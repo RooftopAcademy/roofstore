@@ -1,6 +1,5 @@
-
-function TextLine() {
-    return <div>...</div>
+function TextLine({ text }) {
+	return <p>{text}</p>;
 }
 
-export default TextLine
+export default TextLine;
