@@ -1,5 +1,5 @@
-function TextLine({ text }) {
-	return <p>{text}</p>;
+function TextLine({ text, className }) {
+	return <p className={`txt-center ${className}`}>{text}</p>;
 }
 
 export default TextLine;
