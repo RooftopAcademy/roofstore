@@ -1,18 +1,12 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-function BannerImage(props) {
-  const {
-    src = "https://http2.mlstatic.com/D_NQ_908991-MLA48135975612_112021-OO.webp",
-    alt = "Banner Image",
-  } = props
-  
+function BannerImage({
+  src = "",
+  alt = "Banner Image",
+}) {
+
   return (
     <div>
-      <img
-        width="100%"
-        height="255px"
-        src={src}
-        alt={alt}
-      />
+      <img width="100%" height="255px" src={src} alt={alt} />
     </div>
   )
 }
