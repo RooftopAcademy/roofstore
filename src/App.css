@@ -10,3 +10,26 @@
 .texttag-p {
   font-size: 12px;
 }
+
+img {
+  display: block;
+  width: 100%;
+}
+.texttag-p {
+  font-size: 12px;
+}
+
+.p-base {
+  padding: 6px;
+}
+
+.img-log{
+  width: 100%;
+}
+.width-logo {
+  width: 40px;
+}
+
+.search-bar {
+  flex-grow: 1;
+}
