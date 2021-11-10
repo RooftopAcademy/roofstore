@@ -3,10 +3,12 @@
  * footer: links
  */
 
+import Navbar from "../Blocks/Navbar"
+
 function WebsiteLayout({children}) {
     return (
         <>
-            <div>Header</div>
+            <div><Navbar/></div>
                 {children}
             <div>Footer</div>
         </>
