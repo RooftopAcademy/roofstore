@@ -1,8 +1,8 @@
 
-function TextInput({ holderText, classes }) {
+function TextInput({ holderText, className }) {
     return <input
         type="text"
-        className={classes}
+        className={className}
         placeholder={holderText} />
 }
 
