@@ -1,0 +1,12 @@
+.texttag-container {
+  display: inline-flex;
+  padding: 3px 4px;
+  border-radius: 3px;
+  font-size: 10px;
+  line-height: 1em;
+  vertical-align: middle;
+}
+
+.texttag-p {
+  font-size: 12px;
+}
