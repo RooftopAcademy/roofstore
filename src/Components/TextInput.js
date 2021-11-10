@@ -1,10 +1,9 @@
 
-function TextInput({ holderText }) {
-    return (<input
+function TextInput({ holderText, classes }) {
+    return <input
         type="text"
-        className=""
-        placeholder={holderText} >
-    </input>)
+        className={classes}
+        placeholder={holderText} />
 }
 
 export default TextInput
