@@ -10,12 +10,12 @@ function TextTag({
     bgColor = 'bg-blue',
 }) {
 
-    let content;
+    let content
 
     if (url) {
         content = (<TextLink className={txtColor} url={url}>{text}</TextLink>)
     } else {
-        content = (<p>{text}</p>)
+        content = (<p style={{fontSize: '12px',}} >{text}</p>)
     }
 
     return (
@@ -27,6 +27,7 @@ function TextTag({
                 borderRadius: '3px',
                 fontSize: '10px',
                 lineHeight: '1em',
+                verticalAlign: 'bottom',
             }}
         >
             {content}
