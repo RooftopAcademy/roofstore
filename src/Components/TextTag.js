@@ -15,20 +15,12 @@ function TextTag({
     if (url) {
         content = (<TextLink className={txtColor} url={url}>{text}</TextLink>)
     } else {
-        content = (<p style={{fontSize: '12px',}} >{text}</p>)
+        content = (<p className={'texttag-p'} >{text}</p>)
     }
 
     return (
         <div
-            className={txtColor + ' txt-bold ' + bgColor}
-            style={{
-                display: 'inline-flex',
-                padding: '3px 4px',
-                borderRadius: '3px',
-                fontSize: '10px',
-                lineHeight: '1em',
-                verticalAlign: 'middle',
-            }}
+            className={'texttag-container ' + txtColor + ' txt-bold ' + bgColor}
         >
             {content}
         </div>
