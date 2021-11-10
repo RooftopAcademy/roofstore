@@ -27,7 +27,7 @@ function TextTag({
                 borderRadius: '3px',
                 fontSize: '10px',
                 lineHeight: '1em',
-                verticalAlign: 'bottom',
+                verticalAlign: 'middle',
             }}
         >
             {content}
