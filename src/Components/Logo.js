@@ -1,8 +1,6 @@
 
-function Logo() {
-    return <div className="row">
-                <img src="/logo512.png" alt="react-logo"/> 
-            </div>
+function Logo(imgSrc,imgAlt) {
+    return <img src="{imgSrc}" alt="{imgAlt}"/>
 }
 
 export default Logo
