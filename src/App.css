@@ -10,3 +10,25 @@
 .texttag-p {
   font-size: 12px;
 }
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.d-block {
+  display: block;
+}
+
+.jc-start {
+  justify-content: start;
+}
+
+.txt-start {
+  text-align: start;
+}
+
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
