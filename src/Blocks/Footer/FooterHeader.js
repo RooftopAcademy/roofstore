@@ -4,19 +4,21 @@ import TextLine from "../../Components/TextLine"
 
 function FooterHeader() {
     return (
-        <Link className={'link'} to={'/login'}>
-            <div className='row bg-primary jc-start'>
-                <div className='col'>
-                    <div className='shadow-sm rounded p-0' style={{width:'50px'}}>
-                        {/* <Logo/> */}
-                        <img src="/logo512.png" alt="react-logo"/> 
+        <div className='row bg-primary'>
+            <div className='col'>
+                <Link className={'link'} to={'/login'}>
+                    <div className='row padding-none'>
+                        <div className='col p-0 shadow-sm rounded' style={{width:'50px'}}>
+                            {/* <Logo/> */}
+                            <img src="/logo512.png" alt="react-logo"/> 
+                        </div>
+                        <div className='col'>
+                            <TextLine className={'txt-white'} text={'¡Comprá y vendé con la app!'}/>
+                        </div>
                     </div>
-                </div>
-                <div className='col padding-none'>
-                    <TextLine className={'txt-white'} text={'¡Comprá y vendé con la app!'}/>
-                </div>
+                </Link>
             </div>
-        </Link>
+        </div>
     )
 }
 
