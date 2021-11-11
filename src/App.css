@@ -16,12 +16,8 @@ img {
   width: 100%;
 }
 
-.d-block {
-  display: block;
-}
-
-.jc-start {
-  justify-content: start;
+.d-flex {
+  display: flex;
 }
 
 .txt-start {
