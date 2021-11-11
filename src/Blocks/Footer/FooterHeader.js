@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-// import Logo from "../../Components/Logo"
+import Logo from "../../Components/Logo"
 import TextLine from "../../Components/TextLine"
 
 function FooterHeader() {
@@ -8,11 +8,10 @@ function FooterHeader() {
             <div className='col'>
                 <Link className={'link'} to={'/login'}>
                     <div className='row padding-none'>
-                        <div className='col p-0 shadow-sm rounded' style={{width:'50px'}}>
-                            {/* <Logo/> */}
-                            <img src="/logo512.png" alt="react-logo"/> 
+                        <div className='col shadow-sm rounded w-50px'>
+                            <Logo/>
                         </div>
-                        <div className='col'>
+                        <div className='col padding-none m-left-2'>
                             <TextLine className={'txt-white'} text={'¡Comprá y vendé con la app!'}/>
                         </div>
                     </div>
