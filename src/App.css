@@ -52,9 +52,6 @@
 .OffersPage-m-bottom {
   margin-bottom: var(--padding-base);
 }
-.OffersPage-m-top {
-  margin-top: var(--padding-base);
-}
 
 .OffersPage-p-0-left {
   padding-left: var(--padding-base);
@@ -96,8 +93,20 @@
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: .2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 32px;
 }
 .OffersPage-pagination {
   width: 48px;
   height: 48px;
+}
+
+.OffersPage-active::after {
+  border-bottom: 4px solid #3483fa;
+  border-radius: 0 0 4px 4px;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
 }
