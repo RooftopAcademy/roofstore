@@ -164,23 +164,80 @@ const publicationsOffersData = [
         offerOfDay: true,
         redirect: 'https://articulo.mercadolibre.com.ar/MLA-918999030-notebook-exo-smart-m33-intel-celeron-ram4gb-ssd64gb-win10-14-_JM',
     },
+    {
+        image: 'https://http2.mlstatic.com/D_Q_NP_2X_795154-MLA46724113124_072021-T.webp',
+        price: 79999,
+        discount: 12,
+        interestFree: 0,
+        title: 'Notebook Hp I3 Intel 11va Gen 4gb Ram Ssd 256 Ips Windows 10',
+        made: '',
+        ship: {
+            free: true,
+            full: true,
+        },
+        offerOfDay: true,
+        redirect: 'https://articulo.mercadolibre.com.ar/MLA-929296479-notebook-hp-i3-intel-11va-gen-4gb-ram-ssd-256-ips-windows-10-_JM',
+    },
+    {
+        image: 'https://http2.mlstatic.com/D_Q_NP_2X_603860-MLA31304447090_072019-T.webp',
+        price: 3783,
+        discount: 5,
+        interestFree: 6,
+        title: 'Manguera Riego Reforzada Tecnocom 3/4 X 25 M P',
+        made: '',
+        ship: {
+            free: true,
+            full: false,
+        },
+        offerOfDay: false,
+        redirect: 'https://articulo.mercadolibre.com.ar/MLA-796582574-manguera-riego-reforzada-tecnocom-34-x-25-m-p-_JM',
+    },
+    {
+        image: 'https://http2.mlstatic.com/D_Q_NP_2X_769756-MLA47631875432_092021-T.webp',
+        price: 34999,
+        discount: 9,
+        interestFree: 0,
+        title: 'Cafetera Oster Primalatte Bvstem6603 Automática Negra Y Acero Inoxidable Para Expreso Y Cápsulas Monodosis 220v',
+        made: '',
+        ship: {
+            free: true,
+            full: true,
+        },
+        offerOfDay: true,
+        redirect: 'https://articulo.mercadolibre.com.ar/MLA-1107089785-cafetera-oster-primalatte-bvstem6603-automatica-negra-y-acero-inoxidable-para-expreso-y-capsulas-monodosis-220v-_JM',
+    },
+    {
+        image: 'https://http2.mlstatic.com/D_Q_NP_2X_953279-MLA47937064551_102021-T.webp',
+        price: 2500,
+        discount: 39,
+        interestFree: 0,
+        title: 'Caja Navideña Regalo 7 Articulos Sidra, Pan Dulce, Turron',
+        made: '',
+        ship: {
+            free: false,
+            full: true,
+        },
+        offerOfDay: false,
+        redirect: 'https://articulo.mercadolibre.com.ar/MLA-1107089785-cafetera-oster-primalatte-bvstem6603-automatica-negra-y-acero-inoxidable-para-expreso-y-capsulas-monodosis-220v-_JM',
+    },
 ]
 
 function CategoryOfferItem({title, image}) {
     return (
-        <div className="bg-white rounded shadow-sm row padding-none fd-col jc-center OffersPage-jc-center OffersPage-p-0-left OffersPage-p-0-right OffersPage-offer-item OffersPage-m-right">
+        <div className="bg-white rounded shadow-sm row padding-none fd-col jc-center OffersPage-p-relative OffersPage-jc-center OffersPage-p-0-left OffersPage-p-0-right OffersPage-offer-item OffersPage-m-right ">
             <div className="col padding-none">
                 <img width="48px" height="48px" className="OffersPage-m-bottom" src={image} alt={title} />
             </div>
             <div className="col padding-none">
-                <p className="txt-grey txt-center OffersPage-txt-s OffersPage-offer-title">{title}</p>
+                <p className="txt-grey txt-center OffersPage-txt-s OffersPage-offer-title OffersPage-active ">{title}</p>
             </div>
         </div>
     )
 }
 
 function PublicationItem({image, price, discount, interestFree, title, made, ship: {free, full}, offerOfDay, redirect}) {
-    const newPrice = (price - (price * discount / 100)).toFixed()
+    const oldPrice = new Intl.NumberFormat('es-ES').format(price)
+    const newPrice = new Intl.NumberFormat('es-ES').format((price - (price * discount / 100)).toFixed())
     const minDiscount = 5
 
     return (
@@ -189,7 +246,7 @@ function PublicationItem({image, price, discount, interestFree, title, made, shi
                 <img width="144px" height="144px" src={image} alt={title} />
             </div>
             {offerOfDay && <TextTag text="OFERTA DEL DÍA"/>}
-            {discount > 0 && <p className="txt-strike OffersPage-txt-light-grey OffersPage-txt-s">$ {price}</p>}
+            {discount > 0 && <p className="txt-strike OffersPage-txt-light-grey OffersPage-txt-s">$ {oldPrice}</p>}
             <div className="col padding-none OffersPage-ai-center">
                 <span className="OffersPage-txt-b OffersPage-m-right">$ {newPrice}</span>
                 {discount > minDiscount && <span className="OffersPAge-txt-m txt-green"> {discount}% OFF</span>}
