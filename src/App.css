@@ -19,17 +19,21 @@ img {
   font-size: 12px;
 }
 
-.p-base {
+.navbar-p-base {
   padding: 6px;
 }
 
-.img-log{
-  width: 100%;
-}
-.width-logo {
-  width: 40px;
+.navbar-p-input {
+  padding: 3px 3px 3px 35px;
 }
 
-.search-bar {
+.navbar-img-log{
+  width: 100%;
+}
+.navbar-width-logo {
+  width: 45px;
+}
+
+.navbar-search-bar {
   flex-grow: 1;
 }
