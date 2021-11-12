@@ -1,7 +1,7 @@
 import WebsiteLayout from '../../Layouts/WebsiteLayout'
 import TextLine from '../../Components/TextLine'
-import Icon from '../../Components/Icon'
 import TextTag from '../../Components/TextTag'
+import Icon from '../../Components/Icon'
 import { Link } from 'react-router-dom'
 
 const categoryOffersData = [
@@ -165,7 +165,8 @@ function CategoryOfferItem({title, image}) {
 }
 
 function PublicationItem({image, price, discount, interestFree, title, made, ship: {free, full}, offerOfDay, redirect}) {
-    const newPrice = (price - (price * discount / 100)).toFixed();
+    const newPrice = (price - (price * discount / 100)).toFixed()
+    const minDiscount = 5
 
     return (
         <Link to={redirect} className="
@@ -178,26 +179,34 @@ function PublicationItem({image, price, discount, interestFree, title, made, shi
             br-left
             OffersPage-6-col
             OffersPage-p-0-left
+            OffersPage-publication-h
         ">
             <div className="col padding-none OffersPage-jc-center ">
                 <img width="144px" height="144px" src={image} alt={title} />
             </div>
-            <TextTag text="OFERTA DEL DÍA"/>
+            {offerOfDay && <TextTag text="OFERTA DEL DÍA"/>}
             <p className="txt-strike OffersPage-txt-light-grey OffersPage-txt-s">$ {price}</p>
             <div className="col padding-none OffersPage-ai-center">
-                <span className="OffersPage-price OffersPage-m-right">$ {newPrice}</span>
-                <span className="txt-green"> {discount}% OFF</span>
+                <span className="OffersPage-txt-b OffersPage-m-right">$ {newPrice}</span>
+                {discount > minDiscount && <span className="OffersPAge-txt-m txt-green"> {discount}% OFF</span>}
             </div>
-            {interestFree !== 0 && <p className="txt-green">Hasta {discount} cuotas sin interés</p>}
+            {interestFree !== 0 && <p className="OffersPage-txt-s txt-green">Hasta {discount} cuotas sin interés</p>}
             <div className="col padding-none OffersPage-ai-center txt-green OffersPage-txt-s">
                 {free && <p className="txt-bold OffersPage-m-right">Envío gratis</p>}
-                {full && <><Icon icon="lightning" /><p className="txt-bold OffersPage-m-left">FULL</p></>}
+                {full && <><Icon icon="lightning" /><p className="txt-bold ">&nbsp;FULL</p></>}
             </div>
+            <p className="OffersPAge-txt-m txt-grey OffersPage-m-top txt-overflow ">{title}</p>
+            {made && <p className="OffersPAge-txt-m OffersPage-txt-light-grey">por {made}</p>}
         </Link>
     )
 }
 
 function OffersPage() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const currentPage = Object.fromEntries(urlSearchParams.entries()).page || 1;
+    const nextPage = Number(currentPage) + 1;
+    const previousHidden = (currentPage > 1) ? '' : 'OffersPage-v-hidden';
+
     const carrouselItems = categoryOffersData.map(
         ({title, image}, i) => <CategoryOfferItem key={i} title={title} image={image} />
     )
@@ -237,6 +246,24 @@ function OffersPage() {
 
                 <div className="row fw-wrap padding-none">
                     { publicationsItems }
+                </div>
+
+                <div className="row">
+                    <div className={"col txt-light-grey OffersPage-ai-center " + previousHidden}>
+                        <Icon icon="arrow-right" />
+                        <p>&nbsp;Anterior</p>
+                    </div>
+                    <div className="col OffersPage-ai-center">
+                        <div className="col txt-bold txt-center OffersPage-bg-light-grey OffersPage-pagination ">
+                            <Link className="link txt-black" to={`/offers?page=${currentPage}`}>
+                                <p>{currentPage}</p>
+                            </Link>
+                        </div>
+                    </div>
+                    <Link to={`/offers?page=${nextPage}`} className="col link txt-light-grey OffersPage-ai-center">
+                        <p className="OffersPage-m-right">&nbsp;Siguiente</p>
+                        <Icon icon="arrow-right" />
+                    </Link>
                 </div>
             </main>
         </WebsiteLayout>
