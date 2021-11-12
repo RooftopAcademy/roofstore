@@ -10,3 +10,46 @@
 .texttag-p {
   font-size: 12px;
 }
+
+.login-flex{
+  display: flex;  
+}
+
+.jc-center{
+  justify-content: center;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.ai-start{
+  align-items: flex-start;
+}
+
+
+.fz-sm{
+  font-size: 0.85rem;
+}
+
+.fz-xsm{
+  font-size: .65rem;
+}
+
+.txt-grey-copyright{
+  color: #666;
+}
+
+.p-form{
+  padding: 0.65rem
+}
+
+.border-none{
+  border-color: transparent;
+}
+
+.grow-1{
+  flex-grow: 1;
+}
+
+
