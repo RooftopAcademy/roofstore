@@ -136,24 +136,39 @@ const publicationsOffersData = [
         offerOfDay: true,
         redirect: 'https://www.mercadolibre.com.ar/bicicleta-mountain-bike-klatter-fm18k9am210d-r29-21v-mtb-aluminio/p/MLA18552219',
     },
+    {
+        image: 'https://http2.mlstatic.com/D_Q_NP_2X_670396-MLA48158690358_112021-P.webp',
+        price: 4049,
+        discount: 0,
+        interestFree: 0,
+        title: 'Disco Sólido Interno Kingston Sa400s37/240g 240gb',
+        made: '',
+        ship: {
+            free: true,
+            full: false,
+        },
+        offerOfDay: false,
+        redirect: 'https://articulo.mercadolibre.com.ar/MLA-928019187-disco-solido-interno-kingston-sa400s37240g-240gb-_JM',
+    },
+    {
+        image: 'https://http2.mlstatic.com/D_Q_NP_2X_758306-MLA47762969111_102021-P.webp',
+        price: 51999,
+        discount: 8,
+        interestFree: 18,
+        title: 'Notebook Exo Smart M33 Intel Celeron Ram4gb Ssd64gb Win10 14',
+        made: 'EXO',
+        ship: {
+            free: true,
+            full: true,
+        },
+        offerOfDay: true,
+        redirect: 'https://articulo.mercadolibre.com.ar/MLA-918999030-notebook-exo-smart-m33-intel-celeron-ram4gb-ssd64gb-win10-14-_JM',
+    },
 ]
 
 function CategoryOfferItem({title, image}) {
     return (
-        <div className="
-            row
-            padding-none
-            shadow-sm
-            fd-col
-            jc-center
-            bg-white
-            rounded
-            OffersPage-jc-center
-            OffersPage-p-0-left
-            OffersPage-p-0-right
-            OffersPage-offer-item
-            OffersPage-m-right
-        ">
+        <div className="bg-white rounded shadow-sm row padding-none fd-col jc-center OffersPage-jc-center OffersPage-p-0-left OffersPage-p-0-right OffersPage-offer-item OffersPage-m-right">
             <div className="col padding-none">
                 <img width="48px" height="48px" className="OffersPage-m-bottom" src={image} alt={title} />
             </div>
@@ -169,43 +184,33 @@ function PublicationItem({image, price, discount, interestFree, title, made, shi
     const minDiscount = 5
 
     return (
-        <Link to={redirect} className="
-            col
-            padding-none
-            bg-white
-            txt-black
-            link
-            br-top
-            br-left
-            OffersPage-6-col
-            OffersPage-p-0-left
-            OffersPage-publication-h
-        ">
+        <Link to={redirect} className="bg-white col padding-none txt-black link br-top br-left OffersPage-6-col OffersPage-p-0-left OffersPage-publication-h">
             <div className="col padding-none OffersPage-jc-center ">
                 <img width="144px" height="144px" src={image} alt={title} />
             </div>
             {offerOfDay && <TextTag text="OFERTA DEL DÍA"/>}
-            <p className="txt-strike OffersPage-txt-light-grey OffersPage-txt-s">$ {price}</p>
+            {discount > 0 && <p className="txt-strike OffersPage-txt-light-grey OffersPage-txt-s">$ {price}</p>}
             <div className="col padding-none OffersPage-ai-center">
                 <span className="OffersPage-txt-b OffersPage-m-right">$ {newPrice}</span>
                 {discount > minDiscount && <span className="OffersPAge-txt-m txt-green"> {discount}% OFF</span>}
             </div>
             {interestFree !== 0 && <p className="OffersPage-txt-s txt-green">Hasta {discount} cuotas sin interés</p>}
-            <div className="col padding-none OffersPage-ai-center txt-green OffersPage-txt-s">
+            <div className="col padding-none OffersPage-ai-center txt-green OffersPage-txt-s OffersPage-m-bottom">
                 {free && <p className="txt-bold OffersPage-m-right">Envío gratis</p>}
                 {full && <><Icon icon="lightning" /><p className="txt-bold ">&nbsp;FULL</p></>}
             </div>
-            <p className="OffersPAge-txt-m txt-grey OffersPage-m-top txt-overflow ">{title}</p>
+            <p className="OffersPAge-txt-m txt-grey txt-overflow OffersPage-publication-title">{title}</p>
             {made && <p className="OffersPAge-txt-m OffersPage-txt-light-grey">por {made}</p>}
         </Link>
     )
 }
 
 function OffersPage() {
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    const currentPage = Object.fromEntries(urlSearchParams.entries()).page || 1;
-    const nextPage = Number(currentPage) + 1;
-    const previousHidden = (currentPage > 1) ? '' : 'OffersPage-v-hidden';
+    const urlSearchParams = new URLSearchParams(window.location.search)
+    const currentPage = Object.fromEntries(urlSearchParams.entries()).page || 1
+    const previousHidden = (currentPage > 1) ? '' : 'OffersPage-v-hidden'
+    const nextPage = Number(currentPage) + 1
+    const previousPage = Number(currentPage) - 1
 
     const carrouselItems = categoryOffersData.map(
         ({title, image}, i) => <CategoryOfferItem key={i} title={title} image={image} />
@@ -230,7 +235,7 @@ function OffersPage() {
     return (
         <WebsiteLayout>
             <main className="bg-main">
-                <div className="row padding-none bg-white shadow-sm OffersPage-m-bottom">
+                <div className="bg-white shadow-sm row padding-none OffersPage-m-bottom">
                     <div className="col ">
                         <TextLine text="10.000 productos" className="OffersPage-txt-light-grey"/>
                     </div>
@@ -249,10 +254,10 @@ function OffersPage() {
                 </div>
 
                 <div className="row">
-                    <div className={"col txt-light-grey OffersPage-ai-center " + previousHidden}>
+                    <Link to={`/offers?page=${previousPage}`} className={"col OffersPage-txt-light-grey OffersPage-ai-center " + previousHidden}>
                         <Icon icon="arrow-right" />
                         <p>&nbsp;Anterior</p>
-                    </div>
+                    </Link>
                     <div className="col OffersPage-ai-center">
                         <div className="col txt-bold txt-center OffersPage-bg-light-grey OffersPage-pagination ">
                             <Link className="link txt-black" to={`/offers?page=${currentPage}`}>
@@ -260,11 +265,12 @@ function OffersPage() {
                             </Link>
                         </div>
                     </div>
-                    <Link to={`/offers?page=${nextPage}`} className="col link txt-light-grey OffersPage-ai-center">
+                    <Link to={`/offers?page=${nextPage}`} className="col link OffersPage-txt-light-grey OffersPage-ai-center">
                         <p className="OffersPage-m-right">&nbsp;Siguiente</p>
                         <Icon icon="arrow-right" />
                     </Link>
                 </div>
+
             </main>
         </WebsiteLayout>
     )
