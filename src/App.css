@@ -16,19 +16,19 @@ img {
   width: 100%;
 }
 
-.d-flex {
+.Footer-d-flex {
   display: flex;
 }
 
-.txt-start {
+.Footer-txt-start {
   text-align: start;
 }
 
-.col-6 {
+.Footer-col-6 {
   flex: 0 0 auto;
   width: 50%;
 }
 
-.w-50px {
+.Footer-w-50px {
   width: 50px;
 }
