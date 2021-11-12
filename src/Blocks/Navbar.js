@@ -4,14 +4,14 @@ import Input from "../Components/TextInput"
 function Navbar() {
   return (
       <div className="container bg-primary padding-none">
-        <div className="row p-base">
-            <div className="col p-base width-logo">
-                <Logo imgAlt="Logo" imgSrc="/logo192.png"/>
+        <div className="row navbar-p-base">
+            <div className="col padding-none navbar-width-logo">
+                <Logo imgAlt="Logo" imgSrc="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.17.0/mercadolibre/logo__small@2x.png"/>
             </div>
-          <div className="col p-base search-bar">
-                <Input holderText="Estoy Buscando..." className="input rounded shadow-sm"/>
+          <div className="col navbar-search-bar padding-none m-left-0 m-right-0">
+                <Input holderText="Estoy buscando..." className="input rounded shadow-sm navbar-p-input"/>
           </div>
-          <div className="col p-base">
+          <div className="col padding-none">
             <input
               type="checkbox"
               name="burger-btn-check"
@@ -22,7 +22,7 @@ function Navbar() {
               <span className="burger-icon"></span>
             </label>
           </div>
-          <div className="col txt-white p-base">
+          <div className="col txt-white navbar-p-base m-left-0">
           <Icon icon="cart"/>
           </div>
         </div>
