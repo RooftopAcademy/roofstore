@@ -52,6 +52,9 @@
 .OffersPage-m-right {
   margin-right: var(--margin-base)
 }
+.OffersPage-m-left {
+  margin-left: var(--margin-base)
+}
 .OffersPage-m-bottom {
   margin-bottom: var(--padding-base);
 }
