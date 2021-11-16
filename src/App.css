@@ -15,6 +15,7 @@ img {
   display: block;
   width: 100%;
 }
+
 .texttag-p {
   font-size: 12px;
 }
@@ -36,4 +37,21 @@ img {
 
 .navbar-search-bar {
   flex-grow: 1;
+}
+
+.Footer-d-flex {
+  display: flex;
+}
+
+.Footer-txt-start {
+  text-align: start;
+}
+
+.Footer-col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.Footer-w-50px {
+  width: 50px;
 }
