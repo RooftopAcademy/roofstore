@@ -19,7 +19,8 @@ function OffersPage() {
         (data, i) => <PublicationItem key={i} data={data} />
     )
 
-    const numOfProducts = "10.000 productos"
+    const numProducts = "10.000 productos"
+    const numPages = 9
     const filterText = "Filtrar"
 
     return (
@@ -27,15 +28,14 @@ function OffersPage() {
             <main className="bg-main">
                 <div className="
                     row
-                    bg-white
-                    shadow-sm
+                    bg-white shadow-sm
                     padding-none
                     OffersPage-m-bottom
                 ">
                     <div className="col">
-                        <TextLine text={numOfProducts} className="OffersPage-txt-light-grey"/>
+                        <TextLine text={numProducts} className="OffersPage-txt-light-grey"/>
                     </div>
-                    <div className="col OffersPage-ai-center txt-blue">
+                    <div className="col txt-blue OffersPage-ai-center">
                         <p className="OffersPage-m-right">{filterText}</p>
                         <Icon icon="arrow-down"/>
                     </div>
@@ -55,7 +55,7 @@ function OffersPage() {
                     { publicationsItems }
                 </div>
 
-                <Pagination />
+                <Pagination numPages={numPages}/>
 
             </main>
         </WebsiteLayout>
