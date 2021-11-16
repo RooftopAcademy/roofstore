@@ -4,9 +4,10 @@ export default function CategoryOfferItem({
   data: { title, image }, id
 }) {
   const active = (id === 0) ? 'txt-bold OffersPage-active' : ''
-  console.log(id)
+  const promotionType = 'PROMOTION_TYPE'
+
   return (
-    <Link to={`?promotion_type=PROMOTION_TYPE`} className="
+    <Link to={`?promotion_type=${promotionType}`} className="
       row
       link
       bg-white
@@ -23,10 +24,10 @@ export default function CategoryOfferItem({
       OffersPage-m-right
     ">
       <div className="col padding-none">
-        <img 
+        <img
           width="48px"
           height="48px"
-          className="OffersPage-m-bottom" 
+          className="OffersPage-m-bottom"
           src={image}
           alt={title}
         />
