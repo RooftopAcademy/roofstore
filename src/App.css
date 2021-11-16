@@ -16,6 +16,29 @@ img {
   width: 100%;
 }
 
+.texttag-p {
+  font-size: 12px;
+}
+
+.navbar-p-base {
+  padding: 6px;
+}
+
+.navbar-p-input {
+  padding: 3px 3px 3px 35px;
+}
+
+.navbar-img-log{
+  width: 100%;
+}
+.navbar-width-logo {
+  width: 45px;
+}
+
+.navbar-search-bar {
+  flex-grow: 1;
+}
+
 .Footer-d-flex {
   display: flex;
 }
