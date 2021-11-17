@@ -2,6 +2,7 @@
 import DistractionFreeLayout from '../../Layouts/DistractionFreeLayout'
 import FormLogin from './LoginPage/FormLogin'
 import TextLine from '../../Components/TextLine'
+import TextLink from '../../Components/TextLink'
 
 function LoginPage() {
 
@@ -22,7 +23,7 @@ function LoginPage() {
             <div className="row jc-center">
                 <div className="col">
                     <TextLine className="txt-blue fz-sm txt-bold" text={needHelp} />
-                    <div className="txt-center fz-xsm txt-grey-copyright p-0">{reCaptcha}<span className="fz-xsm txt-blue">{privacy}</span>-<span className="fz-xsm txt-blue">{conditions}</span></div>
+                    <div className="txt-center fz-xsm txt-grey-copyright p-0">{reCaptcha}<TextLink url={"/"} className="fz-xsm txt-blue">{privacy}</TextLink>-<TextLink url={"/"} className="fz-xsm txt-blue">{conditions}</TextLink></div>
                 </div>
             </div>
         </DistractionFreeLayout>
