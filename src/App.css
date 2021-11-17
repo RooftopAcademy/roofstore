@@ -88,6 +88,10 @@
   border-top: 1px solid #666;
 }
 
+.d-none{
+  display: none;
+}
+
 
 
 
