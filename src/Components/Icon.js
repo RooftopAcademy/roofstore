@@ -20,6 +20,12 @@ const icons = {
 	list: "fas fa-list",
 	headset: "fas fa-headset",
 	download: "fas fa-download",
+	'credit-card': "fas fa-credit-card",
+	'car': "fas fa-car",
+	'cell-phone': "fas fa-mobile-alt",
+	'couch': "fas fa-couch",
+	'blender': "fas fa-blender",
+	'microphone': "fas fa-microphone-alt"
 };
 
 function Icon({ className, icon }) {
