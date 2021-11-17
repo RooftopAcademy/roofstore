@@ -12,7 +12,7 @@ function LoginPage() {
     const needHelp = 'Necesito ayuda para ingresar'
 
     return (
-        <DistractionFreeLayout className="fd-col">
+        <DistractionFreeLayout className="fd-col" isFooter={true}>
             <div className="row grow-1 d-flex ai-start">
                 <div className="col">
                     <h1 className="title m-top-1 m-bottom-5">{title}</h1>
