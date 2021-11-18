@@ -1,7 +1,7 @@
 import { useState } from "react"
 import TextLine from "./TextLine"
 
-function FormInput({ holderText, className, type, holderBottom }) {
+function FormInput({ holderText, className, type, holderBottom, id }) {
     const types = ['text', 'password', 'number', 'email']
 
     const [selectInput, setSelectInput] = useState(false)
@@ -10,6 +10,7 @@ function FormInput({ holderText, className, type, holderBottom }) {
     if (types.includes(type)) {
         return <div>
             <input
+                id={id}
                 type={type}
                 className={`${className} ${selectInput ? 'selected' : ''}`}
                 placeholder={holderText}
