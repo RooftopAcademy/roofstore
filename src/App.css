@@ -92,6 +92,15 @@
   display: none;
 }
 
+.checkItem{
+  height: 13px;
+  width: 13px;  
+  border-radius: 50%;
+  background-color: #666;
+}
 
 
+.jc-start{
+  justify-content: flex-start;
+}
 
