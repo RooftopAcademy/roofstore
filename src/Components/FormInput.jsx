@@ -1,5 +1,4 @@
 import { useState } from "react"
-import TextLine from "./TextLine"
 
 function FormInput({ holderText, className, type, holderBottom, id }) {
     const types = ['text', 'password', 'number', 'email']
