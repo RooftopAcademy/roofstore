@@ -18,7 +18,7 @@ const icons = {
 
 function Icon(props) {
     return <>
-    <i className={`${icons[props.icon]}`}></i>
+      <i role="figure" className={`${icons[props.icon]}`}></i>
     </>
 }
 
