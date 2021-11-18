@@ -21,7 +21,7 @@ describe('<TextLink url="/"/>', () => {
 
     // Check that the children is rendered as content between the tags
     
-    test('render a text ("foo") between anchor tags', async () => {
+    test('Check that the children is rendered as content between the tags', async () => {
         const anchorElement = component.container.querySelector(['a'])
         expect(anchorElement).toHaveTextContent("Hola")
     });
