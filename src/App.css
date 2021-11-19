@@ -101,6 +101,11 @@
   width: 50px;
 }
 
+.Footer-img {
+  display: block;
+  width: 100%;
+}
+
 .HomePage-border-circle {
   border-radius: 50%;
 }
