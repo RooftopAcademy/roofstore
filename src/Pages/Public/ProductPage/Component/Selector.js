@@ -13,9 +13,9 @@ function Selector({variantOpcion, opcion, placeHolder}) {
                         </span>
                     </div>
                         
-                    <spam className="txt-blue">
+                    <span className="txt-blue">
                         <Icon icon={"arrow-right"}/>
-                    </spam>
+                    </span>
                 </div>
             </div>
 
