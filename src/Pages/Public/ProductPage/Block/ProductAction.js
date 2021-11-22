@@ -1,4 +1,6 @@
 import TextLine from "../../../../Components/TextLine";
+import Benefit from "../Component/Benefit";
+import product from "../dataProduct"
 
 let buttonShop = "Comprar ahora" 
 let buttonAdd = "Agregar al carrito"
@@ -16,6 +18,28 @@ function ProductAction() {
                         <button className="bg-light-blue txt-blue rounded txt-bold ProductPage-border-none ProductPage-w-100">
                             <TextLine text={buttonAdd} className={"ProductPage-p-button ProductPage-font-size-title"}/>
                         </button>
+                    <Benefit 
+                        icon = "devolution"
+                        txtLink = "Devolución gratis. "
+                        url = "#" 
+                        description = "Tenés 30 días desde que lo recibís."
+                    />
+                    <Benefit 
+                        icon = "shield"
+                        txtLink = "Compra protegida. "
+                        url = "#" 
+                        description = "recibí el producto que esperabas o te devolvemos tu dinero."
+                    />
+                    <Benefit 
+                        icon = "trophy"
+                        txtLink = "Mercado Puntos. "
+                        url = "#" 
+                        description = {"Sumas " + product.points + " puntos"}
+                    />
+                    <Benefit 
+                        icon = "medal"
+                        description = {"6 meses de garantia de fábrica"}
+                    />
                     </div>
                 </div>    
             </div>
