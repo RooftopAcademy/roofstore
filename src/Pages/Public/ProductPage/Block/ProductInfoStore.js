@@ -4,6 +4,7 @@ import Badge from "../Component/Badge";
 import SeeMore from "../Component/SeeMore";
 import Icon from "../../../../Components/Icon"
 
+
 let title = "Informacón de la tienda"
 
 function ProductInfoStore({item, store}) {
@@ -36,11 +37,11 @@ function ProductInfoStore({item, store}) {
                     <TextLine text={"Ventas en los últimos 60 días"} className={"txt-grey ProductPage-font-size-subtitle"}/>    
                 </div>
                 <div className="col txt-center br-left br-right">
-                    <spam className="txt-green"><Icon icon="coment"/></spam>
+                    <span className="txt-green"><Icon icon="coment"/></span>
                     <TextLine text={"Brinda buena atencion"} className={"txt-grey ProductPage-font-size-subtitle"}/>  
                 </div>
                 <div className="col txt-center">
-                    <spam className="txt-green "><Icon icon="watch"/></spam>
+                    <span className="txt-green "><Icon icon="watch"/></span>
                     <TextLine text={"Despacha sus productos a tiempo"} className={"txt-grey ProductPage-font-size-subtitle"}/>  
             </div>
       </div>
@@ -48,6 +49,7 @@ function ProductInfoStore({item, store}) {
            <SeeMore
            message = "Ver más datos"
            />
+          
         </div>
 
     );
