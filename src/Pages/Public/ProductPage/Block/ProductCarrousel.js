@@ -12,16 +12,16 @@ function CarrouselProduct({item}) {
                     <TextTag text={cantImg} txtColor="txt-black" bgColor="ProductPage-bg-light-grey"/>
                 </div>
             </div>
-            <div className="row p-0">
+            <div className="row ">
                 <div className="col padding-none">
                     <BannerImage src={item.src} alt={item.alt}/>
                 </div>
             </div>
             <div className="row ProductPage-jc-right">
                 <div className="col grey-border ProductPage-bg-light-grey ProductPage-circle">
-                    <spam className="ProductPage-circle-content">
+                    <span className="ProductPage-circle-content">
                         <Icon icon="share"/>
-                    </spam>
+                    </span>
                 </div>
             </div>
         </div>
