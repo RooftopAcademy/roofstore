@@ -1,21 +1,17 @@
-import TextLine from "../../../../Components/TextLine";
 import  Icon from "../../../../Components/Icon";
 import TextLink from "../../../../Components/TextLink";
 
-function Benefit({icon, title, subtitle, description}) {
+function Benefit({icon, txtLink, url, description}) {
     return (
-        <div className="container ProductPage-p-top-0">
-                <div className="row ProductPage-p-top-0">
-                    <div className="col padding-none">
-                        <span className="txt-green ProductPage-d-flex">
-                            <span className="m-right-0"><Icon icon={icon}/></span>
-                            <TextLine text={title} className={"txt-green"}/>
-                        </span>
-                        <TextLine text={subtitle} className={"txt-grey m-left-5 ProductPage-font-size-medium"}/>
-                        <TextLink url="/Login" className={"txt-blue ProductPage-font-size-medium m-left-5"} children={description}/>
-                    </div>
-                </div>
+        <div className="row padding-none ProductPage-jc-start">
+            <div className="col ProductPage-as-baseline">
+                <span className="txt-grey"><Icon icon={icon}/></span>
             </div>
+            <div className="col">
+                <TextLink  url={url} className={"txt-blue ProductPage-font-size-medium"} children={txtLink}/>
+                <span className="ProductPage-txt-light-grey ProductPage-font-size-medium">{description}</span>
+            </div>
+        </div>
     );
 }
 
