@@ -2,7 +2,7 @@
 
 import FormInput from "../../../Components/FormInput";
 import PasswordRequirement from "./PasswordRequirement";
-import { Link } from "react-router-dom";
+
 
 function PasswordPage({ optionActive, setOptionActive, className }) {
 
@@ -31,7 +31,7 @@ function PasswordPage({ optionActive, setOptionActive, className }) {
                     <PasswordRequirement text={req5} />
                     <label className="fz-sm m-left-0 m-top-5" htmlFor="name-input">{labelConfirm}</label>
                     <FormInput id="repeat-password-input" type="password" className="input round p-form m-bottom-5" />
-                    <button type="button" className=" w-100 bg-blue txt-white p-form round txt-bold border-none fz-m">{buttonText}</button>
+                    <button type="button" className=" bg-blue txt-white p-form round txt-bold border-none fz-m m-top-1">{buttonText}</button>
                 </form>
             </div>
         </div>
