@@ -3,10 +3,10 @@ let title = "Descripción"
 
 function ProductDescription({item}) {
     return (
-        <div className="container br-top">
+        <div className=" br-top">
             <div className="row padding-none">
                 <div className="col">
-                    <TextLine text={title} className={"txt-black ProductPage-font-size-large"}/>
+                    <TextLine text={title} className={"txt-black ProductPage-fs-18"}/>
                 </div>
             </div>
             <div className="row padding-none">
