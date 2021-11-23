@@ -1,13 +1,10 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
-function BannerImage({
-  src = "",
-  alt = "Banner Image",
-}) {
+import { Link } from "react-router-dom"
 
+function BannerImage({ src = "", alt = "", redirect = "/" }) {
   return (
-    <div>
+    <Link to={redirect}>
       <img width="100%" height="255px" src={src} alt={alt} />
-    </div>
+    </Link>
   )
 }
 

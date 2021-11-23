@@ -17,13 +17,21 @@ const icons = {
   'envelope': "far fa-envelope",
   'dni': "far fa-address-card",
   'mobile': "fas fa-mobile-alt",
-  'lock': "fas fa-unlock-alt"
+  'lock': "fas fa-unlock-alt",
+  'bag': "fas fa-shopping-bag",
+  'tshirt': "fas fa-tshirt",
+	'store': "fas fa-store-alt",
+  'list': "fas fa-list",
+  'headset': "fas fa-headset",
+  'download': "fas fa-download",
 }
 
-function Icon(props) {
-  return <>
-    <i className={`${icons[props.icon]}`}></i>
-  </>
+function Icon({ className, icon }) {
+	return (
+		<>
+			<i className={`${className} ${icons[icon]}`}></i>
+		</>
+	);
 }
 
-export default Icon
+export default Icon;
