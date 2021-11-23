@@ -6,8 +6,6 @@ function PasswordRequirement({ text }) {
             <p className={`fz-sm txt-grey-copyright `}>{text}</p>
         </div>
     )
-
-
 }
 
 export default PasswordRequirement;
