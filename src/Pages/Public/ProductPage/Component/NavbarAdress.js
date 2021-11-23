@@ -6,7 +6,7 @@ function NavbarAdress() {
         <div className="bg-primary br-top shadow-sm">
             <div className="row padding-none">
             <div className="col txt-white padding-none">
-                <span className="ProductPage-d-flex m-left-0  ProductPage-font-size-medium">
+                <span className="ProductPage-d-flex m-left-0  ProductPage-fs-13">
                     <span className="m-right-0">
                         <Icon icon="pin-marker"/>
                     </span>
