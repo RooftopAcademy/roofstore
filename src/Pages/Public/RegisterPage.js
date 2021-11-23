@@ -53,7 +53,6 @@ function RegisterPage() {
                     <ValidateOption info={optionInfoMobile} active={optionActive === 5} optionActive={optionActive} setOptionActive={setOptionActive} />
                     <ValidateOption info={optionInfoPass} active={optionActive === 7} optionActive={optionActive} setOptionActive={setOptionActive} />
                 </div>
-                {console.log(optionActive)}
             </div>
 
             <div >
