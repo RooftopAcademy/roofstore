@@ -9,8 +9,8 @@ function Spec({item}) {
             </div>
             <div className="col">
                 <span className="ProductPage-d-flex">
-                    <TextLine text={item.category} className={"txt-grey ProductPage-font-size-medium"}/>
-                    <TextLine text={item.value} className={"txt-bold ProductPage-font-size-medium"}/>
+                    <TextLine text={item.category} className={"txt-grey ProductPage-fs-14"}/>
+                    <TextLine text={item.value} className={"txt-bold ProductPage-fs-14"}/>
                 </span>   
             </div>
         </div>
