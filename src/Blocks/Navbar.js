@@ -18,7 +18,7 @@ function Navbar() {
               id="burger-btn-check"
               hidden
             />
-            <label for="burger-btn-check" className="burger-btn">
+            <label htmlFor="burger-btn-check" className="burger-btn">
               <span className="burger-icon"></span>
             </label>
           </div>
