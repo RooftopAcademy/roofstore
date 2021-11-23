@@ -38,6 +38,9 @@
 .ai-start{
   align-items: flex-start;
 }
+.fz-l{
+  font-size: 1.5rem;
+}
 .fz-m{font-size: 1rem;}
 
 .fz-sm{
@@ -104,3 +107,32 @@
   justify-content: flex-start;
 }
 
+.circle{
+  border-radius: 50%;
+  border: 1px solid var(--light-grey);
+  width: 50px;
+  
+}
+
+.circle i {
+  color:var(--success-color);
+}
+ .ai-center{
+   align-items: center;
+ }
+
+ .p-button-validate{
+   padding: 5px 12px;
+ }
+
+ .jc-space-around{
+   justify-content: space-around;
+ }
+
+ .padding-card{    
+    padding: 6px 1px 6px 1px
+ }
+ 
+.shadow-m{
+  box-shadow: 0 0.5rem 0.4rem rgba(0, 0, 0, 0.075)
+}
