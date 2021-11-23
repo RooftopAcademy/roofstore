@@ -1,6 +1,6 @@
 import FormInput from '../../../Components/FormInput'
 
-function DataForm() {
+function DataForm({ optionActive, setOptionActive }) {
 
     const buttonText = 'Continuar'
     const labelName = 'Nombre/s'
@@ -17,8 +17,8 @@ function DataForm() {
                     <label className="fz-sm m-left-0" htmlFor="name-input">{labelLastName}</label>
                     <FormInput id="lastName-input" type="text" className="input round p-form m-bottom-5"></FormInput>
                     <label className="fz-sm m-left-0" htmlFor="dni-input">{labelDni}</label>
-                    <FormInput id="dni-input" type="text" holderBottom={holderDni} className="input round p-form "></FormInput>
-                    <button className="bg-blue txt-white p-form round txt-bold border-none fz-m ">{buttonText}</button>
+                    <FormInput id="dni-input" type="number" holderBottom={holderDni} className="input round p-form "></FormInput>
+                    <button type="button" onClick={() => setOptionActive(optionActive++)} className="bg-blue txt-white p-form round txt-bold border-none fz-m m-top-5">{buttonText}</button>
                 </form>
             </div>
         </div>
