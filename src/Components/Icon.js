@@ -14,12 +14,16 @@ const icons = {
   'enter': "fas fa-arrow-right",
   'arrow-down': "fas fa-angle-down",
   'lightning': "fas fa-bolt",
+  'envelope': "far fa-envelope",
+  'dni': "far fa-address-card",
+  'mobile': "fas fa-mobile-alt",
+  'lock': "fas fa-unlock-alt"
 }
 
 function Icon(props) {
-    return <>
+  return <>
     <i className={`${icons[props.icon]}`}></i>
-    </>
+  </>
 }
 
 export default Icon
