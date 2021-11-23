@@ -2,11 +2,11 @@ import Icon from "../../../../Components/Icon"
 import TextTag from "../../../../Components/TextTag"
 import BannerImage from "../../../../Components/BannerImage"
 
-function CarrouselProduct({item}) {
+function ProductCarrousel({item}) {
     let cantImg = "1 de 1"
 
     return (
-        <div className="container">
+        <div className="">
             <div className="row">
                 <div className="col">
                     <TextTag text={cantImg} txtColor="txt-black" bgColor="ProductPage-bg-light-grey"/>
@@ -29,4 +29,4 @@ function CarrouselProduct({item}) {
     );
 }
 
-export default CarrouselProduct
+export default ProductCarrousel
