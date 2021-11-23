@@ -3,7 +3,6 @@ import NavbarAdress from "./Component/NavbarAdress";
 import product from "./dataProduct";
 import store from "./dataStore";
 import ProductHeader from "./Block/ProductHeader";
-import CarrouselProduct from "./Block/ProductCarrousel";
 import ProductsVariations from "./Block/ProductVariations";
 import ProductPrice from "./Block/ProductPrice";
 import ProductBenefit from "./Block/ProductBenefit";
@@ -13,6 +12,7 @@ import ProductStock from "./Block/ProductStock";
 import ProductShare from "./Block/ProductShare";
 import ProductInfoStore from "./Block/ProductInfoStore";
 import ProductAction from "./Block/ProductAction";
+import ProductCarrousel from "./Block/ProductCarrousel";
 
 function ProductPage() {
   return (
@@ -23,7 +23,7 @@ function ProductPage() {
                 item = {product}
                 store = {store}
            />
-            <CarrouselProduct
+            <ProductCarrousel
                 item = {product}
             />
 
@@ -42,7 +42,9 @@ function ProductPage() {
             <ProductStock
                 item = {product}
             />
-            <ProductAction/>
+            <ProductAction
+                item = {product}
+            />
             
             <ProductShare/>
             
