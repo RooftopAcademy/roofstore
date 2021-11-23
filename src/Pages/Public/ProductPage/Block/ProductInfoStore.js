@@ -6,23 +6,25 @@ import Icon from "../../../../Components/Icon"
 
 
 let title = "Informacón de la tienda"
+let message = "Ver más datos"
+let url = "/perfil/Mall-360"
 
 function ProductInfoStore({item, store}) {
     let oficialStore = "Tienda oficial de mercado libre"
     return (
-        <div className="container br-top">
-            <div className="row padding-none">
+        <div className=" br-top">
+            <div className="row ">
                 <div className="col">
-                    <TextLine text={title} className={"txt-black ProductPage-font-size-large"}/>
+                    <TextLine text={title} className={"txt-black ProductPage-fs-18"}/>
                 </div>
             </div>
-            <div className="row padding-none ProductPage-jc-start m-left-0">
+            <div className="row  ProductPage-jc-start">
                 <div className="col padding-none navbar-width-logo rounded m-left-0">
                     <Logo imgAlt={store.nameStore} imgSrc={store.logoStore}/>
                 </div>
                 <div className="col ">
-                    <TextLine text={store.nameStore} className={"txt-black ProductPage-font-size-medium"}/>
-                    <TextLine text={oficialStore} className={"ProductPage-txt-light-grey ProductPage-font-size-medium"}/>  
+                    <TextLine text={store.nameStore} className={"txt-black ProductPage-fs-14"}/>
+                    <TextLine text={oficialStore} className={"ProductPage-txt-light-grey ProductPage-fs-14"}/>  
                 </div>
             </div>
            <Badge
@@ -34,20 +36,21 @@ function ProductInfoStore({item, store}) {
             <div className="row">
                 <div className="col  txt-center">
                     <TextLine text={"18119"} className={"txt-grey ProductPage-font-size-x-large"}/>
-                    <TextLine text={"Ventas en los últimos 60 días"} className={"txt-grey ProductPage-font-size-subtitle"}/>    
+                    <TextLine text={"Ventas en los últimos 60 días"} className={"txt-grey ProductPage-fs-12"}/>    
                 </div>
                 <div className="col txt-center br-left br-right">
                     <span className="txt-green"><Icon icon="coment"/></span>
-                    <TextLine text={"Brinda buena atencion"} className={"txt-grey ProductPage-font-size-subtitle"}/>  
+                    <TextLine text={"Brinda buena atencion"} className={"txt-grey ProductPage-fs-12"}/>  
                 </div>
                 <div className="col txt-center">
                     <span className="txt-green "><Icon icon="watch"/></span>
-                    <TextLine text={"Despacha sus productos a tiempo"} className={"txt-grey ProductPage-font-size-subtitle"}/>  
+                    <TextLine text={"Despacha sus productos a tiempo"} className={"txt-grey ProductPage-fs-12"}/>  
             </div>
       </div>
 
            <SeeMore
-           message = "Ver más datos"
+           message = {message}
+           url = {url}
            />
           
         </div>
