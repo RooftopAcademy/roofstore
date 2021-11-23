@@ -8,7 +8,23 @@ const product = {
     'ranking' : 2,
     'src' : "https://http2.mlstatic.com/D_NQ_NP_838152-MLA47962840755_102021-O.webp",
     'alt' : "Imagen 1 de 1",
+    'stock' : 1,
+    'assurance' : true,
+    'insuranceMonths' : 3,
     'variantSpecs' : true,
+    'variant' : [
+        {
+            "id": 1,
+            "atribute": "Color: ",
+            "value": "Negro ",
+        },
+        {
+            "id": 2,
+            "atribute": "Tamaño del cuadro: ",
+            "value": "M",
+        },
+
+    ],
     'variantOpcion' : ["Color:", "Tamaño del Cuadro:"],
     'opcion' : ["Negro", "M"],
     'divisa' : "$",
@@ -16,7 +32,8 @@ const product = {
     'discount':  true,
     'discountRate' : 50,
     'cantCuotas' : 12, //Cambiar nombre
-    'freeShipping' : false,
+    'freeShipping' : true,
+    'points' : 389,
     'specs': [
         {
             "id": 1,
@@ -45,13 +62,11 @@ const product = {
         {
             "id": 5,
             "icon": "https://http2.mlstatic.com/resources/frontend/ft-extended-v00/assets/vectorial/tamano_del_cuadro_bicy.svg",
-            "category": "Tamaño de cuadro",
+            "category": "Tamaño de cuadro: ",
             "value": "M"
         },
 
     ],
-    //'specsOptions' : ["29", "Mountain Bike", "Adultos", "21"],
-    'stock' : 207,
     'description' : <p>TIENDA OFICIAL MALL 360<br/>
     <br/>
     Bicicleta Mountain Bike SilverFox FM18SI29AM211 Rodado 29 21 Velocidades MTB Aluminio<br/>
