@@ -9,6 +9,7 @@ function ProductBenefit({item}) {
                     title = "Envío gratis a todo el país"
                     description = "Conocé los tiempos y las formas de envío."
                     txtLink = "Calcular cuándo llega"
+                    url = "/mercado-envios"
                 />
             }
             
@@ -17,6 +18,7 @@ function ProductBenefit({item}) {
                 title = "Devolución gratis"
                 description = "Tenés 30 días desde que lo recibís."
                 txtLink = "Conocer más"
+                url = "/politicas-de-devolucion"
             />
         </span>
         
