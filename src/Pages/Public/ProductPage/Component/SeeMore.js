@@ -1,13 +1,13 @@
 import TextLink from "../../../../Components/TextLink";
 import Icon from "../../../../Components/Icon";
 
-function SeeMore({ message }) {
+function SeeMore({ message, url }) {
     return (
         <div className="container">
             <div className="row grey-border rounded padding-none">
-                <div className="col pading-none ProductPage-font-size-medium">
+                <div className="col pading-none ProductPage-fs-14">
                     <TextLink
-                        url="/Login"
+                        url={url}
                         className={"txt-blue"}
                         children={message}
                     />
