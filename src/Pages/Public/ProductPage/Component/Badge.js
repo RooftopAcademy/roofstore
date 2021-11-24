@@ -9,7 +9,7 @@ function Badge({icon, title, description, txtLink, url}) {
                     <span className="txt-green"><Icon icon={icon}/></span>
                 </div>
                 <div className="col">
-                    <TextLine text={title} className={"txt-green"}/>  
+                    <TextLine text={title} className={"ProductPage-txt-start txt-green"}/>  
                     <TextLine text={description} className={"ProductPage-txt-light-grey ProductPage-fs-14"}/> 
                     <TextLink  url={url} className={"txt-blue ProductPage-fs-14"} children={txtLink}/>
                 </div> 
