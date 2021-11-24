@@ -14,18 +14,18 @@ function ProductStock({item}) {
         content = (
            
             <div>
-            <div className="row padding-none">
-                <div className="col">
-                    <TextLine text={title} className={"txt-black ProductPage-fs-18"}/>
+                <div className="row padding-none">
+                    <div className="col">
+                        <TextLine text={title} className={"txt-black ProductPage-fs-18"}/>
+                    </div>
                 </div>
+                <Selector
+                    variantOpcion = "Cantidad: "
+                    opcion = "1"
+                    placeHolder = {ph}
+                
+                />
             </div>
-            <Selector
-                variantOpcion = "Stock: "
-                opcion = "1"
-                placeHolder = {ph}
-               
-            />
-        </div>
         )
         
     }else {
