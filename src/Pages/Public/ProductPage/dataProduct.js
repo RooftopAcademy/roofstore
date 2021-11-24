@@ -4,34 +4,21 @@ const product = {
     'condition' : "Nuevo",
     'quantitySales' : 1520,
     'reviews' : 23,
-    'bestSellers' : true,
+    'bestSellers' : false,
     'ranking' : 2,
     'src' : "https://http2.mlstatic.com/D_NQ_NP_838152-MLA47962840755_102021-O.webp",
     'alt' : "Imagen 1 de 1",
-    'stock' : 1,
+    'stock' : 175,
     'assurance' : true,
     'insuranceMonths' : 3,
     'variantSpecs' : true,
-    'variant' : [
-        {
-            "id": 1,
-            "atribute": "Color: ",
-            "value": "Negro ",
-        },
-        {
-            "id": 2,
-            "atribute": "Tamaño del cuadro: ",
-            "value": "M",
-        },
-
-    ],
     'variantOpcion' : ["Color:", "Tamaño del Cuadro:"],
     'opcion' : ["Negro", "M"],
     'divisa' : "$",
     'price' : 49999,
     'discount':  true,
-    'discountRate' : 50,
-    'cantCuotas' : 12, //Cambiar nombre
+    'discountRate' : 22,
+    'cantCuotas' : 12,
     'freeShipping' : true,
     'points' : 389,
     'specs': [
