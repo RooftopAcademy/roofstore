@@ -29,11 +29,7 @@ const icons = {
 };
 
 function Icon({ className, icon }) {
-	return (
-		<>
-			<i className={`${className} ${icons[icon]}`}></i>
-		</>
-	);
+	return <i className={`${className} ${icons[icon]}`}></i>;
 }
 
 export default Icon;
