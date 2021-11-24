@@ -22,7 +22,7 @@ function ProductHighlightedSpecs({product}) {
             </div>
 
             {specific.map((spec) => {
-                return <Spec item={spec} />;
+                return <Spec item={spec} key={spec.id}/>;
             })}
             
             <SeeMore message={mensaje} url = {url}/>
