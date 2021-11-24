@@ -28,14 +28,16 @@ const icons = {
 	'watch' : "fas fa-stopwatch",
 	'trophy': "fas fa-trophy",
 	'shield': "fas fa-shield-alt",
+	'credit-card': "fas fa-credit-card",
+	'car': "fas fa-car",
+	'cell-phone': "fas fa-mobile-alt",
+	'couch': "fas fa-couch",
+	'blender': "fas fa-blender",
+	'microphone': "fas fa-microphone-alt"
 };
 
 function Icon({ className, icon }) {
-	return (
-		<>
-			<i className={`${className} ${icons[icon]}`}></i>
-		</>
-	);
+	return <i className={`${className} ${icons[icon]}`}></i>;
 }
 
 export default Icon;
