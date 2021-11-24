@@ -1,6 +1,12 @@
+:root {
+  --padding-base: 12px;
+  --margin-base: 6px;
+}
+
 *{
   color: var(--black);
 }
+
 .texttag-container {
 	display: inline-flex;
 	padding: 3px 4px;
@@ -71,6 +77,100 @@
 
 .texttag-p {
   font-size: 12px;
+}
+
+.OffersPage-txt-light-grey {
+  color: #00000073;
+}
+.OffersPage-bg-light-grey {
+  background-color: #CCCCCC;
+}
+
+.OffersPage-6-col {
+  width: 50%;
+}
+.OffersPage-publication-h {
+  height: 300px;
+}
+
+.OffersPage-d-none {
+  display: none;
+}
+.OffersPage-v-hidden {
+  visibility: hidden;
+}
+.OffersPage-p-relative {
+  position: relative;
+}
+
+.OffersPage-ai-center {
+  display: flex;
+  align-items: center;
+}
+.OffersPage-jc-center {
+  display: flex;
+  justify-content: center;
+}
+
+.OffersPage-m-right {
+  margin-right: var(--margin-base)
+}
+.OffersPage-m-left {
+  margin-left: var(--margin-base)
+}
+.OffersPage-m-bottom {
+  margin-bottom: var(--padding-base);
+}
+
+.OffersPage-p-0-left {
+  padding-left: var(--padding-base);
+}
+.OffersPage-p-0-right {
+  padding-right: var(--padding-base);
+}
+
+.OffersPage-txt-s {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+}
+
+.OffersPAge-txt-m {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.17;
+}
+
+.OffersPage-txt-b {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+
+.OffersPage-offer-item {
+  height: 120px;
+}
+.OffersPage-offer-title {
+  width: 76px;
+  height: 28px;
+}
+.OffersPage-publication-title {
+  max-height: 32px;
+}
+.OffersPage-pagination {
+  width: 48px;
+  height: 48px;
+}
+
+.OffersPage-active::after {
+  border-bottom: 4px solid #3483fa;
+  border-radius: 0 0 4px 4px;
+  bottom: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
 }
 
 .round{
