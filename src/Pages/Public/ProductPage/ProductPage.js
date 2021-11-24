@@ -50,7 +50,6 @@ function ProductPage() {
             
             <ProductInfoStore
                 store = {store}
-                item = {product}
             />
 
             <ProductHighlightedSpecs
