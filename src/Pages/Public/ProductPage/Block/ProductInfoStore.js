@@ -8,8 +8,11 @@ import Icon from "../../../../Components/Icon"
 let title = "Informacón de la tienda"
 let message = "Ver más datos"
 let url = "/perfil/Mall-360"
+let sales = "Ventas en los últimos 60 días"
+let support = "Brinda buena atencion"
+let shipping = "Despacha sus productos a tiempo"
 
-function ProductInfoStore({item, store}) {
+function ProductInfoStore({store}) {
     let oficialStore = "Tienda oficial de mercado libre"
     return (
         <div className=" br-top">
@@ -23,7 +26,7 @@ function ProductInfoStore({item, store}) {
                     <Logo imgAlt={store.nameStore} imgSrc={store.logoStore}/>
                 </div>
                 <div className="col ">
-                    <TextLine text={store.nameStore} className={"txt-black ProductPage-fs-14"}/>
+                    <TextLine text={store.nameStore} className={"ProductPage-txt-start txt-black ProductPage-fs-14"}/>
                     <TextLine text={oficialStore} className={"ProductPage-txt-light-grey ProductPage-fs-14"}/>  
                 </div>
             </div>
@@ -35,16 +38,16 @@ function ProductInfoStore({item, store}) {
 
             <div className="row">
                 <div className="col  txt-center">
-                    <TextLine text={"18119"} className={"txt-grey ProductPage-font-size-x-large"}/>
-                    <TextLine text={"Ventas en los últimos 60 días"} className={"txt-grey ProductPage-fs-12"}/>    
+                    <TextLine text={store.salesInTheLastMonth} className={"txt-grey ProductPage-font-size-x-large"}/>
+                    <TextLine text={sales} className={"txt-grey ProductPage-fs-12"}/>    
                 </div>
                 <div className="col txt-center br-left br-right">
                     <span className="txt-green"><Icon icon="coment"/></span>
-                    <TextLine text={"Brinda buena atencion"} className={"txt-grey ProductPage-fs-12"}/>  
+                    <TextLine text={support} className={"txt-grey ProductPage-fs-12"}/>  
                 </div>
                 <div className="col txt-center">
                     <span className="txt-green "><Icon icon="watch"/></span>
-                    <TextLine text={"Despacha sus productos a tiempo"} className={"txt-grey ProductPage-fs-12"}/>  
+                    <TextLine text={shipping} className={"txt-grey ProductPage-fs-12"}/>  
             </div>
       </div>
 
