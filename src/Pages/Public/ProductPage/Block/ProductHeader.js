@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import TextLine from "../../../../Components/TextLine";
 import TextLink from "../../../../Components/TextLink";
 import Icon from "../../../../Components/Icon"
@@ -13,7 +14,7 @@ function ProductHeader({item, store}) {
     let category = item.ranking + "° en " + item.category
     let urlStore = "/profile/mall-360"
     let urlCategory = "/category/bicicletas"
-
+    let urlReviews = "catalog/reviews" 
 
     return (
         <div>
@@ -24,11 +25,11 @@ function ProductHeader({item, store}) {
             </div>
             <div className="row navbar-p-base ProductPage-p-bottom-0 ProductPage-p-top-0">
                 <div className="col padding-none m-left-0">
-                        <TextLine text={item.title} className={"txt-black ProductPage-fs-16"}/>
+                        <TextLine text={item.title} className={"ProductPage-txt-start txt-black ProductPage-fs-16"}/>
                 </div>
             </div>
-            <div className="row padding-none">
-                <div className="col padding-none m-left-3">
+            <div className="row navbar-p-base">
+                <div className="col padding-none m-left-0">
                     {store.oficialStore &&
                         <span className="ProductPage-d-flex ProductPage-fs-12">
                             <span className="">
@@ -40,22 +41,24 @@ function ProductHeader({item, store}) {
                     
                 </div>
             </div>
-            <div className="row navbar-p-base">
-                <div className="col padding-none m-left-0">
-                    <div className="ProductPage-d-flex  ProductPage-fs-14"> 
-                        <span className="txt-blue m-right-0 ProductPage-fs-10">
-                            <Icon icon="full-star"/>
-                            <Icon icon="full-star"/>
-                            <Icon icon="full-star"/>
-                            <Icon icon="full-star"/>
-                            <Icon icon="half-star"/>
-                        </span>
-                        <span>
-                            <TextLine text={reviews} className={"ProductPage-txt-light-grey"}/>
-                        </span>
+            <Link className={'link'} to={urlReviews}>
+                <div className="row navbar-p-base">
+                    <div className="col padding-none m-left-0">
+                        <div className="ProductPage-d-flex  ProductPage-fs-14"> 
+                            <span className="txt-blue m-right-0 ProductPage-fs-10">
+                                <Icon icon="full-star"/>
+                                <Icon icon="full-star"/>
+                                <Icon icon="full-star"/>
+                                <Icon icon="full-star"/>
+                                <Icon icon="half-star"/>
+                            </span>
+                            <span>
+                                <TextLine text={reviews} className={"ProductPage-txt-light-grey"}/>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <div className="row navbar-p-base ProductPage-p-top-0">
                 <div className="col padding-none m-left-0">
                     {item.bestSellers &&
