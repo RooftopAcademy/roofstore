@@ -3,18 +3,22 @@ import TextLink from "../../../../Components/TextLink";
 
 let content = ""
 let  priceOff
-let priceCuotas
+let priceDescount
 let installmentPrice
 let url = "/medios-de-pago"
 
  
 function ProductPrice({item}) {
     priceOff = item.price - ((item.price * item.discountRate) / 100)
-    priceCuotas = priceOff / item.cantCuotas
-    installmentPrice= parseFloat(Math.round(priceCuotas * 100) / 100).toFixed(2);
+    let precioC =  parseFloat(Math.round((item.price / item.cantCuotas) * 100) / 100).toFixed(2);
+    installmentPrice = parseFloat(Math.round((priceOff / item.cantCuotas) * 100) / 100).toFixed(2);
+    priceDescount = parseFloat(Math.round(priceOff * 100)/100).toFixed(2);
+
     if(item.discount) {
-        let mensaje = item.divisa + " " + priceOff
-    
+        let precioFinalDescuento = item.divisa + " " + priceDescount
+        let porcentajeDescuento = item.discountRate + "% OFF"
+        let precioCuotasDescuento = "en " + item.cantCuotas + "x " + item.divisa + installmentPrice
+        
         content = (
             <div className="container ProductPage-p-bottom-0">
             {item.discount &&
@@ -34,24 +38,26 @@ function ProductPrice({item}) {
                 <div className="row p-0">
                     <div className="col padding-none">
                         <span className="ProductPage-d-flex ProductPage-p-bottom-0">
-                            <span><TextLine text={mensaje} className={"txt-black ProductPage-fs-36  m-right-0"}/></span>
-                            <span><TextLine text={item.discountRate + "% OFF"} className={"txt-green ProductPage-fs-18 "}/></span>
+                            <span><TextLine text={precioFinalDescuento} className={"txt-black ProductPage-fs-36  m-right-0"}/></span>
+                            <span><TextLine text={porcentajeDescuento} className={"txt-green ProductPage-fs-18 "}/></span>
                         </span>
-                        <TextLine text={"en " + item.cantCuotas + "x " + item.divisa + installmentPrice } className={"txt-grey ProductPage-fs-18 ProductPage-p-top-2"}/>
+                        <TextLine text={precioCuotasDescuento} className={"ProductPage-txt-start txt-grey ProductPage-fs-18 ProductPage-p-top-2"}/>
                     </div>
                 </div>
         </div>
         )
         
     }else {
+        let precioFinal = item.divisa + " " +item.price
+        let precioCuotas = "en " + item.cantCuotas + "x " + item.divisa + precioC
         content = (
             <div className="container ProductPage-p-bottom-0">
                 <div className="row p-0 ProductPage-p-bottom-0">
                     <div className="col padding-none">
                         <span className="ProductPage-d-flex ProductPage-p-bottom-0">
-                            <span><TextLine text={item.divisa + " " +item.price} className={"txt-black ProductPage-fs-36  m-right-0"}/></span>
+                            <span><TextLine text={precioFinal} className={"txt-black ProductPage-fs-36  m-right-0"}/></span>
                         </span>
-                        <TextLine text={"en " + item.cantCuotas + "x " + item.divisa + installmentPrice } className={"txt-grey ProductPage-fs-18 ProductPage-p-top-0"}/>
+                        <TextLine text={precioCuotas} className={"ProductPage-txt-start txt-grey ProductPage-fs-18 ProductPage-p-top-0"}/>
                     </div>
                 </div>
             </div>
