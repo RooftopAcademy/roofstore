@@ -214,3 +214,7 @@ img {
 .ProductPage-p-button {
   padding: 10px;
 }
+
+.ProductPage-txt-start {
+	text-align: start;
+  }
