@@ -6,10 +6,10 @@ import MenuMobile from "./MenuMobile/MenuMobile";
 
 function Navbar() {
 
-  const [active,setActive] = useState(false)
+  const [activeMenu,setActiveMenu] = useState(false)
 
   const toggleMenu = () => {
-    setActive(!active)
+    setActiveMenu(!activeMenu)
   }
 
   return (
@@ -38,7 +38,7 @@ function Navbar() {
           </div>
         </div>
 
-        { active? <MenuMobile/> : ''}
+        { activeMenu? <MenuMobile/> : ''}
         
       </div>
   );
