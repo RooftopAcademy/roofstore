@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react'
+import { render, screen, within, fireEvent } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import Navbar from './Navbar'
 
@@ -38,6 +38,24 @@ describe("Navbar test", () => {
         it('should render two links to redirect', () => {
             const anchorsElement = screen.getAllByRole("link")
             expect(anchorsElement.length).toBe(2)
+        })
+    })
+
+    describe("Test for hamburger menu", () => {
+        beforeEach(() => {
+            render(<MockNavbar/>)
+        })
+
+        it("should render button hamburger menu", async () => {
+            const buttonElement = screen.getByRole("checkbox", {hidden: true})
+            expect(buttonElement).toBeInTheDocument()
+        })
+
+        it("should render menu mobile when clicked hamburger menu", async () => {
+            const buttonElement = screen.getByRole("checkbox", {hidden: true})
+            fireEvent.click(buttonElement)
+            const textElement = screen.getByText("Bienvenido/a")
+            expect(textElement).toBeInTheDocument()
         })
     })
 })
