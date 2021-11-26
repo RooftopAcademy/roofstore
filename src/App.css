@@ -529,6 +529,14 @@
   max-height: 100%;
 }
 
+.DefensaConsumidor-flex-end {
+  justify-content: flex-end;
+}
+
+.DefensaConsumidor-bg-transparent {
+  background-color: transparent;
+}
+
 .Footer-img {
   display: block;
   width: 100%;
