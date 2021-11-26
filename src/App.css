@@ -445,6 +445,90 @@
 	text-align: start;
 }
 
+.ProductPage-btn-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ProductPage-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.ProductPage-keyword-information-button {
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.ProductPage-text-sm {
+  font-size: 0.75rem;
+}
+
+.ProductPage-question-answer-icon {
+  border-left: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  width: 2.5rem;
+  height: 12px;
+  margin-right: 0.25rem;
+}
+
+.ProductPage-row-left {
+  display: flex;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+
+.ProductPage-text-big {
+  font-size: 3.5rem
+}
+
+.ProductPage-toogle-buttons {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+.ProductPage-toogle-radio-input {
+  display: none;
+}
+
+.ProductPage-toogle-radio-label {
+  cursor: pointer;
+  width: 100%;
+}
+
+.ProductPage-slider {
+  overflow-x: scroll;
+}
+
+.ProductPage-card {
+  width: 224px;
+  height: 340px;
+}
+
+.ProductPage-card-body {
+  padding: .5rem .25rem;
+}
+
+.ProductPage-bg-grey {
+  background-color: #e2e2e2;
+}
+
+.ProductPage-a-product-banner {
+  width: 395px;
+  height: 395px;
+}
+
+.ProductPage-img-fit {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .Footer-img {
   display: block;
   width: 100%;
