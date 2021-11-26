@@ -721,3 +721,7 @@
 .HomePage-shopping-info-image {
   width: 64px;
 }
+
+.p-2 {
+  padding: calc(var(--padding-base) * 1.25);
+}
