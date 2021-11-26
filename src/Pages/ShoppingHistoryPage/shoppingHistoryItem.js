@@ -7,7 +7,15 @@ function ShoppingHistoryItem({shoppingData}) {
             {data.shoppingDate}
           </p>
           <div className="p-2 d-flex">
-            <p>Aquí va más info</p>
+            <img src={data.img} alt={data.productName} className="grey-border horizontal-product-img" />
+            <div className="m-left-1 d-flex fd-col">
+              <p className="txt-green txt-bold">
+                {data.shippingStatus}
+              </p>
+              <p>
+                {data.deliveryDate}
+              </p>
+            </div>
           </div>
         </div>
       </div>
