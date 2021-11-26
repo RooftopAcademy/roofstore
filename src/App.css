@@ -20,6 +20,13 @@
 	font-size: 12px;
 }
 
+.MenuMobile-p-0-vertical {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
 .MenuMobile-p-1-vertical {
 	padding-left: 0;
 	padding-right: 0;
@@ -61,8 +68,8 @@
 .MenuMobile-btn {
 	width: 100%;
 	border: 1px solid #1f64eb;
-	padding-top: var(--padding-base);
-	padding-bottom: var(--padding-base);
+	padding-top: 6px;
+	padding-bottom: 6px;
 }
 
 .HomePage-img {
@@ -743,4 +750,8 @@
 
 .InfoVotation-bg-light-blue {
 	background-color: #e3edfb;
+}
+
+.InfoVotation-line-height {
+	line-height: 220%;
 }
