@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react'
+import { render, screen, within, fireEvent } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import Navbar from './Navbar'
 
@@ -39,5 +39,11 @@ describe("Navbar test", () => {
             const anchorsElement = screen.getAllByRole("link")
             expect(anchorsElement.length).toBe(2)
         })
+    })
+
+    it('should redirect to the main page when clicking on the logo', async () => {
+        render(<MockNavbar/>)
+        const logoElement = screen.getByTestId("LogoNavbar")
+        expect(logoElement.getAttribute("href")).toBe("/")
     })
 })
