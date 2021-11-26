@@ -637,3 +637,43 @@
 .HomePage-shopping-info-image {
   width: 64px;
 }
+
+.SearchHelp-fs-16 {
+  font-size: 16px;
+}
+
+.SearchHelp-color-light-grey {
+  color: #00000073;
+}
+
+.SearchHelp-p-0 {
+  padding: var(--padding-base);
+}
+
+.SearchHelp-p-3-left {
+  padding-left: calc(var(--padding-base) * 3);
+}
+
+.SearchHelp-placeholder-light-gray::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.bg-light-grays {
+  background-color: #f1f3f9;
+}
+
+.SearchHelp-bgi-forget {
+  background-image: url('http://localhost:3000/forget.svg');
+  background-repeat: no-repeat;
+  background-position: 10px 50%;
+}
+
+.SearchHelp-border-inputfocus {
+  border: 1px solid var(--grey);
+}
+
+.SearchHelp-border-inputfocus:focus {
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: 0 0 0 0.125em var(--success-color)
+}
