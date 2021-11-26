@@ -725,3 +725,10 @@
 .p-2 {
   padding: calc(var(--padding-base) * 1.25);
 }
+
+.horizontal-product-img {
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+  border-radius: 6px;
+}
