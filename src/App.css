@@ -638,28 +638,45 @@
   width: 64px;
 }
 
+
+.SearchHelp-width-100 {
+  width: 100%;
+}
+
+.SearchHelp-p-absoulte {
+  position: absolute;
+}
+
+.SearchHelp-ai-start {
+  display: flex;
+  align-items: flex-start;
+}
+
 .SearchHelp-fs-16 {
   font-size: 16px;
 }
 
-.SearchHelp-color-light-grey {
-  color: #00000073;
+.SearchHelp-color-black {
+  color: #000000f3;
+}
+
+.SearchHelp-m-1-top {
+  margin-top: calc(var(--margin-base)* 2);
+}
+
+.SearchHelp-m-3-top {
+  margin-top: calc(var(--margin-base)* 4);
 }
 
 .SearchHelp-p-0 {
   padding: var(--padding-base);
 }
-
-.SearchHelp-p-3-left {
-  padding-left: calc(var(--padding-base) * 3);
+.SearchHelp-p-2-left {
+  padding-left: calc(var(--padding-base) * 3.2);
 }
 
 .SearchHelp-placeholder-light-gray::placeholder {
   color: rgba(0, 0, 0, 0.2);
-}
-
-.bg-light-grays {
-  background-color: #f1f3f9;
 }
 
 .SearchHelp-bgi-forget {
@@ -668,12 +685,23 @@
   background-position: 10px 50%;
 }
 
-.SearchHelp-border-inputfocus {
-  border: 1px solid var(--grey);
+.SearchHelp-borderinput-blue {
+  border: 1px solid #B2B2B2;
 }
 
-.SearchHelp-border-inputfocus:focus {
+.SearchHelp-label-input:focus-within .SearchHelp-borderinput-blue {
   outline: none;
   border: 1px solid transparent;
-  box-shadow: 0 0 0 0.125em var(--success-color)
+  box-shadow: 0 0 0 0.125em var(--success-color);
+}
+
+.SearchHelp-bg-transparent {
+  background-color: transparent;
+}
+.SearchHelp-br-transparent {
+  border: none;
+}
+
+.SearchHelp-border-none {
+  border: none
 }
