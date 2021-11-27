@@ -10,7 +10,7 @@ function TextPageLayout({children, title="", showInfoVotation=false}) {
         <>
             <Navbar showSearch={false} showCart={false} />
 
-            <div className="container bg-main p-0">
+            <div className="container bg-main TextPageLayout-p-container">
                 {title &&
                 <div className="row padding-none m-bottom-0">
                     <div className="col padding-none">
