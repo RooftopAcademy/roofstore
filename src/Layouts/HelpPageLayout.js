@@ -2,7 +2,7 @@ import Footer from "../Blocks/Footer"
 import Navbar from "../Blocks/Navbar"
 import TextLine from "../Components/TextLine"
 
-function HelpPageLayout({children, title=""}) {
+function TextPageLayout({children, title=""}) {
 
     return (
         <>
@@ -32,4 +32,4 @@ function HelpPageLayout({children, title=""}) {
     )
 }
 
-export default HelpPageLayout
+export default TextPageLayout
