@@ -753,3 +753,11 @@
 .ConfirmClassification-m-2-bottom {
   margin-bottom: calc(var(--padding-base) * 2);
 }
+
+.ConfirmClassification-b-none {
+  border: none;
+}
+
+.ConfirmClassification-bg-transparent {
+  background-color: transparent;
+}
