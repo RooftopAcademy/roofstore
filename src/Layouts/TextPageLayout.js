@@ -28,7 +28,7 @@ function TextPageLayout({children, title="", showInfoVotation=false}) {
                 {children}
 
                 {showInfoVotation &&
-                <div className="row padding-none m-top-5 m-bottom-5">
+                <div className="row padding-none m-top-5 m-bottom-5" data-testid="info-votation-block">
                     <div className="col HomePage-col-12 padding-none">
                         <InfoVotation />
                     </div>
