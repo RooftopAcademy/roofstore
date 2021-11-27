@@ -37,7 +37,7 @@ function ConfirmClassification() {
         <div className="col padding-none ConfirmClassification-m-2-bottom">
           <p className="ConfirmClassification-txt-sb txt-grey">{ confirmTitleText }</p>
         </div>
-        <div className="col fd-col ai-center">
+        <div id="classifications-container" className="col fd-col ai-center">
           { classifications }
           <div className="col padding-none d-flex OffersPage-jc-center ConfirmClassification-m-2-bottom">
             <p className="txt-bold txt-grey">{ yourPublicationText }</p>
