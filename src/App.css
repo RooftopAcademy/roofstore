@@ -823,3 +823,7 @@
 .SearchHelp-border-none {
   border: none
 }
+
+.TextPageLayout-p-container {
+	padding: 20px;
+}
