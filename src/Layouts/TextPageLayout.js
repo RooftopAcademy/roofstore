@@ -2,8 +2,9 @@ import Footer from "../Blocks/Footer"
 import Navbar from "../Blocks/Navbar"
 import TextLine from "../Components/TextLine"
 import SearchHelp from "../Components/SearchHelp"
+import InfoVotation from "../Components/InfoVotation"
 
-function TextPageLayout({children, title=""}) {
+function TextPageLayout({children, title="", showInfoVotation=false}) {
 
     return (
         <>
@@ -26,7 +27,13 @@ function TextPageLayout({children, title=""}) {
 
                 {children}
 
-                {/* Vote Component */}
+                {showInfoVotation &&
+                <div className="row padding-none m-top-5 m-bottom-5">
+                    <div className="col HomePage-col-12 padding-none">
+                        <InfoVotation />
+                    </div>
+                </div>
+                }
 
             </div>
 
