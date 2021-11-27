@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import TextLink from '../../Components/TextLink'
 import { arrowLeftIcon } from './ConfirmClassification/svgIcon'
 
 import confirmClassificationData from './ConfirmClassification/confirmClassificationData';
@@ -44,13 +43,29 @@ function ConfirmClassification() {
           </div>
         </div>
 
-        <div className="col d-flex w-100 pading-none fd-col">
-          <TextLink url="/next-step" className="rounded col link bg-blue txt-white w-100 OffersPage-m-bottom">
+        <div className="col d-flex w-100 padding-none fd-col">
+          <button className={`
+            rounded
+            col
+            bg-blue
+            txt-white
+            w-100
+            ConfirmClassification-b-none
+            OffersPage-m-bottom
+            ConfirmClassification-txt-mb
+          `}>
             { acceptClassificationText }
-          </TextLink>
-          <TextLink url="/manual-classification" className="col link txt-blue w-100">
+          </button>
+          <button className={`
+            col
+            txt-blue
+            w-100
+            ConfirmClassification-txt-mb
+            ConfirmClassification-bg-transparent
+            ConfirmClassification-b-none
+          `}>
             { modifiedClassificationText }
-          </TextLink>
+          </button>
         </div>
 
       </div>
