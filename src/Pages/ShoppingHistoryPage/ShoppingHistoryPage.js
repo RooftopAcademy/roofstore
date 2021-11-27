@@ -1,6 +1,6 @@
 import TextLink from '../../Components/TextLink'
 import ShoppingHistoryData from './ShoppingHistoryData'
-import ShoppingHistoryItem from './shoppingHistoryItem'
+import ShoppingHistoryItem from './ShoppingHistoryItem'
 import Pagination from '../Public/OffersPage/Blocks/Pagination'
 
 function ShoppingHistoryPage() {
