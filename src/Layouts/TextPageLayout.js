@@ -11,9 +11,9 @@ function TextPageLayout({children, title=""}) {
 
             <div className="container bg-main p-0">
                 {title &&
-                <div className="row padding-none">
+                <div className="row padding-none m-bottom-0">
                     <div className="col padding-none">
-                        <TextLine className={"txt-black txt-bold HomePage-txt-start br-btm HomePage-fs-18"} text={title} />
+                        <TextLine className={"txt-bold HomePage-txt-start br-btm HomePage-fs-18"} text={title} />
                     </div>
                 </div>
                 }
