@@ -53,6 +53,7 @@ function ConfirmClassification() {
             ConfirmClassification-b-none
             OffersPage-m-bottom
             ConfirmClassification-txt-mb
+            js-btn-approve
           `}>
             { acceptClassificationText }
           </button>
@@ -63,6 +64,7 @@ function ConfirmClassification() {
             ConfirmClassification-txt-mb
             ConfirmClassification-bg-transparent
             ConfirmClassification-b-none
+            js-btn-modify
           `}>
             { modifiedClassificationText }
           </button>
