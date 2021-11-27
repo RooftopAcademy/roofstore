@@ -1,6 +1,7 @@
 import Footer from "../Blocks/Footer"
 import Navbar from "../Blocks/Navbar"
 import TextLine from "../Components/TextLine"
+import SearchHelp from "../Components/SearchHelp"
 
 function TextPageLayout({children, title=""}) {
 
@@ -17,8 +18,11 @@ function TextPageLayout({children, title=""}) {
                 </div>
                 }
             
-
-                {/* Searchbar */}
+                <div className="row padding-none m-bottom-5">
+                    <div className="col HomePage-col-12 padding-none">
+                        <SearchHelp />
+                    </div>
+                </div>
 
                 {children}
 
