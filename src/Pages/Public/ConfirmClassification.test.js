@@ -12,7 +12,7 @@ describe('<SearchHelp />', () => {
     )
   })
 
-  test('render a user guide text "Confirmá la clasificación de tu producto"', () => {
+  test('render an user guide text "Confirmá la clasificación de tu producto"', () => {
     const userGuideText = screen.getByText('Confirmá la clasificación de tu producto')
     expect(userGuideText).toBeDefined()
   })
