@@ -3,7 +3,7 @@ import ShoppingHistoryData from './ShoppingHistoryData'
 import ShoppingHistoryItem from './shoppingHistoryItem'
 import Pagination from '../Public/OffersPage/Blocks/Pagination'
 
-function shoppingHistoryPage() {
+function ShoppingHistoryPage() {
   const title = 'Mis Compras'
   const navigationIcon = 'fas fa-arrow-left txt-white'
   const data = ShoppingHistoryData
@@ -30,4 +30,4 @@ function shoppingHistoryPage() {
   )
 }
 
-export default shoppingHistoryPage
+export default ShoppingHistoryPage
