@@ -57,5 +57,11 @@ describe("Navbar test", () => {
             const textElement = screen.getByText("Bienvenido/a")
             expect(textElement).toBeInTheDocument()
         })
+
+        it('should redirect to the main page when clicking on the logo', async () => {
+            render(<MockNavbar/>)
+            const logoElement = screen.getByTestId("LogoNavbar")
+            expect(logoElement.getAttribute("href")).toBe("/")
+        })
     })
 })
