@@ -8,6 +8,7 @@ import ProductPage from './Pages/Public/ProductPage/ProductPage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
 import ConfirmClassification from './Pages/Public/ConfirmClassification';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
+import ChooseItemTitle from './Pages/PublishingProcess/ChooseItemTitle';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
         <Route path="/shopping-history" element={<ShoppingHistoryPage/>} />
+        <Route path="/sell/itemTitle" element={<ChooseItemTitle/>} />
       </Routes>
     </BrowserRouter>
   );
