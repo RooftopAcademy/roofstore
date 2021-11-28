@@ -5,6 +5,9 @@ import LoginPage from './Pages/Public/LoginPage';
 import RegisterPage from './Pages/Public/RegisterPage';
 import OffersPage from './Pages/Public/OffersPage';
 import ProductPage from './Pages/Public/ProductPage/ProductPage';
+import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
+import ConfirmClassification from './Pages/Public/ConfirmClassification';
+import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/offers" element={<OffersPage />} />
         <Route path="/product" element={<ProductPage />} />
+        <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
+        <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
+        <Route path="/shopping-history" element={<ShoppingHistoryPage/>} />
       </Routes>
     </BrowserRouter>
   );
