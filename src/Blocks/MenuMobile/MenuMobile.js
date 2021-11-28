@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TextLine from "../../Components/TextLine";
 import MenuList from "./MenuList";
 import MenuListItem from "./MenuListItem";
@@ -24,13 +25,16 @@ function MenuMobile() {
 						</div>
 					</div>
 					<div className="row MenuMobile-gap-small">
-						<button className="rounded MenuMobile-btn MenuMobile-m-base-left bg-primary txt-bold txt-white">
-							Ingresá
-						</button>
-
-						<button className="rounded MenuMobile-btn MenuMobile-m-base-right txt-bold txt-blue">
-							Creá tu cuenta
-						</button>
+						<Link to="/login" className="SearchHelp-width-100">
+							<button className="rounded MenuMobile-btn MenuMobile-m-base-right bg-primary txt-bold txt-white">
+								Ingresá
+							</button>
+						</Link>
+						<Link to="/register" className="SearchHelp-width-100">
+							<button className="rounded MenuMobile-btn txt-bold txt-blue">
+								Creá tu cuenta
+							</button>
+						</Link>
 					</div>
 				</div>
 				<MenuList>
@@ -43,13 +47,13 @@ function MenuMobile() {
 					></MenuListItem>
 					<MenuListItem
 						textLinkClass="txt-grey"
-						url="/"
+						url="/offers"
 						icon="tag"
 						text="Ofertas"
 					/>
 					<MenuListItem
 						textLinkClass="txt-grey"
-						url="/"
+						url="/shopping-history"
 						icon="clock"
 						text="Historial"
 					/>
