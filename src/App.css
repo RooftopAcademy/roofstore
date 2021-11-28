@@ -1,6 +1,7 @@
 :root {
 	--padding-base: 12px;
 	--margin-base: 6px;
+  --success-light-color: #D4E6FF;
 }
 
 * {
@@ -888,4 +889,23 @@
   height: 74px;
   object-fit: cover;
   border-radius: 6px;
+}
+
+
+.ChooseItemTitle-resize-none {
+  resize: none;
+}
+
+.ChooseItemTitle-border-blue-bottom {
+  border-bottom: 2px solid var(--success-color);
+}
+
+.ChooseItemTitle-placeholder-gray::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.ChooseItemTitle-btn-disabled:disabled {
+  color: white;
+  border: none;
+  background-color: var(--success-light-color);
 }
