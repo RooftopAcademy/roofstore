@@ -1,6 +1,7 @@
 import Icon from "../Components/Icon";
 import Logo from "../Components/Logo";
 import Input from "../Components/TextInput"
+import TextLink from "../Components/TextLink";
 
 function Navbar({showSearch=true, showCart=true}) {
     return (
