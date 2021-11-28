@@ -1,30 +1,44 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import MenuMobile from "./MenuMobile";
 
 describe("MenuMobile", () => {
-	it("should include the correct urls", () => {
-		render(
+	let component;
+
+	beforeEach(() => {
+		component = render(
 			<BrowserRouter>
 				<MenuMobile />
 			</BrowserRouter>
 		);
+	});
 
-		expect(screen.getByText("Ingresá").closest("a")).toHaveAttribute(
+	it("should include `/login` as href", () => {
+		expect(component.getByText("Ingresá").closest("a")).toHaveAttribute(
 			"href",
 			"/login"
 		);
+	});
 
-		expect(screen.getByText("Creá tu cuenta").closest("a")).toHaveAttribute(
+	it("should include `/register` as href", () => {
+		expect(
+			component.getByText("Creá tu cuenta").closest("a")
+		).toHaveAttribute("href", "/register");
+	});
+
+	it("should include `/` as href", () => {
+		expect(component.getByText("Inicio")).toHaveAttribute("href", "/");
+	});
+
+	it("should include `/offers` as href", () => {
+		expect(component.getByText("Ofertas")).toHaveAttribute(
 			"href",
-			"/register"
+			"/offers"
 		);
+	});
 
-		expect(screen.getByText("Inicio")).toHaveAttribute("href", "/");
-
-		expect(screen.getByText("Ofertas")).toHaveAttribute("href", "/offers");
-
-		expect(screen.getByText("Historial")).toHaveAttribute(
+	it("should include `/shopping-history` as href", () => {
+		expect(component.getByText("Historial")).toHaveAttribute(
 			"href",
 			"/shopping-history"
 		);
