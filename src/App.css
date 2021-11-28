@@ -744,6 +744,46 @@
 	width: 64px;
 }
 
+.ConfirmClassification-bg-main-light {
+  background-color: #D7C8FE;
+}
+
+.ConfirmClassification-min-100vh {
+  min-height: 100vh;
+}
+
+.ConfirmClassification-txt-sb {
+  font-size: 1.5rem;
+}
+
+.ConfirmClassification-ai-end {
+  align-items: flex-end;
+}
+
+.ConfirmClassification-m-3-left {
+  margin-left: calc(var(--margin-base) * 3);
+}
+
+.ConfirmClassification-m-6-left {
+  margin-left: calc(var(--margin-base) * 6);
+}
+
+.ConfirmClassification-txt-mb {
+  font-size: 1rem;
+}
+
+.ConfirmClassification-m-2-bottom {
+  margin-bottom: calc(var(--padding-base) * 2);
+}
+
+.ConfirmClassification-b-none {
+  border: none;
+}
+
+.ConfirmClassification-bg-transparent {
+  background-color: transparent;
+}
+
 .InfoVotation-txt-blue {
 	color: #3483fa;
 }
@@ -772,6 +812,21 @@
 
 .SearchHelp-fs-16 {
   font-size: 16px;
+}
+
+.ChooseCategoryItem-conteiner-img {
+  width: 70px;
+  height: 70px;
+}
+
+.ChooseCategoryItem-arrow-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.w-80 {
+  width: 80%;
 }
 
 .SearchHelp-color-black {
@@ -826,4 +881,15 @@
 
 .TextPageLayout-p-container {
 	padding: 20px;
+}
+
+.p-2 {
+	padding: calc(var(--padding-base) * 1.25);
+}
+
+.horizontal-product-img {
+	width: 74px;
+	height: 74px;
+	object-fit: cover;
+	border-radius: 6px;
 }
