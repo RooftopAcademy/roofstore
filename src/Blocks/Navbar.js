@@ -5,7 +5,8 @@ import Input from "../Components/TextInput"
 import MenuMobile from "./MenuMobile/MenuMobile";
 import TextLink from "../Components/TextLink";
 
-function Navbar() {
+function Navbar({showSearch=true, showCart=true}) {
+
   const [activeMenu, setActiveMenu] = useState(false)
 
   const toggleMenu = () => {
@@ -20,25 +21,33 @@ function Navbar() {
                 <Logo imgAlt="Logo" imgSrc="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.17.0/mercadolibre/logo__small@2x.png"/>
               </TextLink>
             </div>
-          <div className="col navbar-search-bar padding-none m-left-0 m-right-0">
-                <Input holderText="Estoy buscando..." className="input rounded shadow-sm navbar-p-input"/>
-          </div>
-          <div className="col padding-none">
+
+            {showSearch &&
+            <div className="col navbar-search-bar padding-none m-left-0 m-right-0">
+            <Input holderText="Estoy buscando..." className="input rounded shadow-sm navbar-p-input"/>
+            </div>
+            }
+
+            <div className="col padding-none">
             <input onClick={toggleMenu}
               role="checkbox"
-              type="checkbox"
-              name="burger-btn-check"
-              id="burger-btn-check"
-              hidden
+                type="checkbox"
+                name="burger-btn-check"
+                id="burger-btn-check"
+                hidden
             />
             <label htmlFor="burger-btn-check" className="burger-btn">
-              <span className="burger-icon"></span>
+                <span className="burger-icon"></span>
             </label>
-          </div>
-          <div className="col txt-white navbar-p-base m-left-0">
-          <Icon icon="cart"/>
-          </div>
+            </div>
+            
+            {showCart &&
+            <div className="col txt-white navbar-p-base m-left-0">
+                <Icon icon="cart"/>
+            </div>
+            }
         </div>
+        
 
         { activeMenu? <MenuMobile/> : ''}
         
