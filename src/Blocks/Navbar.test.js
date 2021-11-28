@@ -41,9 +41,27 @@ describe("Navbar test", () => {
         })
     })
 
-    it('should redirect to the main page when clicking on the logo', async () => {
-        render(<MockNavbar/>)
-        const logoElement = screen.getByTestId("LogoNavbar")
-        expect(logoElement.getAttribute("href")).toBe("/")
+    describe("Test for hamburger menu", () => {
+        beforeEach(() => {
+            render(<MockNavbar/>)
+        })
+
+        it("should render button hamburger menu", async () => {
+            const buttonElement = screen.getByRole("checkbox", {hidden: true})
+            expect(buttonElement).toBeInTheDocument()
+        })
+
+        it("should render menu mobile when clicked hamburger menu", async () => {
+            const buttonElement = screen.getByRole("checkbox", {hidden: true})
+            fireEvent.click(buttonElement)
+            const textElement = screen.getByText("Bienvenido/a")
+            expect(textElement).toBeInTheDocument()
+        })
+
+        it('should redirect to the main page when clicking on the logo', async () => {
+            render(<MockNavbar/>)
+            const logoElement = screen.getByTestId("LogoNavbar")
+            expect(logoElement.getAttribute("href")).toBe("/")
+        })
     })
 })
