@@ -11,7 +11,7 @@ function FooterMenu() {
                 <TextLink url={'/login'} className={'txt-black'}>Ayuda</TextLink>
             </div>
             <div className='col Footer-col-6 Footer-d-flex fd-col'>
-                <TextLink url={'/login'} className={'txt-black m-bottom-0'}>Mis Compras</TextLink>
+                <TextLink url={'/shopping-history'} className={'txt-black m-bottom-0'}>Mis Compras</TextLink>
                 <TextLink url={'/login'} className={'txt-black m-bottom-0'}>Ofertas</TextLink>
                 <TextLink url={'/login'} className={'txt-black m-bottom-0'}>Tiendas Oficiales</TextLink>
                 <TextLink url={'/login'} className={'txt-black m-bottom-0'}>Mercado Puntos</TextLink>

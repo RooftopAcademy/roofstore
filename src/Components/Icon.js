@@ -11,6 +11,7 @@ const icons = {
 	"half-star": "fas fa-star-half-alt",
 	"empty-star": "far fa-star",
 	"arrow-right": "fas fa-angle-right",
+	'arrow-left': 'fas fa-arrow-left',
 	enter: "fas fa-arrow-right",
 	"arrow-down": "fas fa-angle-down",
 	lightning: "fas fa-bolt",

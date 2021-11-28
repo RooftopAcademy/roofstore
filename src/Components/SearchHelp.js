@@ -7,8 +7,9 @@ import { xIcon } from './SearchHelp/svgIcons'
 
 function SearchHelp() {
   const results = (() => {
+    const maxResults = 6
     let items = []
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < maxResults; i++) {
       items.push(<SuggestedResultsItems key={suggestedResultsData[i].id} data={suggestedResultsData[i]}/>)
     }
     return items
