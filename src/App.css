@@ -721,3 +721,18 @@
 .HomePage-shopping-info-image {
   width: 64px;
 }
+
+.ChooseCategoryItem-conteiner-img {
+  width: 70px;
+  height: 70px;
+}
+
+.ChooseCategoryItem-arrow-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.w-80 {
+  width: 80%;
+}
