@@ -1,6 +1,6 @@
 
-import TextPageLayout from "../Layouts/TextPageLayout";
-import info from "./TermsAndConditionsPage/info";
+import TextPageLayout from "../../Layouts/TextPageLayout";
+import info from "./info";
 
 let titulo = "Términos y condiciones de uso del Sitio"
 let text = info
