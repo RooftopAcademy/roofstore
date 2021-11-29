@@ -6,9 +6,11 @@ import RegisterPage from './Pages/Public/RegisterPage';
 import OffersPage from './Pages/Public/OffersPage';
 import ProductPage from './Pages/Public/ProductPage/ProductPage';
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
+import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsumidorPage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
 import ConfirmClassification from './Pages/Public/ConfirmClassification';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
+import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
 
 function App() {
   return (
@@ -20,12 +22,14 @@ function App() {
         <Route path="/offers" element={<OffersPage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/ayuda/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
+        <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
         <Route path="/shopping-history" element={<ShoppingHistoryPage/>} />
+        <Route path="/financial-user-info" element={<InfoFinancialUserPage/>}/> 
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
 export default App;

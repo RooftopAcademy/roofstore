@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 :root {
 	--padding-base: 12px;
 	--margin-base: 6px;
@@ -535,6 +537,50 @@
 	max-height: 100%;
 }
 
+.DefensaConsumidor-flex-end {
+  justify-content: flex-end;
+}
+
+.DefensaConsumidor-bg-transparent {
+  background-color: transparent;
+}
+
+.DefensaConsumidor-container {
+  padding: 1rem;
+}
+
+.DefensaConsumidor-container p {
+  color: #666;
+}
+
+.DefensaConsumidor-section {
+  padding-left: 1rem;
+}
+
+.DefensaConsumidor-section p {
+  margin-bottom: 1rem;
+}
+
+.DefensaConsumidor-list-inside {
+  list-style-position: inside;
+}
+
+.DefensaConsumidor-indice-subtitle {
+  padding: 1.75rem 0;
+}
+
+.DefensaConsumidor-title {
+  font-weight: 600;
+  font-size: 1.55rem;
+}
+
+.DefensaConsumidor-subtitle {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: initial;
+  padding: 1rem 0;
+}
+
 .Footer-img {
 	display: block;
 	width: 100%;
@@ -892,4 +938,8 @@
 	height: 74px;
 	object-fit: cover;
 	border-radius: 6px;
+}
+
+.TextPageLayout-p-container {
+	padding: 20px;
 }
