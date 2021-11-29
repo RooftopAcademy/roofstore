@@ -1,5 +1,5 @@
-import { ArrowLeftIcon ,LampIcon } from "./ChooseItemTitle/svgIcon";
-import LoadData from "./ChooseItemTitle/Blocks/LoadData";
+import { ArrowLeftIcon ,LampIcon } from "./ChooseItemTitlePage/svgIcon";
+import LoadData from "./ChooseItemTitlePage/Blocks/LoadData";
 
 export default function ChooseItemTitlePage() {
   const title = "Indicá tu producto, marca y modelo"
