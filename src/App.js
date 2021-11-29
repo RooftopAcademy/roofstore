@@ -10,6 +10,7 @@ import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsu
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
 import ConfirmClassification from './Pages/Public/ConfirmClassification';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
+import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
         <Route path="/shopping-history" element={<ShoppingHistoryPage/>} />
+        <Route path="/sell/item-title" element={<ChooseItemTitlePage />} />
         <Route path="/financial-user-info" element={<InfoFinancialUserPage/>}/> 
       </Routes>
     </BrowserRouter>
