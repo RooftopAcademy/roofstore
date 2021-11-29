@@ -1,5 +1,6 @@
 import TextPageLayout from "../../Layouts/TextPageLayout"
 import TextLink from "../../Components/TextLink"
+import Footer from "../../Blocks/Footer"
 
 function InfoFinancialUserPage (){
     const title = 'Información al usuario financiero'
@@ -16,125 +17,78 @@ function InfoFinancialUserPage (){
     const secondText = 'En caso de no estar de acuerdo con nuestra respuesta o si tardamos más de 10 días hábiles en hacerlo, podés comunicarte con la Gerencia Principal de Protección a Usuarios Financieros a través de su sitio:'
     const secondTextLink = 'www.usuariosfinancieros.gob.ar.'
     const rights = 'Tus derechos como usuario de servicios financiero:'
-    const imgBc = 'public/210122132030_05BCRA_Normas2019.jpg'
-    const imgDownProducts = 'public/210122131750_01BCRA_Normas2019.jpg'
+    const imgBc = "https://http2.mlstatic.com/secure/salesforce-resources/faqs-images/210122131750_01BCRA_Normas2019.jpg"
+    const imgDownProducts = "https://http2.mlstatic.com/secure/salesforce-resources/faqs-images/210122131750_01BCRA_Normas2019.jpg"
     const rates = 'Conocé nuestras tarifas:'
     const ratesText = 'Cargos y comisiones Mercado Libre'
     const prodAndFees = 'Productos y tasas:'
     const prodAndFeesText = 'Líneas de consumo y préstamos personales en Mercado Libre'
 
     return (
-        <TextPageLayout showInfoVotation={true}>
-            <InfoFinancialUserPage>
+        <TextPageLayout showInfoVotation={true} >        
+            <div className="row">
+                <div className="col txt-bold InfoFinancialUser-title">
+                    <p>{title}</p>
+                </div>
+            </div>
+            <div className="container InfoFinancialUser-tag">
                 <div className="row">
                     <div className="col">
-                        <p>{title}</p>
+                        <p>{initialText}</p>
                     </div>
                 </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col">
-                            <p>{initialText}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{canaltext}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{tel}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{mail}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{helpPort}</p>
-                            <TextLink url={'/login'}>{port}</TextLink>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{areaRespons}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{titular}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{suplente}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{direction}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{mail}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{tel}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{secondText}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <TextLink>{secondTextLink}</TextLink>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{rights}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <img src={imgBc}></img>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <img src={imgDownProducts}></img>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{rates}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <TextLink url="/login">{ratesText}</TextLink>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <p>{prodAndFees}</p>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col">
-                            <TextLink url="/login">{prodAndFeesText}</TextLink>
-                        </div>
+                <div className="row py-0">
+                    <div className="col">
+                        <p className="txt-bold InfoFinancialUser-subtitle">{canaltext}</p>
+                        <p>{tel}</p>
+                        <p>{mail}</p>
+                        <p>{helpPort} <TextLink url={'/login'}>{port}</TextLink></p>
                     </div>
                 </div>
-            </InfoFinancialUserPage>
+                <div className="row">
+                    <div className="col">
+                        <p className="txt-bold InfoFinancialUser-subtitle">{areaRespons}</p>
+                        <p>{titular}</p>
+                        <p>{suplente}</p>
+                        <p>{direction}</p>
+                        <p>{mail}</p>
+                        <p>{tel}</p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <p>{secondText}</p> 
+                        <TextLink url={'/login'}>{secondTextLink}</TextLink>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <p className="txt-bold InfoFinancialUser-subtitle">{rights}</p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <img src={imgBc}></img>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <img src={imgDownProducts}></img>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <p className="txt-bold InfoFinancialUser-subtitle">{rates}</p>
+                        <TextLink url="/login">{ratesText}</TextLink>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col">
+                        <p className="txt-bold InfoFinancialUser-subtitle">{prodAndFees}</p>
+                        <TextLink url="/login">{prodAndFeesText}</TextLink>
+                    </div>
+                </div>
+            </div> 
         </TextPageLayout>
         )
 }
