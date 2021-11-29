@@ -7,63 +7,99 @@ import PasswordPage from "./RegisterPages/PasswordPage"
 import MobilePage from "./RegisterPages/MobilePage"
 
 function RegisterPage() {
+  let [optionActive, setOptionActive] = useState(1)
 
-    const optionInfoEmail = {
-        text: 'Validar e-mail',
-        subText: 'Lo usarás para recuperar tu cuenta.',
-        icon: 'envelope',
-        to: 'register/email'
-    }
+  const optionInfo = {
+    email: {
+      text: "Validar e-mail",
+      subText: "Lo usarás para recuperar tu cuenta.",
+      icon: "envelope",
+      to: "register/email",
+      isActive: 1,
+    },
+    data: {
+      text: "Confirmar tu identidad",
+      subText: "Accede a los beneficios RoofStore.",
+      icon: "dni",
+      to: "register/data",
+      isActive: 3,
+    },
+    mobile: {
+      text: "Validar teléfono",
+      subText: "Servirá para ingresar a tu cuenta.",
+      icon: "cell-phone",
+      to: "register/pass",
+      isActive: 5,
+    },
+    pass: {
+      text: "Crear contraseña",
+      subText: "Servirá para ingresar a tu cuenta.",
+      icon: "lock",
+      to: "register/pass",
+      isActive: 7,
+    },
+  }
 
-    const optionInfoData = {
-        text: 'Confirmar tu identidad',
-        subText: 'Accede a los beneficios RoofStore.',
-        icon: 'dni',
-        to: 'register/data'
-    }
+  const componentToRender = {
+    email: (
+      <EmailPage
+        className={optionActive === 2 ? "" : "d-none"}
+        setOptionActive={setOptionActive}
+        optionActive={optionActive}
+      />
+    ),
+    data: (
+      <DataPage
+        className={optionActive === 4 ? "" : "d-none"}
+        setOptionActive={setOptionActive}
+        optionActive={optionActive}
+      />
+    ),
+    mobile: (
+      <MobilePage
+        className={optionActive === 6 ? "" : "d-none"}
+        setOptionActive={setOptionActive}
+        optionActive={optionActive}
+      />
+    ),
+    password: (
+      <PasswordPage
+        className={optionActive === 8 ? "" : "d-none"}
+        setOptionActive={setOptionActive}
+        optionActive={optionActive}
+      />
+    ),
+  }
 
-    const optionInfoMobile = {
-        text: 'Validar teléfono',
-        subText: 'Servirá para ingresar a tu cuenta.',
-        icon: 'mobile',
-        to: 'register/pass'
-    }
+  return (
+    <DistractionFreeLayout isFooter={false}>
+      <div className={`row ${optionActive % 2 !== 0 ? "" : "d-none"}`}>
+        <div className="col">
+          <div className="title txt-bold m-bottom-2 ">Tus datos</div>
+          <div className="m-bottom-5 ">
+            {" "}
+            Validá tus datos para que nadie pueda ingresa o crear una cuenta a
+            tu nombre.
+          </div>
 
-    const optionInfoPass = {
-        text: 'Crear contraseña',
-        subText: 'Servirá para ingresar a tu cuenta.',
-        icon: 'lock',
-        to: 'register/pass'
-    }
+          {Object.keys(optionInfo).map((key) => {
+            return (
+              <ValidateOption
+                info={optionInfo[key]}
+                active={optionActive === optionInfo[key].isActive}
+                optionActive={optionActive}
+                setOptionActive={setOptionActive}
+              />
+            )
+          })}
+        </div>
+      </div>
 
-
-
-
-    let [optionActive, setOptionActive] = useState(1)
-
-    return (
-        <DistractionFreeLayout isFooter={false} >
-
-            <div className={`row ${optionActive % 2 !== 0 ? '' : 'd-none'}`}>
-                <div className="col">
-                    <div className="title txt-bold m-bottom-2 ">Tus datos</div>
-                    <div className="m-bottom-5 "> Validá tus datos para que nadie pueda ingresa o crear una cuenta a tu nombre.</div>
-                    <ValidateOption info={optionInfoEmail} active={optionActive === 1} optionActive={optionActive} setOptionActive={setOptionActive} />
-                    <ValidateOption info={optionInfoData} active={optionActive === 3} optionActive={optionActive} setOptionActive={setOptionActive} />
-                    <ValidateOption info={optionInfoMobile} active={optionActive === 5} optionActive={optionActive} setOptionActive={setOptionActive} />
-                    <ValidateOption info={optionInfoPass} active={optionActive === 7} optionActive={optionActive} setOptionActive={setOptionActive} />
-                </div>
-            </div>
-
-            <div >
-                <EmailPage className={optionActive === 2 ? '' : 'd-none'} setOptionActive={setOptionActive} optionActive={optionActive} />
-                <DataPage className={optionActive === 4 ? '' : 'd-none'} setOptionActive={setOptionActive} optionActive={optionActive} />
-                <MobilePage className={optionActive === 6 ? '' : 'd-none'} setOptionActive={setOptionActive} optionActive={optionActive} />
-                <PasswordPage className={optionActive === 8 ? '' : 'd-none'} setOptionActive={setOptionActive} optionActive={optionActive} />
-            </div>
-
-        </DistractionFreeLayout>
-    )
+      <div>
+        {Object.keys(componentToRender).map((key) => componentToRender[key])}
+      </div>
+    </DistractionFreeLayout>
+  )
 }
 
 export default RegisterPage

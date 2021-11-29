@@ -34,7 +34,10 @@ const icons = {
 	'cell-phone': "fas fa-mobile-alt",
 	'couch': "fas fa-couch",
 	'blender': "fas fa-blender",
-	'microphone': "fas fa-microphone-alt"
+	'microphone': "fas fa-microphone-alt",
+	envelope: "fas fa-envelope",
+  dni: "far fa-id-card",
+  lock: "fas fa-unlock-alt",
 };
 
 function Icon({ className, icon }) {

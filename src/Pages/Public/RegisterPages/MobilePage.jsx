@@ -15,7 +15,7 @@ function MobilePage({ optionActive, className, setOptionActive }) {
                 <p className="fz-sm txt-grey-copyright m-bottom-5">{explication}</p>
                 <form className="d-flex fd-col">
                     <FormInput id="mobile-input" type="text" className="input round p-form" holderBottom={holder} />
-                    <button type="button" onClick={() => { setOptionActive(optionActive++) }} className=" m-top-5 bg-blue txt-white p-form round txt-bold border-none fz-m">{buttonText}</button>
+                    <button type="button" onClick={() => { setOptionActive(optionActive + 1) }} className=" m-top-5 bg-blue txt-white p-form round txt-bold border-none fz-m">{buttonText}</button>
                 </form>
             </div>
         </div>
