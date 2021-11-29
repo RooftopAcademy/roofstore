@@ -5,6 +5,7 @@ import LoginPage from './Pages/Public/LoginPage';
 import RegisterPage from './Pages/Public/RegisterPage';
 import OffersPage from './Pages/Public/OffersPage';
 import ProductPage from './Pages/Public/ProductPage/ProductPage';
+import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
 import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsumidorPage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
 import ConfirmClassification from './Pages/Public/ConfirmClassification';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/offers" element={<OffersPage />} />
         <Route path="/product" element={<ProductPage />} />
+        <Route path="/ayuda/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
         <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />

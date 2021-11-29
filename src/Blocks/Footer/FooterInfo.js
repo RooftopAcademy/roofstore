@@ -5,7 +5,7 @@ function FooterInfo() {
     return (
         <div className='row'>
             <div className='col'>
-                <TextLink url={'/login'} className={'txt-black m-right-0'}>Términos y condiciones</TextLink>
+                <TextLink url={'/ayuda/terminos-y-condiciones'} className={'txt-black m-right-0'}>Términos y condiciones</TextLink>
                 <TextLink url={'/login'} className={'txt-black m-right-0'}>Cómo cuidamos tu privacidad</TextLink>
                 <TextLink url={'/ayuda/defensa-del-consumidor'} className={'txt-black m-right-0'}>Defensa del Consumidor</TextLink>
                 <TextLink url={'/financial-user-info'} className={'txt-black m-right-0'}>Información al usuario financiero</TextLink>

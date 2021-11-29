@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "../Components/Icon";
 import Logo from "../Components/Logo";
-import Input from "../Components/TextInput"
+import Input from "../Components/TextInput";
 import MenuMobile from "./MenuMobile/MenuMobile";
 import TextLink from "../Components/TextLink";
 
