@@ -782,7 +782,7 @@
 
 .ConfirmClassification-bg-transparent {
   background-color: transparent;
-=======
+}
 .InfoVotation-txt-blue {
 	color: #3483fa;
 }
@@ -888,3 +888,8 @@
   object-fit: cover;
   border-radius: 6px;
 }
+
+.TextPageLayout-p-container {
+	padding: 20px;
+}
+
