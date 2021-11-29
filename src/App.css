@@ -925,18 +925,21 @@
   border: none
 }
 
+.TextPageLayout-p-container {
+	padding: 20px;
+}
+
 .p-2 {
-  padding: calc(var(--padding-base) * 1.25);
+	padding: calc(var(--padding-base) * 1.25);
 }
 
 .horizontal-product-img {
-  width: 74px;
-  height: 74px;
-  object-fit: cover;
-  border-radius: 6px;
+	width: 74px;
+	height: 74px;
+	object-fit: cover;
+	border-radius: 6px;
 }
 
 .TextPageLayout-p-container {
 	padding: 20px;
 }
-

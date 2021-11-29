@@ -6,15 +6,14 @@ import MenuMobile from "./MenuMobile/MenuMobile";
 import TextLink from "../Components/TextLink";
 
 function Navbar({showSearch=true, showCart=true}) {
+    const [activeMenu, setActiveMenu] = useState(false)
 
-  const [activeMenu, setActiveMenu] = useState(false)
+    const toggleMenu = () => {
+      setActiveMenu(!activeMenu)
+    }
 
-  const toggleMenu = () => {
-    setActiveMenu(!activeMenu)
-  }
-
-  return (
-      <div className="container  padding-none">
+    return (
+        <div className="container padding-none">
         <div className="row bg-primary navbar-p-base">
             <div className="col padding-none navbar-width-logo">
               <TextLink dataTestId="LogoNavbar" url={'/'}>
@@ -23,14 +22,14 @@ function Navbar({showSearch=true, showCart=true}) {
             </div>
 
             {showSearch &&
-            <div className="col navbar-search-bar padding-none m-left-0 m-right-0">
-            <Input holderText="Estoy buscando..." className="input rounded shadow-sm navbar-p-input"/>
-            </div>
+              <div className="col navbar-search-bar padding-none m-left-0 m-right-0">
+                  <Input holderText="Estoy buscando..." className="input rounded shadow-sm navbar-p-input"/>
+              </div>
             }
 
             <div className="col padding-none">
             <input onClick={toggleMenu}
-              role="checkbox"
+                role="checkbox"
                 type="checkbox"
                 name="burger-btn-check"
                 id="burger-btn-check"
