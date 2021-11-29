@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AutoGrowTextAreaComponent from '../../../Public/ProductPage/Component/AutoGrowTextAreaComponent'
 
 export default function TextareaRowDynamic({
   placeholder,
@@ -9,8 +10,7 @@ export default function TextareaRowDynamic({
   setDisableContinue = ()=>{},
 }) {
   const [ valueLength, setValueLength ] = useState(0)
-  const [ rows, setRows ] = useState(1)
-  const maxCharInARow = 45
+  const rows = 1
 
   const checkInput = (length) => {
     if (length === 0 && disableContinue === false) {
@@ -21,20 +21,16 @@ export default function TextareaRowDynamic({
     }
   }
 
-  const checkRows = (currentValue, limitValue) => {
-    if (currentValue > limitValue && rows === 1) {
-      setRows(2)
-    }
-    if (currentValue < limitValue && rows === 2) {
-      setRows(1)
-    }
+  const checkGrow = (el) => {
+    el.style.height = "5px";
+    el.style.height = (el.scrollHeight)+"px";
   }
 
   const handleInput = (e) => {
     const inputValueLength = e.target.value.length
     checkInput(inputValueLength)
     setValueLength(inputValueLength)
-    checkRows(inputValueLength, maxCharInARow)
+    checkGrow(e.target)
   }
 
   return (
@@ -46,7 +42,8 @@ export default function TextareaRowDynamic({
           SearchHelp-border-none
           ChooseItemTitle-border-blue-bottom
           ChooseItemTitle-placeholder-gray
-          ConfirmClassification-txt-mb 
+          ConfirmClassification-txt-mb
+          HomePage-overflow-hidden
         `}
         type={type}
         rows={rows}
