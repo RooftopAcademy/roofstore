@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import AutoGrowTextAreaComponent from '../../../Public/ProductPage/Component/AutoGrowTextAreaComponent'
 
 export default function TextareaRowDynamic({
   placeholder,
