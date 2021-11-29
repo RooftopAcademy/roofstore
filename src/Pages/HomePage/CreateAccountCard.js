@@ -1,4 +1,5 @@
 import TextLink from "../../Components/TextLink"
+import { Link } from "react-router-dom"
 
 export function CreateAccountCard() {
 
@@ -11,7 +12,9 @@ export function CreateAccountCard() {
         <div className="row">
             <div className="col HomePage-col-12 bg-white shadow-sm rounded p-0 HomePage-d-flex fd-col">
                 <p className="txt-bold m-bottom-0 HomePage-fs-18">{titleText}</p>
-                <button type="button" className="rounded bg-blue HomePage-border-none txt-white p-0 m-bottom-0 HomePage-fs-16" >{buttonText}</button>
+                <Link to="/register">
+                    <button type="button" className="rounded bg-blue HomePage-border-none txt-white p-0 m-bottom-0 HomePage-fs-16 MenuMobile-width-100" >{buttonText}</button>
+				</Link>
                 <p className="txt-grey txt-center HomePage-fs-16">
                     {footerText}
                     <TextLink url={'/login'} className={'txt-blue'}>{linkText}</TextLink>
