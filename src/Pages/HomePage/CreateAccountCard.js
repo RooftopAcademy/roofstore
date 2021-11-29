@@ -14,7 +14,7 @@ export function CreateAccountCard() {
                 <p className="txt-bold m-bottom-0 HomePage-fs-18">{titleText}</p>
                 <Link to="/register">
                     <button type="button" className="rounded bg-blue HomePage-border-none txt-white p-0 m-bottom-0 HomePage-fs-16 MenuMobile-width-100" >{buttonText}</button>
-				</Link>
+                </Link>
                 <p className="txt-grey txt-center HomePage-fs-16">
                     {footerText}
                     <TextLink url={'/login'} className={'txt-blue'}>{linkText}</TextLink>
