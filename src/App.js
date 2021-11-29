@@ -1,5 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HelpPage from './Pages/Public/HelpPage';
+import HelpPageCategory from './Pages/Public/HelpPage/HelpPageCategory';
 import HomePage from './Pages/Public/HomePage';
 import LoginPage from './Pages/Public/LoginPage';
 import RegisterPage from './Pages/Public/RegisterPage';
@@ -14,13 +16,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/help/:id" element={<HelpPageCategory />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/offers" element={<OffersPage />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
-        <Route path="/shopping-history" element={<ShoppingHistoryPage/>} />
+        <Route path="/shopping-history" element={<ShoppingHistoryPage />} />
       </Routes>
     </BrowserRouter>
   );
