@@ -935,3 +935,8 @@
   object-fit: cover;
   border-radius: 6px;
 }
+
+.TextPageLayout-p-container {
+	padding: 20px;
+}
+
