@@ -24,7 +24,7 @@ export default function RedirectBtn({
   `)
 
   function handleclick() {
-    navigate('/')
+    navigate(url)
   }
 
   return (
