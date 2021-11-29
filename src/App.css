@@ -1,7 +1,6 @@
 :root {
 	--padding-base: 12px;
 	--margin-base: 6px;
-  --success-light-color: #D4E6FF;
 }
 
 * {
@@ -907,5 +906,13 @@
 .ChooseItemTitle-btn-disabled:disabled {
   color: white;
   border: none;
-  background-color: var(--success-light-color);
+  background-color: var(--light-blue);
+}
+
+.ChooseItemTitle-bg-light-primary {
+  background-color: #D7C8FE;
+}
+
+.ChooseItemTitle-p-3-bottom {
+  padding-bottom: calc(var(--padding-base)* 3);
 }
