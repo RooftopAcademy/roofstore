@@ -4,7 +4,7 @@ import MenuList from "./MenuList";
 import MenuListItem from "./MenuListItem";
 
 function MenuMobile() {
-	const location = useLocation().pathname;
+	const { pathname: location } = useLocation();
 
 	const menuLists = {
 		menuList1: [],
