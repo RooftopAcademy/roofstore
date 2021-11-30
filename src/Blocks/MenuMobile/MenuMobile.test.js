@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, fireEvent } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import MenuMobile from "./MenuMobile";
 
@@ -43,4 +43,10 @@ describe("MenuMobile", () => {
 			"/shopping-history"
 		);
 	});
+
+	/*	it("should assign classes depending on the current location", () => {
+		const offersLink = component.getByText("Ofertas");
+
+		expect(offersLink).toHaveClass("txt-blue");
+	});*/
 });
