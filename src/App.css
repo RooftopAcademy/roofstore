@@ -970,3 +970,12 @@
 .TextPageLayout-p-container {
 	padding: 20px;
 }
+
+.Official-card-wrap{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.border-bg-main{
+	border: 1px solid #e5e5e5
+}
