@@ -12,6 +12,7 @@ import ConfirmClassification from './Pages/Public/ConfirmClassification';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
+import CartUnlogged from './Pages/Public/CartUnlogged';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/shopping-history" element={<ShoppingHistoryPage/>} />
         <Route path="/sell/item-title" element={<ChooseItemTitlePage />} />
         <Route path="/financial-user-info" element={<InfoFinancialUserPage/>}/> 
+        <Route path="/cart-unlogged" element={<CartUnlogged/>}/> 
       </Routes>
     </BrowserRouter>
   )
