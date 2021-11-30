@@ -12,6 +12,7 @@ import ConfirmClassification from './Pages/Public/ConfirmClassification';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
+import OfficialStores from './Pages/Public/officialStoresPage';
 
 function App() {
   return (
@@ -21,14 +22,15 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/offers" element={<OffersPage />} />
+        <Route path="/officialStores" element={<OfficialStores />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/ayuda/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
         <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
-        <Route path="/shopping-history" element={<ShoppingHistoryPage/>} />
+        <Route path="/shopping-history" element={<ShoppingHistoryPage />} />
         <Route path="/sell/item-title" element={<ChooseItemTitlePage />} />
-        <Route path="/financial-user-info" element={<InfoFinancialUserPage/>}/> 
+        <Route path="/financial-user-info" element={<InfoFinancialUserPage />} />
       </Routes>
     </BrowserRouter>
   )
