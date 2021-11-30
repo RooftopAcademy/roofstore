@@ -12,7 +12,7 @@ import ConfirmClassification from './Pages/Public/ConfirmClassification';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
-import OfficialStores from './Pages/Public/officialStoresPage';
+import OfficialStores from './Pages/Public/OfficialStoresPage';
 
 function App() {
   return (
