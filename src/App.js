@@ -22,8 +22,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/offers" element={<OffersPage />} />
-        <Route path="/product" element={<ProductPage />} />
         <Route path="/product-list" element={<ProductListPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/ayuda/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
         <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
