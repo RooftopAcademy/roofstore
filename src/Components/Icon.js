@@ -34,7 +34,8 @@ const icons = {
 	'cell-phone': "fas fa-mobile-alt",
 	'couch': "fas fa-couch",
 	'blender': "fas fa-blender",
-	'microphone': "fas fa-microphone-alt"
+	'microphone': "fas fa-microphone-alt",
+	'ellipsis-v': "fas fa-ellipsis-v"
 };
 
 function Icon({ className, icon }) {
