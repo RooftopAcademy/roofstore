@@ -1,12 +1,15 @@
 import StoreCard from "./StoreCard"
 
 function OfficialStoresBlock({ category }) {
+
     const textButton = 'Ver todas'
     const text = 'Tiendas destacadas en'
+
     return (
-        <div className="m-top-5 m-bottom-5">
+        <div className=" m-bottom-5 SearchHelp-m-3-top">
             <div className="row padding-none">
                 <div className="col padding-none">
+
                     <p className="title">{text}</p>
                     <p className="txt-bold title">{category.title}</p>
                 </div>
