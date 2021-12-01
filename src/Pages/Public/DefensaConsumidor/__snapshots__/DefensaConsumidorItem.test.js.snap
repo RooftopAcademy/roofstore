@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefensaConsumidorPage <DefensaConsumidorItem /> tenga la estructura DOM (incluye classnames) del snapshot 1`] = `
+<div>
+  <section
+    class="border-top-footer"
+  >
+    <div
+      class="row DefensaConsumidor-flex-end padding-none"
+    >
+      <button
+        class="link-color ProductPage-keyword-information-button DefensaConsumidor-bg-transparent"
+      >
+        Volver arriba
+      </button>
+    </div>
+    <h4
+      class="DefensaConsumidor-subtitle m-left-5"
+    >
+      Title
+    </h4>
+    <p
+      class="m-left-5"
+    >
+      Última modificación: 
+      01/01/2021
+    </p>
+    <div>
+       
+    </div>
+    <div
+      class="DefensaConsumidor-section"
+    >
+      <p>
+        A Paragraph or Many Paragraphs
+      </p>
+    </div>
+  </section>
+</div>
+`;
