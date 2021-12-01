@@ -43,4 +43,11 @@ describe("MenuMobile", () => {
 			"/shopping-history"
 		);
 	});
+
+	it("should include '/categories' as href", () => {
+		expect(component.getByText("Categorías")).toHaveAttribute(
+			"href",
+			"/categories"
+		);
+	});
 });
