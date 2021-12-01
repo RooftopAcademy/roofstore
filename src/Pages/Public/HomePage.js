@@ -234,7 +234,7 @@ function HomePage() {
                             </div>
 
                             <div className="HomePage-p-sm">
-                                <Link className="link" to={"/login"}>
+                                <Link className="link" to={"/categories"}>
                                     <div className="p-0 bg-white rounded">
                                         <TextLine className="txt-blue HomePage-fs-16" text={"Ver más categorías"} />
                                     </div>
