@@ -5,6 +5,7 @@ import LoginPage from './Pages/Public/LoginPage';
 import RegisterPage from './Pages/Public/RegisterPage';
 import OffersPage from './Pages/Public/OffersPage';
 import ProductPage from './Pages/Public/ProductPage/ProductPage';
+import ProductListPage from './Pages/Public/ProductListPage'
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
 import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsumidorPage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/offers" element={<OffersPage />} />
+        <Route path="/product-list" element={<ProductListPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/ayuda/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
         <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
