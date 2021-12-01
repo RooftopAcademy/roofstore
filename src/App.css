@@ -979,3 +979,29 @@
 .border-bg-main{
 	border: 1px solid #e5e5e5
 }
+
+.Stores-search-container .Stores-input {
+    padding-left: 2.375rem;
+}
+
+.Stores-search-container .Stores-icon {	
+    position: absolute;
+    z-index: 2;      
+    line-height: 4rem;       
+}
+
+.Stores-input {
+	outline: 0;
+	border-width: 0 0 2px;
+	border-color:	#adadad;
+  }
+
+  .Stores-input-selected {
+	border-color: var(--success-color)
+  }
+  
+  .Stores-image-banner{	  
+	height: 160px;	
+	object-fit: cover;
+	object-position: center;
+  }
