@@ -85,7 +85,7 @@ function MenuMobile() {
 					/>
 					<MenuListItem
 						textLinkClass="txt-grey"
-						url="/"
+						url="/categories"
 						icon="list"
 						text="Categorías"
 					/>
