@@ -1,18 +1,19 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './Pages/Public/HomePage';
-import LoginPage from './Pages/Public/LoginPage';
-import RegisterPage from './Pages/Public/RegisterPage';
-import OffersPage from './Pages/Public/OffersPage';
-import ProductPage from './Pages/Public/ProductPage/ProductPage';
-import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
-import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsumidorPage';
+
+import CartPage from './Pages/Public/CartPage';
+import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
 import ConfirmClassification from './Pages/Public/ConfirmClassification';
-import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
-import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
+import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsumidorPage';
+import HomePage from './Pages/Public/HomePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
-import CartPage from './Pages/Public/CartPage';
+import LoginPage from './Pages/Public/LoginPage';
+import OffersPage from './Pages/Public/OffersPage';
+import ProductPage from './Pages/Public/ProductPage/ProductPage';
+import RegisterPage from './Pages/Public/RegisterPage';
+import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
+import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
 
 function App() {
   return (
