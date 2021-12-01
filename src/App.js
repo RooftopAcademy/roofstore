@@ -28,12 +28,9 @@ function App() {
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
         <Route path="/shopping-history" element={<ShoppingHistoryPage/>} />
-<<<<<<< HEAD
         <Route path="/sell/item-title" element={<ChooseItemTitlePage />} />
         <Route path="/financial-user-info" element={<InfoFinancialUserPage/>}/> 
-=======
         <Route path="/categories" element={<CategoriesPage/>} />
->>>>>>> 2da9296bce6d1353e1b83a7d83cf3386668726d0
       </Routes>
     </BrowserRouter>
   )
