@@ -4,16 +4,20 @@ import CartItem from "../CartPage/CartItem";
 import CartTotal from "../CartPage/CartTotal";
 import FeaturedProductsBlock from "./ProductPage/Block/FeaturedProductsBlock";
 import { MOCK_PRODUCTOS_PROMOCIONADOS } from '../Public/ProductPage/mockData' 
+import axios from "axios";
 
 function CartPage () {
 
     const [products, setProducts] = useState([])
     const [priceTotal, setPriceTotal] = useState(0)
 
+    const fetchProductCart = async () => {
+        const response = await axios.get('http://localhost:3000/data/productCartData.json')
+        setProducts(response.data)
+    }
+
     useEffect(() => {
-        fetch('http://localhost:3000/data/productCartData.json')
-            .then(res => res.json())
-            .then(json => setProducts(json))
+        fetchProductCart()
     }, [])
 
     useEffect(() => {
