@@ -21,10 +21,10 @@ describe( "Info", () => {
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterInfo/> with the link '/terminos-y-condiciones'", () => {
+    it("should render the component <FooterInfo/> with the link '/ayuda/terminos-y-condiciones'", () => {
         const htmlValue = screen.getByText("Términos y condiciones")
         const variable = htmlValue.attributes["href"].value
-        expect(variable).toBe("/terminos-y-condiciones");
+        expect(variable).toBe("/ayuda/terminos-y-condiciones");
     })
 
     it("should render the component <FooterInfo/> with the text 'Cómo cuidamos tu privacidad'", async () => {
