@@ -1,11 +1,13 @@
 import { useState } from "react"
+import Icon from "./Icon"
 
 import SuggestedResultsItems from './SearchHelp/Components/SuggestedResultItem'
 import suggestedResultsData from './SearchHelp/suggestedResultsData'
 import { xIcon } from './SearchHelp/svgIcons'
 
 
-function SearchHelp() {
+function SearchHelp({isHelpMode = true, setNavBarAsSearchMode = null}) {
+  
   const results = (() => {
     const maxResults = 6
     let items = []
@@ -17,16 +19,16 @@ function SearchHelp() {
 
   const input = document.getElementById('search-help')
 
-  const [ suggestedResults, setSuggestedResults ] = useState('')
+  const [ suggestedResults, setSuggestedResults ] = useState(results)
   const [ inputIsFocused, setInputIsFocused ] = useState(false)
   const [ inputHasValue, setInputHasValue ] = useState(false)
 
-  const placeHodlerText = 'Buscá en Ayuda'
+  const placeHodlerText = isHelpMode ? 'Buscá en Ayuda' : 'Estoy buscando...'
   const titleSuggestText = 'Sugerencias para tu búsqueda'
 
   const handleInput = (e) => {
     const inputValue = e.target.value
-    if (inputValue !== '') {
+    if (inputValue !== '' || !isHelpMode) {
       setInputIsFocused(true)
       setInputHasValue(true)
       setSuggestedResults(results)
@@ -38,12 +40,14 @@ function SearchHelp() {
 
   const handleFocus = (e) => {
     const inputValue = e.target.value
-    if (inputValue !== '') return setInputIsFocused(true)
+    !isHelpMode && setNavBarAsSearchMode(true)
+    if (inputValue !== '' || !isHelpMode) return setInputIsFocused(true)
   }
 
   const handleUnfocus = () => {
     setTimeout(() => {
       setInputIsFocused(false)
+      !isHelpMode && setNavBarAsSearchMode(false)
     }, 0)
   }
 
@@ -60,12 +64,13 @@ function SearchHelp() {
     `}>
       <div className={`
         col
-        rounded
         padding-none
         bg-white
         OffersPage-ai-center
-        SearchHelp-borderinput-blue
+        ${isHelpMode && `SearchHelp-borderinput-blue rounded`}
+        ${!isHelpMode && !inputIsFocused && `rounded`}
       `}>
+        {!isHelpMode && <Icon className="ProductPage-txt-light-grey SearchHelp-p-absoulte m-left-2" icon={inputIsFocused ? "arrow-left" : 'search'} />}
         <input
           id="search-help"
           autoComplete="off"
@@ -79,7 +84,7 @@ function SearchHelp() {
             SearchHelp-p-0
             SearchHelp-p-2-left
             SearchHelp-placeholder-light-gray
-            SearchHelp-bgi-forget
+            ${isHelpMode && `SearchHelp-bgi-forget`}
             SearchHelp-border-none
           `}
           onChange={handleInput}
@@ -103,17 +108,21 @@ function SearchHelp() {
           row
           fd-col
           bg-white
-          rounded
           shadow-sm
           SearchHelp-ai-start
-          SearchHelp-m-1-top
-          SearchHelp-p-absoulte
           SearchHelp-width-100
+          SearchHelp-p-absoulte
+          ${isHelpMode ? 
+          `SearchHelp-m-1-top
+          rounded
+          ` :
+          `br-top`
+          }
         `}>
           <div className="col padding-none SearchHelp-width-100">
-            <p className="texttag-p txt-bold OffersPage-txt-light-grey">
+            {isHelpMode && <p className="texttag-p txt-bold OffersPage-txt-light-grey">
               { titleSuggestText }
-            </p>
+            </p>}
           </div>
           { suggestedResults }
         </div>
