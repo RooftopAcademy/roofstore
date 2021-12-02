@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import CartPage from './Pages/Public/CartPage';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/ayuda/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
         <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
+        <Route path="/cart" element={<CartPage/>} />
         <Route path="/categories" element={<CategoriesPage/>} />
         <Route path="/financial-user-info" element={<InfoFinancialUserPage/>}/> 
         <Route path="/help" element={<HelpPage />} />
