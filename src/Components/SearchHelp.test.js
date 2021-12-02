@@ -4,12 +4,17 @@ import userEvent from '@testing-library/user-event'
 import SearchHelp from "./SearchHelp"
 
 describe('<SearchHelp />', () => {
+
+  let rerenderSearchHelp
+
   beforeEach(() => {
-    render(
+    const { rerender } = render(
       <BrowserRouter>
         <SearchHelp />
       </BrowserRouter>
     )
+
+    rerenderSearchHelp = rerender
   })
 
   test('render a placeholder that say "Buscá en Ayuda"', () => {
@@ -48,5 +53,15 @@ describe('<SearchHelp />', () => {
     const clearInputContentBtn = document.getElementById('clear-input-content')
     userEvent.click(clearInputContentBtn)
     expect(input.value).toBe('')
+  })
+
+  test('should render "Estoy buscando..." text as placeholder when receive prop isHelpMode={false}', () => {
+    rerenderSearchHelp(
+      <BrowserRouter>
+        <SearchHelp isHelpMode={false} />
+      </BrowserRouter>
+    )
+    const placeHolder = screen.getByPlaceholderText('Estoy buscando...')
+    expect(placeHolder).toBeDefined()
   })
 })
