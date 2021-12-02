@@ -17,6 +17,9 @@ import ProductPage from './Pages/Public/ProductPage/ProductPage';
 import ProductListPage from './Pages/Public/ProductListPage'
 import RegisterPage from './Pages/Public/RegisterPage';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
+import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
+import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
+import OfficialStores from './Pages/Public/OfficialStoresPage';
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
 
 function App() {
@@ -33,13 +36,15 @@ function App() {
         <Route path="/help/:id" element={<HelpPageCategory />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/offers" element={<OffersPage />} />
+        <Route path="/officialStores" element={<OfficialStores />} />
         <Route path="/product-list" element={<ProductListPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/sell/chooseCategory" element={<ChooseRootCategory />} />
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
-        <Route path="/sell/item-title" element={<ChooseItemTitlePage />} />
         <Route path="/shopping-history" element={<ShoppingHistoryPage />} />
+        <Route path="/sell/item-title" element={<ChooseItemTitlePage />} />
+        <Route path="/financial-user-info" element={<InfoFinancialUserPage />} />
       </Routes>
     </BrowserRouter>
   )
