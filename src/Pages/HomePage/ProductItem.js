@@ -2,7 +2,7 @@ import TextLine from '../../Components/TextLine'
 import Icon from '../../Components/Icon'
 import { Link } from 'react-router-dom'
 
-function ProductItem({item, orientation = 'vertical'}) {
+function ProductItem({item, orientation = 'vertical', dataTestId = ''}) {
 
     const freeShippingText = 'Envío gratis'
     const badge = '$'
@@ -24,7 +24,7 @@ function ProductItem({item, orientation = 'vertical'}) {
     }
 
     return (
-        <Link className={'link br-btm'} to={"/login"}>
+        <Link data-testid={dataTestId} className={'link br-btm'} to={"/product/" + item.id}>
             <div className={`row p-0 ${classes.direction}`}>
                 <img className={`${classes.imageSize}`} src={item.image} alt={item.title}/>
 

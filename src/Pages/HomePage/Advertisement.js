@@ -5,7 +5,7 @@ function Advertisement({item, textLink}) {
     return (
         <div className="row">
             <div className="col bg-white rounded shadow-sm padding-none HomePage-col-12">
-                <Link className={"link"} to={"/login"}>
+                <Link className={"link"} to={item.redirect}>
                     <div className="HomePage-d-flex padding-none">
                         <div className="p-0 HomePage-d-flex fd-col HomePage-flex-grow-1">
                             <TextLine className={"txt-black txt-bold HomePage-txt-start HomePage-fs-12"} text={item.title}/>

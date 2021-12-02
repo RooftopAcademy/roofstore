@@ -56,6 +56,7 @@ function HomePage() {
                                 key={product.id}
                                 orientation = "horizontal"
                                 item = {product}
+                                dataTestId={`product-detail-${product.id}`}
                             />
                         )
                     })}

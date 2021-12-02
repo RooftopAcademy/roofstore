@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import MenuMobile from "./MenuMobile";
 
 describe("MenuMobile", () => {
@@ -7,9 +7,9 @@ describe("MenuMobile", () => {
 
 	beforeEach(() => {
 		component = render(
-			<BrowserRouter>
+			<MemoryRouter initialEntries={[{pathname: "/offers"}]}>
 				<MenuMobile />
-			</BrowserRouter>
+			</MemoryRouter>
 		);
 	});
 
@@ -49,5 +49,11 @@ describe("MenuMobile", () => {
 			"href",
 			"/categories"
 		);
+  });
+
+	it("should assign classes depending on the current location", () => {
+		const offersLink = component.getByText("Ofertas");
+
+		expect(offersLink).toHaveClass("txt-blue");		
 	});
 });
