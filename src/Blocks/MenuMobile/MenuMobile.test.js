@@ -44,6 +44,13 @@ describe("MenuMobile", () => {
 		);
 	});
 
+	it("should include '/categories' as href", () => {
+		expect(component.getByText("Categorías")).toHaveAttribute(
+			"href",
+			"/categories"
+		);
+  });
+
 	it("should assign classes depending on the current location", () => {
 		const offersLink = component.getByText("Ofertas");
 

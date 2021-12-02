@@ -44,7 +44,6 @@ function App() {
         <Route path="/sell/confirm-classification" element={<ConfirmClassification />} />
         <Route path="/shopping-history" element={<ShoppingHistoryPage />} />
         <Route path="/sell/item-title" element={<ChooseItemTitlePage />} />
-        <Route path="/financial-user-info" element={<InfoFinancialUserPage />} />
       </Routes>
     </BrowserRouter>
   )
