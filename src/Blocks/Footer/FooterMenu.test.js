@@ -75,10 +75,10 @@ describe( "Menu", () => {
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterMenu/> with the link '/my-purchases'", () => {
-        const htmlValue = screen.getByText("Mis Compras")
-        const variable = htmlValue.attributes["href"].value
-        expect(variable).toBe("/my-purchases");
+    it("should render the component <FooterMenu/> with the link '/shopping-history'", () => {
+      const htmlValue = screen.getByText("Mis Compras")
+      const variable = htmlValue.attributes["href"].value
+      expect(variable).toBe("/shopping-history")
     })
 
     it("should render the component <FooterMenu/> with the text 'Ofertas'", async () => {

@@ -46,17 +46,17 @@ describe( "Info", () => {
     it("should render the component <FooterInfo/> with the link '/informacion-usuario'", () => {
         const htmlValue = screen.getByText("Información al usuario financiero")
         const variable = htmlValue.attributes["href"].value
-        expect(variable).toBe("/informacion-usuario");
+        expect(variable).toBe("/financial-user-info")
     })
     it("should render the component <FooterInfo/> with the text 'Defensa del Consumidor'", async () => {
         const footerInfo = screen.getByText("Defensa del Consumidor");
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterInfo/> with the link '/defensa-del-consumidor'", () => {
+    it("should render the component <FooterInfo/> with the link '/ayuda/defensa-del-consumidor'", () => {
         const htmlValue = screen.getByText("Defensa del Consumidor")
         const variable = htmlValue.attributes["href"].value
-        expect(variable).toBe("/defensa-del-consumidor");
+        expect(variable).toBe("/ayuda/defensa-del-consumidor");
     })
 
 })    
