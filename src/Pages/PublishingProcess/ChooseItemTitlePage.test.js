@@ -2,13 +2,41 @@ import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import ChooseItemTitlePage from './ChooseItemTitlePage'
 import userEvent from '@testing-library/user-event'
+import { AuthContext } from "../../context/AuthContext"
 
 import App from '../../App'
 
-describe('Test the route: /sell/item-title', () => {
+describe("Test the route: /sell/item-title without authenticated user, user is null", () => {
+
+  const user = null
+
+  beforeEach(() => {
+    window.history.pushState({}, "ChooseItemTitlePage", "/sell/item-title")
+    render(
+      <AuthContext.Provider value={{ user }}>
+        <App />
+      </AuthContext.Provider>
+    )
+  })
+
+  test('should render <LoginPage /> in the route: "/sell/item-title"', () => {
+    const loginTitle = screen.getByText(
+      "¡Hola! Ingresá tu teléfono, e‑mail o usuario"
+    )
+    expect(loginTitle).toBeInTheDocument()
+    expect(window.location.pathname).toBe("/sell/item-title")
+  })
+})
+
+describe('Test the route: /sell/item-title with authenticated user', () => {
+  const user = { username: 'malvavisco tostado'}
   beforeEach(() => {
     window.history.pushState({}, 'ChooseItemTitlePage', '/sell/item-title')
-    render(<App />)
+    render(
+      <AuthContext.Provider value={{ user }}>
+        <App />
+      </AuthContext.Provider>
+    )
   })
 
   test('render components of <ChooseItemTitle /> in the route: "/sell/item-title"', () => {
