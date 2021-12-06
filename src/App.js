@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import CartPage from './Pages/Public/CartPage';
-import CartUnlogged from './Pages/Public/CartUnlogged';
+import CartUnlogged from './Pages/Public/CartUnloggedPage';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
