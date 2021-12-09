@@ -15,8 +15,8 @@ function OfficialStores() {
                 <div className="col">
                     <InputStores />
                     {
-                        officialStoresData.map(category => {
-                            return (<OfficialStoresBlock category={category} />)
+                        officialStoresData.map((category, i) => {
+                            return (<OfficialStoresBlock category={category} key={i}/>)
                         })
                     }
                     <div className="row jc-center">
