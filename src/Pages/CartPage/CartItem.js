@@ -63,13 +63,13 @@ function CartItem ({item, dataTestId=""}) {
             </div>
 
             <div className="row">
-                <a className="txt-blue fz-sm">Eliminar</a>
+                <button className="txt-blue fz-sm HomePage-border-none bg-white">Eliminar</button>
                 <TextLink className="fz-sm txt-blue" url="/">
                     Ver más productos del vendedor
                 </TextLink>
-                <a>
+                <button className="HomePage-border-none">
                     <Icon icon="ellipsis-v" className="txt-grey-copyright"/>
-                </a>
+                </button>
             </div>
 
         </div>
