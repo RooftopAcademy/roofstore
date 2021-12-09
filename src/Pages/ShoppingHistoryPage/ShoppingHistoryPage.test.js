@@ -34,7 +34,7 @@ describe('<ShoppingHistoryPage/>',()=>{
 describe(
   "Test the route: /shopping-history" , () => {
 
-    test("should render <LoginPage /> if user is not authenticated", () => {
+    test("should render <LoginPage /> if user is not authenticated and path to be /login", () => {
       const user = null
       window.history.pushState({}, "ShoppingHistoryPage", "/shopping-history")
 
@@ -48,7 +48,7 @@ describe(
         /Ingresá tu teléfono, e‑mail o usuario/i
       )
       expect(loginTitle).toBeInTheDocument()
-      expect(window.location.pathname).toBe("/shopping-history")
+      expect(window.location.pathname).toBe("/login")
     })
 
     test("should render <ShoppingHistoryPage /> with 'Mis Compras' text in the menu if user is authenticated", () => {

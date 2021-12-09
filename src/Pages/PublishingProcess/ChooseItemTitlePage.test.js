@@ -24,7 +24,7 @@ describe("Test the route: /sell/item-title without authenticated user, user is n
       "¡Hola! Ingresá tu teléfono, e‑mail o usuario"
     )
     expect(loginTitle).toBeInTheDocument()
-    expect(window.location.pathname).toBe("/sell/item-title")
+    expect(window.location.pathname).toBe("/login")
   })
 })
 
