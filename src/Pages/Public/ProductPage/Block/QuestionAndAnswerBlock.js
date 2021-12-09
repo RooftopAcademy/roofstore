@@ -35,8 +35,8 @@ function QuestionAndAnswerBlock() {
       <div className="row">
         <div className="col">
           <p className="txt-bold">Últimas realizadas</p>
-          {mock_questionsAnswers.map((qa) => (
-            <QAComponent qa={qa} />
+          {mock_questionsAnswers.map((qa, index) => (
+            <QAComponent qa={qa} key={index}/>
           ))}
         </div>
       </div>
