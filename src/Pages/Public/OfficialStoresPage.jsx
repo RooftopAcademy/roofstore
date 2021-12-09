@@ -1,7 +1,6 @@
 import OfficialStoresBlock from "./OfficialStoresPage/OfficialStoresBlock"
 import { officialStoresData } from "./OfficialStoresPage/officialStoresData"
 import WebsiteLayout from "../../Layouts/WebsiteLayout"
-import { forgetLargeIcon } from '../../Components/SearchHelp/svgIcons'
 import InputStores from './OfficialStoresPage/InputStores'
 function OfficialStores() {
     const textButton = 'Ver todas las tiendas'
