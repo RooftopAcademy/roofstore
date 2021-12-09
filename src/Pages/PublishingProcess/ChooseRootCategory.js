@@ -26,8 +26,8 @@ function ChooseRootCategory () {
                     <div className="d-flex fw-wrap justify-content-sb m-top-5">
                         {categories.map((category, index) => {
                             return (
-                                <div className="OffersPage-6-col">
-                                    <ChooseCategoryItem category={category} key={index} />
+                                <div className="OffersPage-6-col" key={index}>
+                                    <ChooseCategoryItem category={category} />
                                 </div>
                             )
                         })}
