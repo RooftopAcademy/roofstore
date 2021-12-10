@@ -32,10 +32,10 @@ describe( "Info", () => {
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterInfo/> with the link '/privacidad'", () => {
+    it("should render the component <FooterInfo/> with the link '/privacy'", () => {
         const htmlValue = screen.getByText("Cómo cuidamos tu privacidad")
         const variable = htmlValue.attributes["href"].value
-        expect(variable).toBe("/privacidad");
+        expect(variable).toBe("/privacy");
     })
 
     it("should render the component <FooterInfo/> with the text 'Información al usuario financiero'", async () => {
