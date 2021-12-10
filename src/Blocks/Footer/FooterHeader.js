@@ -5,7 +5,7 @@ function FooterHeader() {
     return (
         <div className='row bg-primary'>
             <div className='col'>
-                <Link className={'link'} to={'/home'}>
+                <Link className={'link'} to={'/login'}>
                     <div className='row padding-none'>
                         <div className='col shadow-sm rounded Footer-w-50px'>
                             <img className="Footer-img" src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.17.0/mercadolibre/logo__small@2x.png" alt="Logo" />
