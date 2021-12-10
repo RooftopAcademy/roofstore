@@ -69,12 +69,12 @@ function InfoFinancialUserPage (){
                 </div>
                 <div className="row">
                     <div className="col">
-                        <img src={imgBc} alt={imgBcAlt}></img>
+                        <img className="w-100" src={imgBc} alt={imgBcAlt}></img>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col">
-                        <img src={imgDownProducts} alt={imgDownProductsAlt}></img>
+                        <img className="w-100" src={imgDownProducts} alt={imgDownProductsAlt}></img>
                     </div>
                 </div>
                 <div className="row">
