@@ -398,7 +398,3 @@ p::after {
 .bg-black-transparent {
     background-color: rgba(0,0,0,.3);
 }
-.comment-box{
-  resize: none;
-  border-radius: 8px;
-}
