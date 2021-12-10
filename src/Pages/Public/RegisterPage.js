@@ -25,7 +25,7 @@ function RegisterPage() {
     const optionInfoMobile = {
         text: 'Validar teléfono',
         subText: 'Servirá para ingresar a tu cuenta.',
-        icon: 'mobile',
+        icon: 'cell-phone',
         to: 'register/pass'
     }
 
