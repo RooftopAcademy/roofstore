@@ -10,7 +10,7 @@ function ShoppingHistoryItem({shoppingData}) {
           </p>
           {
             data.products.map((item) => {
-              return <ShoppingHistoryProduct productData = {item} />
+              return <ShoppingHistoryProduct productData = {item} key={item.productId} />
             })
           }
         </div>
