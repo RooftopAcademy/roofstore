@@ -8,7 +8,7 @@ function QuestionAndAnswerBlock() {
   return (
     <section className="shadow-sm">
       <div className="row">
-        <div className="col ProductPage-w-100">
+        <div className="col ProductPage-w-100 padding-none">
           <h3 className="m-top-2 m-bottom-4">
             Preguntas y respuestas
           </h3>
