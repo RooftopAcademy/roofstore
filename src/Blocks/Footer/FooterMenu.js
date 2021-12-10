@@ -6,7 +6,7 @@ function FooterMenu() {
             <div className='col Footer-col-6 Footer-d-flex fd-col'>
                 <TextLink url={'/my-acount'} className={'txt-black m-bottom-0'}>Mi cuenta</TextLink>
                 <TextLink url={'/navigation'} className={'txt-black m-bottom-0'}>Historial</TextLink>
-                <TextLink url={'/favourite'} className={'txt-black m-bottom-0'}>Favoritos</TextLink>
+                <TextLink url={'/favourites'} className={'txt-black m-bottom-0'}>Favoritos</TextLink>
                 <TextLink url={'/categories'} className={'txt-black m-bottom-0'}>Categorias</TextLink>
                 <TextLink url={'/help'} className={'txt-black'}>Ayuda</TextLink>
             </div>
