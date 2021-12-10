@@ -10,7 +10,7 @@ function CategoriesPage () {
     <WebsiteLayout>
       <div className="row bg-main">
         <div className="col w-100">
-          <h3>Categorías</h3>
+          <h3 className='m-left-4'>Categorías</h3>
           <div className="row w-100">
             <div className="col bg-white rounded shadow-sm padding-none d-flex w-100 fd-col">
               {services.map((service) => {
