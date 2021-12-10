@@ -5,10 +5,6 @@
 	--margin-base: 6px;
 }
 
-* {
-	color: var(--black);
-}
-
 .texttag-container {
 	display: inline-flex;
 	padding: 3px 4px;
