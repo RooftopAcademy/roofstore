@@ -1,11 +1,8 @@
 import categoriesData from './categoriesData'
 import HelpBlock from './HelpBlock'
-import { useParams } from 'react-router-dom'
 
 function HelpPageCategory() {
     const title = '¿Con qué temas quieres ayuda?'
-
-    const { id } = useParams()
 
     return (
         <div className="row  bg-main vh-100">

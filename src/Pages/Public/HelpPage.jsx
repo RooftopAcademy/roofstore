@@ -13,7 +13,7 @@ function HelpPage() {
                 <SearchHelp />
                 {categoryBlocksData.map(category => {
                     return (
-                        <div>
+                        <div key={category.id}>
                             <br />
                             <p className="title txt-bold m-bottom-4 m-top-3">{category.title}</p>
                             <HelpBlock items={category.items} dataTestId={category.id} />

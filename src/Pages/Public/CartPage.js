@@ -12,7 +12,7 @@ function CartPage () {
     const [priceTotal, setPriceTotal] = useState(0)
 
     const fetchProductCart = async () => {
-        const response = await axios.get('http://localhost:3000/data/productCartData.json')
+        const response = await axios.get('/data/productCartData.json')
         setProducts(response.data)
     }
 

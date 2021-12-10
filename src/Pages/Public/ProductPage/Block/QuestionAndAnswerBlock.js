@@ -8,25 +8,23 @@ function QuestionAndAnswerBlock() {
   return (
     <section className="shadow-sm">
       <div className="row">
-        <div className="col ProductPage-w-100">
+        <div className="col ProductPage-w-100 padding-none">
           <h3 className="m-top-2 m-bottom-4">
             Preguntas y respuestas
           </h3>
-          <p className="txt-bold">¿Qué querés saber?</p>
-          <div className="row">
-            <div className="ProductPage-flex-container">
-              {mock_keywordInformation.map((keyword) => (
-                <KeywordInformationButtonComponent key={keyword}>
-                  {keyword}
-                </KeywordInformationButtonComponent>
-              ))}
-            </div>
+          <p className="txt-bold OffersPage-m-bottom">¿Qué querés saber?</p>
+          <div className="ProductPage-flex-container">
+            {mock_keywordInformation.map((keyword) => (
+              <KeywordInformationButtonComponent key={keyword}>
+                {keyword}
+              </KeywordInformationButtonComponent>
+            ))}
           </div>
 
-          <p className="txt-bold">Preguntale al vendedor</p>
-          <div className="row">
-            <AutoGrowTextAreaComponent />
-          </div>
+          <p className="txt-bold SearchHelp-m-3-top OffersPage-m-bottom">
+            Preguntale al vendedor
+          </p>
+          <AutoGrowTextAreaComponent />
           <button className="rounded txt-white p-0 bg-blue ProductPage-w-100 input">
             Preguntar
           </button>
@@ -35,8 +33,8 @@ function QuestionAndAnswerBlock() {
       <div className="row">
         <div className="col">
           <p className="txt-bold">Últimas realizadas</p>
-          {mock_questionsAnswers.map((qa) => (
-            <QAComponent qa={qa} />
+          {mock_questionsAnswers.map((qa, index) => (
+            <QAComponent qa={qa} key={index}/>
           ))}
         </div>
       </div>

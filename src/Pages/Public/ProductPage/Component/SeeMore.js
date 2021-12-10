@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import TextLink from "../../../../Components/TextLink";
 import Icon from "../../../../Components/Icon";
+import TextLine from "../../../../Components/TextLine";
 
 function SeeMore({ message, url }) {
     return (
@@ -8,10 +8,9 @@ function SeeMore({ message, url }) {
             <div className="container">
                 <div className="row grey-border rounded padding-none">
                     <div className="col pading-none ProductPage-fs-14">
-                        <TextLink
-                            url={url}
+                        <TextLine
                             className={"txt-blue"}
-                            children={message}
+                            text={message}
                         />
                     </div>
                     <div className="col">

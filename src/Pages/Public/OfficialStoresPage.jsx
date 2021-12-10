@@ -1,7 +1,6 @@
 import OfficialStoresBlock from "./OfficialStoresPage/OfficialStoresBlock"
 import { officialStoresData } from "./OfficialStoresPage/officialStoresData"
 import WebsiteLayout from "../../Layouts/WebsiteLayout"
-import { forgetLargeIcon } from '../../Components/SearchHelp/svgIcons'
 import InputStores from './OfficialStoresPage/InputStores'
 function OfficialStores() {
     const textButton = 'Ver todas las tiendas'
@@ -16,8 +15,8 @@ function OfficialStores() {
                 <div className="col">
                     <InputStores />
                     {
-                        officialStoresData.map(category => {
-                            return (<OfficialStoresBlock category={category} />)
+                        officialStoresData.map((category, i) => {
+                            return (<OfficialStoresBlock category={category} key={i}/>)
                         })
                     }
                     <div className="row jc-center">

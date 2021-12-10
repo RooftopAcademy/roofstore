@@ -15,9 +15,9 @@ export const arrowLeftUpIcon = (
 
 export const forgetLargeIcon = (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
       <path d="M0 0h24v24H0z"></path>
-      <path fill="#000" fill-opacity=".25" fill-rule="nonzero" d="M16.32 14.906l5.594 5.594-1.414 1.414-5.594-5.594a8 8 0 1 1 1.414-1.414zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path>
+      <path fill="#000" fillOpacity=".25" fillRule="nonzero" d="M16.32 14.906l5.594 5.594-1.414 1.414-5.594-5.594a8 8 0 1 1 1.414-1.414zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path>
     </g>
   </svg>
 )

@@ -16,9 +16,9 @@ function Navbar({showSearch=true, showCart=true}) {
     return (
         <div className="container padding-none">
         <div className={`row bg-primary ${isSearchMode ? "padding-none" : "navbar-p-base"}`}>
-            { !isSearchMode && <div className="col padding-none navbar-width-logo">
+            { !isSearchMode && <div className="col padding-none">
               <TextLink dataTestId="LogoNavbar" url={'/'}>
-                <Logo imgAlt="Logo" imgSrc="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.17.0/mercadolibre/logo__small@2x.png"/>
+                <Logo className="navbar-width-logo d-flex" imgAlt="Logo" imgSrc="https://rooftop.dev/images/favicon.png"/>
               </TextLink>
             </div>}
 
