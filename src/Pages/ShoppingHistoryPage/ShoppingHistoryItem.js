@@ -1,3 +1,5 @@
+import ShoppingHistoryProduct from './ShoppingHistoryProduct'
+
 function ShoppingHistoryItem({shoppingData}) {
   const data = shoppingData
   return (
@@ -6,17 +8,11 @@ function ShoppingHistoryItem({shoppingData}) {
           <p className="txt-black txt-bold br-btm p-0">
             {data.shoppingDate}
           </p>
-          <div className="p-2 d-flex">
-            <img src={data.img} alt={data.productName} className="grey-border horizontal-product-img" />
-            <div className="m-left-1 d-flex fd-col">
-              <p className="txt-green txt-bold">
-                {data.shippingStatus}
-              </p>
-              <p>
-                {data.deliveryDate}
-              </p>
-            </div>
-          </div>
+          {
+            data.products.map((item) => {
+              return <ShoppingHistoryProduct productData = {item} key={item.productId} />
+            })
+          }
         </div>
       </div>
   )

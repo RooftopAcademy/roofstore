@@ -17,8 +17,8 @@ function OfficialStoresBlock({ category }) {
             <div className="bg-white row padding-none round m-top-4 m-bottom-0 shadow-sm">
                 <div className="col padding-none">
                     <div className="Official-card-wrap">
-                        {category.brandsData.map(item => {
-                            return <StoreCard brandName={item.brandName} src={item.src} to={item.to} />
+                        {category.brandsData.map((item , i)=> {
+                            return <StoreCard brandName={item.brandName} src={item.src} to={item.to} key={i}/>
                         })}
                     </div>
 
