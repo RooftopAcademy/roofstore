@@ -45,7 +45,9 @@ function Navbar({showSearch=true, showCart=true}) {
 
             {!isSearchMode && showCart &&
             <div className="col txt-white navbar-p-base m-left-0">
+              <TextLink dataTestId="cart" className="txt-white" url={'/cart'}>
                 <Icon icon="cart"/>
+              </TextLink>
             </div>
             }
         </div>
