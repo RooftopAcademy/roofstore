@@ -7,7 +7,7 @@ function HelpBlock({ items, dataTestId }) {
         <div data-testid={dataTestId} className="round bg-white shadow-sm">
             {items.map((item, i) => {
                 return (
-                    <Link role="link" to={item.to} className="link" key={i}>
+                    <Link role="link" to={item.to} className="link txt-black" key={i}>
                         <div className="ProductPage-btn-left row br-btm">
                             <div className="col">
                                 <div>
