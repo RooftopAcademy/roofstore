@@ -43,10 +43,10 @@ describe( "Menu", () => {
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterMenu/> with the link '/favourite'", () => {
+    it("should render the component <FooterMenu/> with the link '/favourites'", () => {
         const htmlValue = screen.getByText("Favoritos")
         const variable = htmlValue.attributes["href"].value
-        expect(variable).toBe("/favourite");
+        expect(variable).toBe("/favourites");
     })
 
     it("should render the component <FooterMenu/> with the text 'Categorias'", async () => {
@@ -75,7 +75,7 @@ describe( "Menu", () => {
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterMenu/> with the link '//shopping-history'", () => {
+    it("should render the component <FooterMenu/> with the link '/shopping-history'", () => {
         const htmlValue = screen.getByText("Mis Compras")
         const variable = htmlValue.attributes["href"].value
         expect(variable).toBe("/shopping-history");
@@ -86,7 +86,7 @@ describe( "Menu", () => {
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterMenu/> with the link '/off'", () => {
+    it("should render the component <FooterMenu/> with the link '/offers'", () => {
         const htmlValue = screen.getByText("Ofertas")
         const variable = htmlValue.attributes["href"].value
         expect(variable).toBe("/offers");
@@ -97,7 +97,7 @@ describe( "Menu", () => {
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterMenu/> with the link '/tiendas-oficiales'", () => {
+    it("should render the component <FooterMenu/> with the link '/officialStores", () => {
         const htmlValue = screen.getByText("Tiendas Oficiales")
         const variable = htmlValue.attributes["href"].value
         expect(variable).toBe("/officialStores");
@@ -119,7 +119,7 @@ describe( "Menu", () => {
         expect(footerInfo).toBeInTheDocument();
     })
 
-    it("should render the component <FooterMenu/> with the link '/sell'", () => {
+    it("should render the component <FooterMenu/> with the link '/sell/chooseCategory'", () => {
         const htmlValue = screen.getByText("Vender")
         const variable = htmlValue.attributes["href"].value
         expect(variable).toBe("/sell/chooseCategory");
