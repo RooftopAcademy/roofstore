@@ -55,5 +55,10 @@ describe("Navbar test", () => {
             const logoElement = screen.getByTestId("LogoNavbar")
             expect(logoElement.getAttribute("href")).toBe("/")
         })
+
+        it('should redirect to the cart page when clicking on the cart logo', async () => {
+            const logoElement = screen.getByTestId("cart")
+            expect(logoElement.getAttribute("href")).toBe("/cart")
+        })
     })
 })
