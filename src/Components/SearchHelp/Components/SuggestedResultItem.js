@@ -8,7 +8,7 @@ function SuggestedResultsItem({ data: { suggested, redirect } }) {
   }
   return (
     <div className="row justify-content-sb padding-none SearchHelp-m-3-top">
-      <Link to={redirect} className="col link padding-none OffersPage-ai-center">
+      <Link to={redirect} className="txt-black col link padding-none OffersPage-ai-center">
         { forgetNormalIcon }
         <p className="txt-bold OffersPage-p-0-left">{ suggested }</p>
       </Link>
