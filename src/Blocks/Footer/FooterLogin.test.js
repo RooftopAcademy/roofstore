@@ -33,7 +33,7 @@ describe( "Login", () => {
 
     it("should render the component <FooterLogin/> with the link /register", () => {
         render(<MockFooterLogin />);
-        const htmlValue = screen.getByText("Ingresá")
+        const htmlValue = screen.getByText("Creá tu cuenta")
         const variable = htmlValue.attributes["href"].value
         expect(variable).toBe("/register");
     })
