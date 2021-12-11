@@ -55,8 +55,8 @@ function MenuMobile() {
 			<div>
 				<div className="grey-border">
 					<div className="row">
-						<div className="col">
-							<img src="" alt="Imagen perfil en blanco" />
+						<div className="col OffersPage-6-col">
+							<img src="./user-avatar.png" alt="Imagen perfil en blanco" className="w-100"/>
 						</div>
 						<div className="col">
 							<TextLine
