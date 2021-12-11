@@ -107,10 +107,10 @@ const info =
                 <li><Link to="/" className={'txt-blue'} >Inhabilitación o suspensión de usuarios</Link></li><br/>
                 <li><Link to="/" className={'txt-blue'} >Términos y condiciones de contratación de Roofstore publicidad</Link></li><br/>
                 <li><Link to="/" className={'txt-blue'} >Términos y condiciones de RoofPay</Link></li><br/>
-                <li><Link to="/" className={'txt-blue'} >Términos y condiciones de Roofshipping</Link></li><br/>
-                <li><Link to="/" className={'txt-blue'} >Términos y condiciones de Roofshipping Flex</Link></li><br/>
-                <li><Link to="/" className={'txt-blue'} >Términos y condiciones de Roofshipping Full</Link></li><br/>
-                <li><Link to="/" className={'txt-blue'} >Términos y condiciones de uso de Roofshop</Link></li><br/>
+                <li><Link to="/" className={'txt-blue'} >Términos y condiciones de RoofShipping</Link></li><br/>
+                <li><Link to="/" className={'txt-blue'} >Términos y condiciones de RoofShipping Flex</Link></li><br/>
+                <li><Link to="/" className={'txt-blue'} >Términos y condiciones de RoofShipping Full</Link></li><br/>
+                <li><Link to="/" className={'txt-blue'} >Términos y condiciones de uso de RoofShop</Link></li><br/>
                 <li><Link to="/" className={'txt-blue'} >Términos y condiciones de uso de Mercado Puntos</Link></li><br/>
                 <li><Link to="/" className={'txt-blue'} >Términos y condiciones para el Programa Roofstore Solidario</Link></li><br/>
                 <li><Link to="/" className={'txt-blue'}>Términos y condiciones del beneficio "Codo a Codo con las PYMES"</Link></li><br/>
