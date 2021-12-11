@@ -33,7 +33,7 @@ const publicationsOffersData = [
       discount: 5,
       interestFree: 12,
       title: 'Smart Tv Jvc Lt-43da5125 Led Full Hd 43  220v',
-      brand: 'Mercado Libre Electronica',
+      brand: 'Roofstore Electronica',
       ship: {
           free: true,
           full: true,
@@ -47,7 +47,7 @@ const publicationsOffersData = [
       discount: 5,
       interestFree: 0,
       title: 'Smart Tv Bgh B5021uh6a Led 4k 50  220v',
-      brand: 'Mercado Libre Electronica',
+      brand: 'Roofstore Electronica',
       ship: {
           free: true,
           full: true,

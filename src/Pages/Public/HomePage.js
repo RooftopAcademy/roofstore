@@ -107,7 +107,7 @@ function HomePage() {
 
                     <div className="p-0">
                         <TextLine
-                            text={"Conseguí los mejores beneficios en Roofstore y Roofpay"}
+                            text={"Conseguí los mejores beneficios en Roofstore y RoofPay"}
                             className={"txt-black txt-bold HomePage-txt-start HomePage-fs-14"}/>
                     </div>
 
@@ -121,9 +121,9 @@ function HomePage() {
                     })}
                 </SubscriptionCard>
 
-                {/* Beneficios de Roof Points */}
+                {/* Beneficios de Mercado Puntos */}
                 <CardLayout 
-                    title="Beneficios de Roof Points"
+                    title="Beneficios de Mercado Puntos"
                     footerLinkText="Ver todos los beneficios"
                     footerLinkUrl ="/login">
 

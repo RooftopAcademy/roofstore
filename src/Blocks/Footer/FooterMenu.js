@@ -14,7 +14,7 @@ function FooterMenu() {
                 <TextLink url={'/shopping-history'} className={'txt-black m-bottom-0'}>Mis Compras</TextLink>
                 <TextLink url={'/offers'} className={'txt-black m-bottom-0'}>Ofertas</TextLink>
                 <TextLink url={'/officialStores'} className={'txt-black m-bottom-0'}>Tiendas Oficiales</TextLink>
-                <TextLink url={'/mercado-puntos'} className={'txt-black m-bottom-0'}>Roof Points</TextLink>
+                <TextLink url={'/mercado-puntos'} className={'txt-black m-bottom-0'}>Mercado Puntos</TextLink>
                 <TextLink url={'/sell/chooseCategory'} className={'txt-black'}>Vender</TextLink>
             </div>
         </div>
