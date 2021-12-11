@@ -98,7 +98,7 @@ function HomePage() {
                     })}
                 </CardLayout>
 
-                {/* Sucscripciones */}
+                {/* Suscripciones */}
                 <SubscriptionCard 
                     title="Suscribite al nivel 6"
                     price={449}
@@ -107,7 +107,7 @@ function HomePage() {
 
                     <div className="p-0">
                         <TextLine
-                            text={"Conseguí los mejores beneficios en Mercado Libre y Mercado Pago"}
+                            text={"Conseguí los mejores beneficios en Roofstore y Roofpay"}
                             className={"txt-black txt-bold HomePage-txt-start HomePage-fs-14"}/>
                     </div>
 
@@ -121,9 +121,9 @@ function HomePage() {
                     })}
                 </SubscriptionCard>
 
-                {/* Beneficios de Mercado Puntos */}
+                {/* Beneficios de Roof Points */}
                 <CardLayout 
-                    title="Beneficios de Mercado Puntos"
+                    title="Beneficios de Roof Points"
                     footerLinkText="Ver todos los beneficios"
                     footerLinkUrl ="/login">
 
