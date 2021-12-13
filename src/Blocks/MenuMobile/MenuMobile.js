@@ -72,12 +72,12 @@ function MenuMobile() {
 					</div>
 					<div className="row MenuMobile-gap-small">
 						<Link to="/login" className="SearchHelp-width-100">
-							<button className="rounded MenuMobile-btn MenuMobile-m-base-right bg-primary txt-bold txt-white">
+							<button className="rounded MenuMobile-btn MenuMobile-m-base-right bg-blue txt-bold txt-white">
 								Ingresá
 							</button>
 						</Link>
 						<Link to="/register" className="SearchHelp-width-100">
-							<button className="rounded MenuMobile-btn txt-bold txt-blue">
+							<button className="rounded MenuMobile-btn txt-bold txt-blue ConfirmClassification-bg-transparent">
 								Creá tu cuenta
 							</button>
 						</Link>
