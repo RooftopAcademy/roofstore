@@ -18,13 +18,16 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ProductPage from './Pages/Public/ProductPage/ProductPage';
 import ProductListPage from './Pages/Public/ProductListPage'
 import RegisterPage from './Pages/Public/RegisterPage';
+import ScrollTop from './hooks/scrollTop';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
+
 
 function App() {
 
   return (
     <BrowserRouter>
+      <ScrollTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/ayuda/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
