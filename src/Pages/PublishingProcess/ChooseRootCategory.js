@@ -5,10 +5,10 @@ import TextLink from "../../Components/TextLink";
 import ChooseCategoryItem from "./ChooseCategoryItem";
 
 const DataCategories = [
-    {name: 'Productos', icon: '/productos.svg', url: '/'},
-    {name: 'Vehículos', icon: '/vehiculos.svg', url: '/'},
-    {name: 'Inmuebles', icon: '/inmuebles.svg', url: '/'},
-    {name: 'Servicios', icon: '/servicios.svg', url: '/'},
+    {name: 'Productos', icon: '/productos.svg', url: '/sell/item-title'},
+    {name: 'Vehículos', icon: '/vehiculos.svg', url: '/sell/item-title'},
+    {name: 'Inmuebles', icon: '/inmuebles.svg', url: '/sell/item-title'},
+    {name: 'Servicios', icon: '/servicios.svg', url: '/sell/item-title'},
 ]
 
 function ChooseRootCategory () {
