@@ -5,10 +5,10 @@ import TextLink from "../../Components/TextLink";
 import ChooseCategoryItem from "./ChooseCategoryItem";
 
 const DataCategories = [
-    {name: 'Productos', icon: 'http://localhost:3000/productos.svg', url: '/'},
-    {name: 'Vehículos', icon: 'http://localhost:3000/vehiculos.svg', url: '/'},
-    {name: 'Inmuebles', icon: 'http://localhost:3000/inmuebles.svg', url: '/'},
-    {name: 'Servicios', icon: 'http://localhost:3000/servicios.svg', url: '/'},
+    {name: 'Productos', icon: '/productos.svg', url: '/sell/item-title'},
+    {name: 'Vehículos', icon: '/vehiculos.svg', url: '/sell/item-title'},
+    {name: 'Inmuebles', icon: '/inmuebles.svg', url: '/sell/item-title'},
+    {name: 'Servicios', icon: '/servicios.svg', url: '/sell/item-title'},
 ]
 
 function ChooseRootCategory () {
@@ -26,8 +26,8 @@ function ChooseRootCategory () {
                     <div className="d-flex fw-wrap justify-content-sb m-top-5">
                         {categories.map((category, index) => {
                             return (
-                                <div className="OffersPage-6-col">
-                                    <ChooseCategoryItem category={category} key={index} />
+                                <div className="OffersPage-6-col" key={index}>
+                                    <ChooseCategoryItem category={category} />
                                 </div>
                             )
                         })}

@@ -1,4 +1,4 @@
-import { render, screen, within, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import Navbar from './Navbar'
 
@@ -12,11 +12,11 @@ const MockNavbar = () => {
 
 describe("Navbar test", () => {
 
-    describe("Test for search bar", () => {
+    beforeEach(() => {
+        render(<MockNavbar/>)
+    })
 
-        beforeEach(() => {
-            render(<MockNavbar/>)
-        })
+    describe("Test for search bar", () => {    
 
         it('should render a input text', () => {
             const inputElement = screen.getByRole("textbox")
@@ -31,20 +31,13 @@ describe("Navbar test", () => {
 
     describe("Test for redirect links", () => {
 
-        beforeEach(() => {
-            render(<MockNavbar/>)
-        })
-
-        it('should render two links to redirect', () => {
+        it('should render a logo as link', () => {
             const anchorsElement = screen.getAllByRole("link")
-            expect(anchorsElement.length).toBe(2)
+            expect(anchorsElement.length).toBe(1)
         })
     })
 
     describe("Test for hamburger menu", () => {
-        beforeEach(() => {
-            render(<MockNavbar/>)
-        })
 
         it("should render button hamburger menu", async () => {
             const buttonElement = screen.getByRole("checkbox", {hidden: true})
@@ -59,9 +52,13 @@ describe("Navbar test", () => {
         })
 
         it('should redirect to the main page when clicking on the logo', async () => {
-            render(<MockNavbar/>)
             const logoElement = screen.getByTestId("LogoNavbar")
             expect(logoElement.getAttribute("href")).toBe("/")
+        })
+
+        it('should redirect to the cart page when clicking on the cart logo', async () => {
+            const logoElement = screen.getByTestId("cart")
+            expect(logoElement.getAttribute("href")).toBe("/cart")
         })
     })
 })

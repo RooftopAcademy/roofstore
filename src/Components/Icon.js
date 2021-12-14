@@ -21,12 +21,12 @@ const icons = {
 	list: "fas fa-list",
 	headset: "fas fa-headset",
 	download: "fas fa-download",
-	'share' : "fas fa-share-alt",
-	'free-shipping' : "fas fa-truck",
-	'devolution' : "fas fa-undo",
-	'medal' : "fas fa-medal",
+	'share': "fas fa-share-alt",
+	'free-shipping': "fas fa-truck",
+	'devolution': "fas fa-undo",
+	'medal': "fas fa-medal",
 	'coment': "far fa-comment-alt",
-	'watch' : "fas fa-stopwatch",
+	'watch': "fas fa-stopwatch",
 	'trophy': "fas fa-trophy",
 	'shield': "fas fa-shield-alt",
 	'credit-card': "fas fa-credit-card",
@@ -35,13 +35,14 @@ const icons = {
 	'couch': "fas fa-couch",
 	'blender': "fas fa-blender",
 	'microphone': "fas fa-microphone-alt",
-	envelope: "fas fa-envelope",
-  dni: "far fa-id-card",
-  lock: "fas fa-unlock-alt",
+	'ellipsis-v': "fas fa-ellipsis-v",
+	'envelope': 'far fa-envelope',
+	'lock': 'fas fa-unlock-alt',
+	'dni': 'far fa-id-card',
 };
 
 function Icon({ className, icon }) {
-	return <i className={`${className} ${icons[icon]}`}></i>;
+	return <i role="figure" className={`${className} ${icons[icon]}`}></i>
 }
 
 export default Icon;

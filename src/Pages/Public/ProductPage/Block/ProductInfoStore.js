@@ -22,8 +22,8 @@ function ProductInfoStore({store}) {
                 </div>
             </div>
             <div className="row  ProductPage-jc-start">
-                <div className="col padding-none navbar-width-logo rounded m-left-0">
-                    <Logo imgAlt={store.nameStore} imgSrc={store.logoStore}/>
+                <div className="col padding-none rounded m-left-0">
+                    <Logo className="navbar-width-logo d-flex" imgAlt={store.nameStore} imgSrc={store.logoStore}/>
                 </div>
                 <div className="col ">
                     <TextLine text={store.nameStore} className={"ProductPage-txt-start txt-black ProductPage-fs-14"}/>

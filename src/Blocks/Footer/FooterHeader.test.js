@@ -19,11 +19,11 @@ describe( "Header", () => {
 
     })
 
-    it("should render the component <FooterHeader/> with the link '/home'", () => {
+    it("should render the component <FooterHeader/> with the link '/'", () => {
         render(<MockFooterHeader />);
         const htmlValue = screen.getByRole("link")
         const variable = htmlValue.attributes["href"].value
-        expect(variable).toBe("/home");
+        expect(variable).toBe("/");
         
     })
 
