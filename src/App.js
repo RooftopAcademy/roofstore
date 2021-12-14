@@ -36,7 +36,7 @@ function App() {
         <Route path="/help/:id" element={<HelpPageCategory />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/offers" element={<OffersPage />} />
-        <Route path="/officialStores" element={<OfficialStores />} />
+        <Route path="/stores" element={<OfficialStores />} />
         <Route path="/product-list" element={<ProductListPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/register" element={<RegisterPage />} />
