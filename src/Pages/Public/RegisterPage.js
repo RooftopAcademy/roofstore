@@ -81,7 +81,6 @@ function RegisterPage() {
         <div className="col">
           <div className="title txt-bold m-bottom-2 ">Tus datos</div>
           <div className="m-bottom-5 ">
-            {" "}
             Validá tus datos para que nadie pueda ingresa o crear una cuenta a
             tu nombre.
           </div>
