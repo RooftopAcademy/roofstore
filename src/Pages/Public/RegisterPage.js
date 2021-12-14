@@ -43,6 +43,7 @@ function RegisterPage() {
   const componentToRender = {
     email: (
       <EmailPage
+        key={"emailPage"}
         className={optionActive === 2 ? "" : "d-none"}
         setOptionActive={setOptionActive}
         optionActive={optionActive}
@@ -50,6 +51,7 @@ function RegisterPage() {
     ),
     data: (
       <DataPage
+        key={"dataPage"}
         className={optionActive === 4 ? "" : "d-none"}
         setOptionActive={setOptionActive}
         optionActive={optionActive}
@@ -57,6 +59,7 @@ function RegisterPage() {
     ),
     mobile: (
       <MobilePage
+        key={"mobilePage"}
         className={optionActive === 6 ? "" : "d-none"}
         setOptionActive={setOptionActive}
         optionActive={optionActive}
@@ -64,6 +67,7 @@ function RegisterPage() {
     ),
     password: (
       <PasswordPage
+        key={"passwordPage"}
         className={optionActive === 8 ? "" : "d-none"}
         setOptionActive={setOptionActive}
         optionActive={optionActive}
@@ -85,6 +89,7 @@ function RegisterPage() {
           {Object.keys(optionInfo).map((key) => {
             return (
               <ValidateOption
+                key={key}
                 info={optionInfo[key]}
                 active={optionActive === optionInfo[key].isActive}
                 optionActive={optionActive}
