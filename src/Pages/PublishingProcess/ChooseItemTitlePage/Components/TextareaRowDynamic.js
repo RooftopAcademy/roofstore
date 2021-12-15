@@ -56,7 +56,7 @@ export default function TextareaRowDynamic({
           <p className="OffersPage-txt-light-grey">{ description }</p>
         </div>
         <div className="col padding-none">
-          <p className="OffersPage-txt-light-grey">
+          <p className="OffersPage-txt-light-grey character-limit-test">
             { valueLength } / { maxLength }
           </p>
         </div>

@@ -14,4 +14,11 @@ describe('roofstore home page', () => {
     it('logo has width with 45px', () => {
         cy.get('.navbar a img').should('have.css', 'width', '45px')
     })
+
+    it('check all links to sites', () => {
+      cy.get("a:not([href*='mailto:'])").each(page => {
+        cy.request(page.prop('href'))
+      })
+    
+    })
 })

@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cyop" : "npx cypress open"
+    "cyop": "npx cypress open"
   },
   "eslintConfig": {
     "extends": [
