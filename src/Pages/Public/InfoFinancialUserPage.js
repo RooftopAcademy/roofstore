@@ -6,9 +6,9 @@ function InfoFinancialUserPage (){
     const initialText = 'Contás con nuestra ayuda para consultas o reclamos en relación a tu crédito de consumo y/o préstamo personal. Tenemos el compromiso de responderte en un plazo máximo de 10 días hábiles a partir de tu contacto.'
     const canaltext = 'Canales'
     const tel = 'Teléfono: +54 11 51290410'
-    const mail = 'E-mail: usuarios_financieros@mercadopago.com'
+    const mail = 'E-mail: usuarios_financieros@RoofPay.com'
     const helpPort = 'Portal de Ayuda:'
-    const port = 'Mercado Crédito.'
+    const port = 'RoofCredit.'
     const areaRespons = 'Responsables de Area'
     const titular = 'Responsable Titular: Pedro Kudrnac'
     const suplente = 'Responsable Suplente: Mariano Aztiria'
@@ -21,9 +21,9 @@ function InfoFinancialUserPage (){
     const imgDownProducts = "https://http2.mlstatic.com/secure/salesforce-resources/faqs-images/210122131750_01BCRA_Normas2019.jpg"
     const imgDownProductsAlt = "Información sobre baja de servicios BCRA"
     const rates = 'Conocé nuestras tarifas:'
-    const ratesText = 'Cargos y comisiones Mercado Libre'
+    const ratesText = 'Cargos y comisiones Roofstore'
     const prodAndFees = 'Productos y tasas:'
-    const prodAndFeesText = 'Líneas de consumo y préstamos personales en Mercado Libre'
+    const prodAndFeesText = 'Líneas de consumo y préstamos personales en Roofstore'
 
     return (
         <TextPageLayout showInfoVotation={true} >        
