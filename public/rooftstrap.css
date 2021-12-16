@@ -134,7 +134,7 @@ p::after {
 }
 
 .bg-light-grey {
-  background-color: rgb(196, 196, 196);
+  background-color: var(--light-grey);
 }
 
 .bg-light-blue {

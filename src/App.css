@@ -895,7 +895,7 @@
 }
 
 .SearchHelp-bgi-forget {
-  background-image: url('http://localhost:3000/forget.svg');
+  background-image: url('../public/forget.svg');
   background-repeat: no-repeat;
   background-position: 10px 50%;
 }

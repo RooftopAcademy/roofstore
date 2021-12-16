@@ -2,23 +2,19 @@ import React from 'react'
 
 function AProductBanner() {
   return (
-    <section className="ProductPage-a-product-banner">
+    <section className="w-100">
       <div className="row">
-        <div className="ProductPage-w-100">
-          <div>
+        <div >        
             <img
-              className="ProductPage-img-fit"
-              src="https://tpc.googlesyndication.com/simgad/6843340545857917117?"
+              className="w-100"
+              src="/raid-banner.png"
               alt="raid"
-            />
-          </div>
-          <div className="ProductPage-a-product-banner-footer">
+            /> 
             <img
-              className="ProductPage-img-fit"
-              src="https://tpc.googlesyndication.com/simgad/2884261227085518499?"
+              className="w-100"
+              src="/raid-info-banner.png"
               alt="info"
-            />
-          </div>
+            /> 
         </div>
       </div>
     </section>

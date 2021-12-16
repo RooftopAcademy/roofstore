@@ -67,7 +67,7 @@ function CartItem ({item, dataTestId=""}) {
                 <TextLink className="fz-sm txt-blue" url="/">
                     Ver más productos del vendedor
                 </TextLink>
-                <button className="HomePage-border-none">
+                <button className="HomePage-border-none bg-white">
                     <Icon icon="ellipsis-v" className="txt-grey-copyright"/>
                 </button>
             </div>

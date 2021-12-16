@@ -33,17 +33,17 @@ function DefensaConsumidorBlock() {
           <DefensaConsumidorItem title={"Denuncias en Defensa del Consumidor"}>
             <p>
               Cualquier persona usuaria que tenga un problema con los servicios
-              ofrecidos por Mercado Libre podrá iniciar un reclamo. Para
+              ofrecidos por Roofstore podrá iniciar un reclamo. Para
               hacerlo, tendrá que ingresar a su cuenta con su usuario y
               contraseña y buscar la sección de Ayuda. Podrá contactar al
               Vendedor para intentar solucionar el problema o incluso solicitar
-              la intervención de Mercado Libre.{" "}
+              la intervención de Roofstore.{" "}
             </p>
             <p>
-              Para las compras en la plataforma de Mercado Libre, si la
+              Para las compras en la plataforma de Roofstore, si la
               resolución de un reclamo no fuera satisfactoria, podrá continuar
               con el reclamo ante el{" "}
-              <TextLink url="/">Defensor del Cliente de Mercado Libre</TextLink>
+              <TextLink url="/">Defensor del Cliente de Roofstore</TextLink>
               .
             </p>
             <p>
