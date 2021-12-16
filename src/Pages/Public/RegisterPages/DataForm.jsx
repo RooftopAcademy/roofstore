@@ -18,7 +18,7 @@ function DataForm({ optionActive, setOptionActive }) {
                     <FormInput id="lastName-input" type="text" className="input round p-form m-bottom-5"></FormInput>
                     <label className="fz-sm m-left-0" htmlFor="dni-input">{labelDni}</label>
                     <FormInput id="dni-input" type="number" holderBottom={holderDni} className="input round p-form "></FormInput>
-                    <button type="button" onClick={() => setOptionActive(optionActive++)} className="bg-blue txt-white p-form round txt-bold border-none fz-m m-top-5">{buttonText}</button>
+                    <button type="button" onClick={() => setOptionActive(optionActive + 1)} className="bg-blue txt-white p-form round txt-bold border-none fz-m m-top-5">{buttonText}</button>
                 </form>
             </div>
         </div>

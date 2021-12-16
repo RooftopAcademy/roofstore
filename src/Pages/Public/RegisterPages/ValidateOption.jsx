@@ -13,7 +13,7 @@ export default function ValidateOption({ info, active, optionActive, setOptionAc
                 <p className="txt-grey-copyright fz-sm">{info.subText}</p>
             </div>
             <div className="col padding-none">
-                <button onClick={() => setOptionActive(optionActive++)} className={`${active ? 'bg-blue' : ''}  txt-white p-button-validate round txt-bold border-none fz-m`} disabled={!active} >{buttonText}</button>
+                <button onClick={() => setOptionActive(optionActive + 1)} className={`${active ? 'bg-blue' : ''}  txt-white p-button-validate round txt-bold border-none fz-m`} disabled={!active} >{buttonText}</button>
             </div>
         </div >
     )

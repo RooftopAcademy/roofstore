@@ -13,7 +13,7 @@ let support = "Brinda buena atencion"
 let shipping = "Despacha sus productos a tiempo"
 
 function ProductInfoStore({store}) {
-    let oficialStore = "Tienda oficial de mercado libre"
+    let oficialStore = "Tienda oficial de Roofstore"
     return (
         <div className=" br-top">
             <div className="row ">
@@ -32,7 +32,7 @@ function ProductInfoStore({store}) {
             </div>
            <Badge
            icon = "medal" 
-           title = "MercadoLíder Platinum" 
+           title = "RoofLeader Platinum" 
            description = "¡Es uno de los mejores del sitio!"
            />
 
