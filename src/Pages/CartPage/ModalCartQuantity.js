@@ -32,11 +32,11 @@ export default function ModalCartCuantity({useState: { showModal, setShowModal }
           }
         }}
       >
-      <button
-      onClick={handleCloseModal}
-      className="Modal-button-close"
-      >
-      </button>
+        <button
+          onClick={handleCloseModal}
+          className="Modal-button-close"
+          data-testid={'modal-button-close'}
+        />
         <div className="row jc-center bg-light-grey">
           <div className="col">
             <p className="txt-center txt-grey">Cantidad</p>
