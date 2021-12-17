@@ -20,6 +20,7 @@ import ProductListPage from './Pages/Public/ProductListPage'
 import RegisterPage from './Pages/Public/RegisterPage';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
+import FavouritesPage from './Pages/Public/FavouritesPage';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
         <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
         <Route path="/categories" element={<CategoriesPage />} />
+        <Route path="/favourites" element={<FavouritesPage />} />
         <Route path="/financial-user-info" element={<InfoFinancialUserPage />} />
         <Route path="/help" element={<HelpPage />} />
         <Route path="/help/:id" element={<HelpPageCategory />} />
