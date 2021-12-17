@@ -6,18 +6,17 @@ function PaymentInfo() {
     
     const title = 'Hasta 6 cuotas sin interés'
     const subtitle = 'Ver promociones bancarias'
+    const image = '/credit-card.svg'
 
     return (
         <Link className={'link'} to={'/login'}>
-            <div className="row bg-white HomePage-jc-center">
-                <div className="col">
-                    <span className={"txt-blue p-0 grey-border HomePage-border-circle"}>
-                        <Icon icon={"credit-card"}/>
-                    </span>
+            <div className="row bg-white HomePage-jc-center TextPageLayout-p-container">
+                <div className="col padding-none m-right-5">
+                    <img className="HomePage-img" src={image} alt={title}></img>
                 </div>
-                <div className="col">
-                    <TextLine className={"txt-black HomePage-fs-16"} text={title}/>
-                    <TextLine className={"txt-blue HomePage-fs-14"} text={subtitle}/>
+                <div className="col padding-none">
+                    <TextLine className={"txt-black HomePage-fs-16 HomePage-txt-start"} text={title}/>
+                    <TextLine className={"txt-blue HomePage-fs-14 HomePage-txt-start"} text={subtitle}/>
                 </div>
             </div>
         </Link>
