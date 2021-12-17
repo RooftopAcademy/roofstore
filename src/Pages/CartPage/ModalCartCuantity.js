@@ -63,7 +63,7 @@ export default function ModalCartCuantity({useState: { showModal, setShowModal }
           </div>
           <div className="col w-100 br-top txt-center txt-blue">
             Más de 6 unidades
-            </div>
+          </div>
         </div>
       </ReactModal>
     </>
