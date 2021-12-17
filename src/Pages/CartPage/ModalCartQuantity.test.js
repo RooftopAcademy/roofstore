@@ -16,18 +16,27 @@ const item = {
 }
 
 describe("ModalCartQuantity", () => {
-  beforeEach(() => {
+  beforeEach(() =>
     render (
       <BrowserRouter>
         <CartItem item={item} />
       </BrowserRouter>
     )
-  })
+  )
 
-  test("render the modal when clicking on the select quantity button", () => {
+  test("render the modal when clicking on the select quantity button.", () => {
     const openModalBtn = screen.getByText(/1 u./i)
     userEvent.click(openModalBtn)
     const modalCartQuantity = screen.getByTestId('modal-cart-cuantity')
     expect(modalCartQuantity).toBeInTheDocument()
+  })
+
+  test("that it can close the modal once opened.", () => {
+    const openModalBtn = screen.getByText(/1 u./i)
+    userEvent.click(openModalBtn)
+    const modalCartQuantity = screen.getByTestId('modal-cart-cuantity')
+    const closeModalBtn = screen.getByTestId('modal-button-close')
+    userEvent.click(closeModalBtn)
+    expect(modalCartQuantity).not.toBeInTheDocument()
   })
 })
