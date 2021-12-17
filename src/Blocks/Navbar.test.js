@@ -33,7 +33,7 @@ describe("Navbar test", () => {
 
         it('should render a logo as link', () => {
             const anchorsElement = screen.getAllByRole("link")
-            expect(anchorsElement.length).toBe(1)
+            expect(anchorsElement.length).toBe(2)
         })
     })
 

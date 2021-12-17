@@ -3,7 +3,7 @@ function GarantiaBlock() {
     <section className="row shadow-sm">
       <div className="col ProductPage-w-100">
         <h3 className="ProductPage-section-title m-bottom-2">Garantía</h3>
-        <p>Compra Protegida con Mercado Pago</p>
+        <p>Compra Protegida con RoofPay</p>
         <p className="ProductPage-txt-light-grey m-bottom-4">
           Recibí el producto que esperabas o te devolvemos tu dinero
         </p>

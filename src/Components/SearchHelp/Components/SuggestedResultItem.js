@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom"
 import { forgetNormalIcon, arrowLeftUpIcon } from '../svgIcons'
 
-function SuggestedResultsItem({ data: { suggested, redirect } }) {
-  const input = document.getElementById('search-help')
+function SuggestedResultsItem({ data: { suggested, redirect }, callback: setInputValue }) {
   const handleClick = () => {
-    input.value = suggested
+    setInputValue(suggested)
   }
   return (
     <div className="row justify-content-sb padding-none SearchHelp-m-3-top">

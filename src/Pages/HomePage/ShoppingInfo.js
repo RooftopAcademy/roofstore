@@ -5,7 +5,7 @@ function ShoppingInfo() {
 
     const image = 'https://http2.mlstatic.com/resources/frontend/homes-korriban/assets/images/ecosystem/payment.svg'
     const title = 'Elegí cómo pagar'
-    const subtitle = 'Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta con Mercado Crédito.'
+    const subtitle = 'Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta con RoofCredit.'
     const textLink = 'Cómo pagar tus compras'
 
     return (
