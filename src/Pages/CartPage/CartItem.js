@@ -3,7 +3,7 @@ import Icon from "../../Components/Icon";
 import TextLine from "../../Components/TextLine";
 import TextLink from "../../Components/TextLink";
 import { useState } from 'react'
-import ModalCartCuantity from "./ModalCartCuantity";
+import ModalCartQuantity from "./ModalCartQuantity";
 
 function CartItem ({item, dataTestId=""}) {
     const [ showModal, setShowModal ] = useState(false)
@@ -19,7 +19,7 @@ function CartItem ({item, dataTestId=""}) {
 
     return (
         <div data-testid={dataTestId} className="m-bottom-0 bg-white" >
-            <ModalCartCuantity
+            <ModalCartQuantity
                 useState={{ showModal, setShowModal }}
             />
             <div className="row br-btm">

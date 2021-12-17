@@ -10,6 +10,7 @@ export default function ModalCartCuantity({useState: { showModal, setShowModal }
     <>
       <ReactModal
         isOpen={showModal}
+        testId={"modal-cart-cuantity"}
         ariaHideApp={false}
         bodyOpenClassName={'HomePage-overflow-hidden'}
         onRequestClose={handleCloseModal}
