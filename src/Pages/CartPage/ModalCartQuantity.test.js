@@ -39,4 +39,11 @@ describe("ModalCartQuantity", () => {
     userEvent.click(closeModalBtn)
     expect(modalCartQuantity).not.toBeInTheDocument()
   })
+
+  test("the number of modal options are less than 8.", () => {
+    const openModalBtn = screen.getByText(/1 u./i)
+    userEvent.click(openModalBtn)
+    const modalContainerQuantities = screen.getByTestId('modal-container-quantities')
+    expect(modalContainerQuantities.childElementCount).toBeLessThan(8)
+  })
 })

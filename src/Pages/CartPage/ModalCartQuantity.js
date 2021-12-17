@@ -43,7 +43,10 @@ export default function ModalCartCuantity({useState: { showModal, setShowModal }
             <p className="txt-center ProductPage-txt-light-grey HomePage-fs-12">4.419 unidades disponibles</p>
           </div>
         </div>
-        <div className="row fd-col jc-start  padding-none Modal-max-height-50-vh h-100 Modal-of-y-scroll">
+        <div
+          data-testid={'modal-container-quantities'}
+          className="row fd-col jc-start padding-none Modal-max-height-50-vh h-100 Modal-of-y-scroll"
+        >
           <div className="col w-100 br-top txt-center OffersPage-p-relative Modal-br-left-blue">
             1 unidad
           </div>
