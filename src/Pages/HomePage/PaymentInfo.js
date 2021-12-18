@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import Icon from '../../Components/Icon'
 import TextLine from '../../Components/TextLine'
 
 function PaymentInfo() {
