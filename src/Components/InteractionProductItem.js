@@ -50,6 +50,7 @@ function InteractionProductItem({item, favButton = false, dataTestId = ''}) {
                     </p>
                     }
 
+                    {item.freeShipping || item.fullShipping &&
                     <p>
                         {item.freeShipping  &&
                         <span className="txt-green txt-bold m-right-0 HomePage-fs-12">{freeShippingText}</span>
@@ -61,6 +62,7 @@ function InteractionProductItem({item, favButton = false, dataTestId = ''}) {
                         </span>
                         }
                     </p>
+                    }
 
                     {item.seller &&
                     <TextLine className={"txt-grey-copyright HomePage-txt-start HomePage-fs-12 m-bottom-0"} text={sellerText}/>
