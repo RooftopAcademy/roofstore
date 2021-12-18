@@ -21,7 +21,7 @@ function InteractionProductItem({item, favButton = false, dataTestId = ''}) {
 
     return (
         <Link data-testid={dataTestId} className={"link br-btm"} to={"/product/" + item.id}>
-            <div className={"row bg-white p-0 jc-start"}>
+            <div className={"row bg-white p-0 jc-start ai-start"}>
                 <div className="col padding-none">
                     <img className={"HomePage-product-item-image-horizontal"} src={item.image} alt={item.title}/>
                 </div>
@@ -65,7 +65,7 @@ function InteractionProductItem({item, favButton = false, dataTestId = ''}) {
                     }
 
                     {item.seller &&
-                    <TextLine className={"txt-grey-copyright HomePage-txt-start HomePage-fs-12 m-bottom-0"} text={sellerText}/>
+                    <TextLine className={"txt-grey-copyright HomePage-txt-start HomePage-fs-12"} text={sellerText}/>
                     }
                     
                     <button className={"HomePage-border-none bg-white txt-blue"} onClick={handleDeleteButton}>
