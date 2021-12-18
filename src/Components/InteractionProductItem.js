@@ -50,7 +50,7 @@ function InteractionProductItem({item, favButton = false, dataTestId = ''}) {
                     </p>
                     }
 
-                    {item.freeShipping || item.fullShipping &&
+                    {(item.freeShipping || item.fullShipping) &&
                     <p>
                         {item.freeShipping  &&
                         <span className="txt-green txt-bold m-right-0 HomePage-fs-12">{freeShippingText}</span>
