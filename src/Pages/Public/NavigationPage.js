@@ -7,6 +7,7 @@ import WebsiteLayout from "../../Layouts/WebsiteLayout"
 function NavigationPage() {
 
     const title = "Tu historial"
+    const adminTextLink = "Administrar"
 
     return (
         <WebsiteLayout>
@@ -14,7 +15,7 @@ function NavigationPage() {
                 <div className="row NavigationPage-padding-top-24">
                     <div className="col padding-none HomePage-fs-20">{title}</div>
                     <div className="col padding-none">
-                        <TextLink url={'/navigation/admin'} className={'txt-blue txt-bold HomePage-fs-14'}>Administrar</TextLink>
+                        <TextLink url={'/navigation/admin'} className={'txt-blue txt-bold HomePage-fs-14'}>{adminTextLink}</TextLink>
                     </div>
                 </div>
 
