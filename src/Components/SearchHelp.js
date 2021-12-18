@@ -1,76 +1,90 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Icon from "./Icon"
 
-import SuggestedResultsItems from './SearchHelp/Components/SuggestedResultItem'
+import SuggestedResults from "./SearchHelp/Components/SuggestedResults"
+import SuggestedResultsItems from "./SearchHelp/Components/SuggestedResultItem"
 import suggestedResultsData from './SearchHelp/suggestedResultsData'
+
+
 import { xIcon } from './SearchHelp/svgIcons'
 
 
 function SearchHelp({isHelpMode = true, setNavBarAsSearchMode = null}) {
-  
-  const results = (() => {
-    const maxResults = 6
-    let items = []
-    for (let i = 0; i < maxResults; i++) {
-      items.push(<SuggestedResultsItems key={suggestedResultsData[i].id} data={suggestedResultsData[i]}/>)
-    }
-    return items
-  })()
 
-  const input = document.getElementById('search-help')
+  const MAX_SUGGESTED_RESULTS = 6
+  let filteredSuggestedResults = suggestedResultsData.slice(0, MAX_SUGGESTED_RESULTS)
 
-  const [ suggestedResults, setSuggestedResults ] = useState(results)
+  const [ suggestedResults, setSuggestedResults ] = useState(filteredSuggestedResults)
   const [ inputIsFocused, setInputIsFocused ] = useState(false)
-  const [ inputHasValue, setInputHasValue ] = useState(false)
+  const [ inputValue , setInputValue ] = useState('')
+
+  const inputRef = useRef()
 
   const placeHodlerText = isHelpMode ? 'Buscá en Ayuda' : 'Estoy buscando...'
   const titleSuggestText = 'Sugerencias para tu búsqueda'
 
   const handleInput = (e) => {
-    const inputValue = e.target.value
-    if (inputValue !== '' || !isHelpMode) {
+    const value = e.target.value
+    if (value !== '' || !isHelpMode) {
       setInputIsFocused(true)
-      setInputHasValue(true)
-      setSuggestedResults(results)
+      setInputValue(value)
+      filteredSuggestedResults = suggestedResultsData
+        .filter(({ suggested }) => suggested.toLowerCase().includes(value.toLowerCase()))
+        .slice(0, MAX_SUGGESTED_RESULTS)
+      setSuggestedResults(filteredSuggestedResults)
       return
     }
-    setInputHasValue(false)
+    setInputValue('')
     setInputIsFocused(false)
   }
 
   const handleFocus = (e) => {
-    const inputValue = e.target.value
+    const value = e.target.value
     !isHelpMode && setNavBarAsSearchMode(true)
-    if (inputValue !== '' || !isHelpMode) return setInputIsFocused(true)
+    if (value !== '' || !isHelpMode) return setInputIsFocused(true)
   }
 
-  const handleUnfocus = () => {
-    setTimeout(() => {
-      setInputIsFocused(false)
-      !isHelpMode && setNavBarAsSearchMode(false)
-    }, 0)
+  const handleUnfocus = (e) => {
+    setInputIsFocused(false)
+    !isHelpMode && setNavBarAsSearchMode(false)
+    e.relatedTarget?.click()
+    inputRef.current?.blur() // Esto es para arreglar el "bug" al clicar afuera
   }
 
   const clearInputValue = () => {
-    input.value = ''
-    setInputHasValue(false)
+    setInputValue('')
+    isHelpMode && setInputIsFocused(false)
   }
 
   return (
-    <div className={`
+    <div
+      className={`
       SearchHelp-width-100
       SearchHelp-label-input
       OffersPage-p-relative
-    `}>
-      <div className={`
+    `}
+    >
+      <div
+        className={`
         col
         padding-none
         bg-white
         OffersPage-ai-center
         ${isHelpMode && `SearchHelp-borderinput-blue rounded`}
         ${!isHelpMode && !inputIsFocused && `rounded`}
-      `}>
-        {!isHelpMode && <Icon className="ProductPage-txt-light-grey SearchHelp-p-absoulte m-left-2" icon={inputIsFocused ? "arrow-left" : 'search'} />}
+      `}
+      >
+        {!isHelpMode && (
+          <div
+            className="SearchHelp-p-absoulte m-left-2"
+            onClick={handleUnfocus}
+          >
+            <Icon
+              className="ProductPage-txt-light-grey"
+              icon={inputIsFocused ? "arrow-left" : "search"}
+            />
+          </div>
+        )}
         <input
           id="search-help"
           autoComplete="off"
@@ -87,46 +101,44 @@ function SearchHelp({isHelpMode = true, setNavBarAsSearchMode = null}) {
             ${isHelpMode && `SearchHelp-bgi-forget`}
             SearchHelp-border-none
           `}
+          value={inputValue}
           onChange={handleInput}
           onFocus={handleFocus}
           onBlur={handleUnfocus}
+          ref={inputRef}
         />
-        <span className={inputHasValue ? 'd-flex' : 'OffersPage-d-none'}>
-          <button id="clear-input-content" onClick={clearInputValue} className={`
-            OffersPage-ai-center
-            OffersPage-p-0-right
-            SearchHelp-bg-transparent
-            SearchHelp-border-none
-          `}>
-            {xIcon}
-          </button>
-        </span>
+        {inputValue !== "" && (
+          <span className="d-flex">
+            <button
+              id="clear-input-content"
+              onClick={clearInputValue}
+              className={`
+                OffersPage-ai-center
+                OffersPage-p-0-right
+                SearchHelp-bg-transparent
+                SearchHelp-border-none
+              `}
+            >
+              {xIcon}
+            </button>
+          </span>
+        )}
       </div>
 
-      {inputIsFocused &&
-        <div id="suggested-results" className={`
-          row
-          fd-col
-          bg-white
-          shadow-sm
-          SearchHelp-ai-start
-          SearchHelp-width-100
-          SearchHelp-p-absoulte
-          ${isHelpMode ? 
-          `SearchHelp-m-1-top
-          rounded
-          ` :
-          `br-top`
-          }
-        `}>
-          <div className="col padding-none SearchHelp-width-100">
-            {isHelpMode && <p className="texttag-p txt-bold OffersPage-txt-light-grey">
-              { titleSuggestText }
-            </p>}
-          </div>
-          { suggestedResults }
-        </div>
-      }
+      {(inputIsFocused && suggestedResults.length > 0) && (
+        <SuggestedResults
+          isHelpMode={isHelpMode}
+          titleSuggestText={titleSuggestText}
+        >
+          {suggestedResults.map((suggestItem) => (
+            <SuggestedResultsItems
+              key={suggestItem.id}
+              data={suggestItem}
+              callback={setInputValue}
+            />
+          ))}
+        </SuggestedResults>
+      )}
     </div>
   )
 }
