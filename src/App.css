@@ -1103,3 +1103,47 @@
 .NavigationPage-margin-top-4 {
 	margin-top: 4px;
 }
+
+.switch-button-container {
+	position: relative;
+	display: inline-block;
+	width: 34px;
+	height: 19px;
+}
+
+.switch-button-container input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.switch-button-slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 12px;
+	background-color: #ccc;
+	transition: 0.4s;
+}
+
+.switch-button-slider::before {
+	position: absolute;
+	content: "";
+	width: 15px;
+	height: 15px;
+	margin: 2px;
+	border-radius: 50%;
+	background-color: white;
+	transition: 0.4s;
+}
+
+.switch-button-container input:checked + .switch-button-slider {
+	background-color: var(--success-color);
+}
+
+.switch-button-container input:checked + .switch-button-slider::before {
+	transform: translateX(15px);
+}
