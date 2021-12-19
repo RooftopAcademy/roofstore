@@ -7,6 +7,7 @@ import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
 import ConfirmClassification from './Pages/Public/ConfirmClassification';
 import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsumidorPage';
+import FavouritesPage from './Pages/Public/FavouritesPage/FavouritesPage';
 import HelpPage from './Pages/Public/HelpPage';
 import HelpPageCategory from './Pages/Public/HelpPage/HelpPageCategory';
 import HomePage from './Pages/Public/HomePage';
@@ -20,7 +21,6 @@ import ProductListPage from './Pages/Public/ProductListPage'
 import RegisterPage from './Pages/Public/RegisterPage';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
-import FavouritesPage from './Pages/Public/FavouritesPage';
 
 function App() {
 
