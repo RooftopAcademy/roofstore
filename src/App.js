@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import AdminNavigationPage from './Pages/Public/AdminNavigationPage';
 import CartPage from './Pages/Public/CartPage';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/offers" element={<OffersPage />} />
         <Route path="/navigation" element={<NavigationPage />} />
+        <Route path="/navigation/admin" element={<AdminNavigationPage />} />
         <Route path="/stores" element={<OfficialStores />} />
         <Route path="/product-list" element={<ProductListPage />} />
         <Route path="/product/:id" element={<ProductPage />} />
