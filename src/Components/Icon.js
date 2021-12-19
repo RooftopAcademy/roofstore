@@ -39,6 +39,8 @@ const icons = {
 	'envelope': 'far fa-envelope',
 	'lock': 'fas fa-unlock-alt',
 	'dni': 'far fa-id-card',
+	'heart-regular': 'far fa-heart',
+	'heart-solid': 'fas fa-heart'
 };
 
 function Icon({ className, icon }) {
