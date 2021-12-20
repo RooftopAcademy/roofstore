@@ -12,6 +12,7 @@ import HelpPageCategory from './Pages/Public/HelpPage/HelpPageCategory';
 import HomePage from './Pages/Public/HomePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
 import LoginPage from './Pages/Public/LoginPage';
+import MarketPointPage from './Pages/MarketPointsPage/MarketPointsPage';
 import OffersPage from './Pages/Public/OffersPage';
 import OfficialStores from './Pages/Public/OfficialStoresPage';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
@@ -38,6 +39,7 @@ function App() {
           <Route path="/help" element={<HelpPage />} />
           <Route path="/help/:id" element={<HelpPageCategory />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/market-points" element={<PrivateRoute><MarketPointPage /></PrivateRoute>} />
           <Route path="/offers" element={<OffersPage />} />
           <Route path="/stores" element={<OfficialStores />} />
           <Route path="/product-list" element={<ProductListPage />} />
