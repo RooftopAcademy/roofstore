@@ -18,9 +18,7 @@ function WelcomeCard ({closeWelcome}) {
           </div>
         </div>
         <div>
-          {/* <button className="button"> */}
-            <Icon icon="x" className="ProductPage-txt-light-grey" onClick={closeWelcome} />
-          {/* </button> */}
+          <Icon dataTestId="close-welcome" icon="x" className="ProductPage-txt-light-grey" onClick={closeWelcome} />
         </div>
       </div>
     </div>

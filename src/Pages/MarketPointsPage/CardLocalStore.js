@@ -2,7 +2,7 @@ import React from "react";
 
 function CardLocalStore ({store}) {
     return (
-        <div className="d-flex fd-col ai-center">
+        <div className="d-flex fd-col ai-center" data-testid="local-store-test">
             <div>
                 <img className="HomePage-border-circle" src={store.logo} alt={store.name} width="60px" />
             </div>

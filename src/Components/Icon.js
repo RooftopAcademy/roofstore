@@ -46,11 +46,12 @@ const icons = {
 	'truck': 'fas fa-truck-moving',
 };
 
-function Icon({ className, icon, onClick=null }) {
+function Icon({ className, icon, onClick=null, dataTestId }) {
 	return (<i 
 		role="figure" 
 		className={`${className} ${icons[icon]}`} 
 		onClick={onClick} 
+		data-testid={dataTestId}
 		></i>
 	)
 }

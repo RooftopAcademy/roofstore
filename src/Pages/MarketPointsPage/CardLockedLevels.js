@@ -7,7 +7,7 @@ function CardLockedLevels ({nextLevelBenefit, textLink, urlLink = '/'}) {
     <div className="bg-white my-3 rounded shadow-m">
       {nextLevelBenefit.map(item => {
         return(
-          <div className={`row ai-center br-btm OffersPage-p-relative txt-grey-copyright`}>
+          <div data-testid="level-benefit-test" className={`row ai-center br-btm OffersPage-p-relative txt-grey-copyright`}>
             <div className="d-flex ai-center w-80">
               <div className="HomePage-border-circle bg-main d-flex" style={{padding: "10px 9px"}}>
                 <Icon icon={item.logo} className="txt-white" />
