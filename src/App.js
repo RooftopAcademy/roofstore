@@ -12,6 +12,7 @@ import HelpPageCategory from './Pages/Public/HelpPage/HelpPageCategory';
 import HomePage from './Pages/Public/HomePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
 import LoginPage from './Pages/Public/LoginPage';
+import MessengerServicePage from './Pages/Public/MessengerServicePage/MessengerServicePage';
 import OffersPage from './Pages/Public/OffersPage';
 import OfficialStores from './Pages/Public/OfficialStoresPage';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
@@ -46,6 +47,7 @@ function App() {
           <Route path="/sell/chooseCategory" element={<PrivateRoute><ChooseRootCategory /></PrivateRoute>} />
           <Route path="/sell/confirm-classification" element={<PrivateRoute><ConfirmClassification /></PrivateRoute>} />
           <Route path="/shopping-history" element={<PrivateRoute><ShoppingHistoryPage /></PrivateRoute>} />
+          <Route path="/shopping/messenger" element={<MessengerServicePage />} />
           <Route path="/sell/item-title" element={<PrivateRoute><ChooseItemTitlePage /></PrivateRoute>} />
         </Routes>
       </ScrollTop>
