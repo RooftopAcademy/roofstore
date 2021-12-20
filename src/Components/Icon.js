@@ -44,11 +44,15 @@ const icons = {
 	'percent': 'fas fa-percent',
 	'money': 'far fa-money-bill-alt',
 	'truck': 'fas fa-truck-moving',
-	'tag': 'fas fa-tag'
 };
 
-function Icon({ className, icon }) {
-	return <i role="figure" className={`${className} ${icons[icon]}`}></i>
+function Icon({ className, icon, onClick=null }) {
+	return (<i 
+		role="figure" 
+		className={`${className} ${icons[icon]}`} 
+		onClick={onClick} 
+		></i>
+	)
 }
 
 export default Icon;
