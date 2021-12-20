@@ -8,7 +8,7 @@ function OfficialStores() {
         <WebsiteLayout>
             <div className="row padding-none">
                 <div className="col padding-none bg-main">
-                    <img className="Stores-image-banner w-100" src={"https://http2.mlstatic.com/resources/largesellers/header-web_mobile-768-HSP@2x.png"} alt={"Offical Stores Banner"} />
+                    <img className="Stores-image-banner w-100" src={"/images/tiendas-oficiales.png"} alt={"Offical Stores Banner"} />
                 </div>
             </div>
             <div className="row bg-main ">

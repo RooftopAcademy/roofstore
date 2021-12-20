@@ -2,7 +2,7 @@
 function FinancialUserInfo() {
 
     const url = 'http://www.usuariosfinancieros.gob.ar'
-    const image = 'https://http2.mlstatic.com/resources/sell/banner_usuarios_financieros.svg'
+    const image = '/images/banner-usuarios-financieros.svg'
     const altText = 'Usuarios Financieros'
 
     return (

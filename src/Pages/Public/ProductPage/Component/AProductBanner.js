@@ -7,12 +7,12 @@ function AProductBanner() {
         <div >        
             <img
               className="w-100"
-              src="/raid-banner.png"
+              src="/images/raid-banner.png"
               alt="raid"
             /> 
             <img
               className="w-100"
-              src="/raid-info-banner.png"
+              src="/images/raid-info-banner.png"
               alt="info"
             /> 
         </div>
