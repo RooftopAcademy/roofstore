@@ -110,8 +110,8 @@ function MarketPointPage () {
             titleDownload="Exclusivo con la app de Roofstore Pago"
           >
             <div className="row px-6">
-              { stores.map(store => {
-                return( <CardLocalStore store={store}/> )
+              { stores.map((store, index) => {
+                return( <CardLocalStore store={store} key={index} /> )
               })}
             </div>
           </CardLayoutWhitLogo>

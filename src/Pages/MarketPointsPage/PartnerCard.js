@@ -7,9 +7,9 @@ function PartnerCard ({suscriptions}) {
   return(
     <>
       {
-        suscriptions.map(suscription => {
+        suscriptions.map((suscription, index) => {
           return (
-          <div className="bg-white w-100 rounded my-3 shadow-m">
+          <div className="bg-white w-100 rounded my-3 shadow-m" key={index}>
             <div className="row pb-0">
 
               <div className="col d-flex ai-center pb-0">
