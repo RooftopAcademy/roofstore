@@ -6,7 +6,6 @@ import FavouriteList from "./favouritesData"
 function FavouritesPage() {
     let title = "Favoritos"
   return (
-    
     <WebsiteLayout>
         <div className="container bg-light-grey padding-none">
             <div className="row">
@@ -14,16 +13,19 @@ function FavouritesPage() {
                 <TextLine text={title} className={"ProductPage-fs-24"}/>
                 </div>
             </div>
-
-            {FavouriteList.map(product => {
-                        return (
+            <ul>
+                {FavouriteList.map(product => {
+                    return (
+                        <li className="br-btm"> 
                             <InteractionProductItem
-                                key={product.id}
-                                item = {product}
-                                favButton = {false}
+                            key={product.id}
+                            item = {product}
+                            favButton = {false}
                             />
-                        )
-                    })}
+                        </li>
+                    )   
+                })}
+            </ul>
         </div>
     </WebsiteLayout>
   )
