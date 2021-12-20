@@ -37,26 +37,26 @@ describe("InteractionProductItem", () => {
 
         it('image should have a src prop', () => {
             const element = screen.getByRole("img")
-            expect(element.getAttribute("src")).toBe("https://http2.mlstatic.com/D_Q_NP_2X_649806-MLA47931899819_102021-G.webp")
+            expect(element.getAttribute("src")).toBe(product.image)
         })
 
-        it('should render a text line with the text "Notebook Hp"', () => {
-            const element = screen.getByText("Notebook Hp")
+        it(`should render a text line with the text "${product.title}"`, () => {
+            const element = screen.getByText(product.title)
             expect(element).toBeInTheDocument()
         })
 
-        it('should render a text line with the text "$ 99.999"', () => {
-            const element = screen.getByText("$ 99.999")
+        it(`should render a text line with the text "$ ${product.price}"`, () => {
+            const element = screen.getByText(`$ ${product.price}`)
             expect(element).toBeInTheDocument()
         })
 
-        it('should render a text line with the text "8% OFF"', () => {
-            const element = screen.getByText("8% OFF")
+        it(`should render a text line with the text "${product.discount}"`, () => {
+            const element = screen.getByText(product.discount)
             expect(element).toBeInTheDocument()
         })
 
-        it('should render a text line with the text "9x $ 11.111 sin interés"', () => {
-            const element = screen.getByText("9x $ 11.111 sin interés")
+        it(`should render a text line with the text "${product.installments}"`, () => {
+            const element = screen.getByText(product.installments)
             expect(element).toBeInTheDocument()
         })
 
@@ -70,8 +70,8 @@ describe("InteractionProductItem", () => {
             expect(element).toBeInTheDocument()
         })
 
-        it('should render a text line with the text "por Hp Tienda Oficial"', () => {
-            const element = screen.getByText("por Hp Tienda Oficial")
+        it(`should render a text line with the text "por ${product.seller}"`, () => {
+            const element = screen.getByText(`por ${product.seller}`)
             expect(element).toBeInTheDocument()
         })
     })
