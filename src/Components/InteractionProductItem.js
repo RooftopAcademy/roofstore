@@ -8,6 +8,7 @@ function InteractionProductItem({item, favButton = false}) {
     const badge = '$'
     const price = `${badge} ${item.price}`
     const fullText = ' FULL'
+    const installmentsText = "en "
     const sellerText = `por ${item.seller}`
     const deleteText = "Eliminar"
 
@@ -45,7 +46,7 @@ function InteractionProductItem({item, favButton = false}) {
                     
                     {item.installments  &&
                     <p className="HomePage-fs-12" data-testid="interaction-product-item-installments">
-                        <span className="txt-grey">{"en "}</span>
+                        <span className="txt-grey">{installmentsText}</span>
                         <span className={"txt-green"}>{item.installments}</span>
                     </p>
                     }
