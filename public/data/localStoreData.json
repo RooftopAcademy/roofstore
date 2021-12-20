@@ -1,13 +1,16 @@
 [
     {
+        "name": "tienda1",
         "logo": "https://mla-s2-p.mlstatic.com/650590-MLA41109062101_032020-G.jpg",
         "offer": "5"
     },
     {
+        "name": "Rapanui",
         "logo": "https://mla-s2-p.mlstatic.com/765616-MLA40026415645_122019-G.jpg",
         "offer": "15"
     },
     {
+        "name": "Volta",
         "logo": "https://mla-s2-p.mlstatic.com/622540-MLA48343155800_112021-G.jpg",
         "offer": "20"
     }
