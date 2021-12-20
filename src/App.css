@@ -1169,6 +1169,22 @@
 	top: 0;
 }
 
+.bottom-0 {
+	bottom: 0;
+}
+
 .right-0 {
 	right: 0;
+}
+
+.overflow-y-hidden {
+	overflow-y: hidden;
+}
+
+.bg-gradiant-transparent {
+	background: linear-gradient(0deg, rgba(25,25,30) 0%, rgba(25,25,30,0.0001) 100%);
+}
+
+.txt-light-grey-roofstrap {
+	color: rgba(204, 204, 204, 1);
 }
