@@ -8,6 +8,7 @@ function TextTag({
     url = null,
     txtColor = 'txt-white',
     bgColor = 'bg-blue',
+    className = ''
 }) {
 
     let content
@@ -20,7 +21,7 @@ function TextTag({
 
     return (
         <div
-            className={'texttag-container ' + txtColor + ' txt-bold ' + bgColor}
+            className={'texttag-container ' + txtColor + ' txt-bold ' + bgColor + ' ' + className}
         >
             {content}
         </div>
