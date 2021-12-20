@@ -18,7 +18,7 @@ function AdminNavigationPage() {
     }
 
     return (
-        <div className="container p-2">
+        <div className="container p-2 vh-100">
             <div className="row">
                 <div className="col padding-none">
                     <Link className="" to="/navigation">
