@@ -847,6 +847,10 @@
   position: absolute;
 }
 
+.SearchHelp-z-index {
+	z-index: 1;
+}
+
 .SearchHelp-ai-start {
   display: flex;
   align-items: flex-start;
