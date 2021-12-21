@@ -8,11 +8,9 @@ function HelpPage() {
     const helpTitle = '¿Con qué podemos ayudarte?'
 
     return (
-        <TextPageLayout>
-            <div className="row bg-main" >
-                <div className="col">
-                    <p className="title m-bottom-1">{helpTitle}</p>
-                    <SearchHelp />
+        <TextPageLayout title={helpTitle}>
+            <div className="row bg-main padding-none" >
+                <div className="col padding-none">
                     {categoryBlocksData.map(category => {
                         return (
                             <div key={category.id}>
