@@ -15,7 +15,7 @@ function MessageReceived({iniciales, message, time, docs = false}) {
 						<TextLine text={message} className={"Footer-txt-start"}/>
 					</div>
 					{docs  &&
-						<div className=" row grey-border ProductPage-bg-light-grey rounded jc-start">
+						<div className=" row grey-border ProductPage-bg-light-grey rounded jc-start m-left-5">
 							<span className="col">
 								<button className="bg-white ProductPage-border-none ProductPage-circle">
 									<Icon icon="file" className={"ProductPage-fs-36"}/>
