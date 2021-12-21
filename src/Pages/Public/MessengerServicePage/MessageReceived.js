@@ -11,7 +11,7 @@ function MessageReceived({iniciales, message, time, docs = false}) {
                     </div>
                 </div>
 				<div className="col padding-none">
-					<div className="row grey-border ProductPage-bg-light-grey rounded ">
+					<div className="row grey-border ProductPage-bg-light-grey rounded m-left-5">
 						<TextLine text={message} className={"Footer-txt-start"}/>
 					</div>
 					{docs  &&
