@@ -14,11 +14,50 @@ function MessengerServicePage() {
 	const [buttonActive, setButtonActive]=useState(false)
 
 	const [text, setText] = useState("")
+	const [audio, setAudio] = useState('')
+
+	let globalStream = null
+	let mediaRecorder = null
+	let recordChunk = []
+
+
+	const config = {mimeType: 'audio/webm'}
 
 	const handleChangeInput = e =>{
 		setText (e.target.value)
 		console.log (text)
 	}
+
+
+	const handleStart = () => {
+		mediaRecorder = new MediaRecorder(globalStream, config)
+		
+		mediaRecorder.addEventListener('dataavailable', (e) => {
+			if (e.data.size > 0) {
+				recordChunk.push(e.data)
+			}
+		})
+
+		mediaRecorder.addEventListener('stop', function () {
+			console.log('stop audio')
+
+			setAudio(URL.createObjectURL(new Blob(recordChunk)))
+			recordChunk = []
+			mediaRecorder = null
+		})
+
+		mediaRecorder.start();
+	}
+
+	const handlerEnd = () => {
+		mediaRecorder.stop()
+	}
+	
+	navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+		.then((stream) => {
+			globalStream = stream
+		})
+
 	return (
 		<div className="container padding-none bg-light-grey">	
 			<div className="sticky-header">
@@ -96,6 +135,10 @@ function MessengerServicePage() {
 				message = "Gracias"
 				time = "09:52"
 			/>
+
+			{audio? <audio id="player" controls src={audio} ></audio> : ''}
+			
+			
 			<div className="row br-top bg-white shadow-sm rounded sticky-footer">
 				<div className="col">
 					<button className="bg-white ProductPage-border-none ProductPage-circle">
@@ -111,9 +154,12 @@ function MessengerServicePage() {
 					</button>
 				</div>
 				<div className={`col ${text? 'd-none'  : ''}`}>
-					<button className="bg-light-grey ProductPage-border-none ProductPage-circle" >
+					<button className="bg-light-grey ProductPage-border-none ProductPage-circle" 
+						onMouseDown={handleStart} onMouseUp={handlerEnd}
+					>
 						<Icon icon="microphone"/>
 					</button>
+					{/* <input type="file" accept="audio/*" capture onChange={handleRecord} /> */}
 				</div>
 			</div>
 		</div>
