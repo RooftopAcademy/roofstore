@@ -9,10 +9,8 @@ function MessageSend({message, time}) {
 				</div>
 				<div className="row ProductPage-jc-right padding-none">
 					<TextLine text={time} className={"ProductPage-txt-light-grey ProductPage-fs-14"}/>
-                     
 				</div>
-			</div>
-				
+			</div>	
 		</div>
     );
 }
