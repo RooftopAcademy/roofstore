@@ -1,3 +1,4 @@
+import { useState } from "react/cjs/react.development";
 import TextLine from "../../../Components/TextLine";
 import TextLink from "../../../Components/TextLink"
 import Icon from "../../../Components/Icon"
@@ -5,10 +6,19 @@ import MessageReceived from "./MessageReceived"
 import MessageSend from "./MessageSend";
 import FormInput from "../../../Components/FormInput"
 
+
 let title = "Mensajes"
 let userName = "user012"
 
 function MessengerServicePage() {
+	const [buttonActive, setButtonActive]=useState(false)
+
+	const [text, setText] = useState("")
+
+	const handleChangeInput = e =>{
+		setText (e.target.value)
+		console.log (text)
+	}
 	return (
 		<div className="container padding-none bg-light-grey">	
 			<div className="sticky-header">
@@ -35,6 +45,7 @@ function MessengerServicePage() {
 			<div className="row bg-white jc-center">
 				<div className="col">
 					<TextLine text={"14 de Noviembre"} className={"ProductPage-fs-12 ProductPage-txt-light-grey"}></TextLine>
+					
 				</div>
 			</div>
 			{/*casilla de mensajes*/}
@@ -92,15 +103,15 @@ function MessengerServicePage() {
 					</button> 
 				</div>
 				<div className="col grow-1">
-					<FormInput  type="text" className="input round p-form SearchHelp-placeholder-light-gray" holderText="Escribile al vendedor"/>
+					<FormInput  type="text" className="input round p-form SearchHelp-placeholder-light-gray" holderText="Escribile al vendedor" onChange={handleChangeInput} value={text}></FormInput>
 				</div>
-				<div className="col d-none">
+				<div className={`col ${!text?  'd-none' : ''}`}>
 					<button className="bg-light-grey ProductPage-border-none ProductPage-circle">
 						<Icon icon="send"/>
 					</button>
 				</div>
-				<div className="col">
-					<button className="bg-light-grey ProductPage-border-none ProductPage-circle">
+				<div className={`col ${text? 'd-none'  : ''}`}>
+					<button className="bg-light-grey ProductPage-border-none ProductPage-circle" >
 						<Icon icon="microphone"/>
 					</button>
 				</div>
