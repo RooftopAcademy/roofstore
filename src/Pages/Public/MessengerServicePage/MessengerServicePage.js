@@ -86,16 +86,23 @@ function MessengerServicePage() {
 				time = "09:52"
 			/>
 			<div className="row br-top bg-white shadow-sm rounded sticky-footer">
-				<div className="col"> 
-					<Icon icon="paper-clip" className="txt-light-grey"/>
+				<div className="col">
+					<button className="bg-white ProductPage-border-none ProductPage-circle">
+						<Icon icon="paper-clip"/>
+					</button> 
 				</div>
 				<div className="col grow-1">
 					<FormInput  type="text" className="input round p-form SearchHelp-placeholder-light-gray" holderText="Escribile al vendedor"/>
 				</div>
-				<div className="col grey-border ProductPage-bg-grey ProductPage-circle">
-					<span className="ProductPage-circle-content">
-						<Icon icon="microphone" className="txt-light-grey"/>
-					</span>
+				<div className="col d-none">
+					<button className="bg-light-grey ProductPage-border-none ProductPage-circle">
+						<Icon icon="send"/>
+					</button>
+				</div>
+				<div className="col">
+					<button className="bg-light-grey ProductPage-border-none ProductPage-circle">
+						<Icon icon="microphone"/>
+					</button>
 				</div>
 			</div>
 		</div>
