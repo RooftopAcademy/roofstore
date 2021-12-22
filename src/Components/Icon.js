@@ -39,10 +39,21 @@ const icons = {
 	'envelope': 'far fa-envelope',
 	'lock': 'fas fa-unlock-alt',
 	'dni': 'far fa-id-card',
+	'x': 'fas fa-times',
+	'tv': 'fas fa-tv',
+	'percent': 'fas fa-percent',
+	'money': 'far fa-money-bill-alt',
+	'truck': 'fas fa-truck-moving',
 };
 
-function Icon({ className, icon }) {
-	return <i role="figure" className={`${className} ${icons[icon]}`}></i>
+function Icon({ className, icon, onClick=null, dataTestId }) {
+	return (<i 
+		role="figure" 
+		className={`${className} ${icons[icon]}`} 
+		onClick={onClick} 
+		data-testid={dataTestId}
+		></i>
+	)
 }
 
 export default Icon;
