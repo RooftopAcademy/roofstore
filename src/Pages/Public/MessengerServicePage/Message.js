@@ -4,7 +4,7 @@ import TextLine from "../../../Components/TextLine";
 function Message({item}) {
     let content
 
-    if(item.send){
+    if(item.username == "myUser"){
         content = (
             <div className="container padding-none OffersPage-p-0-left">
                 <div className="row ProductPage-jc-right">
