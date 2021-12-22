@@ -156,10 +156,10 @@ function MessengerServicePage() {
 				<div className={`col ${text? 'd-none'  : ''}`}>
 					<button className="bg-light-grey ProductPage-border-none ProductPage-circle" 
 						onMouseDown={handleStart} onMouseUp={handlerEnd}
+						onTouchStart={handleStart} onTouchCancel={handlerEnd}
 					>
 						<Icon icon="microphone"/>
 					</button>
-					{/* <input type="file" accept="audio/*" capture onChange={handleRecord} /> */}
 				</div>
 			</div>
 		</div>
