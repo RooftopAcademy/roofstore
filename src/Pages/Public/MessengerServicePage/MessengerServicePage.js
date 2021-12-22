@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react/cjs/react.development";
 import TextLine from "../../../Components/TextLine";
 import TextLink from "../../../Components/TextLink"
 import Icon from "../../../Components/Icon"
@@ -18,6 +18,9 @@ function MessengerServicePage() {
 	let mediaRecorder = null
 	let recordChunk = []
 
+	useEffect(() => {
+		window.scroll(0,document.body.scrollHeight)
+	},[document.body.scrollHeight])
 
 	const config = {mimeType: 'audio/webm'}
 
@@ -35,8 +38,6 @@ function MessengerServicePage() {
 		})
 
 		mediaRecorder.addEventListener('stop', function () {
-			console.log('stop audio')
-
 			setAudio(URL.createObjectURL(new Blob(recordChunk)))
 			recordChunk = []
 			mediaRecorder = null
@@ -45,8 +46,9 @@ function MessengerServicePage() {
 		mediaRecorder.start();
 	}
 
-	const handlerEnd = () => {
-		mediaRecorder.stop()
+	const handlerEnd = async () => {
+		await mediaRecorder.stop()
+		window.scroll(0,document.body.scrollHeight)
 	}
 	
 	navigator.mediaDevices.getUserMedia({ audio: true, video: false })
