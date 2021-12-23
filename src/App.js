@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import AdminNavigationPage from './Pages/Public/AdminNavigationPage';
 import CartPage from './Pages/Public/CartPage';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
@@ -13,6 +14,7 @@ import HomePage from './Pages/Public/HomePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
 import LoginPage from './Pages/Public/LoginPage';
 import MarketPointPage from './Pages/MarketPointsPage/MarketPointsPage';
+import NavigationPage from './Pages/Public/NavigationPage';
 import OffersPage from './Pages/Public/OffersPage';
 import OfficialStores from './Pages/Public/OfficialStoresPage';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
@@ -40,15 +42,17 @@ function App() {
           <Route path="/help/:id" element={<HelpPageCategory />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/market-points" element={<PrivateRoute><MarketPointPage /></PrivateRoute>} />
+          <Route path="/navigation" element={<NavigationPage />} />
+          <Route path="/navigation/admin" element={<AdminNavigationPage />} />
           <Route path="/offers" element={<OffersPage />} />
-          <Route path="/stores" element={<OfficialStores />} />
           <Route path="/product-list" element={<ProductListPage />} />
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/sell/chooseCategory" element={<PrivateRoute><ChooseRootCategory /></PrivateRoute>} />
           <Route path="/sell/confirm-classification" element={<PrivateRoute><ConfirmClassification /></PrivateRoute>} />
-          <Route path="/shopping-history" element={<PrivateRoute><ShoppingHistoryPage /></PrivateRoute>} />
           <Route path="/sell/item-title" element={<PrivateRoute><ChooseItemTitlePage /></PrivateRoute>} />
+          <Route path="/shopping-history" element={<PrivateRoute><ShoppingHistoryPage /></PrivateRoute>} />
+          <Route path="/stores" element={<OfficialStores />} />
         </Routes>
       </ScrollTop>
     </BrowserRouter >

@@ -16,7 +16,7 @@ function MenuMobile() {
 	const menuItems = [
 		{ url: "/", icon: "home", text: "Inicio" },
 		{ url: "/offers", icon: "tag", text: "Ofertas" },
-		{ url: "/shopping-history", icon: "clock", text: "Historial" },
+		{ url: "/navigation", icon: "clock", text: "Historial" },
 		{ url: "/sales", icon: "tag", text: "Ventas" },
 		{ url: "/supermarket", icon: "bag", text: "Supermercado" },
 		{ url: "/fashion", icon: "tshirt", text: "Moda" },
