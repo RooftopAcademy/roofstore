@@ -5,7 +5,7 @@ function PaymentInfo() {
     
     const title = 'Hasta 6 cuotas sin interés'
     const subtitle = 'Ver promociones bancarias'
-    const image = '/credit-card.svg'
+    const image = '/images/credit-card.svg'
 
     return (
         <Link className={'link'} to={'/login'}>

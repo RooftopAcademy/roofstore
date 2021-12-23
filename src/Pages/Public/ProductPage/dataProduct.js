@@ -6,7 +6,7 @@ const product = {
     'reviews' : 23,
     'bestSellers' : false,
     'ranking' : 2,
-    'src' : "https://http2.mlstatic.com/D_NQ_NP_838152-MLA47962840755_102021-O.webp",
+    'src' : "/images/bicicleta-l.webp",
     'alt' : "Imagen 1 de 1",
     'stock' : 175,
     'assurance' : true,
@@ -24,31 +24,31 @@ const product = {
     'specs': [
         {
             "id": 1,
-            "icon": "https://http2.mlstatic.com/resources/frontend/ft-extended-v00/assets/vectorial/rodado_bicy.svg",
+            "icon": "/images/rodado_bicy.svg",
             "category": "Rodado: ",
             "value": "29"
         },
         {
             "id": 2,
-            "icon": "https://http2.mlstatic.com/resources/frontend/ft-extended-v00/assets/vectorial/tipo_de_bicicleta_bicy.svg",
+            "icon": "/images/tipo_de_bicicleta_bicy.svg",
             "category": "Tipo de bicicleta: ",
             "value": "Mountain Bike"
         },
         {
             "id": 3,
-            "icon": "https://http2.mlstatic.com/resources/frontend/ft-extended-v00/assets/vectorial/grupo_etario_bicy.svg",
+            "icon": "/images/grupo_etario_bicy.svg",
             "category": "Grupo etario: ",
             "value": "Adultos"
         },
         {
             "id": 4,
-            "icon": "https://http2.mlstatic.com/resources/frontend/ft-extended-v00/assets/vectorial/tipo_de_bicicleta_bicy.svg",
+            "icon": "/images/tipo_de_bicicleta_bicy.svg",
             "category": "Cantidad de velocidades: ",
             "value": "21"
         },
         {
             "id": 5,
-            "icon": "https://http2.mlstatic.com/resources/frontend/ft-extended-v00/assets/vectorial/tamano_del_cuadro_bicy.svg",
+            "icon": "/images/tamano_del_cuadro_bicy.svg",
             "category": "Tamaño de cuadro: ",
             "value": "M"
         },

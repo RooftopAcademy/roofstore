@@ -8,7 +8,7 @@ function FooterHeader() {
                 <Link className={'link'} to={'/'}>
                     <div className='row padding-none'>
                         <div className='col shadow-sm rounded Footer-w-50px'>
-                            <img className="Footer-img" src="https://rooftop.dev/images/favicon.png" alt="Logo" />
+                            <img className="Footer-img" src="/images/rooftop-favicon.png" alt="Logo" />
                         </div>
                         <div className='col padding-none m-left-2'>
                             <TextLine className={'txt-white'} text={'¡Comprá y vendé con la app!'}/>
