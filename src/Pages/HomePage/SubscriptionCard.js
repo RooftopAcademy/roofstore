@@ -1,6 +1,14 @@
 import CardFooterLink from "./CardFooterLink"
 
-function SubscriptionCard({children, title, price, period, footerLinkUrl}) {
+function SubscriptionCard(
+    {
+        children, 
+        title, 
+        price, 
+        period, 
+        footerLinkUrl, 
+        titleClass= "HomePage-fs-24"
+    }) {
 
     const footerLinkText = 'Suscribite'
 
@@ -10,21 +18,29 @@ function SubscriptionCard({children, title, price, period, footerLinkUrl}) {
                 
                 {/* Header */}
                 <div className="row p-0 bg-primary HomePage-br-top-radius txt-white txt-bold HomePage-subscription-card-header-bg">
-                    <div className="col padding-none HomePage-fs-24 HomePage-subscription-card-title">
+                    <div 
+                        className={
+                            `col padding-none  
+                            ${price? 'HomePage-subscription-card-title' : ''}
+                            ${titleClass} `
+                        }>
                         {title}
                     </div>
                     <div className="col padding-none">
-                        <span className="HomePage-fs-24">{`$ ${price}`}</span>
-                        <p className="HomePage-fs-12">{period}</p>
+                        { price? <span className="HomePage-fs-24">{`$ ${price}`}</span> : '' }
+                        { period? <p className="HomePage-fs-12">{period}</p> : '' }
                     </div>
                 </div>
 
                 {children}
 
                 {/* Footer Link */}
-                <div className="br-top">
-                    <CardFooterLink text={footerLinkText} url={footerLinkUrl}/>
-                </div>
+                {footerLinkUrl? 
+                    <div className="br-top">
+                        <CardFooterLink text={footerLinkText} url={footerLinkUrl}/>
+                    </div>
+                    : ''
+                }
             </div>
         </div>
     )

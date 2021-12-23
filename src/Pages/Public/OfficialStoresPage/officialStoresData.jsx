@@ -5,42 +5,42 @@ export const officialStoresData = [
             [
                 {
                     brandName: 'Lenovo',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/lenovo/logo201609060235.jpg',
+                    src: '/images/lenovo-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'Xerox',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/xerox/logo201907240315.jpg',
+                    src: '/images/xerox-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'Dell',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/dell/logo201703100459.jpg',
+                    src: '/images/dell-logo.jpg',
                     to: '/'
                 },
                 {
                     brandName: 'Redragon',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/redragon/logo201908271133.jpg',
+                    src: '/images/redragon-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'HyperX',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/hypex/logo201602051217.jpg',
+                    src: '/images/hyperx-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'Kingston',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/kingston/logo20212004162149.jpg',
+                    src: '/images/kingston-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'Gadnic',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/gadnic/logo201912120428.jpg',
+                    src: '/images/gadnic-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'HP',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/hpstore/logo20211105131359.jpg',
+                    src: '/images/hp-logo.jpg',
                     to: '/',
                 }
             ]
@@ -51,42 +51,42 @@ export const officialStoresData = [
             [
                 {
                     brandName: 'Lenovo',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/lenovo/logo201609060235.jpg',
+                    src: '/images/lenovo-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'Xerox',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/xerox/logo201907240315.jpg',
+                    src: '/images/xerox-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'Dell',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/dell/logo201703100459.jpg',
+                    src: '/images/dell-logo.jpg',
                     to: '/'
                 },
                 {
                     brandName: 'Redragon',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/redragon/logo201908271133.jpg',
+                    src: '/images/redragon-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'HyperX',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/hypex/logo201602051217.jpg',
+                    src: '/images/hyperx-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'Kingston',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/kingston/logo20212004162149.jpg',
+                    src: '/images/kingston-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'Gadnic',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/gadnic/logo201912120428.jpg',
+                    src: '/images/gadnic-logo.jpg',
                     to: '/',
                 },
                 {
                     brandName: 'HP',
-                    src: 'https://http2.mlstatic.com/storage/official-stores-images/hpstore/logo20211105131359.jpg',
+                    src: '/images/hp-logo.jpg',
                     to: '/',
                 }
             ]

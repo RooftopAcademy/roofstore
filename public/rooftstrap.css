@@ -398,3 +398,11 @@ p::after {
 .bg-black-transparent {
     background-color: rgba(0,0,0,.3);
 }
+
+.color-primary {
+  color: var(--primary)
+}
+
+.border-radius-bottom {
+	border-radius: 0 0 var(--default-rounded) var(--default-rounded);
+}
