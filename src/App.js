@@ -21,6 +21,7 @@ import RegisterPage from './Pages/Public/RegisterPage';
 import ScrollTop from './Components/ScrollTop';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
+import UploadPhotoPage from './Pages/PublishingProcess/UploadPhotoPage';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
           <Route path="/sell/confirm-classification" element={<PrivateRoute><ConfirmClassification /></PrivateRoute>} />
           <Route path="/shopping-history" element={<PrivateRoute><ShoppingHistoryPage /></PrivateRoute>} />
           <Route path="/sell/item-title" element={<PrivateRoute><ChooseItemTitlePage /></PrivateRoute>} />
+          <Route path="/sell/upload-photo" element={<UploadPhotoPage />} />
         </Routes>
       </ScrollTop>
     </BrowserRouter >
