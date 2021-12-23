@@ -40,7 +40,7 @@ const icons = {
 	'lock': 'fas fa-unlock-alt',
 	'dni': 'far fa-id-card',
 	'heart-regular': 'far fa-heart',
-	'heart-solid': 'fas fa-heart'
+	'heart-solid': 'fas fa-heart',
 	'x': 'fas fa-times',
 	'tv': 'fas fa-tv',
 	'percent': 'fas fa-percent',
