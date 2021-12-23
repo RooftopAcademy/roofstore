@@ -42,10 +42,24 @@ const icons = {
 	'trophy': "fas fa-trophy",
 	'tshirt': "fas fa-tshirt",
 	'watch': "fas fa-stopwatch",
+	'dni': 'far fa-id-card',
+	'heart-regular': 'far fa-heart',
+	'heart-solid': 'fas fa-heart'
+	'x': 'fas fa-times',
+	'tv': 'fas fa-tv',
+	'percent': 'fas fa-percent',
+	'money': 'far fa-money-bill-alt',
+	'truck': 'fas fa-truck-moving',
 };
 
-function Icon({ className, icon }) {
-	return <i role="figure" className={`${className} ${icons[icon]}`}></i>
+function Icon({ className, icon, onClick=null, dataTestId }) {
+	return (<i 
+		role="figure" 
+		className={`${className} ${icons[icon]}`} 
+		onClick={onClick} 
+		data-testid={dataTestId}
+		></i>
+	)
 }
 
 export default Icon;
