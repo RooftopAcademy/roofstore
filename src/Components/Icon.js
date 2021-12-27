@@ -39,6 +39,7 @@ const icons = {
 	'envelope': 'far fa-envelope',
 	'lock': 'fas fa-unlock-alt',
 	'dni': 'far fa-id-card',
+	'times': 'fas fa-times'
 };
 
 function Icon({ className, icon }) {
