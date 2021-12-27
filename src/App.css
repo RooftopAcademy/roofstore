@@ -1099,3 +1099,37 @@
 	bottom: 0;
 	box-shadow: 0px -3px 8px 5px rgb(0 0 0 / 10%);
 }
+
+.UploadPhotoPage-image {
+	width: 96px;
+	height: 96px;
+}
+
+.UploadPhotoPage-max-width-100 {
+	max-width: 100%;
+}
+
+.UploadPhotoPage-max-height-100 {
+	max-height: 100%;
+}
+
+.UploadPhotoPage-carousel-container-img {
+	width: 72px;
+	height: 72px;
+}
+
+.UploadPhotoPage-carousel-selected-img {
+	border: 2px solid var(--success-color);
+}
+
+.UploadPhotoPage-carousel-selected-img-container {
+	height: 380px;
+}
+
+.UploadPhotoPage-object-fit-cover {
+	object-fit: cover;
+}
+
+.UploadPhotoPage-object-fit-contain {
+	object-fit: contain;
+}
