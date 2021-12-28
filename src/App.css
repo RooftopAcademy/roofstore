@@ -1133,3 +1133,18 @@
 .UploadPhotoPage-object-fit-contain {
 	object-fit: contain;
 }
+
+.UploadPhotoPage-snackbar {
+	position: fixed;
+	bottom: 0%;
+	transition: 0.4s;
+}
+
+.UploadPhotoPage-snackbar-v-hidden {
+	visibility: hidden;
+	transform: translateY(100%);
+}
+
+.UploadPhotoPage-bg-dark-grey {
+	background-color: #333333;
+}
