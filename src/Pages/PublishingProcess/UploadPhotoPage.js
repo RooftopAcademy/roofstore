@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import Icon from "../../Components/Icon"
+import Snackbar from "../../Components/Snackbar"
 import TextLine from "../../Components/TextLine"
 
 function UploadPhotoPage() {
@@ -16,6 +17,8 @@ function UploadPhotoPage() {
     const [photos, setPhotos] = useState([])
     const [selectedImage, setSelectedImage] = useState()
 
+    const snackbarRef = useRef(null)
+
     const upload = () => {
         return new Promise((resolve, reject) => {
             const filePicker = document.querySelector('input')
@@ -27,8 +30,8 @@ function UploadPhotoPage() {
             }
 
             if ((photos.length + filePicker.files.length) > 10) {
-                reject('Puede seleccionar hasta 10 fotos')
-                alert("Puede seleccionar hasta 10 fotos")
+                reject('up to 10 files allowed')
+                snackbarRef.current.show()
                 return
             }
 
@@ -100,6 +103,9 @@ function UploadPhotoPage() {
                     </div>
                 </div>
             }
+            <Snackbar
+                ref={snackbarRef}
+                message="Podés subir hasta 10 fotos de tu producto" />
         </>
     )
 }
