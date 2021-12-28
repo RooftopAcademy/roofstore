@@ -24,9 +24,15 @@ import RegisterPage from './Pages/Public/RegisterPage';
 import ScrollTop from './Components/ScrollTop';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
+import Geolocation from './Geolocation';
+import { useEffect } from 'react';
 
 
 function App() {
+
+  useEffect(()=>{
+    Geolocation()
+  },[])
 
   return (
     <BrowserRouter>
