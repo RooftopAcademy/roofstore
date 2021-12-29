@@ -48,7 +48,7 @@ function App() {
           <Route path="/sell/confirm-classification" element={<PrivateRoute><ConfirmClassification /></PrivateRoute>} />
           <Route path="/shopping-history" element={<PrivateRoute><ShoppingHistoryPage /></PrivateRoute>} />
           <Route path="/sell/item-title" element={<PrivateRoute><ChooseItemTitlePage /></PrivateRoute>} />
-          <Route path="/sell/upload-photo" element={<UploadPhotoPage />} />
+          <Route path="/sell/upload-photo" element={<PrivateRoute><UploadPhotoPage /></PrivateRoute>} />
         </Routes>
       </ScrollTop>
     </BrowserRouter >
