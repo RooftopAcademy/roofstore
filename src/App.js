@@ -8,6 +8,7 @@ import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
 import ConfirmClassification from './Pages/Public/ConfirmClassification';
 import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsumidorPage';
+import FavouritesPage from './Pages/Public/FavouritesPage/FavouritesPage';
 import HelpPage from './Pages/Public/HelpPage';
 import HelpPageCategory from './Pages/Public/HelpPage/HelpPageCategory';
 import HomePage from './Pages/Public/HomePage';
@@ -38,6 +39,7 @@ function App() {
           <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
           <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
           <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/favourites" element={<PrivateRoute><FavouritesPage /></PrivateRoute>} />
           <Route path="/financial-user-info" element={<InfoFinancialUserPage />} />
           <Route path="/help" element={<HelpPage />} />
           <Route path="/help/:id" element={<HelpPageCategory />} />
