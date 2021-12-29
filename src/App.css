@@ -1109,6 +1109,18 @@
 	box-shadow: 0px -3px 8px 5px rgb(0 0 0 / 10%);
 }
 
+
+.sticky-header {
+	position: sticky;
+	top: 0;
+}
+
+.sticky-footer {
+	position: sticky;
+	bottom: 0;
+}
+
+
 .NavigationPage-padding-top-24 {
 	padding-top: 24px;
 }
@@ -1239,9 +1251,11 @@
 	color: rgba(204, 204, 204, 1);
 }
 
+
 .Modal-button-close {
   position: absolute;
 }
+
 .Modal-button-close::after {
   position: absolute;
   left: 8px;
@@ -1254,6 +1268,7 @@
   transform: rotate(45deg) translateX(20px);
   opacity: .5;
 }
+
 .Modal-button-close::before {
   position: absolute;
   left: 8px;

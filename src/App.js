@@ -14,6 +14,7 @@ import HomePage from './Pages/Public/HomePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
 import LoginPage from './Pages/Public/LoginPage';
 import MarketPointPage from './Pages/MarketPointsPage/MarketPointsPage';
+import MessengerServicePage from './Pages/Public/MessengerServicePage/MessengerServicePage';
 import NavigationPage from './Pages/Public/NavigationPage';
 import OffersPage from './Pages/Public/OffersPage';
 import OfficialStores from './Pages/Public/OfficialStoresPage';
@@ -50,6 +51,8 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/sell/chooseCategory" element={<PrivateRoute><ChooseRootCategory /></PrivateRoute>} />
           <Route path="/sell/confirm-classification" element={<PrivateRoute><ConfirmClassification /></PrivateRoute>} />
+          <Route path="/shopping-history" element={<PrivateRoute><ShoppingHistoryPage /></PrivateRoute>} />
+          <Route path="/shopping/messenger" element={<MessengerServicePage />} />
           <Route path="/sell/item-title" element={<PrivateRoute><ChooseItemTitlePage /></PrivateRoute>} />
           <Route path="/shopping-history" element={<PrivateRoute><ShoppingHistoryPage /></PrivateRoute>} />
           <Route path="/stores" element={<OfficialStores />} />
