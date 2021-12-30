@@ -13,7 +13,7 @@ function SuggestedResultsItem({ data: { suggested, redirect }, callback: setInpu
       </Link>
       <button
         onClick={handleClick}
-        className="col padding-none SearchHelp-bg-transparent SearchHelp-br-transparent"
+        className="col padding-none SearchHelp-bg-transparent SearchHelp-br-transparent icon-arrow-right-test"
       >
         { arrowLeftUpIcon }
       </button>

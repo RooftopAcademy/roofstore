@@ -117,6 +117,7 @@ function SearchHelp({isHelpMode = true, setNavBarAsSearchMode = null}) {
                 OffersPage-p-0-right
                 SearchHelp-bg-transparent
                 SearchHelp-border-none
+                icon-x-test
               `}
             >
               {xIcon}

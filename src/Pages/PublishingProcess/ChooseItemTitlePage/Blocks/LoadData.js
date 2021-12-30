@@ -29,7 +29,7 @@ export default function LoadData({
         <p className="OffersPage-txt-b txt-center">{ title }</p>
       </div>
 
-      <div className="row fd-col justify-content-sb SearchHelp-m-1-top grow-1">
+      <div className="row fd-col justify-content-sb SearchHelp-m-1-top grow-1 conteiner-title-item-test">
         <div className="col padding-none w-100">
           <TextareaRowDynamic
             placeholder={placeholder}
