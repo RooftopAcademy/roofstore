@@ -2,16 +2,35 @@ import React from "react";
 import Icon from "../../Components/Icon";
 import TextLine from "../../Components/TextLine";
 import TextLink from "../../Components/TextLink";
+import { useState } from 'react'
+import ModalCartQuantity from "./ModalCartQuantity";
 
 function CartItem ({item, dataTestId=""}) {
+
+    const [ showModal, setShowModal ] = useState(false)
+    const [ itemQuant, setItemQuant ] = useState(item.cant)
+
+    const handleOpenModal = () => {
+        return setShowModal(!showModal)
+    }
 
     const freeShippingText = 'Envío gratis'
     const badge = '$'
     const price = `${badge} ${item.price * item.cant}`
     const fullText = ' FULL'
+    const stock = 4419
 
     return (
         <div data-testid={dataTestId} className="m-bottom-0 bg-white" >
+            <ModalCartQuantity
+                data={{stock}}
+                functions={{
+                    showModal,
+                    setShowModal,
+                    itemQuant,
+                    setItemQuant
+                }}
+            />
             <div className="row br-btm">
 
                 <div className="col">
@@ -46,8 +65,8 @@ function CartItem ({item, dataTestId=""}) {
 
                     <div className="row padding-none m-top-5">
                         <div className="col padding-none">
-                            <button className="button CartItem-button round">
-                                <span className="txt-blue">{item.cant} u.</span>
+                            <button className="button CartItem-button round" onClick={handleOpenModal}>
+                                <span className="txt-blue">{itemQuant} u.</span>
                                 <Icon icon="arrow-down" className={"fz-m txt-grey-copyright"} />
                             </button>
                         </div>

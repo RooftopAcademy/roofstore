@@ -74,7 +74,7 @@ function UploadPhotoPage() {
                 <div className="container vh-100 padding-none d-flex fd-col">
                     <div className="row p-0 bg-primary">
                         <div className="col padding-none" onClick={() => closeButton()}>
-                            <Icon className={"txt-white HomePage-fs-24"} icon={"times"}/>
+                            <Icon className={"txt-white HomePage-fs-24"} icon={"x"}/>
                         </div>
                     </div>
                     <div className="row padding-none bg-main UploadPhotoPage-carousel-selected-img-container HomePage-flex-grow-1">
