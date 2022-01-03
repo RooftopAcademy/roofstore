@@ -1,7 +1,7 @@
 import TextLine from './TextLine'
 import Icon from './Icon'
 import { Link } from 'react-router-dom'
-function InteractionProductItem({item, favButton = false, dataTestId = ''}) {
+
 function InteractionProductItem({item, favButton = false}) {
 
     const freeShippingText = 'Envío gratis'
