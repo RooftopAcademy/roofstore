@@ -21,6 +21,7 @@ function InteractionProductItem({item, favButton = false}) {
     }
 
     return (
+
         <Link data-testid={"interaction-product-item-link"} className={"link"} to={"/product/" + item.id}>
             <div className={"row bg-white p-0 jc-start ai-start"}>
                 <div className="col padding-none">

@@ -1109,6 +1109,66 @@
 	box-shadow: 0px -3px 8px 5px rgb(0 0 0 / 10%);
 }
 
+.UploadPhotoPage-image {
+	width: 96px;
+	height: 96px;
+}
+
+.UploadPhotoPage-max-width-100 {
+	max-width: 100%;
+}
+
+.UploadPhotoPage-max-height-100 {
+	max-height: 100%;
+}
+
+.UploadPhotoPage-carousel-container-img {
+	width: 72px;
+	height: 72px;
+}
+
+.UploadPhotoPage-carousel-selected-img {
+	border: 2px solid var(--success-color);
+}
+
+.UploadPhotoPage-carousel-selected-img-container {
+	height: 240px;
+}
+
+.UploadPhotoPage-object-fit-cover {
+	object-fit: cover;
+}
+
+.UploadPhotoPage-object-fit-contain {
+	object-fit: contain;
+}
+
+.UploadPhotoPage-snackbar {
+	position: fixed;
+	bottom: 0%;
+	transition: 0.4s;
+}
+
+.UploadPhotoPage-snackbar-v-hidden {
+	visibility: hidden;
+	transform: translateY(100%);
+}
+
+.UploadPhotoPage-bg-dark-grey {
+	background-color: #333333;
+}
+
+.sticky-header {
+	position: sticky;
+	top: 0;
+}
+
+.sticky-footer {
+	position: sticky;
+	bottom: 0;
+}
+
+
 .NavigationPage-padding-top-24 {
 	padding-top: 24px;
 }
@@ -1239,9 +1299,11 @@
 	color: rgba(204, 204, 204, 1);
 }
 
+
 .Modal-button-close {
   position: absolute;
 }
+
 .Modal-button-close::after {
   position: absolute;
   left: 8px;
@@ -1254,6 +1316,7 @@
   transform: rotate(45deg) translateX(20px);
   opacity: .5;
 }
+
 .Modal-button-close::before {
   position: absolute;
   left: 8px;
