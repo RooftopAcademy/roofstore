@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getMessaging, getToken } from "firebase/messaging";
+import { getMessaging, onMessage, getToken } from 'firebase/messaging';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -12,12 +12,12 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-export const askForNotificationPermission = () => {
+export const registerFirebaseSW = (serviceWorkerRegistration) => {
   const messaging = getMessaging();
 
   const vapid = process.env.REACT_FIREBASE_VAPID;
 
-  getToken(messaging, { vapidKey: vapid })
+  getToken(messaging, { serviceWorkerRegistration, vapidKey: vapid })
     .then((currentToken) => {
       if (currentToken) {
         console.log('CURRENT TOKEN', currentToken);
@@ -32,9 +32,20 @@ export const askForNotificationPermission = () => {
       }
     })
     .catch((err) => {
-      console.log('An error occurred while retrieving token for notification. ', err);
+      console.log(
+        'An error occurred while retrieving token for notification. ',
+        err
+      );
       // ...
     });
-}
+};
+
+export const onForegroundMessage = () => {
+  const messaging = getMessaging();
+  onMessage(messaging, (payload) => {
+    console.log('Message received. ', payload);
+    // ...
+  });
+};
 
 export default app;

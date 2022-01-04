@@ -9,6 +9,7 @@
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://cra.link/PWA
+import { registerFirebaseSW } from './firebase';
 
 const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
@@ -90,6 +91,7 @@ const isLocalhost = Boolean(
             }
           };
         };
+        registerFirebaseSW(registration);
       })
       .catch((error) => {
         console.error('Error during service worker registration:', error);

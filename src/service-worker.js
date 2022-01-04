@@ -12,6 +12,9 @@ import { ExpirationPlugin } from 'workbox-expiration';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
+import { getMessaging } from 'firebase/messaging/sw';
+import { onBackgroundMessage } from 'firebase/messaging/sw';
+import app from './firebase'
 
 clientsClaim();
 
@@ -70,3 +73,10 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+const messaging = getMessaging(app);
+onBackgroundMessage(messaging, (payload) => {
+  console.log(
+    '[firebase-messaging-sw.js] Received background message ',
+    payload
+  );
+});
