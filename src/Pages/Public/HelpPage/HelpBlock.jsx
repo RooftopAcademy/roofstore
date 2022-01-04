@@ -29,7 +29,7 @@ function HelpBlock({ items, dataTestId }) {
                                 }
                             </div>
                             <div className="fz-l txt-grey-copyright">
-                                <Icon className='txt-grey-copyright' icon="arrow-right" />
+                                <Icon className='txt-grey-copyright ' icon="arrow-right" />
                             </div>
                         </div>
                     </Link>

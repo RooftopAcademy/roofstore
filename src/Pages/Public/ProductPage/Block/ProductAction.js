@@ -10,7 +10,7 @@ function ProductAction({item}) {
             <div className="row p-0 ">
                 <div className="col padding-none ProductPage-w-100">
                     <div className="ProductPage-p-bottom-2">
-                        <button className=" bg-blue txt-white rounded txt-bold ProductPage-border-none ProductPage-w-100">
+                        <button className="bg-blue txt-white rounded txt-bold ProductPage-border-none ProductPage-w-100">
                             <TextLine text={buttonShop} className={"ProductPage-p-button ProductPage-fs-16"}/>
                         </button>
                     </div>
@@ -23,10 +23,6 @@ function ProductAction({item}) {
                         txtLink = "Devolución gratis. "
                         url = "/politicas-de-devolucion" 
                         description = "Tenés 30 días desde que lo recibís."
-                    />
-                    <Benefit 
-                        icon = "shield"
-                        txtLink = "Compra protegida. "
                         url = "/compra-protegida" 
                         description = "recibí el producto que esperabas o te devolvemos tu dinero."
                     />
