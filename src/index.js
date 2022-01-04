@@ -4,7 +4,6 @@ import { AuthProvider } from './context/AuthContext'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import * as fb from './firebase'
 
 ReactDOM.render(
   <React.StrictMode>
