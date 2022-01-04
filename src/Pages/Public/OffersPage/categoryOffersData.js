@@ -1,75 +1,75 @@
 const categoryOffersData = [
   {
       title: 'Todas las ofertas',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1583341146061-todas-las-ofertas@3x.png',
+      image: '/images/todas-las-ofertas.webp',
   },
   {
       title: 'Ofertas relámpago',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1589556042906-relampago@3x.png',
+      image: '/images/ofertas-relampago.webp',
   },
   {
       title: 'Audífonos',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1583341411212-audifonos@3x.png',
+      image: '/images/audifonos.webp',
   },
   {
       title: 'Supermercado',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1583867863898-supermercado@3x.png',
+      image: '/images/supermercado.webp',
   },
   {
       title: 'Notebooks',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1583354134276-notebooks@3x.png',
+      image: '/images/notebooks.webp',
   },
   {
       title: 'Menos de $2000',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1583341233361-menos-de@3x.png',
+      image: '/images/menos-de-2000.webp',
   },
   {
       title: 'Calzado',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1583354080423-zapatillas@3x.png',
+      image: '/images/calzado.webp',
   },
   {
       title: 'Celulares',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1583341349527-celulares@3x.png',
+      image: '/images/celulares.webp',
   },
   {
       title: 'Ofertas Grandes',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1631908638808-camion.png',
+      image: '/images/ofertas-grandes.webp',
   },
   {
       title: 'Especial Pymes',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1631307183227-casitav2.png',
+      image: '/images/especial-pymes.webp',
   },
   {
       title: 'Herramientas',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1592947702168-herramientas@3x.png',
+      image: '/images/herramientas.webp',
   },
   {
       title: 'Televisores',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1583341437743-televisores@3x.png',
+      image: '/images/televisores.webp',
   },
   {
       title: 'Bicicletas',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1592946620975-bicycles@3x.png',
+      image: '/images/bicicletas.webp',
   },
   {
       title: 'Colchones',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1592947545519-colchones@3x.png',
+      image: '/images/colchones.webp',
   },
   {
       title: 'Parlantes',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1585847817557-speaker@3x.png',
+      image: '/images/parlantes.webp',
   },
   {
       title: 'Calefacción',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1597163728035-calefactor@3x.png',
+      image: '/images/calefaccion.webp',
   },
   {
       title: 'Videojuegos',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1597163382792-consolas@3x.png',
+      image: '/images/calefaccion.webp',
   },
   {
       title: 'Deportes y fitness',
-      image: 'https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:low/1598990157432-deportes-fitness@3x.png',
+      image: '/images/deportes-y-fitness.webp',
   },
 ]
 

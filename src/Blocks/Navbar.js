@@ -18,7 +18,7 @@ function Navbar({showSearch=true, showCart=true}) {
         <div className={`row bg-primary ${isSearchMode ? "padding-none" : "navbar-p-base"}`}>
             { !isSearchMode && <div className="col padding-none">
               <TextLink dataTestId="LogoNavbar" url={'/'}>
-                <Logo className="navbar-width-logo d-flex" imgAlt="Logo" imgSrc="https://rooftop.dev/images/favicon.png"/>
+                <Logo className="navbar-width-logo d-flex" imgAlt="Logo" imgSrc="/images/rooftop-favicon.png"/>
               </TextLink>
             </div>}
 

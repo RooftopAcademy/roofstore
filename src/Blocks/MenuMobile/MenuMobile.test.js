@@ -37,10 +37,10 @@ describe("MenuMobile", () => {
 		);
 	});
 
-	it("should include `/shopping-history` as href", () => {
+	it("should include `/navigation` as href", () => {
 		expect(component.getByText("Historial")).toHaveAttribute(
 			"href",
-			"/shopping-history"
+			"/navigation"
 		);
 	});
 

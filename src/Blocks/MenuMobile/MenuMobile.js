@@ -16,7 +16,7 @@ function MenuMobile() {
 	const menuItems = [
 		{ url: "/", icon: "home", text: "Inicio" },
 		{ url: "/offers", icon: "tag", text: "Ofertas" },
-		{ url: "/shopping-history", icon: "clock", text: "Historial" },
+		{ url: "/navigation", icon: "clock", text: "Historial" },
 		{ url: "/sales", icon: "tag", text: "Ventas" },
 		{ url: "/supermarket", icon: "bag", text: "Supermercado" },
 		{ url: "/fashion", icon: "tshirt", text: "Moda" },
@@ -56,7 +56,7 @@ function MenuMobile() {
 				<div className="grey-border">
 					<div className="row">
 						<div className="col OffersPage-6-col">
-							<img src="/user-avatar.png" alt="Imagen perfil en blanco" className="w-100"/>
+							<img src="/images/user-avatar.png" alt="Imagen perfil en blanco" className="w-100"/>
 						</div>
 						<div className="col">
 							<TextLine
