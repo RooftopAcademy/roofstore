@@ -1,4 +1,4 @@
-function DefensaConsumidorItem({ title, children, lastModifiedDate }) {
+function ConsumerDefenseItem({ title, children, lastModifiedDate }) {
   return (
     <section className="border-top-footer">
       <div className="row DefensaConsumidor-flex-end padding-none">
@@ -17,4 +17,4 @@ function DefensaConsumidorItem({ title, children, lastModifiedDate }) {
   )
 }
 
-export default DefensaConsumidorItem
+export default ConsumerDefenseItem
