@@ -1,7 +1,7 @@
 import TextLink from "../../../Components/TextLink"
-import DefensaConsumidorItem from "./DefensaConsumidorItem"
+import ConsumerDefenseItem from "./ConsumerDefenseItem"
 
-function DefensaConsumidorBlock() {
+function ConsumerDefenseBlock() {
   return (
     <div className="row ProductPage-bg-light-grey padding-none">
       <div className="col DefensaConsumidor-container">
@@ -30,7 +30,7 @@ function DefensaConsumidorBlock() {
         {/* ITEMS */}
         <section>
           {/* ITEMS 1 */}
-          <DefensaConsumidorItem title={"Denuncias en Defensa del Consumidor"}>
+          <ConsumerDefenseItem title={"Denuncias en Defensa del Consumidor"}>
             <p>
               Cualquier persona usuaria que tenga un problema con los servicios
               ofrecidos por Roofstore podrá iniciar un reclamo. Para
@@ -62,9 +62,9 @@ function DefensaConsumidorBlock() {
               </TextLink>
               .
             </p>
-          </DefensaConsumidorItem>
+          </ConsumerDefenseItem>
           {/* ITEMS 2 */}
-          <DefensaConsumidorItem
+          <ConsumerDefenseItem
             title={"Avisos Legales"}
             lastModifiedDate={"01/10/2020"}
           >
@@ -84,11 +84,11 @@ function DefensaConsumidorBlock() {
               Accedé a la norma completa:{" "}
               <TextLink url="/">Resolución 244/2020</TextLink>
             </p>
-          </DefensaConsumidorItem>
+          </ConsumerDefenseItem>
         </section>
       </div>
     </div>
   )
 }
 
-export default DefensaConsumidorBlock
+export default ConsumerDefenseBlock
