@@ -50,7 +50,7 @@ function UploadPhotoPage() {
 
     return (
         <>
-            {(photos.length == 0) &&
+            {(photos.length === 0) &&
             <div className="container bg-primary vh-100 p-0 d-flex fd-col">
                 <div className="row padding-none">
                     <div className="col padding-none">
@@ -86,7 +86,7 @@ function UploadPhotoPage() {
                         {photos.map((photo, index) => {
                             return (
                                 <div className="p-0" key={index} onClick={() => setSelectedImage(photo)}>
-                                    <img src={URL.createObjectURL(photo)} alt={photo.name} key={index} className={`UploadPhotoPage-carousel-container-img UploadPhotoPage-object-fit-cover ${photo == selectedImage ? "UploadPhotoPage-carousel-selected-img" : ""}`}/>
+                                    <img src={URL.createObjectURL(photo)} alt={photo.name} key={index} className={`UploadPhotoPage-carousel-container-img UploadPhotoPage-object-fit-cover ${photo === selectedImage ? "UploadPhotoPage-carousel-selected-img" : ""}`}/>
                                 </div>
                             )
                         })
