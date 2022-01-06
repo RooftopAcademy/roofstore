@@ -26,7 +26,7 @@ export default function ModalCartQuantity({
   data: {stock},
     show,
     setShow,
-    qty,
+    // qty,
     setQty,
 }) {
 
@@ -36,25 +36,9 @@ export default function ModalCartQuantity({
   const quantityText = 'Cantidad'
   const quantityAvailableText = `${stock} unidades disponibles`
 
-  const handleCloseModal = () => {
-    console.log('handleCloseModal')
-    setShow(false)
-  }
+  const handleCloseModal = () => setShow(false)
 
-  const handleOpenModal = () => {
-    console.log('handleOpenModal')
-    setShowSubModal(true)
-  }
-
-  /**
-   * 
-   */
-  const handleButtons = (e) => {
-    e.preventDefault()
-    const buttonValue = e.target.value
-    setQty(buttonValue)
-    setShow(false)
-  }
+  const handleOpenModal = () => setShowSubModal(true)
 
   let quantitiesItems = [
     {
@@ -69,8 +53,22 @@ export default function ModalCartQuantity({
     }
   ]
 
+  let updateItemQty = (e) => {
+    if (e.target.value < 6) {
+      e.preventDefault()
+      setQty(e.target.value)
+      handleCloseModal()
+    } else {
+      handleOpenModal()
+    }
+  }
+
   const quantitiesListItems = quantitiesItems.map((option, i) => {
-    return <QuantitiesItems key={i} option={option} handleButtons={handleButtons} handleOpenModal={handleOpenModal} />
+    return (
+      <QuantitiesItems 
+        key={i} 
+        option={option} 
+        updateItemQty={updateItemQty} />)
   })
 
   return (

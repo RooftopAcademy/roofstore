@@ -23,6 +23,8 @@ function CartItem ({item, dataTestId=""}) {
     const freeShippingText = 'Envío gratis'
     const price = `${item.currencySymbol} ${item.price * item.qty}`
     const fullShippingText = 'FULL'
+    const moreFromSeller = 'Ver más productos del vendedor'
+    const removeText = 'Eliminar'
 
     return (
         <div data-testid={dataTestId} className="m-bottom-0 bg-white" >
@@ -86,9 +88,11 @@ function CartItem ({item, dataTestId=""}) {
             </div>
 
             <div className="row">
-                <button className="txt-blue fz-sm HomePage-border-none bg-white">Eliminar</button>
+                <button className="txt-blue fz-sm HomePage-border-none bg-white">
+                    {removeText}
+                </button>
                 <TextLink className="fz-sm txt-blue" url="/">
-                    Ver más productos del vendedor
+                    {moreFromSeller}
                 </TextLink>
                 <button className="HomePage-border-none bg-white">
                     <Icon icon="ellipsis-v" className="txt-grey-copyright"/>

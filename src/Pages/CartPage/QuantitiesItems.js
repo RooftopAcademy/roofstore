@@ -1,17 +1,14 @@
 export default function QuantitiesItems({
   option,
-  handleButtons,
-  handleOpenModal
+  updateItemQty
 }) {
   const txtBlue = option.value > 5 ? 'txt-blue' : ''
-
-  let clickHandler = (option.value < 6) ? handleButtons : handleOpenModal
 
   return (
     <div className={`col padding-none w-100 br-top txt-center OffersPage-p-relative`}>
       <button
         value={option.value}
-        onClick={clickHandler}
+        onClick={updateItemQty}
         className={`
           w-100
           p-0
