@@ -1,63 +1,58 @@
 import { useState } from "react";
 import ReactModal from "react-modal";
+import QuantityInput from './QuantityInput'
 
-export default function ModalCartInputQuantity({
-  data: { stock },
-  functions: {
-    showSubModal,
-    setShowSubModal,
-    setShowModal,
-    setItemQuant,
+const modalStyles = {
+  overlay: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#4721bef2',
+  },
+  content: {
+    width: '360px',
+    maxHeight: "100%",
+    inset: 'unset',
+    padding: "none",
+    overflow: "hidden",
   }
-}) {
-  const [ isInputFocused, setIsInputFocused ] = useState(false)
+}
+
+// isVisible(true), isOpen(false)
+export default function ModalCartInputQuantity(props) {
+  const {stock} = props.data
+  const show = props.show
+  const setShow = props.setShow
+  const showParentModal = props.showParentModal
+  const setItemQty = props.setItemQty
+
   const quantityText = 'Cantidad'
   const quantityAvailableText = `${stock} disponibles`
-  const btnText = 'Continuar'
+  const btnText = 'Continuar' // !
 
-  const handleCloseModal = () => {
-    return setShowSubModal(false)
-  }
-
-  const handleFocusInput = () => {
-    return setIsInputFocused(!isInputFocused)
-  }
+  const handleCloseModal = () => setShow(false)
 
   const handleForm = (e) => {
     e.preventDefault()
     let inputValue = e.target.submodalInput.value
     inputValue = (inputValue > 0) ? inputValue : 1
     inputValue = (inputValue > stock) ? stock : inputValue
-    setItemQuant(inputValue)
-    setShowModal(false)
-    setShowSubModal(false)
+    setItemQty(inputValue)
+    showParentModal(false)
+    setShow(false)
   }
 
   return (
     <>
       <ReactModal
-        isOpen={showSubModal}
+        isOpen={show}
         testId={"submodal-cart-quantity"}
         ariaHideApp={false}
         bodyOpenClassName={'HomePage-overflow-hidden'}
         onRequestClose={handleCloseModal}
-        style={{
-          overlay: {
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#4721bef2',
-          },
-          content: {
-            width: '360px',
-            maxHeight: "100%",
-            inset: 'unset',
-            padding: "none",
-            overflow: "hidden",
-          }
-        }}
+        style={modalStyles}
       >
         <button
           onClick={handleCloseModal}
@@ -81,26 +76,7 @@ export default function ModalCartInputQuantity({
             className="col w-100"
             onSubmit={handleForm}
           >
-            <input
-              name="submodalInput"
-              required={true}
-              type="number"
-              min="1"
-              placeholder="Ingresar cantidad"
-              className={`
-                w-100
-                SearchHelp-placeholder-light-gray
-                ConfirmClassification-b-none
-                ${isInputFocused
-                  ? 'ChooseItemTitle-border-blue-bottom'
-                  : 'Modal-border-bottom-grey'
-                }
-                OffersPage-m-bottom
-                SearchHelp-m-3-top
-              `}
-              onFocus={handleFocusInput}
-              onBlur={handleFocusInput}
-            />
+            <QuantityInput setQty={setItemQty} />
 
             <button
               className="rounded MenuMobile-btn bg-blue txt-white"

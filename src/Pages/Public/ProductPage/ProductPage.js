@@ -64,12 +64,10 @@ function ProductPage() {
                 {/* Productos promocionados */}
                 <FeaturedProductsBlock
                   title="Productos promocionados"
-                  products={MOCK_PRODUCTOS_PROMOCIONADOS}
                 />
                 {/* Quienes compraron este producto también compraron */}
                 <FeaturedProductsBlock
                   title="Quienes compraron este producto también compraron"
-                  products={MOCK_PRODUCTOS_QUE_TBM_COMPRARON}
                 />
                 {/* Banner Publicitario */}
                 <AProductBanner />

@@ -7,30 +7,34 @@ import ModalCartQuantity from "./ModalCartQuantity";
 
 function CartItem ({item, dataTestId=""}) {
 
+    /**
+     * Cuando el usuario clickea el boton "comprar" 
+     * se despliega una ventana modal que permite elegir la cantidad
+     */
     const [ showModal, setShowModal ] = useState(false)
-    const [ itemQuant, setItemQuant ] = useState(item.cant)
 
-    const handleOpenModal = () => {
-        return setShowModal(!showModal)
-    }
+    /**
+     * Cantidad de unidades de un producto del carrito
+     */
+    const [ qty, setQty ] = useState(item.cant)
+
+    const handleOpenModal = () => setShowModal(!showModal)
 
     const freeShippingText = 'Envío gratis'
-    const badge = '$'
-    const price = `${badge} ${item.price * item.cant}`
-    const fullText = ' FULL'
-    const stock = 4419
+    const price = `${item.currencySymbol} ${item.price * item.qty}`
+    const fullShippingText = 'FULL'
 
     return (
         <div data-testid={dataTestId} className="m-bottom-0 bg-white" >
             <ModalCartQuantity
-                data={{stock}}
-                functions={{
-                    showModal,
-                    setShowModal,
-                    itemQuant,
-                    setItemQuant
-                }}
+                data={{stock : item.stock}}
+
+                show={showModal}
+                setShow={setShowModal}
+                qty={qty}
+                setQty={setQty}
             />
+
             <div className="row br-btm">
 
                 <div className="col">
@@ -54,7 +58,7 @@ function CartItem ({item, dataTestId=""}) {
                                     {item.fullShipping  &&
                                         <span className="txt-green txt-bold HomePage-fs-12 m-left-0">
                                             <Icon icon={"lightning"} className={"txt-green"}/>
-                                            <span className="txt-green">{fullText}</span>
+                                            <span className="txt-green">{` ` + fullShippingText}</span>
                                         </span>
                                     }
                                 </span>
@@ -66,7 +70,7 @@ function CartItem ({item, dataTestId=""}) {
                     <div className="row padding-none m-top-5">
                         <div className="col padding-none">
                             <button className="button CartItem-button round" onClick={handleOpenModal}>
-                                <span className="txt-blue">{itemQuant} u.</span>
+                                <span className="txt-blue">{item.qty} u.</span>
                                 <Icon icon="arrow-down" className={"fz-m txt-grey-copyright"} />
                             </button>
                         </div>
