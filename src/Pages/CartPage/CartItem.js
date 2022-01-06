@@ -19,6 +19,8 @@ function CartItem ({item, dataTestId=""}) {
     const price = `${badge} ${item.price * item.cant}`
     const fullText = ' FULL'
     const stock = 4419
+    const deleteText = 'Eliminar'
+    const seeMoreProductText = 'Ver más productos del vendedor'
 
     return (
         <div data-testid={dataTestId} className="m-bottom-0 bg-white" >
@@ -82,9 +84,9 @@ function CartItem ({item, dataTestId=""}) {
             </div>
 
             <div className="row">
-                <button className="txt-blue fz-sm HomePage-border-none bg-white">Eliminar</button>
+                <button className="txt-blue fz-sm HomePage-border-none bg-white">{deleteText}</button>
                 <TextLink className="fz-sm txt-blue" url="/">
-                    Ver más productos del vendedor
+                    {seeMoreProductText}
                 </TextLink>
                 <button className="HomePage-border-none bg-white">
                     <Icon icon="ellipsis-v" className="txt-grey-copyright"/>
