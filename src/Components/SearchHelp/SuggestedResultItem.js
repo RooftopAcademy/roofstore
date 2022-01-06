@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { forgetNormalIcon, arrowLeftUpIcon } from '../svgIcons'
+import { forgetNormalIcon, arrowLeftUpIcon } from './svgIcons'
 
 function SuggestedResultsItem({ data: { suggested, redirect }, callback: setInputValue }) {
   const handleClick = () => {
