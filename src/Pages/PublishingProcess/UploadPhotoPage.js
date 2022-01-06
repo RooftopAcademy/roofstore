@@ -10,9 +10,9 @@ function UploadPhotoPage() {
     const secondaryDescription = 'No incluyas banners, datos de contacto, links ni referencias a sitios externos.'
     const cameraImage = '/camera.svg'
     const addPhotos = 'Agregar fotos'
-
     const confirmText = 'Confirmar'
     const addMoreText = 'Cargar más fotos'
+    const alertMessage = 'Podés subir hasta 10 fotos de tu producto'
     
     const [photos, setPhotos] = useState([])
     const [selectedImage, setSelectedImage] = useState()
@@ -103,7 +103,7 @@ function UploadPhotoPage() {
             }
             <Snackbar
                 ref={snackbarRef}
-                message="Podés subir hasta 10 fotos de tu producto" />
+                message={alertMessage} />
         </>
     )
 }
