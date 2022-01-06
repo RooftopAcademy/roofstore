@@ -15,12 +15,12 @@ import ProductAction from "./Block/ProductAction";
 import ProductCarrousel from "./Block/ProductCarrousel";
 import BreadcrumbBlock from "./Block/BreadcrumbBlock"
 import FeaturedProductsBlock from "./Block/FeaturedProductsBlock"
-import GarantiaBlock from "./Block/GarantiaBlock"
+import WarrantyComponent from "./Component/WarrantyComponent"
 import PaymentBlock from "./Block/PaymentBlock"
 import ProductReviewsBlock from "./Block/ProductReviewsBlock"
 import QuestionAndAnswerBlock from "./Block/QuestionAndAnswerBlock"
 import AProductBanner from "./Component/AProductBanner"
-import { MOCK_CATEGORIES, MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON } from './mockData'
+import { MOCK_CATEGORIES, MOCK_WARRANTY_TIME, MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON } from './mockData'
 
 function ProductPage() {
     
@@ -50,7 +50,7 @@ function ProductPage() {
 
         <div className="row padding-none">
           <div className="ProductPage-w-100 padding-none">
-            <GarantiaBlock />
+            <WarrantyComponent warranty={MOCK_WARRANTY_TIME} />
             <PaymentBlock />
             <QuestionAndAnswerBlock />
             <ProductReviewsBlock />
