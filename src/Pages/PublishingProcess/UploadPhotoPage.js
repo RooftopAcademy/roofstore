@@ -83,13 +83,11 @@ function UploadPhotoPage() {
                         </div>
                     </div>
                     <div className="row padding-none overflow-scrollx jc-start">
-                        {photos.map((photo, index) => {
-                            return (
-                                <div className="p-0" key={index} onClick={() => setSelectedImage(photo)}>
-                                    <img src={URL.createObjectURL(photo)} alt={photo.name} key={index} className={`UploadPhotoPage-carousel-container-img UploadPhotoPage-object-fit-cover ${photo === selectedImage ? "UploadPhotoPage-carousel-selected-img" : ""}`}/>
-                                </div>
-                            )
-                        })
+                        {photos.map((photo, index) =>
+                            <div className="p-0" key={index} onClick={() => setSelectedImage(photo)}>
+                                <img src={URL.createObjectURL(photo)} alt={photo.name} key={index} className={`UploadPhotoPage-carousel-container-img UploadPhotoPage-object-fit-cover ${photo === selectedImage ? "UploadPhotoPage-carousel-selected-img" : ""}`}/>
+                            </div>
+                        )
                         }
                     </div>
                     <div className="row padding-none">
