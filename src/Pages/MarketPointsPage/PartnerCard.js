@@ -4,6 +4,9 @@ import TextLink from "../../Components/TextLink";
 import TextTag from "../../Components/TextTag";
 
 function PartnerCard ({suscriptions}) {
+  const offText = 'OFF'
+  const activarText = 'Activar'
+
   return(
     <>
       {
@@ -21,7 +24,7 @@ function PartnerCard ({suscriptions}) {
               </div>
 
               <div className="col txt-end pb-0">
-                <p><span className="txt-bold">{suscription.partner.offer}</span>OFF</p>
+                <p><span className="txt-bold">{suscription.partner.offer}</span>{offText}</p>
                 <TextTag text={`${suscription.partner.offer_day} DÍAS GRATIS`} bgColor="bg-green"/>
               </div>
 
@@ -32,13 +35,8 @@ function PartnerCard ({suscriptions}) {
                 {suscription.movies.map(movie => {
                   return(
                     <div 
-                      className="
-                        rounded 
-                        OffersPage-offer-item 
-                        overflow-y-hidden 
-                        ProductList-m-0 
-                        OffersPage-p-relative
-                        "
+                      className="rounded OffersPage-offer-item overflow-y-hidden ProductList-m-0 
+                        OffersPage-p-relative"
                       >
                       <img className="rounded" height="230px" src={movie.image} alt={movie.title} />
                       <div className="SearchHelp-p-absoulte bottom-0 w-100 bg-gradiant-transparent" 
@@ -54,7 +52,7 @@ function PartnerCard ({suscriptions}) {
 
             <div className="br-top row">
               <TextLink className="d-flex ai-center justify-content-sb w-100" url="/">
-                <span className="txt-blue fz-sm">Activar</span>
+                <span className="txt-blue fz-sm">{activarText}</span>
                 <Icon icon="arrow-right" className="txt-blue" />
               </TextLink>
             </div>
