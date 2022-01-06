@@ -20,7 +20,7 @@ import PaymentBlock from "./Block/PaymentBlock"
 import ProductReviewsBlock from "./Block/ProductReviewsBlock"
 import QuestionAndAnswerBlock from "./Block/QuestionAndAnswerBlock"
 import AProductBanner from "./Component/AProductBanner"
-import { MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON } from './mockData'
+import { MOCK_CATEGORIES, MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON } from './mockData'
 
 function ProductPage() {
     
@@ -74,7 +74,7 @@ function ProductPage() {
                 {/* Banner Publicitario */}
                 <AProductBanner />
                 {/* End banner publicitario */}
-                <BreadcrumbBlock />
+                <BreadcrumbBlock categories={MOCK_CATEGORIES}/>
               </div>
             </div>
           </div>

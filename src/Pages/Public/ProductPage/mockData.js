@@ -100,3 +100,5 @@ export   const MOCK_OPINIONS = [
     isPositiveReview: false,
   },
 ]
+
+export const MOCK_CATEGORIES = ['Deportes', 'Bicicletas', 'Rodado 29', 'Mountain Bike']
