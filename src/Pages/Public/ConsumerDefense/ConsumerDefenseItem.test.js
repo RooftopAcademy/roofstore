@@ -1,18 +1,18 @@
 import "@testing-library/jest-dom/extend-expect"
 import { render } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
-import DefensaConsumidorItem from "./DefensaConsumidorItem"
+import ConsumerDefenseItem from "./ConsumerDefenseItem"
 
 
 describe("DefensaConsumidorPage" , () => {
-  test("<DefensaConsumidorItem /> tenga la estructura DOM (incluye classnames) del snapshot", () => {
+  test("<ConsumerDefenseItem /> tenga la estructura DOM (incluye classnames) del snapshot", () => {
     const component = render(
       <BrowserRouter>
-        <DefensaConsumidorItem title="Title" lastModifiedDate="01/01/2021">
+        <ConsumerDefenseItem title="Title" lastModifiedDate="01/01/2021">
           <p>
             A Paragraph or Many Paragraphs
           </p>
-        </DefensaConsumidorItem>
+        </ConsumerDefenseItem>
       </BrowserRouter>
     )
 
