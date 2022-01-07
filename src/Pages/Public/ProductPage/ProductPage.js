@@ -20,10 +20,11 @@ import PaymentBlock from "./Block/PaymentBlock"
 import ProductReviewsBlock from "./Block/ProductReviewsBlock"
 import QuestionAndAnswerBlock from "./Block/QuestionAndAnswerBlock"
 import AProductBanner from "./Component/AProductBanner"
-import { MOCK_CATEGORIES, MOCK_WARRANTY_TIME, MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON } from './mockData'
+import { MOCK_CATEGORIES, MOCK_WARRANTY_TIME, MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON, MOCK_PROMEDY } from './mockData'
 
 function ProductPage() {
-    
+  const promotedProductText = 'Productos promocionados'
+  const alsoBoughtText = 'Quienes compraron este producto también compraron'
   return (
     <WebsiteLayout>
       <div className="container padding-none">
@@ -53,7 +54,7 @@ function ProductPage() {
             <WarrantyComponent warranty={MOCK_WARRANTY_TIME} />
             <PaymentBlock />
             <QuestionAndAnswerBlock />
-            <ProductReviewsBlock />
+            <ProductReviewsBlock data={MOCK_PROMEDY} />
             <div className="row padding-none ProductPage-bg-grey">
               <div className="col ProductPage-w-100">
                 <p>
@@ -63,12 +64,12 @@ function ProductPage() {
 
                 {/* Productos promocionados */}
                 <FeaturedProductsBlock
-                  title="Productos promocionados"
+                  title={promotedProductText}
                   products={MOCK_PRODUCTOS_PROMOCIONADOS}
                 />
                 {/* Quienes compraron este producto también compraron */}
                 <FeaturedProductsBlock
-                  title="Quienes compraron este producto también compraron"
+                  title={alsoBoughtText}
                   products={MOCK_PRODUCTOS_QUE_TBM_COMPRARON}
                 />
                 {/* Banner Publicitario */}
