@@ -20,7 +20,7 @@ import PaymentBlock from "./Block/PaymentBlock"
 import ProductReviewsBlock from "./Block/ProductReviewsBlock"
 import QuestionAndAnswerBlock from "./Block/QuestionAndAnswerBlock"
 import AProductBanner from "./Component/AProductBanner"
-import { MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON } from './mockData'
+import { MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON, MOCK_PROMEDY } from './mockData'
 
 function ProductPage() {
 
@@ -30,7 +30,7 @@ function ProductPage() {
 
   const promotedProductsTitle = 'Productos promocionados'
   const featuredProductsTitle = 'Quienes compraron este producto también compraron'
-    
+
   return (
     <WebsiteLayout>
       <div className="container padding-none">
@@ -60,7 +60,7 @@ function ProductPage() {
             <GarantiaBlock />
             <PaymentBlock />
             <QuestionAndAnswerBlock />
-            <ProductReviewsBlock />
+            <ProductReviewsBlock data={MOCK_PROMEDY} />
             <div className="row padding-none ProductPage-bg-grey">
               <div className="col ProductPage-w-100">
                 <p>
