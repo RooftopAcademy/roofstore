@@ -5,14 +5,21 @@ import { mock_keywordInformation, mock_questionsAnswers } from '../mockData'
 
 function QuestionAndAnswerBlock() {
 
+  const questionsAndAnswersText = 'Preguntas y respuestas'
+  const whatWantToKnowText = '¿Qué querés saber?'
+  const askToSellerText = 'Preguntale al vendedor'
+  const askButtonText = 'Preguntar'
+  const lastQuestionsText = 'Últimas realizadas'
+  const seeAllQuestionsText = 'Ver todas las preguntas'
+
   return (
     <section className="shadow-sm">
       <div className="row">
         <div className="col ProductPage-w-100 padding-none">
           <h3 className="m-top-2 m-bottom-4">
-            Preguntas y respuestas
+            {questionsAndAnswersText}
           </h3>
-          <p className="txt-bold OffersPage-m-bottom">¿Qué querés saber?</p>
+          <p className="txt-bold OffersPage-m-bottom">{whatWantToKnowText}</p>
           <div className="ProductPage-flex-container">
             {mock_keywordInformation.map((keyword) => (
               <KeywordInformationButtonComponent key={keyword}>
@@ -22,17 +29,17 @@ function QuestionAndAnswerBlock() {
           </div>
 
           <p className="txt-bold SearchHelp-m-3-top OffersPage-m-bottom">
-            Preguntale al vendedor
+            {askToSellerText}
           </p>
           <AutoGrowTextAreaComponent />
           <button className="rounded txt-white p-0 bg-blue ProductPage-w-100 input">
-            Preguntar
+            {askButtonText}
           </button>
         </div>
       </div>
       <div className="row">
         <div className="col">
-          <p className="txt-bold">Últimas realizadas</p>
+          <p className="txt-bold">{lastQuestionsText}</p>
           {mock_questionsAnswers.map((qa, index) => (
             <QAComponent qa={qa} key={index}/>
           ))}
@@ -41,7 +48,8 @@ function QuestionAndAnswerBlock() {
       <div className="row">
         <div className="col ProductPage-w-100">
           <button className="rounded txt-blue bg-white p-0 input ProductPage-btn-left">
-            Ver todas las preguntas <i className="fas fa-angle-right" />
+            {seeAllQuestionsText}
+            <i className="fas fa-angle-right" />
           </button>
         </div>
       </div>

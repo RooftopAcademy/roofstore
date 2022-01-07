@@ -4,7 +4,7 @@ import TextLine from "../../../Components/TextLine";
 function Message({item}) {
     let content
 
-    if(item.username == "myUser"){
+    if(item.username === "myUser"){
         content = (
             <div className="container padding-none OffersPage-p-0-left">
                 <div className="row ProductPage-jc-right">
@@ -25,7 +25,7 @@ function Message({item}) {
                     <div className="row jc-start">
                         <div className="col grey-border ProductPage-bg-grey circle ProductPage-as-baseline">
                             <div className="ProductPage-circle-content txt-white">
-                                {item.iniciales}
+                                {item.initials}
                             </div>
                         </div>
                         <div className="col padding-none">

@@ -42,7 +42,6 @@ const icons = {
 	'trophy': "fas fa-trophy",
 	'tshirt': "fas fa-tshirt",
 	'watch': "fas fa-stopwatch",
-	'dni': 'far fa-id-card',
 	'heart-regular': 'far fa-heart',
 	'heart-solid': 'fas fa-heart',
 	'x': 'fas fa-times',

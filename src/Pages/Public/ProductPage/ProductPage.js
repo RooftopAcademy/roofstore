@@ -23,8 +23,14 @@ import AProductBanner from "./Component/AProductBanner"
 import { MOCK_CATEGORIES, MOCK_WARRANTY_TIME, MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON, MOCK_PROMEDY } from './mockData'
 
 function ProductPage() {
-  const promotedProductText = 'Productos promocionados'
-  const alsoBoughtText = 'Quienes compraron este producto también compraron'
+
+  const publicationText = 'Publicación'
+  const publicationNumber = 1109087736
+  const reportText = 'Denunciar'
+
+  const promotedProductsTitle = 'Productos promocionados'
+  const featuredProductsTitle = 'Quienes compraron este producto también compraron'
+
   return (
     <WebsiteLayout>
       <div className="container padding-none">
@@ -58,18 +64,20 @@ function ProductPage() {
             <div className="row padding-none ProductPage-bg-grey">
               <div className="col ProductPage-w-100">
                 <p>
-                  Publicación <span className="txt-bold">#1109087736</span> |{" "}
-                  <span className="link-color">Denunciar</span>
+                  {publicationText + ' '}
+                  <span className="txt-bold">{'#' + publicationNumber}</span>
+                  {" | "}
+                  <span className="link-color">{reportText}</span>{}
                 </p>
 
                 {/* Productos promocionados */}
                 <FeaturedProductsBlock
-                  title={promotedProductText}
+                  title={promotedProductsTitle}
                   products={MOCK_PRODUCTOS_PROMOCIONADOS}
                 />
                 {/* Quienes compraron este producto también compraron */}
                 <FeaturedProductsBlock
-                  title={alsoBoughtText}
+                  title={featuredProductsTitle}
                   products={MOCK_PRODUCTOS_QUE_TBM_COMPRARON}
                 />
                 {/* Banner Publicitario */}

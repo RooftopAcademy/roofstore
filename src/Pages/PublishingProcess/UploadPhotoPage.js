@@ -10,9 +10,9 @@ function UploadPhotoPage() {
     const secondaryDescription = 'No incluyas banners, datos de contacto, links ni referencias a sitios externos.'
     const cameraImage = '/camera.svg'
     const addPhotos = 'Agregar fotos'
-
     const confirmText = 'Confirmar'
     const addMoreText = 'Cargar más fotos'
+    const alertMessage = 'Podés subir hasta 10 fotos de tu producto'
     
     const [photos, setPhotos] = useState([])
     const [selectedImage, setSelectedImage] = useState()
@@ -50,7 +50,7 @@ function UploadPhotoPage() {
 
     return (
         <>
-            {(photos.length == 0) &&
+            {(photos.length === 0) &&
             <div className="container bg-primary vh-100 p-0 d-flex fd-col">
                 <div className="row padding-none">
                     <div className="col padding-none">
@@ -83,13 +83,11 @@ function UploadPhotoPage() {
                         </div>
                     </div>
                     <div className="row padding-none overflow-scrollx jc-start">
-                        {photos.map((photo, index) => {
-                            return (
-                                <div className="p-0" key={index} onClick={() => setSelectedImage(photo)}>
-                                    <img src={URL.createObjectURL(photo)} alt={photo.name} key={index} className={`UploadPhotoPage-carousel-container-img UploadPhotoPage-object-fit-cover ${photo == selectedImage ? "UploadPhotoPage-carousel-selected-img" : ""}`}/>
-                                </div>
-                            )
-                        })
+                        {photos.map((photo, index) =>
+                            <div className="p-0" key={index} onClick={() => setSelectedImage(photo)}>
+                                <img src={URL.createObjectURL(photo)} alt={photo.name} key={index} className={`UploadPhotoPage-carousel-container-img UploadPhotoPage-object-fit-cover ${photo === selectedImage ? "UploadPhotoPage-carousel-selected-img" : ""}`}/>
+                            </div>
+                        )
                         }
                     </div>
                     <div className="row padding-none">
@@ -105,7 +103,7 @@ function UploadPhotoPage() {
             }
             <Snackbar
                 ref={snackbarRef}
-                message="Podés subir hasta 10 fotos de tu producto" />
+                message={alertMessage} />
         </>
     )
 }
