@@ -1,13 +1,6 @@
 import FormInput from "../../../Components/FormInput";
 
-
-
-function MobilePage({ optionActive, className, setOptionActive }) {
-
-    const title = 'Ingresá tu teléfono'
-    const explication = 'Con este teléfono podrás entrar a tu cuenta.'
-    const buttonText = 'Enviar'
-    const holder = 'Código de área + número.'
+function MobilePage({ optionActive, className, setOptionActive, title, explication, buttonText, holder = '' }) {
     return (
         <div className={`row ${className}`}>
             <div className="col w-100">
@@ -21,4 +14,5 @@ function MobilePage({ optionActive, className, setOptionActive }) {
         </div>
     )
 }
+
 export default MobilePage;
