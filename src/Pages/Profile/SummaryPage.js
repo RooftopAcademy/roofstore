@@ -1,5 +1,6 @@
+const formDatosText = "Listado de todos los datos personales"
 function ProfileSummaryPage() {
-    return (<div>Listado de todos los datos personales</div>)
+    return (<div>{formDatosText}</div>)
 }
 
 export default ProfileSummaryPage
