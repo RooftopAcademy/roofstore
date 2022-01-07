@@ -26,7 +26,7 @@ function ConsumerDefenseBlock() {
   const resolutionTwoFourFourTitleText = 'Resolución 244/2020 de la Secretaría de Comercio Interior del Ministerio de Desarrollo Productivo'
   const resolutionTwoFourFourBodyText = 'Dispone que los plazos previstos en las garantías contractuales y legales en los términos de la Ley N° 24.240 se tienen por suspendidos por todo el periodo en que los consumidores se hayan visto imposibilitados de ejercer sus derechos en virtud del Aislamiento Social, Preventivo y Obligatorio dictado por el Decreto Nº 297 de fecha 19 de marzo de 2020 y sus modificatorios.'
   const accessCompleteruleText = 'Accedé a la norma completa:'
-  const resolutionTwoFourFourText = 'Resolución 244/2020'
+  const resolutionTwoFourFourText = ' Resolución 244/2020'
 
   return (
     <div className="row ProductPage-bg-light-grey padding-none">
