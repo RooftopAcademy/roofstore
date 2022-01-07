@@ -9,7 +9,7 @@ import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
 import ConfirmClassification from './Pages/Public/ConfirmClassification';
-import DefensaConsumidorPage from './Pages/Public/DefensaConsumidor/DefensaConsumidorPage';
+import ConsumerDefensePage from './Pages/Public/ConsumerDefense/ConsumerDefensePage';
 import FavouritesPage from './Pages/Public/FavouritesPage/FavouritesPage';
 import Geolocation from './Geolocation';
 import HelpPage from './Pages/Public/HelpPage';
@@ -43,8 +43,8 @@ function App() {
       <ScrollTop>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/ayuda/terminos-y-condiciones" element={<TermsAndConditionsPage />} />
-          <Route path="/ayuda/defensa-del-consumidor" element={<DefensaConsumidorPage />} />
+          <Route path="/help/terms-and-conditions" element={<TermsAndConditionsPage />} />
+          <Route path="/help/defensa-del-consumidor" element={<ConsumerDefensePage />} />
           <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/favourites" element={<PrivateRoute><FavouritesPage /></PrivateRoute>} />
