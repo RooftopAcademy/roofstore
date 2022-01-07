@@ -6,13 +6,14 @@ let priceOff
 let priceDescount
 let installmentPrice
 let url = "/medios-de-pago"
-
+let linkText = "Ver los medios de pago"
 
 function ProductPrice({ item }) {
     priceOff = item.price - ((item.price * item.discountRate) / 100)
     let precioC = parseFloat(Math.round((item.price / item.cantCuotas) * 100) / 100).toFixed(2);
     installmentPrice = parseFloat(Math.round((priceOff / item.cantCuotas) * 100) / 100).toFixed(2);
     priceDescount = parseFloat(Math.round(priceOff * 100) / 100).toFixed(2);
+
 
     if (item.discount) {
         let finalDescountPrice = item.divisa + " " + priceDescount
@@ -71,7 +72,7 @@ function ProductPrice({ item }) {
             <div className="container ProductPage-p-top-0 ProductPage-p-bottom-0">
                 <div className="row ProductPage-p-top-0">
                     <div className="col padding-none">
-                        <TextLink url={url} className={"txt-blue ProductPage-fs-14"} children={"Ver los medios de pago"} />
+                        <TextLink url={url} className={"txt-blue ProductPage-fs-14"} children={linkText} />
                     </div>
                 </div>
             </div>
