@@ -1,6 +1,6 @@
 import FormInput from "../../../Components/FormInput";
 
-function MobilePage({ optionActive, className, setOptionActive, title, explication, buttonText, holder = '' }) {
+function SingleInputRegisterPage({ optionActive, className, setOptionActive, title, explication, buttonText, holder = '' }) {
     return (
         <div className={`row ${className}`}>
             <div className="col w-100">
@@ -15,4 +15,4 @@ function MobilePage({ optionActive, className, setOptionActive, title, explicati
     )
 }
 
-export default MobilePage;
+export default SingleInputRegisterPage
