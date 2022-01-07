@@ -8,6 +8,8 @@ import MobilePage from "./RegisterPages/MobilePage"
 
 function RegisterPage() {
   let [optionActive, setOptionActive] = useState(1)
+  const datos = "Tus datos"
+  const validaText = "Validá tus datos para que nadie pueda ingresa o crear una cuenta a tu nombre."
 
   const optionInfo = {
     email: {
@@ -79,10 +81,9 @@ function RegisterPage() {
     <DistractionFreeLayout isFooter={false}>
       <div className={`row ${optionActive % 2 !== 0 ? "" : "d-none"}`}>
         <div className="col">
-          <div className="title txt-bold m-bottom-2 ">Tus datos</div>
+          <div className="title txt-bold m-bottom-2 ">{datos}</div>
           <div className="m-bottom-5 ">
-            Validá tus datos para que nadie pueda ingresa o crear una cuenta a
-            tu nombre.
+            {validaText}
           </div>
 
           {Object.keys(optionInfo).map((key) => {
