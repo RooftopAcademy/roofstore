@@ -1,5 +1,9 @@
 import React from "react";
 
+const localStoreText = "HASTA"
+const percentageSymbol = "%"
+const offText = "OFF"
+
 function CardLocalStore ({store}) {
     return (
         <div className="d-flex fd-col ai-center" data-testid="local-store-test">
@@ -8,8 +12,8 @@ function CardLocalStore ({store}) {
             </div>
 
             <div className="d-flex fd-col ai-center">
-                <p className="fz-sm">HASTA</p>
-                <p> <span className="txt-bold">{store.offer}</span>% <span className="txt-bold">OFF</span></p>
+                <p className="fz-sm">{localStoreText}</p>
+                <p> <span className="txt-bold">{store.offer}</span>{percentageSymbol}<span className="txt-bold">{offText}</span></p>
             </div>
         </div>
     )
