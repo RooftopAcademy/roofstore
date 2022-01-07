@@ -1,10 +1,11 @@
 function BreadcrumbBlock({ categories }) {
   /**
-   * Si es la primera categoria no se le agrega un icono de flecha antes de la palabra.
+   * Si es la primera categoria no se le agrega un icono de flecha apuntando a la derecha antes de la palabra.
+   * Ej: Deportes > Bicicletas > Rodado 29 > Mountain Bike
    */
   const categoriesItems = categories.map((category, i) => {
-    if (i === 0) return <span>{category} </span>
-    return <span><i className="fas fa-angle-right" /> {category} </span>
+    if (i === 0) return <span key={i}>{category} </span>
+    return <span key={i}><i className="fas fa-angle-right" /> {category} </span>
   })
 
   return (
