@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
+import { onForegroundMessage } from './firebase';
 
 import AdminNavigationPage from './Pages/Public/AdminNavigationPage';
 import CartPage from './Pages/Public/CartPage';
@@ -34,6 +35,7 @@ function App() {
 
   useEffect(()=>{
     Geolocation()
+    onForegroundMessage()
   },[])
 
   return (

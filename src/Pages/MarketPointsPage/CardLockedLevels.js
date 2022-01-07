@@ -2,6 +2,8 @@ import React from "react";
 import Icon from "../../Components/Icon";
 import TextLink from "../../Components/TextLink";
 
+const levelText = "Nivel"
+
 function CardLockedLevels ({nextLevelBenefit, textLink, urlLink = '/'}) {
   return (
     <div className="bg-white my-3 rounded shadow-m">
@@ -18,7 +20,7 @@ function CardLockedLevels ({nextLevelBenefit, textLink, urlLink = '/'}) {
             </div>
             <div className="d-flex ai-center">
               <Icon icon="lock" className="m-right-3 fz-sm" />
-              <p className="fz-sm">Nivel {item.level}</p>
+              <p className="fz-sm">{levelText} {item.level}</p>
             </div>
           </div>
         )
