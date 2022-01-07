@@ -67,8 +67,9 @@ export const mock_questionsAnswers = [
     date: "01/11/2021",
   },
 ]
+export const MOCK_PROMEDY = 4.5;
 
-export   const MOCK_OPINIONS = [
+export const MOCK_OPINIONS = [
   {
     id: 1,
     stars: 3,
@@ -100,3 +101,6 @@ export   const MOCK_OPINIONS = [
     isPositiveReview: false,
   },
 ]
+
+export const MOCK_CATEGORIES = ['Deportes', 'Bicicletas', 'Rodado 29', 'Mountain Bike']
+export const MOCK_WARRANTY_TIME = '12 meses'

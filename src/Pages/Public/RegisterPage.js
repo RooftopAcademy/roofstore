@@ -1,10 +1,9 @@
 import { useState } from "react"
 import DistractionFreeLayout from "../../Layouts/DistractionFreeLayout"
 import ValidateOption from "./RegisterPages/ValidateOption"
-import EmailPage from "./RegisterPages/EmailPage"
 import DataPage from "./RegisterPages/DataPage"
 import PasswordPage from "./RegisterPages/PasswordPage"
-import MobilePage from "./RegisterPages/MobilePage"
+import SingleInputRegisterPage from "./RegisterPages/SingleInputRegisterPage"
 
 function RegisterPage() {
   let [optionActive, setOptionActive] = useState(1)
@@ -44,11 +43,15 @@ function RegisterPage() {
 
   const componentToRender = {
     email: (
-      <EmailPage
+      <SingleInputRegisterPage
         key={"emailPage"}
         className={optionActive === 2 ? "" : "d-none"}
         setOptionActive={setOptionActive}
         optionActive={optionActive}
+        title={"Ingresá tu e-mail"}
+        explication={"Te enviaremos un mensaje para confirmarlo."}
+        buttonText={"'Enviar e-mail de confirmación"}
+        formInputId={"email-input"}
       />
     ),
     data: (
@@ -60,11 +63,16 @@ function RegisterPage() {
       />
     ),
     mobile: (
-      <MobilePage
+      <SingleInputRegisterPage
         key={"mobilePage"}
         className={optionActive === 6 ? "" : "d-none"}
         setOptionActive={setOptionActive}
         optionActive={optionActive}
+        title={"Ingresá tu teléfono"}
+        explication={"Con este teléfono podrás entrar a tu cuenta."}
+        buttonText={"Enviar"}
+        holder={"Código de área + número."}
+        formInputId={"mobile-input"}
       />
     ),
     password: (

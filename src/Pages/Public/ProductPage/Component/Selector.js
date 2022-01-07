@@ -7,7 +7,7 @@ function Selector({variantOpcion, opcion, placeHolder}) {
             <div className="row ProductPage-bg-light-grey grey-border rounded">
                 <div className="col padding-none m-left-0">
                     <span>
-                        <span className="txt-grey">{variantOpcion}</span>
+                        <span className="txt-grey">{variantOpcion + ':'}</span>
                             <span className="txt-bold m-left-0">{opcion}</span>
                             <span className="ProductPage-txt-light-grey m-left-0">{placeHolder}</span>
                         </span>
