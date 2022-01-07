@@ -1,5 +1,6 @@
+const formEmailText = "Formulario de edicion de nombre de email"
 function EmailEditPage() {
-    return (<div>Formulario de edicion de nombre de email</div>)
+    return (<div>{formEmailText}</div>)
 }
 
 export default EmailEditPage
