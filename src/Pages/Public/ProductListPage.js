@@ -84,10 +84,10 @@ function ProductList() {
         </div>
 
         <Paginator
-          currentPage={currentPage}
-          nextUrl={nextUrl}
-          prevUrl={prevUrl}
-          lastPage={lastPage}
+          currentPage={items.meta.currentPage}
+          nextUrl={items.links.next}
+          prevUrl={items.links.previous}
+          lastPage={items.links.last}
           classNameText={"txt-blue"}
           classNameNumber={"ProductPage-bg-grey ProductList-txt-light-grey"}
         />
