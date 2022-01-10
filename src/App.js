@@ -44,7 +44,7 @@ function App() {
     <BrowserRouter>
       <ScrollTop>
         <Routes>
-            {routes.map(({path, auth, element}, i) => {
+            {routes.map(({path, element}, i) => {
                 return <Route key={i} path={path} element={element} />
             })}
 
