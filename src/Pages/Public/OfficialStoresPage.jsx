@@ -1,17 +1,12 @@
-import {useEffect, useState} from 'react'
-import axios from 'axios'
 import OfficialStoresBlock from "./OfficialStoresPage/OfficialStoresBlock"
 import WebsiteLayout from "../../Layouts/WebsiteLayout"
 import InputStores from './OfficialStoresPage/InputStores'
+import useFetch from "../../hooks/useFetch";
 
 function OfficialStores() {
     const textButton = 'Ver todas las tiendas'
 
-    const [categories, setCategories] = useState([])
-
-    useEffect(() => {
-        axios('/data/brandsByCategory.json').then(res => setCategories(res.data))
-    }, [])
+    const {data : categories} = useFetch({src: "/data/brandsByCategory.json"})
 
     return (
         <WebsiteLayout>
@@ -24,7 +19,7 @@ function OfficialStores() {
                 <div className="col">
                     <InputStores />
                     {
-                        categories.map((category, i) => {
+                        categories?.map((category, i) => {
                             return (<OfficialStoresBlock category={category} key={i}/>)
                         })
                     }
