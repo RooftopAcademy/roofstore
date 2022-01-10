@@ -36,7 +36,7 @@ function HomePage() {
     const relacionadoTitle = "Relacionado con tus visitas en Computación"
     const relacionadoFooterLinkUrl = "/login"
     const ofertasTitle = "Ofertas"
-    const ofertasFooterLinkUrl = "/login"
+    const ofertasFooterLinkUrl = "/offers"
     const subsTitle = "Suscribite al nivel 6"
     const subsPeriod = "el primer mes"
     const subsFooterLinkUrl = "/login"
