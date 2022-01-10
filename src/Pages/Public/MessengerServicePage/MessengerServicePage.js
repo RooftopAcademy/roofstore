@@ -5,56 +5,24 @@ import Icon from "../../../Components/Icon"
 import FormInput from "../../../Components/FormInput"
 import messagesList from "./mesaggesList"
 import Message from "./Message";
+import useRecorder from '../../../hooks/useRecorder'
 
 let title = "Mensajes"
 let userName = "user012"
 
 function MessengerServicePage() {
 
-	const [text, setText] = useState("")
-	const [audio, setAudio] = useState('')
+	let [audioURL, isRecording, startRecording, stopRecording] = useRecorder()
 
-	let globalStream = null
-	let mediaRecorder = null
-	let recordChunk = []
+	const [text, setText] = useState("")
 
 	useEffect(() => {
 		window.scroll(0,document.body.scrollHeight)
 	},[document.body.scrollHeight])
 
-	const config = {mimeType: 'audio/webm'}
-
 	const handleChangeInput = e => {
 		setText (e.target.value)
 	}
-
-	const handleStart = () => {
-		mediaRecorder = new MediaRecorder(globalStream, config)
-		
-		mediaRecorder.addEventListener('dataavailable', (e) => {
-			if (e.data.size > 0) {
-				recordChunk.push(e.data)
-			}
-		})
-
-		mediaRecorder.addEventListener('stop', function () {
-			setAudio(URL.createObjectURL(new Blob(recordChunk)))
-			recordChunk = []
-			mediaRecorder = null
-		})
-
-		mediaRecorder.start();
-	}
-
-	const handlerEnd = async () => {
-		await mediaRecorder.stop()
-		window.scroll(0,document.body.scrollHeight)
-	}
-	
-	navigator.mediaDevices.getUserMedia({ audio: true, video: false })
-		.then((stream) => {
-			globalStream = stream
-		})
 
 	return (
 		<div className="container padding-none bg-white">	
@@ -98,8 +66,7 @@ function MessengerServicePage() {
 					</div>
 				)
       })}
-			
-			{audio? <audio id="player" controls src={audio} ></audio> : ''}
+			{audioURL? <audio id="player" controls src={audioURL} ></audio> : ''}
 			
 			<div className="row bg-white br-top shadow-sm rounded sticky-footer">
 				<div className="col">
@@ -116,9 +83,9 @@ function MessengerServicePage() {
 					</button>
 				</div>
 				<div className={`col ${text? 'd-none'  : ''}`}>
-					<button className="bg-light-grey ProductPage-border-none ProductPage-circle" 
-						onMouseDown={handleStart} onMouseUp={handlerEnd}
-						onTouchStart={handleStart} onTouchCancel={handlerEnd}
+					<button className={`bg-light-grey ProductPage-border-none ProductPage-circle ${isRecording ? 'bg-light-green' : ''} `}
+						onMouseDown={startRecording} onMouseUp={stopRecording}
+						onTouchStart={startRecording} onTouchEnd={stopRecording}
 					>
 						<Icon icon="microphone"/>
 					</button>
