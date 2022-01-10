@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import {Fragment, useEffect} from 'react';
 import { onForegroundMessage } from './firebase';
 
 import AdminNavigationPage from './Pages/Public/AdminNavigationPage';
@@ -31,6 +31,8 @@ import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage
 import TermsAndConditionsPage from './Pages/TermsAndConditionsPage/TermsAndConditionsPage';
 import UploadPhotoPage from './Pages/PublishingProcess/UploadPhotoPage';
 
+import routes from './routes'
+
 function App() {
 
   useEffect(()=>{
@@ -42,10 +44,14 @@ function App() {
     <BrowserRouter>
       <ScrollTop>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+            {routes.map(({path, auth, element}, i) => {
+                return <Route key={i} path={path} element={element} />
+            })}
+
+          {/*<Route path="/" element={<HomePage />} />*/}
           <Route path="/help/terms-and-conditions" element={<TermsAndConditionsPage />} />
           <Route path="/help/defensa-del-consumidor" element={<ConsumerDefensePage />} />
-          <Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />
+          {/*<Route path="/cart" element={<PrivateRoute><CartPage /></PrivateRoute>} />*/}
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/favourites" element={<PrivateRoute><FavouritesPage /></PrivateRoute>} />
           <Route path="/financial-user-info" element={<InfoFinancialUserPage />} />
