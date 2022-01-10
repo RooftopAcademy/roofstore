@@ -11,12 +11,6 @@ export default function Paginator({
   classNameNumber,
 }) {
 
-  if (!prevUrl) return console.error(
-    'El componente <Paginator /> necesita una url pasado por la propiedad "prevUrl".'
-  )
-  if (!nextUrl) return console.error(
-    'El componente <Paginator /> necesita una url pasado por la propiedad "nextUrl".'
-  )
   if (lastPage > 0 && currentPage > lastPage) return console.error(
     'El número actual de página es mayor al límite.'
   )
@@ -30,24 +24,28 @@ export default function Paginator({
 
   return (
     <div className="row">
+      {prevUrl ? 
       <LinkPaginator
         url={prevUrl}
         text={prevText}
         next={false}
         classNameLink={`${classNameLink} ${prevHidden}`}
         classNameText={classNameText}
-      />
+      /> : "" }
+
       <div className="col padding-none d-flex ai-center">
         <NumberPaginator page={currentPage} className={classNameNumber}/>
         { lastPage > 0 && <p className="OffersPage-txt-light-grey">{ofText} {lastPage}</p> }
       </div>
+
+      {nextUrl ? 
       <LinkPaginator
         url={nextUrl}
         text={nextText}
         next={true}
         classNameLink={`${classNameLink} ${nextHidden}`}
         classNameText={classNameText}
-      />
+      /> : "" }
     </div>
   )
 }
