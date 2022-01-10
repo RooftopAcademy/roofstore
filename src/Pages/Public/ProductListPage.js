@@ -1,13 +1,24 @@
+import {useEffect, useState} from 'react'
+import axios from 'axios'
 import WebsiteLayout from '../../Layouts/WebsiteLayout'
 import Paginator from './ProductList/Components/Paginator'
 import { InfoIcon, ArrowDownAndUpIcon, FilterIcon } from './ProductList/svgIcon'
 import RoundedProductItem from './ProductList/Components/RoundedProductItem'
-import productListData from './ProductList/Mocks/productListData'
 import SwitchSmall from './ProductList/Components/SwitchSmall'
 
 function ProductList() {
 
-  const publicationsItems = productListData.map(
+  const [items, setItems] = useState({
+    items : [],
+    meta : {currentPage : 1},
+    links : {next : "", previous : "", last: ""}
+  })
+
+  useEffect(() => {
+    axios('/data/items.json').then(res => setItems(res.data))
+  }, [])
+
+  const publicationsItems = items.map(
     data => <RoundedProductItem key={data.id} data={data} />
   )
   const publicationsItemsCopy = [...publicationsItems]
@@ -23,11 +34,6 @@ function ProductList() {
   const titleSectionText = "Black Friday: Todo para Jardin y Aire Libre"
 
   const shippingNoticeText = "El envío gratis está sujeto al peso, precio y la distancia del envío."
-
-  const currentPage = 1
-  const nextUrl = "/"
-  const prevUrl = "/"
-  const lastPage = 100
 
   return (
     <WebsiteLayout>
