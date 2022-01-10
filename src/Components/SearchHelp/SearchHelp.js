@@ -1,12 +1,12 @@
 import { useState, useRef } from "react"
-import Icon from "./Icon"
+import Icon from "../Icon"
 
-import SuggestedResults from "./SearchHelp/Components/SuggestedResults"
-import SuggestedResultsItems from "./SearchHelp/Components/SuggestedResultItem"
-import suggestedResultsData from './SearchHelp/suggestedResultsData'
+import SuggestedResults from "./SuggestedResults"
+import SuggestedResultsItems from "./SuggestedResultItem"
+import suggestedResultsData from './suggestedResultsData'
 
 
-import { xIcon } from './SearchHelp/svgIcons'
+import { xIcon } from './svgIcons'
 
 
 function SearchHelp({isHelpMode = true, setNavBarAsSearchMode = null}) {
@@ -117,6 +117,7 @@ function SearchHelp({isHelpMode = true, setNavBarAsSearchMode = null}) {
                 OffersPage-p-0-right
                 SearchHelp-bg-transparent
                 SearchHelp-border-none
+                icon-x-test
               `}
             >
               {xIcon}

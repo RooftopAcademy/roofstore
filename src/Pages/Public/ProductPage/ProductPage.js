@@ -71,15 +71,14 @@ function ProductPage() {
                 </p>
 
                 {/* Productos promocionados */}
-                <FeaturedProductsBlock
-                  title={promotedProductsTitle}
-                  products={MOCK_PRODUCTOS_PROMOCIONADOS}
-                />
-                {/* Quienes compraron este producto también compraron */}
-                <FeaturedProductsBlock
-                  title={featuredProductsTitle}
-                  products={MOCK_PRODUCTOS_QUE_TBM_COMPRARON}
-                />
+                <FeaturedProductsBlock 
+                  src="/data/featured.json"
+                  title={promotedProductsTitle} />
+
+                <FeaturedProductsBlock 
+                  src="/data/featured.json"
+                  title={featuredProductsTitle} />
+                  
                 {/* Banner Publicitario */}
                 <AProductBanner />
                 {/* End banner publicitario */}

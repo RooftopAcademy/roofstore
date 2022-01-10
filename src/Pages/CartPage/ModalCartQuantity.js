@@ -3,83 +3,83 @@ import ReactModal from "react-modal";
 import ModalCartInputQuantity from './ModalCartInputQuantity'
 import QuantitiesItems from "./QuantitiesItems";
 
+let styles = {
+  overlay: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#4721bef2',
+  },
+  content: {
+    border: 'none',
+    width: '360px',
+    maxHeight: "100%",
+    inset: 'unset',
+    padding: "none",
+    overflow: "hidden",
+  }
+}
+
 export default function ModalCartQuantity({
   data: {stock},
-  functions: {
-    showModal,
-    setShowModal,
-    itemQuant,
-    setItemQuant,
-  }
+    show,
+    setShow,
+    // qty,
+    setQty,
 }) {
+
+  // subModal es ModalCartInputQuantity
   const [ showSubModal, setShowSubModal ] = useState(false)
 
   const quantityText = 'Cantidad'
   const quantityAvailableText = `${stock} unidades disponibles`
 
-  const handleCloseModal = () => {
-    return setShowModal(false)
-  }
+  const handleCloseModal = () => setShow(false)
 
-  const handleOpenModal = () => {
-    return setShowSubModal(true)
-  }
+  const handleOpenModal = () => setShowSubModal(true)
 
-  const handleButtons = (e) => {
-    e.preventDefault()
-    const buttonValue = e.target.value
-    setItemQuant(buttonValue)
-    setShowModal(false)
-  }
-
-  let quantitiesText = [
-    '1 unidad',
-    '2 unidades',
-    '3 unidades',
-    '4 unidades',
-    '5 unidades',
-    '6 unidades',
-    'Más de 6 unidades',
+  let quantitiesItems = [
+    {
+      "value" : 1,
+      "text" : "1 unidad",
+      "showMoreOptions" : false
+    },
+    {
+      "value" : 6,
+      "text" : "Mas de 6 unidades",
+      "showMoreOptions" : true
+    }
   ]
 
-  quantitiesText = quantitiesText.filter((_, i) => i < stock)
+  let updateItemQty = (e) => {
+    if (e.target.value < 6) {
+      e.preventDefault()
+      setQty(e.target.value)
+      handleCloseModal()
+    } else {
+      handleOpenModal()
+    }
+  }
 
-  const quantitiesListItems = quantitiesText.map((el, i) => {
+  const quantitiesListItems = quantitiesItems.map((option, i) => {
     return (
-      <QuantitiesItems
-        key={i}
-        data={{el, i, itemQuant}}
-        onClick={{handleButtons, handleOpenModal}} 
-      />
-    )
+      <QuantitiesItems 
+        key={i} 
+        option={option} 
+        updateItemQty={updateItemQty} />)
   })
 
   return (
     <>
       <ReactModal
-        isOpen={showModal}
+        isOpen={show}
         testId={"modal-cart-quantity"}
         ariaHideApp={false}
         bodyOpenClassName={'HomePage-overflow-hidden'}
         onRequestClose={handleCloseModal}
-        style={{
-          overlay: {
-            width: '100%',
-            height: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            backgroundColor: '#4721bef2',
-          },
-          content: {
-            border: 'none',
-            width: '360px',
-            maxHeight: "100%",
-            inset: 'unset',
-            padding: "none",
-            overflow: "hidden",
-          }
-        }}
+        style={styles}
       >
         <button
           onClick={handleCloseModal}
@@ -103,14 +103,13 @@ export default function ModalCartQuantity({
           { quantitiesListItems }
         </div>
       </ReactModal>
+
       <ModalCartInputQuantity
         data={{stock}}
-        functions={{
-          showSubModal,
-          setShowSubModal,
-          setShowModal,
-          setItemQuant,
-        }}
+        show={showSubModal}
+        setShow={setShowSubModal}
+        showParentModal={setShow}
+        setItemQty={setQty}
       />
     </>
   )
