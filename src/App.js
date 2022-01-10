@@ -1,10 +1,9 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {Fragment, useEffect} from 'react';
+import {useEffect} from 'react';
 import { onForegroundMessage } from './firebase';
 
 import AdminNavigationPage from './Pages/Public/AdminNavigationPage';
-import CartPage from './Pages/Public/CartPage';
 import CategoriesPage from './Pages/CategoriesPage/CategoriesPage';
 import ChooseItemTitlePage from './Pages/PublishingProcess/ChooseItemTitlePage';
 import ChooseRootCategory from './Pages/PublishingProcess/ChooseRootCategory';
@@ -14,7 +13,6 @@ import FavouritesPage from './Pages/Public/FavouritesPage/FavouritesPage';
 import Geolocation from './Geolocation';
 import HelpPage from './Pages/Public/HelpPage';
 import HelpPageCategory from './Pages/Public/HelpPage/HelpPageCategory';
-import HomePage from './Pages/Public/HomePage';
 import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
 import LoginPage from './Pages/Public/LoginPage';
 import MarketPointPage from './Pages/MarketPointsPage/MarketPointsPage';
