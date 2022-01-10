@@ -1,13 +1,20 @@
 import axios from 'axios'
 import {useState, useEffect} from "react";
 
+const http = axios.create({
+    baseURL : "http://localhost:3000/data/",
+    headers : {
+        "Authorization" : "Bearer ..."
+    }
+})
+
 function useFetch(props) {
     const [response, setResponse] = useState({
         data : null
     })
 
     useEffect(() => {
-        axios(props.src).then(res => setResponse(res))
+        http(props).then(res => setResponse(res))
     }, [])
 
     return response
