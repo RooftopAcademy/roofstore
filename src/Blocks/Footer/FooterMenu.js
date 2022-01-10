@@ -26,7 +26,7 @@ function FooterMenu() {
                 <TextLink url={'/shopping-history'} className={'txt-black m-bottom-0'}>{myShoppingText}</TextLink>
                 <TextLink url={'/offers'} className={'txt-black m-bottom-0'}>{offersText}</TextLink>
                 <TextLink url={'/officialStores'} className={'txt-black m-bottom-0'}>{oficialStoreText}</TextLink>
-                <TextLink url={'/mercado-puntos'} className={'txt-black m-bottom-0'}>{storePointText}</TextLink>
+                <TextLink url={'/market-points'} className={'txt-black m-bottom-0'}>{storePointText}</TextLink>
                 <TextLink url={'/sell/chooseCategory'} className={'txt-black'}>{sellText}</TextLink>
             </div>
         </div>
