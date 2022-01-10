@@ -24,7 +24,7 @@ import OffersPage from './Pages/Public/OffersPage';
 import OfficialStores from './Pages/Public/OfficialStoresPage';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import ProductPage from './Pages/Public/ProductPage/ProductPage';
-import ProductListPage from './Pages/Public/ProductListPage'
+import ProductList from './Pages/Public/ProductListPage'
 import RegisterPage from './Pages/Public/RegisterPage';
 import ScrollTop from './Components/ScrollTop';
 import ShoppingHistoryPage from './Pages/ShoppingHistoryPage/ShoppingHistoryPage'
@@ -56,7 +56,7 @@ function App() {
           <Route path="/navigation" element={<NavigationPage />} />
           <Route path="/navigation/admin" element={<AdminNavigationPage />} />
           <Route path="/offers" element={<OffersPage />} />
-          <Route path="/product-list" element={<ProductListPage />} />
+          <Route path="/product-list" element={<ProductList />} />
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/sell/chooseCategory" element={<PrivateRoute><ChooseRootCategory /></PrivateRoute>} />
