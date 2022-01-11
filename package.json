@@ -1,5 +1,8 @@
 {
 	"name": "roofstore",
+	"engines": {
+		"node": "14.x"
+	},
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
