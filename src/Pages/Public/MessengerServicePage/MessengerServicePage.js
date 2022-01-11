@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react/cjs/react.development";
+import { useLayoutEffect, useState, useEffect } from "react";
 import TextLine from "../../../Components/TextLine";
 import TextLink from "../../../Components/TextLink"
 import Icon from "../../../Components/Icon"
@@ -14,15 +14,32 @@ function MessengerServicePage() {
 
 	let [audioURL, isRecording, startRecording, stopRecording] = useRecorder()
 
+	const [messages, setMessages] = useState(messagesList)
+
 	const [text, setText] = useState("")
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		window.scroll(0,document.body.scrollHeight)
-	},[document.body.scrollHeight])
+	},[document.body.scrollHeight, messages])
 
 	const handleChangeInput = e => {
 		setText (e.target.value)
 	}
+
+	useEffect(() => {
+		if (audioURL && audioURL != '') {
+			const newMessages = [...messages]
+			newMessages[newMessages.length-1].messages.push({
+				id: 4,
+				iniciales: "",
+				message: audioURL,
+				audio: true,
+				time : "10:00",
+				send: true,
+			})
+			setMessages(newMessages)
+		}
+	},[audioURL])
 
 	return (
 		<div className="container padding-none bg-white">	
@@ -49,7 +66,7 @@ function MessengerServicePage() {
 			
 			{/*casilla de mensajes*/}
 
-			{messagesList.map((list) => {
+			{messages.map((list) => {
 				return (
 					<div key={list.id}>
 						<div className="row jc-center">
@@ -66,7 +83,6 @@ function MessengerServicePage() {
 					</div>
 				)
       })}
-			{audioURL? <audio id="player" controls src={audioURL} ></audio> : ''}
 			
 			<div className="row bg-white br-top shadow-sm rounded sticky-footer">
 				<div className="col">

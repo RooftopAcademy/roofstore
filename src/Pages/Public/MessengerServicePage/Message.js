@@ -5,7 +5,7 @@ function Message({item}) {
     let content
 
     if(item.send){
-        content = (
+        content = !item.audio ? (
             <div className="container padding-none OffersPage-p-0-left">
                 <div className="row ProductPage-jc-right">
                     <div className="col padding-none">
@@ -18,7 +18,8 @@ function Message({item}) {
                     </div>	
                 </div>
             </div>
-        )
+        ) : ( <audio id="player" controls src={item.message} ></audio>)
+
     }else{
         content = (
             <div className="container padding-none OffersPage-p-0-right">
