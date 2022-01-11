@@ -3,7 +3,7 @@ import OpinionComponent from "../Component/OpinionComponent"
 import ToogleButtons from "../Component/ToogleButtons"
 import { MOCK_OPINIONS } from '../mockData'
 
-function ProductReviewsBlock(data) {
+function ProductReviewsBlock({ data }) {
 
   const LABELS = {
     all: "Todas",

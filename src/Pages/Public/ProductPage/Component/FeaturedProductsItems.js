@@ -13,14 +13,14 @@ function FeaturedProductsItems({ products }) {
         width={imageSizeWith}
         height={imageSizeHeight}
         src={p.image}
-        alt={p.description}
+        alt={p.title}
       />
       <div className="ProductPage-card-body">
         <p>{p.price}</p>
         {p.freeShipping && (
           <p className="txt-green txt-bold">{freeShippingText}</p>
         )}
-        <p className="m-top-2">{p.description}</p>
+        <p className="m-top-2">{p.title}</p>
       </div>
     </div>
   ))

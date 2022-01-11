@@ -18,7 +18,7 @@ function ProductList() {
     axios('/data/items.json').then(res => setItems(res.data))
   }, [])
 
-  const publicationsItems = items.map(
+  const publicationsItems = items.items.map(
     data => <RoundedProductItem key={data.id} data={data} />
   )
   const publicationsItemsCopy = [...publicationsItems]
