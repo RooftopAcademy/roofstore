@@ -398,3 +398,7 @@ p::after {
 .bg-black-transparent {
     background-color: rgba(0,0,0,.3);
 }
+.progress-bar {
+  height: 40px;
+  width: 40px;
+}
