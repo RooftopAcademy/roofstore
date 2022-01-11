@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event'
 
 const item = {
   "id" : 1,
-  "image": "https://http2.mlstatic.com/D_Q_NP_2X_649806-MLA47931899819_102021-G.webp",
+  "image": "/images/notebook-lenovo2.webp",
   "title": "Notebook Hp 14-cf2074la Intel Core I5 10210u 8gb 256gb Win10",
   "price": 99.999,
   "discount": "8% OFF",

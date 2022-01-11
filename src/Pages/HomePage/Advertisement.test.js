@@ -10,7 +10,7 @@ describe('Advertisement component test', () => {
             'title': "PEQUEÑOS ELECTRO",
             'body1': "EQUIPÁ TU HOGAR",
             'body2': "EN 6X SIN INTERÉS",
-            'image': "https://http2.mlstatic.com/D_NQ_684569-MLA48136225881_112021-C.webp",
+            'image': "/images/cafetera.webp",
             'redirect': "/offers"
         }
 

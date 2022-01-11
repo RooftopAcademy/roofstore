@@ -7,7 +7,7 @@ describe("InteractionProductItem", () => {
     describe("Test render complete product information", () => {
         const product = {
             'id': 1,
-            'image': "https://http2.mlstatic.com/D_Q_NP_2X_649806-MLA47931899819_102021-G.webp",
+            'image': "/images/notebook-lenovo2.webp",
             'title': "Notebook Hp",
             'price': 99.999,
             'discount': "8% OFF",
@@ -79,7 +79,7 @@ describe("InteractionProductItem", () => {
     describe("Test render conditional product information", () => {
         const product = {
             'id': 1,
-            'image': "https://http2.mlstatic.com/D_Q_NP_2X_649806-MLA47931899819_102021-G.webp",
+            'image': "/images/notebook-lenovo2.webp",
             'title': "Notebook Hp",
             'price': 99.999,
             'discount': "",
@@ -121,7 +121,7 @@ describe("InteractionProductItem", () => {
     describe("Test render interaction elements", () => {
         const product = {
             'id': 1,
-            'image': "https://http2.mlstatic.com/D_Q_NP_2X_649806-MLA47931899819_102021-G.webp",
+            'image': "/images/notebook-lenovo2.webp",
             'title': "Notebook Hp",
             'price': 99.999,
             'discount': "8% OFF",
