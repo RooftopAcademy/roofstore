@@ -6,7 +6,7 @@ const ShoppingHistoryData = [
       {
         productId: 1,
         productName: 'Pellet Sanitario Vegetal Poopy Pets 25 Kg',
-        img: 'https://http2.mlstatic.com/D_776646-MLA47291405232_082021-I.jpg',
+        img: '/images/pellet-pets.jpeg',
         shippingStatus: 'En camino',
         deliveryDate: 'Tu compra llega el 16 de Octubre'
       }
@@ -18,8 +18,8 @@ const ShoppingHistoryData = [
     products: [
       {
         productId: 2,
-        productName: 'Ruedas Para Silla Giratoria De Oficina Reforzadas Pack X 5',
-        img: 'https://http2.mlstatic.com/D_624116-MLA44023587000_112020-I.jpg',
+        productName: '/images/ruedas-silla.jpeg',
+        img: '',
         shippingStatus: 'Entregado',
         deliveryDate: 'Llegó el 22 de Septiembre'
       }
@@ -32,14 +32,14 @@ const ShoppingHistoryData = [
       {
         productId: 3,
         productName: 'Cable Usb Tipo C 2 Metros Carga Rapida',
-        img: 'https://http2.mlstatic.com/D_621066-MLA48187015333_112021-I.jpg',
+        img: '/images/cable-usb.jpeg',
         shippingStatus: 'Entregado',
         deliveryDate: 'Llegó el 20 de Septiembre'
       },
       {
         productId: 4,
         productName: 'Cable Hdmi 1,2m Macho Macho Full Hd 1080p - Polotecno',
-        img: 'https://http2.mlstatic.com/D_915319-MLA31114614647_062019-I.jpg',
+        img: '/images/cable-hdmi.jpeg',
         shippingStatus: 'Entregado',
         deliveryDate: 'Llegó el 20 de Septiembre'
       }

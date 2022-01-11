@@ -16,38 +16,38 @@ function PaymentBlock() {
         </p>
         <div className="row m-bottom-2">
           <img
-            src="https://http2.mlstatic.com/secure/payment-logos/v2/payment-logo-mla-visa-medium_v_91cc43d5a1.png"
+            src="/images/visa.png"
             alt="visa"
           />
           <img
-            src="https://http2.mlstatic.com/secure/payment-logos/v2/payment-logo-mla-amex-medium_v_91cc43d5a1.png"
+            src="/images/amex.png"
             alt="American Express"
           />
           <img
-            src="https://http2.mlstatic.com/secure/payment-logos/v2/payment-logo-mla-master-medium_v_91cc43d5a1.png"
+            src="/images/mastercard.png"
             alt="master card"
           />
           <img
-            src="https://http2.mlstatic.com/secure/payment-logos/v2/payment-logo-mla-naranja-medium_v_91cc43d5a1.png"
+            src="/images/naranja.png"
             alt="naranja"
           />
         </div>
         <p>Tarjetas de débito</p>
         <div className="row m-bottom-2">
           <img
-            src="https://http2.mlstatic.com/secure/payment-logos/v2/payment-logo-mla-debvisa-medium_v_91cc43d5a1.png"
+            src="/images/visa-debito.png"
             alt="visa debito"
           />
           <img
-            src="https://http2.mlstatic.com/secure/payment-logos/v2/payment-logo-mla-debmaster-medium_v_91cc43d5a1.png"
+            src="/images/mastercard-debito.png"
             alt="master card"
           />
           <img
-            src="https://http2.mlstatic.com/secure/payment-logos/v2/payment-logo-mla-debcabal-medium_v_91cc43d5a1.png"
+            src="/images/cabal-debito.png"
             alt="cabal"
           />
           <img
-            src="https://http2.mlstatic.com/secure/payment-logos/v2/payment-logo-mla-maestro-medium_v_91cc43d5a1.png"
+            src="/images/maestro.png"
             alt="maestro"
           />
         </div>

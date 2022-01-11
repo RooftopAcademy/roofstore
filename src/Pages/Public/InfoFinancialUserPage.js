@@ -16,9 +16,9 @@ function InfoFinancialUserPage (){
     const secondText = 'En caso de no estar de acuerdo con nuestra respuesta o si tardamos más de 10 días hábiles en hacerlo, podés comunicarte con la Gerencia Principal de Protección a Usuarios Financieros a través de su sitio:'
     const secondTextLink = 'www.usuariosfinancieros.gob.ar.'
     const rights = 'Tus derechos como usuario de servicios financiero:'
-    const imgBc = "https://http2.mlstatic.com/secure/salesforce-resources/faqs-images/210122131750_01BCRA_Normas2019.jpg"
+    const imgBc = "/images/normas-usuarios-financieros.jpeg"
     const imgBcAlt = "Información sobre derechos del BCRA"
-    const imgDownProducts = "https://http2.mlstatic.com/secure/salesforce-resources/faqs-images/210122131750_01BCRA_Normas2019.jpg"
+    const imgDownProducts = "/images/normas-usuarios-financieros.jpeg"
     const imgDownProductsAlt = "Información sobre baja de servicios BCRA"
     const rates = 'Conocé nuestras tarifas:'
     const ratesText = 'Cargos y comisiones Roofstore'

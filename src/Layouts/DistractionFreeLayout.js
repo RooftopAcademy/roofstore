@@ -8,7 +8,7 @@ import TextLine from "../Components/TextLine"
 function DistractionFreeLayout({ children, isFooter }) {
     const footerText = 'Cuidamos tu privacidad'
     const copyright = 'Copyright © 1999-2021 Roofstore'
-    const logoUrl = 'https://rooftop.dev/images/favicon.png'
+    const logoUrl = '/images/rooftop-favicon.png'
     const logoAlt = 'Roofstore Logo'
     return (
         <div className="d-flex vh-100 fd-col">

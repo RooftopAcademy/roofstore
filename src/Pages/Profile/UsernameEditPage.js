@@ -1,5 +1,6 @@
+const userNameFormText = "Formulario de edicion de nombre"
 function UsernameEditPage() {
-    return (<div>Formulario de edicion de nombre de usuario</div>)
+    return (<div>{userNameFormText}</div>)
 }
 
 export default UsernameEditPage
