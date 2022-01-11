@@ -15,7 +15,7 @@
     "items" : [
     {
       "id": 16,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_850813-MLA48317742358_112021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Paleta Raqueta Mata Mosca Mosquito Electrica Recargable Usb",
       "price": 1200,
@@ -35,7 +35,7 @@
     },
     {
       "id": 0,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_611690-MLA41179103513_032020-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "OFERTA DEL DÍA",
       "title": "Motosierra a nafta Philco 52cc MJPMO217 2.4hp",
       "price": 9499,
@@ -55,7 +55,7 @@
     },
     {
       "id": 3,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_902502-MLA47752761623_102021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Kit Herramientas De Jardinería Con Bolsa - Klatter",
       "price": 3489,
@@ -75,7 +75,7 @@
     },
     {
       "id": 4,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_862194-MLA42149717446_062020-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Pileta estructural rectangular Bestway 56403 con capacidad de 2300 litros de 2.59m de largo x 1.7m de ancho  azul",
       "price": 17399,
@@ -95,7 +95,7 @@
     },
     {
       "id": 5,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_717303-MLA46508468787_062021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Set Parrillero Kit Asador Set Asado Juego Asado Kit Cod 1025",
       "price": 1199,
@@ -115,7 +115,7 @@
     },
     {
       "id": 6,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_850813-MLA48317742358_112021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Paleta Raqueta Mata Mosca Mosquito Electrica Recargable Usb",
       "price": 1200,
@@ -135,7 +135,7 @@
     },
     {
       "id": 1,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_842402-MLA48108304641_112021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "MÁS VENDIDO",
       "title": "Pastillas Cloro Triple Accion Multiaccion 200gr 5kg Nataclor",
       "price": 5495,
@@ -155,7 +155,7 @@
     },
     {
       "id": 7,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_641505-MLA46805950270_072021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Gazebo Autoarmable 3x3 Reforzado Playa Paredes Impermeable",
       "price": 41654,
@@ -175,7 +175,7 @@
     },
     {
       "id": 8,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_628110-MLA42957480060_072020-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Bordeadora Plumita Magnum 1000W color azul y negro 220V",
       "price": 8002,
@@ -197,7 +197,7 @@
   
     {
       "id": 11,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_842402-MLA48108304641_112021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "MÁS VENDIDO",
       "title": "Pastillas Cloro Triple Accion Multiaccion 200gr 5kg Nataclor",
       "price": 5495,
@@ -217,7 +217,7 @@
     },
     {
       "id": 12,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_800016-MLA47753936126_102021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "OFERTA RELÁMPAGO",
       "title": "Kit Herramientas De Jardinería - Klatter",
       "price": 1939,
@@ -237,7 +237,7 @@
     },
     {
       "id": 13,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_902502-MLA47752761623_102021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Kit Herramientas De Jardinería Con Bolsa - Klatter",
       "price": 3489,
@@ -257,7 +257,7 @@
     },
     {
       "id": 9,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_969591-MLA47574247083_092021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Hamaca Sillon Columpio Macrame Colgante Interior Exterior",
       "price": 16551,
@@ -277,7 +277,7 @@
     },
     {
       "id": 14,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_862194-MLA42149717446_062020-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Pileta estructural rectangular Bestway 56403 con capacidad de 2300 litros de 2.59m de largo x 1.7m de ancho  azul",
       "price": 17399,
@@ -297,7 +297,7 @@
     },
     {
       "id": 2,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_800016-MLA47753936126_102021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "OFERTA RELÁMPAGO",
       "title": "Kit Herramientas De Jardinería - Klatter",
       "price": 1939,
@@ -317,7 +317,7 @@
     },
     {
       "id": 15,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_717303-MLA46508468787_062021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Set Parrillero Kit Asador Set Asado Juego Asado Kit Cod 1025",
       "price": 1199,
@@ -337,7 +337,7 @@
     },
     {
       "id": 17,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_641505-MLA46805950270_072021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Gazebo Autoarmable 3x3 Reforzado Playa Paredes Impermeable",
       "price": 41654,
@@ -357,7 +357,7 @@
     },
     {
       "id": 10,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_611690-MLA41179103513_032020-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "OFERTA DEL DÍA",
       "title": "Motosierra a nafta Philco 52cc MJPMO217 2.4hp",
       "price": 9499,
@@ -377,7 +377,7 @@
     },
     {
       "id": 18,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_628110-MLA42957480060_072020-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Bordeadora Plumita Magnum 1000W color azul y negro 220V",
       "price": 8002,
@@ -397,7 +397,7 @@
     },
     {
       "id": 19,
-      "image": "https://http2.mlstatic.com/D_NQ_NP_969591-MLA47574247083_092021-O.webp",
+      "image": "/images/pileta.webp",
       "offerType": "none",
       "title": "Hamaca Sillon Columpio Macrame Colgante Interior Exterior",
       "price": 16551,

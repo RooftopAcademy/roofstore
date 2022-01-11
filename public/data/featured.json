@@ -1,5 +1,5 @@
 [{
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_855522-MLA47146718618_082021-AB.webp",
+    "image": "/images/bicicleta-2.webp",
     "title": "Bicicleta Cube Attain Race",
     "id": 1,
     "price": 99.999,
@@ -12,7 +12,7 @@
     "stock": 4419
   },
   {
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_855522-MLA47146718618_082021-AB.webp",
+    "image": "/images/bicicleta-2.webp",
     "title": "Bicicleta Cube Attain Race",
     "id": 2,
     "price": 99.999,
@@ -25,7 +25,7 @@
     "stock": 4419
   },
   {
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_855522-MLA47146718618_082021-AB.webp",
+    "image": "/images/bicicleta-2.webp",
     "title": "Bicicleta Cube Attain Race",
     "id": 3,
     "price": 99.999,
@@ -38,7 +38,7 @@
     "stock": 4419
   },
   {
-    "image": "https://http2.mlstatic.com/D_Q_NP_2X_855522-MLA47146718618_082021-AB.webp",
+    "image": "/images/bicicleta-2.webp",
     "title": "Bicicleta Cube Attain Race",
     "id": 4,
     "price": 99.999,
