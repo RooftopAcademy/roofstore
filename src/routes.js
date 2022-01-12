@@ -13,6 +13,7 @@ import InfoFinancialUserPage from './Pages/Public/InfoFinancialUserPage';
 import LoginPage from './Pages/Public/LoginPage';
 import MarketPointPage from './Pages/MarketPointsPage/MarketPointsPage';
 import MessengerServicePage from './Pages/Public/MessengerServicePage/MessengerServicePage';
+import MyAccountPage from './Pages/Public/MyAccountPage';
 import NavigationPage from './Pages/Public/NavigationPage';
 import OffersPage from './Pages/Public/OffersPage';
 import OfficialStores from './Pages/Public/OfficialStoresPage';
@@ -69,6 +70,10 @@ const routes = [
     {
         "path" : "/market-points",
         "element" : <PrivateRoute><MarketPointPage /></PrivateRoute>,
+    },
+    {
+        "path" : "/my-account",
+        "element" : <PrivateRoute><MyAccountPage /></PrivateRoute>,
     },
     {
         "path" : "/navigation",

@@ -16,7 +16,7 @@ function FooterMenu() {
     return (
         <div className='row'>
             <div className='col Footer-col-6 Footer-d-flex fd-col'>
-                <TextLink url={'/my-acount'} className={'txt-black m-bottom-0'}>{myAccountText}</TextLink>
+                <TextLink url={'/my-account'} className={'txt-black m-bottom-0'}>{myAccountText}</TextLink>
                 <TextLink url={'/navigation'} className={'txt-black m-bottom-0'}>{historyText}</TextLink>
                 <TextLink url={'/favourites'} className={'txt-black m-bottom-0'}>{favouritesText}</TextLink>
                 <TextLink url={'/categories'} className={'txt-black m-bottom-0'}>{categoriesText}</TextLink>
