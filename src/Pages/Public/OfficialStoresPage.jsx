@@ -2,11 +2,12 @@ import OfficialStoresBlock from "./OfficialStoresPage/OfficialStoresBlock"
 import WebsiteLayout from "../../Layouts/WebsiteLayout"
 import InputStores from './OfficialStoresPage/InputStores'
 import useFetch from "../../hooks/useFetch";
+import {getByCategory} from "../../requests/brands";
 
 function OfficialStores() {
     const textButton = 'Ver todas las tiendas'
 
-    const {data : categories} = useFetch({src: "/data/brandsByCategory.json"})
+    const {data : categories} = useFetch(getByCategory)
 
     return (
         <WebsiteLayout>
