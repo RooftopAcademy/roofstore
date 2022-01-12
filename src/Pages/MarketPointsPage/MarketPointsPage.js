@@ -73,7 +73,7 @@ function MarketPointPage () {
               </div>
             </div>
             <img className="w-100" 
-              src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hub/level6/banner-level6-v2-mobile2@2x.png"
+              src="/images/disney-banner.png"
               alt="Disney+ y Star+"
             />
             <div className="row bg-blue-dark border-radius-bottom">
