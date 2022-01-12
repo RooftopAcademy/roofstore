@@ -1,6 +1,16 @@
 import { useState } from "react"
 
-function FormInput({ holderText, className, type, holderBottom = '', id, onChange, value }) {
+function FormInput({ 
+    name = '',
+    holderBottom = '',
+    id,
+    type,
+    required = false,
+    holderText,
+    className,
+    onChange,
+    value
+}) {
     const types = ['text', 'password', 'number', 'email']
 
     const [selectInput, setSelectInput] = useState(false)
@@ -16,6 +26,8 @@ function FormInput({ holderText, className, type, holderBottom = '', id, onChang
                 onBlur={() => setSelectInput(!selectInput)}
                 onChange={onChange}
                 value={value}
+                required={required}
+                name={name}
             />    
             {holderBottom &&
             <div className="fz-sm txt-grey-copyright m-left-0">{holderBottom}</div>

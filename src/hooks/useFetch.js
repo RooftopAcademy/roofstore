@@ -4,7 +4,7 @@ import {useState, useEffect} from "react";
 const http = axios.create({
     baseURL : "http://localhost:3000/data/",
     headers : {
-        "Authorization" : "Bearer ..."
+        "Authorization" : `Bearer ${localStorage.getItem('token')}`
     }
 })
 
