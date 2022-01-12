@@ -1,44 +1,35 @@
 import { useState } from 'react'
 import FormInput from '../../../Components/FormInput'
 import TextLink from '../../../Components/TextLink'
-// import useFetch from '../../../hooks/useFetch'
-// import { postLogin } from '../../../requests/login'
+import useAuth from '../../../hooks/useAuth'
 
-function FormLogin() {
+function FormLogin(props) {
+    const {signin, error} = useAuth()
 
-    const [ loginData, setLoginData ] = useState({email: '', password: '' })
-
-    // const { data: token } = useFetch({
-    //     method: 'get', // TO DO: postLogin.method
-    //     url: postLogin.url,
-    //     data: loginData
-    // })
-    // console.log(token)
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     let handleSubmit = (e) => {
         e.preventDefault()
-        console.log(loginData)
-        // TO DO fetch (POST /register)
+        signin({email, password})
     }
 
-    const handleEmail = (e) => {
-        e.preventDefault()
-        setLoginData({...loginData, email: e.target.value})
-    }
-
-    const handlePassword = (e) => {
-        e.preventDefault()
-        setLoginData({...loginData, password: e.target.value})
-    }
+    const handleEmail = (e) => setEmail(e.target.value)
+    const handlePassword = (e) => setPassword(e.target.value)
 
     const buttonText = 'Continuar'
     const labelEmailText = 'Telefono, e-mail o usuario'
     const labelPasswordText = 'Contraseña'
     const linkCreateAccount = 'Crear cuenta'
     const urlRegistration = '/register'
+
     return (
         <div className="row padding-none">
             <div className="col w-100 padding-none">
+                <div>
+                    {error ? error.message : ""}
+                </div>
+
                 <form className="d-flex fd-col" onSubmit={handleSubmit}>
 
                     <label className="fz-sm m-left-0" htmlFor="login-email">{labelEmailText}</label>
