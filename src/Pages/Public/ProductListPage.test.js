@@ -64,7 +64,7 @@ describe('<ProductList />', () => {
 describe('<RoundedProductItem />', () => {
   const data = {
     id: 0,
-    image: 'https://http2.mlstatic.com/D_NQ_NP_611690-MLA41179103513_032020-O.webp',
+    image: '/images/pileta.webp',
     offerType: 'OFERTA DEL DÍA',
     title: 'Motosierra a nafta Philco 52cc MJPMO217 2.4hp',
     price: 9499,

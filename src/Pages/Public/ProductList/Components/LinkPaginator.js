@@ -9,9 +9,6 @@ export default function LinkPaginator({
   classNameText = '',
 }) {
 
-  if (!url) return console.error(
-    'El componente <LinkPaginator /> necesita una url pasado por la propiedad "url"'
-  )
   if (!text) return console.error(
     'El componente <LinkPaginator /> necesita un texto pasado por la propiedad "text"'
   )

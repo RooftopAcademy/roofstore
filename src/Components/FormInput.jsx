@@ -1,10 +1,9 @@
 import { useState } from "react"
 
-function FormInput({ holderText, className, type, holderBottom, id, onChange, value }) {
+function FormInput({ holderText, className, type, holderBottom = '', id, onChange, value }) {
     const types = ['text', 'password', 'number', 'email']
 
     const [selectInput, setSelectInput] = useState(false)
-
 
     if (types.includes(type)) {
         return <div>
@@ -18,7 +17,9 @@ function FormInput({ holderText, className, type, holderBottom, id, onChange, va
                 onChange={onChange}
                 value={value}
             />    
+            {holderBottom &&
             <div className="fz-sm txt-grey-copyright m-left-0">{holderBottom}</div>
+            }
         </div>
     }
 }

@@ -1,9 +1,13 @@
 import OfficialStoresBlock from "./OfficialStoresPage/OfficialStoresBlock"
-import { officialStoresData } from "./OfficialStoresPage/officialStoresData"
 import WebsiteLayout from "../../Layouts/WebsiteLayout"
 import InputStores from './OfficialStoresPage/InputStores'
+import useFetch from "../../hooks/useFetch";
+
 function OfficialStores() {
     const textButton = 'Ver todas las tiendas'
+
+    const {data : categories} = useFetch({src: "/data/brandsByCategory.json"})
+
     return (
         <WebsiteLayout>
             <div className="row padding-none">
@@ -15,7 +19,7 @@ function OfficialStores() {
                 <div className="col">
                     <InputStores />
                     {
-                        officialStoresData.map((category, i) => {
+                        categories?.map((category, i) => {
                             return (<OfficialStoresBlock category={category} key={i}/>)
                         })
                     }

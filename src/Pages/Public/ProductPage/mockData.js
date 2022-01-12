@@ -1,28 +1,28 @@
 export const MOCK_PRODUCTOS_PROMOCIONADOS = [
   {
     image:
-      "https://http2.mlstatic.com/D_Q_NP_2X_855522-MLA47146718618_082021-AB.webp",
+      "/images/bicicleta-2.webp",
     price: "$445.000",
     freeShipping: true,
     description: "Bicicleta Cube Attain Race",
   },
   {
     image:
-      "https://http2.mlstatic.com/D_Q_NP_2X_855522-MLA47146718618_082021-AB.webp",
+      "/images/bicicleta-2.webp",
     price: "$445.000",
     freeShipping: false,
     description: "Bicicleta Cube Attain Race",
   },
   {
     image:
-      "https://http2.mlstatic.com/D_Q_NP_2X_855522-MLA47146718618_082021-AB.webp",
+      "/images/bicicleta-2.webp",
     price: "$445.000",
     freeShipping: false,
     description: "Bicicleta Cube Attain Race",
   },
   {
     image:
-      "https://http2.mlstatic.com/D_Q_NP_2X_855522-MLA47146718618_082021-AB.webp",
+      "/images/bicicleta-2.webp",
     price: "$445.000",
     freeShipping: false,
     description: "Bicicleta Cube Attain Race",
@@ -32,14 +32,14 @@ export const MOCK_PRODUCTOS_PROMOCIONADOS = [
 export const MOCK_PRODUCTOS_QUE_TBM_COMPRARON = [
   {
     image:
-      "https://http2.mlstatic.com/D_Q_NP_2X_713835-MLA32584163069_102019-AB.webp",
+      "/images/bicicleta-2.webp",
     price: "$3.781",
     freeShipping: false,
     description: "Plato Palanca Shimano",
   },
   {
     image:
-      "https://http2.mlstatic.com/D_Q_NP_970195-MLA32933079566_112019-AB.webp",
+      "/images/bicicleta-2.webp",
     price: "$1.278",
     freeShipping: true,
     description: "Manubrio P/ Bici Lovit 25,4",
@@ -67,8 +67,9 @@ export const mock_questionsAnswers = [
     date: "01/11/2021",
   },
 ]
+export const MOCK_PROMEDY = 4.5;
 
-export   const MOCK_OPINIONS = [
+export const MOCK_OPINIONS = [
   {
     id: 1,
     stars: 3,
@@ -100,3 +101,6 @@ export   const MOCK_OPINIONS = [
     isPositiveReview: false,
   },
 ]
+
+export const MOCK_CATEGORIES = ['Deportes', 'Bicicletas', 'Rodado 29', 'Mountain Bike']
+export const MOCK_WARRANTY_TIME = '12 meses'

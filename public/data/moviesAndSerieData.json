@@ -3,7 +3,7 @@
         "partner": {
             "id": 1,
             "name": "HBO Max",
-            "logo": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/logo/logoSquare@3x.png?v=1",
+            "logo": "/images/hbo-max.png",
             "type": "Películas y series",
             "offer": "10%",
             "offer_day": "7"
@@ -12,42 +12,42 @@
             {
                 "id": 11,
                 "title": "Raised by wolves",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/carousel/o:f_webp/Raised-by-wolves@3x.jpg?v=1"
+                "image": "/images/raised-by-wolves.webp"
             },
             {
                 "id": 12,
                 "title": "The Flight Attendant",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/carousel/o:f_webp/the-Flight-attendant@3x.jpg?v=1"
+                "image": "/images/raised-by-wolves.webp"
             },
             {
                 "id": 13,
                 "title": "Justice League",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/carousel/o:f_webp/Justice-league@3x.jpg?v=1"
+                "image": "/images/raised-by-wolves.webp"
             },
             {
                 "id": 14,
                 "title": "GOT",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/carousel/o:f_webp/GOT@3x.jpg?v=1"
+                "image": "/images/raised-by-wolves.webp"
             },
             {
                 "id": 15,
                 "title": "Friends",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/carousel/o:f_webp/Friends@3x.jpg?v=1"
+                "image": "/images/raised-by-wolves.webp"
             },
             {
                 "id": 16,
                 "title": "Harry Potter",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/carousel/o:f_webp/Harry-Potter@3x.jpg?v=1"
+                "image": "/images/raised-by-wolves.webp"
             },
             {
                 "id": 17,
                 "title": "Gossip Girl",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/carousel/o:f_webp/Gossip-Girl@3x.jpg?v=1"
+                "image": "/images/raised-by-wolves.webp"
             },
             {
                 "id": 18,
                 "title": "The Big Bang Theory",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/carousel/o:f_webp/The-Big-bang-Theory@3x.jpg?v=1"
+                "image": "/images/raised-by-wolves.webp"
             }
         ]
     },
@@ -55,7 +55,7 @@
         "partner": {
             "id": 2,
             "name": "Paramount+",
-            "logo": "https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@3x.png",
+            "logo": "/images/hbo-max.png",
             "type": "Películas y series",
             "offer": "10%",
             "offer_day": "7"
@@ -64,42 +64,42 @@
             {
                 "id": 19,
                 "title": "The Handmaid's Tale",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mla/carousel/o:f_webp/handmails-tale@3x.jpg"
+                "image": "/images/interrogation.webp"
             },
             {
                 "id": 20,
                 "title": "Your Honor",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mla/carousel/o:f_webp/your-honor@3x.jpg"
+                "image": "/images/interrogation.webp"
             },
             {
                 "id": 21,
                 "title": "Kamp Koral",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mla/carousel/o:f_webp/kamp-koral@3x.jpg"
+                "image": "/images/interrogation.webp"
             },
             {
                 "id": 22,
                 "title": "Yellowstone",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mla/carousel/o:f_webp/yellowstone@3x.jpg"
+                "image": "/images/interrogation.webp"
             },
             {
                 "id": 23,
                 "title": "Paw Patrol",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mla/carousel/o:f_webp/paw-patrol@3x.jpg"
+                "image": "/images/interrogation.webp"
             },
             {
                 "id": 24,
                 "title": "Ordinary Love",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mla/carousel/o:f_webp/ordinary-love@3x.jpg"
+                "image": "/images/interrogation.webp"
             },
             {
                 "id": 25,
                 "title": "The Astronauts",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mla/carousel/o:f_webp/the-astronauts@3x.jpg"
+                "image": "/images/interrogation.webp"
             },
             {
                 "id": 26,
                 "title": "Interrogation",
-                "image": "https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/paramount/mla/carousel/o:f_webp/interrogation@3x.jpg"
+                "image": "/images/interrogation.webp"
             }
         ]
     }

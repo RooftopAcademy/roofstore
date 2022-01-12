@@ -1,26 +1,14 @@
 export default function QuantitiesItems({
-  data: { el, i },
-  onClick: { handleButtons, handleOpenModal }
+  option,
+  updateItemQty
 }) {
-  const txtBlue = (i > 5)
-    ? 'txt-blue'
-    : ''
+  const txtBlue = option.value > 5 ? 'txt-blue' : ''
 
   return (
-    <div className={`
-      col
-      padding-none
-      w-100
-      br-top
-      txt-center
-      OffersPage-p-relative
-    `}>
+    <div className={`col padding-none w-100 br-top txt-center OffersPage-p-relative`}>
       <button
-        value={(i + 1)}
-        onClick={(i < 5)
-          ? handleButtons
-          : handleOpenModal
-        }
+        value={option.value}
+        onClick={updateItemQty}
         className={`
           w-100
           p-0
@@ -29,7 +17,7 @@ export default function QuantitiesItems({
           ProductPage-fs-16
           ${txtBlue}
         `}>
-          { el }
+          { option.text }
       </button>
     </div>
   )

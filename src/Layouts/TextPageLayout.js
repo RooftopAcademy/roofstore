@@ -1,7 +1,7 @@
 import Footer from "../Blocks/Footer"
 import Navbar from "../Blocks/Navbar"
 import TextLine from "../Components/TextLine"
-import SearchHelp from "../Components/SearchHelp"
+import SearchHelp from "../Components/SearchHelp/SearchHelp"
 import InfoVotation from "../Components/InfoVotation"
 
 function TextPageLayout({children, title="", showInfoVotation=false}) {
