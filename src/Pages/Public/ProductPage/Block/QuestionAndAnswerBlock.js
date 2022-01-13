@@ -1,9 +1,13 @@
 import AutoGrowTextAreaComponent from "../Component/AutoGrowTextAreaComponent"
 import KeywordInformationButtonComponent from "../Component/KeywordInformationButtonComponent"
 import QAComponent from "../Component/QAComponent"
-import { mock_keywordInformation, mock_questionsAnswers } from '../mockData'
+import useFetch from "../../../../hooks/useFetch"
+import { getKeyWordInformation, getQuestionsAnswers } from "../../../../requests/mocks"
 
 function QuestionAndAnswerBlock() {
+
+  const {data: mock_keywordInformation} = useFetch(getKeyWordInformation)
+  const {data: mock_questionsAnswers} = useFetch(getQuestionsAnswers)
 
   const questionsAndAnswersText = 'Preguntas y respuestas'
   const whatWantToKnowText = '¿Qué querés saber?'
@@ -21,7 +25,7 @@ function QuestionAndAnswerBlock() {
           </h3>
           <p className="txt-bold OffersPage-m-bottom">{whatWantToKnowText}</p>
           <div className="ProductPage-flex-container">
-            {mock_keywordInformation.map((keyword) => (
+            {mock_keywordInformation?.map((keyword) => (
               <KeywordInformationButtonComponent key={keyword}>
                 {keyword}
               </KeywordInformationButtonComponent>
@@ -40,7 +44,7 @@ function QuestionAndAnswerBlock() {
       <div className="row">
         <div className="col">
           <p className="txt-bold">{lastQuestionsText}</p>
-          {mock_questionsAnswers.map((qa, index) => (
+          {mock_questionsAnswers?.map((qa, index) => (
             <QAComponent qa={qa} key={index}/>
           ))}
         </div>

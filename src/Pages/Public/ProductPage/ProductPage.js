@@ -20,9 +20,15 @@ import PaymentBlock from "./Block/PaymentBlock"
 import ProductReviewsBlock from "./Block/ProductReviewsBlock"
 import QuestionAndAnswerBlock from "./Block/QuestionAndAnswerBlock"
 import AProductBanner from "./Component/AProductBanner"
-import { MOCK_CATEGORIES, MOCK_WARRANTY_TIME, MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON, MOCK_PROMEDY } from './mockData'
+import useFetch from "../../../hooks/useFetch";
+import { getPromedy, getMockCategories, getWarrantyTime } from "../../../requests/mocks";
+import { getFeatured } from "../../../requests/products";
 
 function ProductPage() {
+
+  const {data: MOCK_PROMEDY} = useFetch(getPromedy)
+  const {data: MOCK_CATEGORIES} = useFetch(getMockCategories)
+  const {data: MOCK_WARRANTY_TIME} = useFetch(getWarrantyTime)
 
   const publicationText = 'Publicación'
   const publicationNumber = 1109087736
@@ -57,10 +63,14 @@ function ProductPage() {
 
         <div className="row padding-none">
           <div className="ProductPage-w-100 padding-none">
-            <WarrantyComponent warranty={MOCK_WARRANTY_TIME} />
+            
+            {MOCK_WARRANTY_TIME? <WarrantyComponent warranty={MOCK_WARRANTY_TIME} /> : ''}
+
             <PaymentBlock />
             <QuestionAndAnswerBlock />
-            <ProductReviewsBlock data={MOCK_PROMEDY} />
+            
+            {MOCK_PROMEDY? <ProductReviewsBlock data={MOCK_PROMEDY} /> : ""}
+            
             <div className="row padding-none ProductPage-bg-grey">
               <div className="col ProductPage-w-100">
                 <p>
@@ -72,17 +82,19 @@ function ProductPage() {
 
                 {/* Productos promocionados */}
                 <FeaturedProductsBlock 
-                  src="/data/featured.json"
+                  src={getFeatured}
                   title={promotedProductsTitle} />
 
                 <FeaturedProductsBlock 
-                  src="/data/featured.json"
+                  src={getFeatured}
                   title={featuredProductsTitle} />
                   
                 {/* Banner Publicitario */}
                 <AProductBanner />
                 {/* End banner publicitario */}
-                <BreadcrumbBlock categories={MOCK_CATEGORIES}/>
+
+                {MOCK_CATEGORIES? <BreadcrumbBlock categories={MOCK_CATEGORIES}/> : ''}
+                
               </div>
             </div>
           </div>

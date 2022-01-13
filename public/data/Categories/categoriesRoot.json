@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Productos", 
+    "icon": "/images/productos.svg", 
+    "url": "/sell/item-title"
+  },
+  {
+    "name": "Vehículos", 
+    "icon": "/images/vehiculos.svg", 
+    "url": "/sell/item-title"
+  },
+  {
+    "name": "Inmuebles", 
+    "icon": "/images/inmuebles.svg", 
+    "url": "/sell/item-title"
+  },
+  {
+    "name": "Servicios", 
+    "icon": "/images/servicios.svg", 
+    "url": "/sell/item-title"
+  }
+]

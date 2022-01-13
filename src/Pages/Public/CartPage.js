@@ -3,28 +3,22 @@ import WebsiteLayout from "../../Layouts/WebsiteLayout";
 import CartItem from "../CartPage/CartItem";
 import CartTotal from "../CartPage/CartTotal";
 import FeaturedProductsBlock from "./ProductPage/Block/FeaturedProductsBlock";
-import axios from "axios";
+import useFetch from "../../hooks/useFetch";
+import { getCart } from "../../requests/products";
 
 function CartPage () {
 
-    const [cart, setCart] = useState({items : []})
-
     const cartText = 'Carrito'
     const savedText = 'Guardado'
-    const cartUrl = '/data/cart.json'
 
-    const fetchCart = () => axios.get(cartUrl).then(({data}) => setCart(data))
-
-    useEffect(() => {
-        fetchCart()
-    }, [])
+    const {data: cart} = useFetch(getCart)
 
     return (
         <WebsiteLayout>
             <div>
                 <div data-testid="hola" className="row padding-none bg-primary">
                     <div className="col OffersPage-6-col txt-white txt-center ChooseItemTitle-border-blue-bottom">
-                        {cartText} ({cart.totalItems})
+                        {cartText} ({cart?.totalItems})
                     </div>
                     <div className="col OffersPage-6-col txt-white txt-center">
                         {savedText} (0)
@@ -32,7 +26,7 @@ function CartPage () {
                 </div>
 
                 <div className="bg-main">
-                    {cart.items.map((product, index) => {
+                    {cart?.items.map((product, index) => {
                         return(
                             <CartItem
                                 key={product.id}
@@ -42,7 +36,7 @@ function CartPage () {
                         )
                     })}
 
-                    <CartTotal priceTotal={cart.finalPrice} />
+                    <CartTotal priceTotal={cart?.finalPrice} />
                     
                     <div className="SearchHelp-m-3-top">
                         <FeaturedProductsBlock

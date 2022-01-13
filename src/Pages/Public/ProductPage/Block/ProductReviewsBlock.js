@@ -1,9 +1,12 @@
 import { useState } from "react"
 import OpinionComponent from "../Component/OpinionComponent"
 import ToogleButtons from "../Component/ToogleButtons"
-import { MOCK_OPINIONS } from '../mockData'
+import useFetch from "../../../../hooks/useFetch"
+import { getOpinions } from "../../../../requests/mocks"
 
 function ProductReviewsBlock({ data }) {
+
+  const {data: MOCK_OPINIONS} = useFetch(getOpinions)
 
   const LABELS = {
     all: "Todas",
@@ -20,8 +23,8 @@ function ProductReviewsBlock({ data }) {
     active === LABELS.all
       ? MOCK_OPINIONS
       : active === LABELS.positive
-        ? MOCK_OPINIONS.filter((opinion) => opinion.isPositiveReview)
-        : MOCK_OPINIONS.filter((opinion) => !opinion.isPositiveReview)
+        ? MOCK_OPINIONS?.filter((opinion) => opinion.isPositiveReview)
+        : MOCK_OPINIONS?.filter((opinion) => !opinion.isPositiveReview)
 
   return (
     <section className="shadow-sm">
@@ -62,7 +65,7 @@ function ProductReviewsBlock({ data }) {
             labels={LABELS}
             setActive={setActive}
           />
-          {filteredOpinions.map((opinion) => (
+          {filteredOpinions?.map((opinion) => (
             <OpinionComponent key={opinion.id} opinion={opinion} />
           ))}
 
