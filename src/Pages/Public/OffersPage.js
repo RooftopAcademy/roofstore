@@ -6,16 +6,20 @@ import CategoryOfferItem from './OffersPage/Components/CategoryOfferItem'
 import PublicationItem from './OffersPage/Components/PublicationItem'
 import Pagination from './OffersPage/Blocks/Pagination'
 
-import publicationsOffersData from './OffersPage/publicationsOffersData'
-import categoryOffersData from './OffersPage/categoryOffersData'
+import useFetch from '../../hooks/useFetch'
+import { getOffersCategories } from '../../requests/categories'
+import { getOffersProducts } from '../../requests/products'
 
 function OffersPage() {
 
-    const carrouselItems = categoryOffersData.map(
+    const {data: categoryOffersData} = useFetch(getOffersCategories)
+    const {data: publicationsOffersData} = useFetch(getOffersProducts)
+
+    const carrouselItems = categoryOffersData?.map(
         (data, i) => <CategoryOfferItem key={i} data={data} id={i} />
     )
 
-    const publicationsItems = publicationsOffersData.map(
+    const publicationsItems = publicationsOffersData?.map(
         (data, i) => <PublicationItem key={i} data={data} />
     )
 

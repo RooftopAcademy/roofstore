@@ -1,17 +1,11 @@
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 import FeaturedProductsItems from "../Component/FeaturedProductsItems"
+import useFetch from '../../../../hooks/useFetch'
 
 function FeaturedProductsBlock({ title, src = '' }) {
-  const [featuredItems, setFeaturedItems] = useState([])
 
-  const fetchFeaturedItems = () => axios.get(src).then((response) => {
-    setFeaturedItems(response.data)
-  })
-
-  useEffect(() => {
-    fetchFeaturedItems()
-  }, [])
+  const {data: featuredItems} = useFetch(src)
 
   return (
     <section>
@@ -19,7 +13,7 @@ function FeaturedProductsBlock({ title, src = '' }) {
         <div className="col ProductPage-w-100">
           <h3>{title}</h3>
           <div className="row padding-none ProductPage-slider">
-            <FeaturedProductsItems products={featuredItems} />
+            {featuredItems? <FeaturedProductsItems products={featuredItems} /> : ''}
           </div>
         </div>
       </div>

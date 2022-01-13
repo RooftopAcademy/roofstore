@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import { arrowLeftIcon } from './ConfirmClassification/svgIcon'
-
-import confirmClassificationData from './ConfirmClassification/confirmClassificationData';
 import ClassificationItem from './ConfirmClassification/Components/ClassificationItem';
-
+import useFetch from '../../hooks/useFetch';
+import { getConfirmClassification } from '../../requests/products';
 
 function ConfirmClassification() {
   const confirmTitleText = 'Confirmá la clasificación de tu producto'
@@ -12,9 +11,11 @@ function ConfirmClassification() {
   const modifiedClassificationText = 'Quiero clasificarlo yo'
   const maxClassif = 3
 
+  const {data: confirmClassificationData} = useFetch(getConfirmClassification)
+
   const classifications = confirmClassificationData
-  .slice(0, maxClassif)
-  .map((item, index) => <ClassificationItem key={item.id} data={item} num={index} />)
+  ?.slice(0, maxClassif)
+  ?.map((item, index) => <ClassificationItem key={item.id} data={item} num={index} />)
 
   return (
     <main className={`
