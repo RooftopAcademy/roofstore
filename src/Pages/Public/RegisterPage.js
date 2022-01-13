@@ -1,115 +1,49 @@
 import { useState } from "react"
 import DistractionFreeLayout from "../../Layouts/DistractionFreeLayout"
-import ValidateOption from "./RegisterPages/ValidateOption"
-import DataPage from "./RegisterPages/DataPage"
-import PasswordPage from "./RegisterPages/PasswordPage"
-import SingleInputRegisterPage from "./RegisterPages/SingleInputRegisterPage"
+import TextLine from "../../Components/TextLine"
+import FormInput from "../../Components/FormInput"
+import TextLink from "../../Components/TextLink"
 
 function RegisterPage() {
-  let [optionActive, setOptionActive] = useState(1)
-  const datos = "Tus datos"
-  const validaText = "Validá tus datos para que nadie pueda ingresa o crear una cuenta a tu nombre."
 
-  const optionInfo = {
-    email: {
-      text: "Validar e-mail",
-      subText: "Lo usarás para recuperar tu cuenta.",
-      icon: "envelope",
-      to: "register/email",
-      isActive: 1,
-    },
-    data: {
-      text: "Confirmar tu identidad",
-      subText: "Accede a los beneficios RoofStore.",
-      icon: "dni",
-      to: "register/data",
-      isActive: 3,
-    },
-    mobile: {
-      text: "Validar teléfono",
-      subText: "Servirá para ingresar a tu cuenta.",
-      icon: "cell-phone",
-      to: "register/pass",
-      isActive: 5,
-    },
-    pass: {
-      text: "Crear contraseña",
-      subText: "Servirá para ingresar a tu cuenta.",
-      icon: "lock",
-      to: "register/pass",
-      isActive: 7,
-    },
-  }
-
-  const componentToRender = {
-    email: (
-      <SingleInputRegisterPage
-        key={"emailPage"}
-        className={optionActive === 2 ? "" : "d-none"}
-        setOptionActive={setOptionActive}
-        optionActive={optionActive}
-        title={"Ingresá tu e-mail"}
-        explication={"Te enviaremos un mensaje para confirmarlo."}
-        buttonText={"'Enviar e-mail de confirmación"}
-        formInputId={"email-input"}
-      />
-    ),
-    data: (
-      <DataPage
-        key={"dataPage"}
-        className={optionActive === 4 ? "" : "d-none"}
-        setOptionActive={setOptionActive}
-        optionActive={optionActive}
-      />
-    ),
-    mobile: (
-      <SingleInputRegisterPage
-        key={"mobilePage"}
-        className={optionActive === 6 ? "" : "d-none"}
-        setOptionActive={setOptionActive}
-        optionActive={optionActive}
-        title={"Ingresá tu teléfono"}
-        explication={"Con este teléfono podrás entrar a tu cuenta."}
-        buttonText={"Enviar"}
-        holder={"Código de área + número."}
-        formInputId={"mobile-input"}
-      />
-    ),
-    password: (
-      <PasswordPage
-        key={"passwordPage"}
-        className={optionActive === 8 ? "" : "d-none"}
-        setOptionActive={setOptionActive}
-        optionActive={optionActive}
-      />
-    ),
-  }
+  const title = "Creá tu cuenta"
+  const description = "Registrate para disfrutar de todos los beneficios que tiene Roofstore para vos"
+  const labelEmailText = 'E-mail'
+  const labelPasswordText = 'Contraseña'
+  const labelConfirmPasswordText = 'Confirmar contraseña'
+  const createAccountButtonText = 'Crear cuenta'
+  const alreadyHaveAccountText = '¿Ya tenés una cuenta?'
+  const sigInText = 'Ingresá'
 
   return (
     <DistractionFreeLayout isFooter={false}>
-      <div className={`row ${optionActive % 2 !== 0 ? "" : "d-none"}`}>
-        <div className="col">
-          <div className="title txt-bold m-bottom-2 ">{datos}</div>
-          <div className="m-bottom-5 ">
-            {validaText}
+      <div className="container grow-1 d-flex fd-col">
+        <div className="row grow-1 ai-start">
+          <div className="col padding-none">
+            <TextLine text={title} className="HomePage-fs-20 txt-bold HomePage-txt-start m-bottom-2" />
+            <TextLine text={description} className="HomePage-txt-start" />
+
+            <form className="d-flex fd-col padding-none m-top-5">
+
+              <label className="fz-sm m-left-0" htmlFor="register-email">{labelEmailText}</label>
+              <FormInput name="email" id="register-email" type="email" className="input round p-form" />
+
+              <label className="fz-sm m-left-0 m-top-0" htmlFor="register-password">{labelPasswordText}</label>
+              <FormInput name="password" id="register-password" type="password" className="input round p-form" />
+
+              <label className="fz-sm m-left-0 m-top-0" htmlFor="register-confirm-password">{labelConfirmPasswordText}</label>
+              <FormInput name="confirm-password" id="register-confirm-password" type="password" className="input round p-form" />
+
+              <button className="bg-blue txt-white p-form round txt-bold border-none m-top-5 fz-m">{createAccountButtonText}</button>
+            </form>
           </div>
-
-          {Object.keys(optionInfo).map((key) => {
-            return (
-              <ValidateOption
-                key={key}
-                info={optionInfo[key]}
-                active={optionActive === optionInfo[key].isActive}
-                optionActive={optionActive}
-                setOptionActive={setOptionActive}
-              />
-            )
-          })}
         </div>
-      </div>
-
-      <div>
-        {Object.keys(componentToRender).map((key) => componentToRender[key])}
+        <div className="row jc-center padding-none">
+          <div className="col padding-none d-flex ">
+            <TextLine text={alreadyHaveAccountText} className="HomePage-fs-14 txt-grey-copyright" />
+            <TextLink url="/login" className="HomePage-fs-14 txt-blue m-left-0">{sigInText}</TextLink>
+          </div>
+        </div>
       </div>
     </DistractionFreeLayout>
   )
