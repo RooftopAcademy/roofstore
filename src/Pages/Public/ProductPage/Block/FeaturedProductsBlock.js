@@ -1,5 +1,3 @@
-import {useEffect, useState} from 'react'
-import axios from 'axios'
 import FeaturedProductsItems from "../Component/FeaturedProductsItems"
 import useFetch from '../../../../hooks/useFetch'
 
