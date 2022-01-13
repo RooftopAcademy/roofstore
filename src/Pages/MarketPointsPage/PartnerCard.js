@@ -3,14 +3,14 @@ import Icon from "../../Components/Icon";
 import TextLink from "../../Components/TextLink";
 import TextTag from "../../Components/TextTag";
 
-function PartnerCard ({suscriptions}) {
+function PartnerCard ({subscriptions}) {
   const offText = 'OFF'
   const activarText = 'Activar'
 
   return(
     <>
       {
-        suscriptions.map((suscription, index) => {
+        subscriptions?.map((suscription, index) => {
           return (
           <div className="bg-white w-100 rounded my-3 shadow-m" key={index}>
             <div className="row pb-0">

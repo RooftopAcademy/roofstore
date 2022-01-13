@@ -1,0 +1,26 @@
+[
+  {
+    "image": "/images/bicicleta-2.webp",
+    "price": "$445.000",
+    "freeShipping": true,
+    "description": "Bicicleta Cube Attain Race"
+  },
+  {
+    "image": "/images/bicicleta-2.webp",
+    "price": "$445.000",
+    "freeShipping": false,
+    "description": "Bicicleta Cube Attain Race"
+  },
+  {
+    "image": "/images/bicicleta-2.webp",
+    "price": "$445.000",
+    "freeShipping": false,
+    "description": "Bicicleta Cube Attain Race"
+  },
+  {
+    "image": "/images/bicicleta-2.webp",
+    "price": "$445.000",
+    "freeShipping": false,
+    "description": "Bicicleta Cube Attain Race"
+  }
+]

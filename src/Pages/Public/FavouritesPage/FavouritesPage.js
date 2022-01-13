@@ -1,10 +1,14 @@
 import WebsiteLayout from "../../../Layouts/WebsiteLayout";
 import TextLine from "../../../Components/TextLine";
 import InteractionProductItem from "../../../Components/InteractionProductItem";
-import FavouriteList from "./favouritesData"
+import useFetch from "../../../hooks/useFetch";
+import { getFavourites } from "../../../requests/products";
 
 function FavouritesPage() {
+    const {data: FavouriteList} = useFetch(getFavourites)
+    
     let title = "Favoritos"
+
   return (
     <WebsiteLayout>
         <div className="container bg-light-grey padding-none">
@@ -14,7 +18,7 @@ function FavouritesPage() {
                 </div>
             </div>
             <ul>
-                {FavouriteList.map(product => {
+                {FavouriteList?.map(product => {
                     return (
                         <li className="br-btm"> 
                             <InteractionProductItem

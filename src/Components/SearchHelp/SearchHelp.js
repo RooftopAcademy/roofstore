@@ -1,18 +1,19 @@
 import { useState, useRef } from "react"
 import Icon from "../Icon"
-
+import useFetch from '../../hooks/useFetch'
 import SuggestedResults from "./SuggestedResults"
 import SuggestedResultsItems from "./SuggestedResultItem"
-import suggestedResultsData from './suggestedResultsData'
+import { getSearchHelp } from "../../requests/serchers"
 
 
 import { xIcon } from './svgIcons'
 
-
 function SearchHelp({isHelpMode = true, setNavBarAsSearchMode = null}) {
 
+  const {data : suggestedResultsData} = useFetch(getSearchHelp)
+
   const MAX_SUGGESTED_RESULTS = 6
-  let filteredSuggestedResults = suggestedResultsData.slice(0, MAX_SUGGESTED_RESULTS)
+  let filteredSuggestedResults = suggestedResultsData?.slice(0, MAX_SUGGESTED_RESULTS)
 
   const [ suggestedResults, setSuggestedResults ] = useState(filteredSuggestedResults)
   const [ inputIsFocused, setInputIsFocused ] = useState(false)
@@ -126,7 +127,7 @@ function SearchHelp({isHelpMode = true, setNavBarAsSearchMode = null}) {
         )}
       </div>
 
-      {(inputIsFocused && suggestedResults.length > 0) && (
+      {(inputIsFocused && suggestedResults?.length > 0) && (
         <SuggestedResults
           isHelpMode={isHelpMode}
           titleSuggestText={titleSuggestText}
