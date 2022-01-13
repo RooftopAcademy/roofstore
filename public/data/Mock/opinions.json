@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "stars": 3,
+    "title": "Muy buena!",
+    "review":
+      "Solo le di 40km de uso en ciudad, de momento excelente por su coste, lo unico que viene asi nomas recomiendo llevarla a un taller para los ajustes o de freno y transmision.",
+    "likes": 3,
+    "dislikes": 1,
+    "isPositiveReview": true
+  },
+  {
+    "id": 2,
+    "stars": 4,
+    "title": "Precio/producto calidad acorde.",
+    "review":
+      "Producto acordé al precio. Muy bueno, calidad de cuadro de aluminio aleación muy liviana incluso mejor que bicicletas mucho más caras.",
+    "likes": 0,
+    "dislikes": 0,
+    "isPositiveReview": true
+  },
+  {
+    "id": 3,
+    "stars": 1,
+    "title": "Muy malo.",
+    "review":
+      "5 cuadras hice. Y se rompio el descarrilador. Hay que llevarla a poner a punto con un bicicletero, los cambios no entran. Mala compra.",
+    "likes": 0,
+    "dislikes": 1,
+    "isPositiveReview": false
+  }
+]
