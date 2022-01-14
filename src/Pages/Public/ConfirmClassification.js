@@ -1,24 +1,21 @@
 import { Link } from 'react-router-dom';
 import { arrowLeftIcon } from './ConfirmClassification/svgIcon'
-
-import confirmClassificationData from './ConfirmClassification/confirmClassificationData';
 import ClassificationItem from './ConfirmClassification/Components/ClassificationItem';
-
+import useFetch from '../../hooks/useFetch';
+import { getConfirmClassification } from '../../requests/products';
 
 function ConfirmClassification() {
   const confirmTitleText = 'Confirmá la clasificación de tu producto'
   const yourPublicationText = 'Tu publicación'
   const acceptClassificationText = 'Está bien clasificado'
   const modifiedClassificationText = 'Quiero clasificarlo yo'
+  const maxClassif = 3
 
-  const classifications = (() => {
-    let item = []
-    const maxClassif = 3
-    for (let i = 0; i < maxClassif; i++) {
-      item.push(<ClassificationItem key={confirmClassificationData[i].id} data={confirmClassificationData[i]} num={i} />)
-    }
-    return item
-  })()
+  const {data: confirmClassificationData} = useFetch(getConfirmClassification)
+
+  const classifications = confirmClassificationData
+  ?.slice(0, maxClassif)
+  ?.map((item, index) => <ClassificationItem key={item.id} data={item} num={index} />)
 
   return (
     <main className={`
@@ -37,7 +34,9 @@ function ConfirmClassification() {
           <p className="ConfirmClassification-txt-sb txt-grey">{ confirmTitleText }</p>
         </div>
         <div id="classifications-container" className="col fd-col ai-center">
+
           { classifications }
+         
           <div className="col padding-none d-flex OffersPage-jc-center ConfirmClassification-m-2-bottom">
             <p className="txt-bold txt-grey">{ yourPublicationText }</p>
           </div>

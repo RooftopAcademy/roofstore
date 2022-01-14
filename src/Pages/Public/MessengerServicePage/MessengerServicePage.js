@@ -1,21 +1,45 @@
-import { useState } from "react/cjs/react.development";
+import { useLayoutEffect, useState, useEffect } from "react";
 import TextLine from "../../../Components/TextLine";
 import TextLink from "../../../Components/TextLink"
 import Icon from "../../../Components/Icon"
 import FormInput from "../../../Components/FormInput"
 import messagesList from "./mesaggesList"
 import Message from "./Message";
+import useRecorder from '../../../hooks/useRecorder'
 
 let title = "Mensajes"
 let userName = "user012"
 
 function MessengerServicePage() {
 
+	let [audioURL, isRecording, startRecording, stopRecording] = useRecorder()
+
+	const [messages, setMessages] = useState(messagesList)
+
 	const [text, setText] = useState("")
 
-	const handleChangeInput = e =>{
+	useLayoutEffect(() => {
+		window.scroll(0,document.body.scrollHeight)
+	},[document.body.scrollHeight, messages])
+
+	const handleChangeInput = e => {
 		setText (e.target.value)
 	}
+
+	useEffect(() => {
+		if (audioURL && audioURL != '') {
+			const newMessages = [...messages]
+			newMessages[newMessages.length-1].messages.push({
+				id: 4,
+				iniciales: "",
+				message: audioURL,
+				audio: true,
+				time : "10:00",
+				send: true,
+			})
+			setMessages(newMessages)
+		}
+	},[audioURL])
 
 	return (
 		<div className="container padding-none bg-white">	
@@ -41,7 +65,8 @@ function MessengerServicePage() {
 			</div>
 			
 			{/*casilla de mensajes*/}
-			{messagesList.map((list) => {
+
+			{messages.map((list) => {
 				return (
 					<div key={list.id}>
 						<div className="row jc-center">
@@ -57,7 +82,7 @@ function MessengerServicePage() {
 						)}
 					</div>
 				)
-            })}
+      })}
 			
 			<div className="row bg-white br-top shadow-sm rounded sticky-footer">
 				<div className="col">
@@ -73,8 +98,11 @@ function MessengerServicePage() {
 						<Icon icon="send"/>
 					</button>
 				</div>
-				<div className={`col ${text ? 'd-none'  : '' }`}>
-					<button className="bg-light-grey ProductPage-border-none ProductPage-circle " >
+				<div className={`col ${text? 'd-none'  : ''}`}>
+					<button className={`bg-light-grey ProductPage-border-none ProductPage-circle ${isRecording ? 'bg-light-green' : ''} `}
+						onMouseDown={startRecording} onMouseUp={stopRecording}
+						onTouchStart={startRecording} onTouchEnd={stopRecording}
+					>
 						<Icon icon="microphone"/>
 					</button>
 				</div>

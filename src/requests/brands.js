@@ -1,4 +1,4 @@
 export let getByCategory = {
     method : "get",
-    url: "brandsByCategory.json"
+    url: "Categories/brandsByCategory.json"
 }

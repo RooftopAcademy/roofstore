@@ -1,0 +1,14 @@
+[
+  {
+    "image": "/images/bicicleta-2.webp",
+    "price": "$3.781",
+    "freeShipping": false,
+    "description": "Plato Palanca Shimano"
+  },
+  {
+    "image": "/images/bicicleta-2.webp",
+    "price": "$1.278",
+    "freeShipping": true,
+    "description": "Manubrio P/ Bici Lovit 25,4"
+  }
+]

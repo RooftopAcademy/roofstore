@@ -1,31 +1,27 @@
-import {useEffect, useState} from 'react'
-import axios from 'axios'
 import WebsiteLayout from '../../Layouts/WebsiteLayout'
 import Paginator from './ProductList/Components/Paginator'
 import { InfoIcon, ArrowDownAndUpIcon, FilterIcon } from './ProductList/svgIcon'
 import RoundedProductItem from './ProductList/Components/RoundedProductItem'
 import SwitchSmall from './ProductList/Components/SwitchSmall'
+import useFetch from '../../hooks/useFetch'
+import { getItems } from '../../requests/products'
 
 function ProductList() {
 
-  const [items, setItems] = useState({
-    items : [],
-    meta : {currentPage : 1},
-    links : {next : "", previous : "", last: ""}
-  })
+  const {data: items} = useFetch(getItems)
 
-  useEffect(() => {
-    axios('/data/items.json').then(res => setItems(res.data))
-  }, [])
-
-  const publicationsItems = items.items.map(
+  const publicationsItems = items?.items.map(
     data => <RoundedProductItem key={data.id} data={data} />
   )
-  const publicationsItemsCopy = [...publicationsItems]
 
-  const halfLengthPublicationItems = (publicationsItems.length / 2)
-  const leftColumnProduct = publicationsItems.splice(0, halfLengthPublicationItems)
-  const rightColumnProduct = publicationsItemsCopy.splice(halfLengthPublicationItems, halfLengthPublicationItems)
+  let publicationsItemsCopy = []
+  if (publicationsItems) {
+    publicationsItemsCopy = [...publicationsItems]
+  }
+
+  const halfLengthPublicationItems = (publicationsItems?.length / 2)
+  const leftColumnProduct = publicationsItems?.splice(0, halfLengthPublicationItems)
+  const rightColumnProduct = publicationsItemsCopy?.splice(halfLengthPublicationItems, halfLengthPublicationItems)
 
   const orderText = "Ordenar"
   const arriveTodayText = "Llegan hoy"
@@ -84,10 +80,10 @@ function ProductList() {
         </div>
 
         <Paginator
-          currentPage={items.meta.currentPage}
-          nextUrl={items.links.next}
-          prevUrl={items.links.previous}
-          lastPage={items.links.last}
+          currentPage={items?.meta.currentPage}
+          nextUrl={items?.links.next}
+          prevUrl={items?.links.previous}
+          lastPage={items?.links.last}
           classNameText={"txt-blue"}
           classNameNumber={"ProductPage-bg-grey ProductList-txt-light-grey"}
         />
