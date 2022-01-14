@@ -2,32 +2,32 @@
   {
     "id": 1,
     "suggested": "Bases y condiciones",
-    "redirect": "/terms"
+    "redirect": "/help/terms-and-conditions"
   },
   {
     "id": 2,
     "suggested": "Reserva de vehículos",
-    "redirect": "/reserve"
+    "redirect": "/help/terms-and-conditions"
   },
   {
     "id": 3,
     "suggested": "Cuentas y contenido digital",
-    "redirect": "/digital-content"
+    "redirect": "/help/terms-and-conditions"
   },
   {
     "id": 4,
     "suggested": "Pasaremos a buscar tus ventas",
-    "redirect": "/look-for-your-sales"
+    "redirect": "/help/terms-and-conditions"
   },
   {
     "id": 5,
     "suggested": "Bases y condiciones del concurso",
-    "redirect": "/conditions-contest"
+    "redirect": "/help/terms-and-conditions"
   },
   {
     "id": 6,
     "suggested": "Sistema de opiniones de automóviles",
-    "redirect": "/car-review-system"
+    "redirect": "/help/terms-and-conditions"
   },
   {
     "id": 7,
