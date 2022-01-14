@@ -3,8 +3,9 @@
 
 ### 1️⃣ Description
 
-### Rooftore was born from the idea of the frontend's group, in the Bootcamp Alpha of Rooftop Academy. This project is inspired in the ecommerce #1 in latam , Mercado Libre. We decided to clone this one.
-#### This project has been created to educational purposes. We will put into practice our skill acquired with this project, and to be shown as part of our portfolio. 
+Rooftore was born from the idea of the frontend's group, in the Bootcamp Alpha of Rooftop Academy. We got our inspiration from Mercado Libre, the #1 ecommerce in Latin America.
+
+This project has been created with educational purposes, where we put into practice our skills acquired trough our learning journey, and to be shown as part of our portfolio. 
 
 ### 2️⃣ Links of the project. 
 * [Deploy](https://github.com/RooftopAcademy/roofstore)
@@ -12,14 +13,21 @@
 
 ### 3️⃣ Technologies used
 
-### ✅ Styles from our own framework [Rooftrap](https://github.com/RooftopAcademy/rooftstrap-docs)
-### ✅ Git & GitHub. 
-### ✅ React.js library.
-### ✅ React Testing library. 
-### ✅ Cypress.
-### ✅ Jest.
-### ✅ PWA. 
-### ✅ Firebase. 
+✅ Styles from our own framework [Rooftrap](https://github.com/RooftopAcademy/rooftstrap-docs)
+
+✅ Git & GitHub. 
+
+✅ React.js library.
+
+✅ React Testing library. 
+
+✅ Cypress.
+
+✅ Jest.
+
+✅ PWA. 
+
+✅ Firebase. 
 
 ### 4️⃣ How can you initialize the project? 
 ```bash
