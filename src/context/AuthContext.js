@@ -22,17 +22,34 @@ export const AuthProvider = ({ children }) => {
 
     axios({
       method: "post",
-      url: "http://localhost:3002/login",
+      url: "http://localhost:3001/auth/login",
       data : credentials
     }).then(res => {
+      setUser({ email: credentials.email })
       localStorage.setItem('token', res.data.accessToken)
       localStorage.setItem('email', credentials.email)
     })
     .catch(err => setError(err.response.data))
   }
 
-  const signup = (user) => {
-    setUser(user)
+  /**
+ * 
+ * @param {{email: string, password: string, passwordConfirmation: string}} credentials 
+ */
+  const signup = (credentials) => {
+
+    setError(null)
+
+    axios({
+      method: "post",
+      url: "http://localhost:3001/auth/register",
+      data : credentials
+    }).then(res => {
+      setUser({ email: credentials.email })
+      localStorage.setItem('token', res.data.accessToken)
+      localStorage.setItem('email', credentials.email)
+    })
+    .catch(err => setError(err.response.data))
   }
 
   const signout = () => {
