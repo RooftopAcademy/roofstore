@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Welcome to Roofstore! 🛒
+## About the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 1️⃣ Description
 
-## Available Scripts
+### Rooftore was born from the idea of the frontend's group, in the Bootcamp Alpha of Rooftop Academy. This project is inspired in the ecommerce #1 in latam , Mercado Libre. We decided to clone this one.
+#### This project has been created to educational purposes. We will put into practice our skill acquired with this project, and to be shown as part of our portfolio. 
 
-In the project directory, you can run:
+### 2️⃣ Links of the project. 
+* [Deploy](https://github.com/RooftopAcademy/roofstore)
+* [Roofstore/GitHub](https://roofstore-test.herokuapp.com/)
 
-### `yarn start`
+### 3️⃣ Technologies used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### ✅ Styles from our own framework [Rooftrap](https://github.com/RooftopAcademy/rooftstrap-docs)
+### ✅ Git & GitHub. 
+### ✅ React.js library.
+### ✅ React Testing library. 
+### ✅ Cypress.
+### ✅ Jest.
+### ✅ PWA. 
+### ✅ Firebase. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 4️⃣ How can you initialize the project? 
+```bash
+git clone https://github.com/RooftopAcademy/roofstore.git
+cd rooftore
+npm install && npm run start
+```
 
-### `yarn test`
+### 5️⃣ Collaborators: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Scarlet Albornoz](https://github.com/smichelle05a)
+* [Jorgelina Cardozo](https://github.com/jocardozo)
+* [Federico Martin](https://github.com/fl-martin)
+* [Mauricio Ferreyra Rizzoli](https://github.com/Mauri548)
+* [Pablo Nicolás Alonso](https://github.com/Alonso-Pablo)
+* [Fernando Alba](https://github.com/feralba28)
+* [Facundo Alba](https://github.com/FacundoAlba)
+* [Pablo Canale](https://github.com/pablocanale)
+* [Kevin Au Tam](https://github.com/kevin-dev71)
+* [Alejandro Villafañe](https://github.com/alezvi)
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## And this is all! Thanks for visiting our project!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
