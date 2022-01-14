@@ -41,7 +41,7 @@ export default function RoundedProductItem({ data: {
   return (
     <>
       <div data-testid="product-item" className="bg-white rounded shadow-sm col padding-none h-100 SearchHelp-m-1-top">
-        <Link to={redirect} className="link" >
+        <Link to={redirect} className="link txt-black" >
           <img className="w-100 rounded-top" src={image} alt={title} />
 
           <div className="row fd-col ai-start">
