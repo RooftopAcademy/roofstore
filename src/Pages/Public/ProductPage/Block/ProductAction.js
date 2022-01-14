@@ -28,19 +28,19 @@ function ProductAction({item}) {
                 <Benefit
                     icon="devolution"
                     txtLink={freeReturnText}
-                    url="/politicas-de-devolucion"
+                    url="/help/terms-and-conditions"
                     description={sinceYouReceiveText}
                 />
                 <Benefit
                     icon="shield"
                     txtLink={protectedPurchaseText}
-                    url="/compra-protegida" 
+                    url="/help/consumer-defense" 
                     description={refoundYourMoneyText}
                 />
                 <Benefit
                     icon="trophy"
                     txtLink={mercadoPointText}
-                    url="/mercado-puntos"
+                    url="/market-points"
                     description={addPointText}
                 />
                 {item.assurance &&
