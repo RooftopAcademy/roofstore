@@ -6,42 +6,42 @@
                 {
                     "brandName": "Lenovo",
                     "src": "/images/lenovo-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Xerox",
                     "src": "/images/xerox-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Dell",
                     "src": "/images/dell-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Redragon",
                     "src": "/images/redragon-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "HyperX",
                     "src": "/images/hyperx-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Kingston",
                     "src": "/images/kingston-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Gadnic",
                     "src": "/images/gadnic-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "HP",
                     "src": "/images/hp-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 }
             ]
     },
@@ -52,42 +52,42 @@
                 {
                     "brandName": "Lenovo",
                     "src": "/images/lenovo-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Xerox",
                     "src": "/images/xerox-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Dell",
                     "src": "/images/dell-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Redragon",
                     "src": "/images/redragon-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "HyperX",
                     "src": "/images/hyperx-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Kingston",
                     "src": "/images/kingston-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "Gadnic",
                     "src": "/images/gadnic-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 },
                 {
                     "brandName": "HP",
                     "src": "/images/hp-logo.jpg",
-                    "to": "/"
+                    "to": "/product-list"
                 }
             ]
     }
