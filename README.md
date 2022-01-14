@@ -33,6 +33,10 @@ This project has been created with educational purposes, where we put into pract
 ```bash
 git clone https://github.com/RooftopAcademy/roofstore.git
 cd rooftore
+```
+> create a .env file following the .env.example
+
+```bash
 npm install && npm run start
 ```
 
