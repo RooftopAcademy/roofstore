@@ -41,11 +41,15 @@ export const registerFirebaseSW = (serviceWorkerRegistration) => {
 };
 
 export const onForegroundMessage = () => {
-  const messaging = getMessaging();
-  onMessage(messaging, (payload) => {
-    console.log('Message received. ', payload);
-    // ...
-  });
+  try {
+    const messaging = getMessaging();
+    onMessage(messaging, (payload) => {
+      console.log('Message received. ', payload);
+      // ...
+    });
+  } catch (error) {
+    console.log("Error occurred while subscribing to onMessage: ", error);
+  }
 };
 
 export default app;
