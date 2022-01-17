@@ -3,15 +3,15 @@ import App from './App';
 
 import useFetch from './hooks/useFetch';
 
-Mock de useFetch
+// Mock de useFetch
 jest.mock('./hooks/useFetch', () => {
   return jest.fn();
 });
 
-Mock de window.scrollTo
+// Mock de window.scrollTo
 window.scrollTo = jest.fn();
 
-Mock de geolocation
+// Mock de geolocation
 const mockGeolocation = {
   getCurrentPosition: jest.fn().mockImplementationOnce((success) =>
     Promise.resolve(
@@ -26,7 +26,7 @@ const mockGeolocation = {
 };
 global.navigator.geolocation = mockGeolocation;
 
-Mock de Firebase Cloud Messaging
+// Mock de Firebase Cloud Messaging
 jest.mock('./firebase.js', () => ({
   ...jest.requireActual('./firebase.js'),
   onForegroundMessage: jest.fn()
