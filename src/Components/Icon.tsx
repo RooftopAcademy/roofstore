@@ -1,4 +1,10 @@
-const icons = {
+import { MouseEventHandler } from 'react';
+
+interface IconsList {
+  [key: string] : string
+}
+
+const icons : IconsList = {
 	'arrow-down': "fas fa-angle-down",
 	'arrow-left': 'fas fa-arrow-left',
 	'arrow-right': "fas fa-angle-right",
@@ -51,12 +57,17 @@ const icons = {
 	'truck': 'fas fa-truck-moving',
 };
 
-function Icon({ className, icon, onClick=null, dataTestId }) {
+interface IconInterface {
+  className? : string;
+  icon: string;
+  onClick?: MouseEventHandler<HTMLElement>;
+}
+
+function Icon(props: IconInterface): JSX.Element {
 	return (<i 
 		role="figure" 
-		className={`${className} ${icons[icon]}`} 
-		onClick={onClick} 
-		data-testid={dataTestId}
+		className={`${props.className} ${icons[props.icon]}`} 
+		onClick={props.onClick}
 		></i>
 	)
 }
