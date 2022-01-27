@@ -1,12 +1,5 @@
 import { Link } from "react-router-dom"
-
-interface Banner {
-    id: string;
-    url: string;
-    image: string;
-    title: string;
-}
-
+import type { Banner } from "../../types/banner"
 interface CarouselProps {
     banners : Array<Banner>,
     visible? : boolean
