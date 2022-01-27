@@ -1,6 +1,10 @@
 import axios from 'axios'
 import {useState, useEffect} from "react";
 
+interface FetchData<T> {
+  data: T | null;
+}
+
 const http = axios.create({
     baseURL : "http://localhost:3000/data/",
     headers : {
@@ -8,9 +12,9 @@ const http = axios.create({
     }
 })
 
-function useFetch(props) {
-    const [response, setResponse] = useState({
-        data : null
+function useFetch<dataType>(props:object): FetchData<dataType> {
+    const [response, setResponse] = useState<FetchData<dataType>>({
+      data: null
     })
 
     useEffect(() => {
