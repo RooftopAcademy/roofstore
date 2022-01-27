@@ -70,7 +70,7 @@ function HomePage() {
         <WebsiteLayout>
             <div className="container bg-main padding-none m-bottom-0">
 
-                {bannerList? <Carrousel bannerList={bannerList}/> : ""}
+                {bannerList? <Carrousel banners={bannerList} visible={false} /> : ""}
                 
 
                 <PaymentInfo/>
