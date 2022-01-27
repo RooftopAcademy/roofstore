@@ -8,7 +8,7 @@ const http = axios.create({
     }
 })
 
-function useFetch(props) {
+function useFetch<dataType>(props) {
     const [response, setResponse] = useState({
         data : null
     })
