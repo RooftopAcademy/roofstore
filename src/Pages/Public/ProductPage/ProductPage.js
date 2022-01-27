@@ -15,15 +15,28 @@ import ProductAction from "./Block/ProductAction";
 import ProductCarrousel from "./Block/ProductCarrousel";
 import BreadcrumbBlock from "./Block/BreadcrumbBlock"
 import FeaturedProductsBlock from "./Block/FeaturedProductsBlock"
-import GarantiaBlock from "./Block/GarantiaBlock"
+import WarrantyComponent from "./Component/WarrantyComponent"
 import PaymentBlock from "./Block/PaymentBlock"
 import ProductReviewsBlock from "./Block/ProductReviewsBlock"
 import QuestionAndAnswerBlock from "./Block/QuestionAndAnswerBlock"
 import AProductBanner from "./Component/AProductBanner"
-import { MOCK_PRODUCTOS_PROMOCIONADOS, MOCK_PRODUCTOS_QUE_TBM_COMPRARON } from './mockData'
+import useFetch from "../../../hooks/useFetch";
+import { getPromedy, getMockCategories, getWarrantyTime } from "../../../requests/mocks";
+import { getFeatured } from "../../../requests/products";
 
 function ProductPage() {
-    
+
+  const {data: MOCK_PROMEDY} = useFetch(getPromedy)
+  const {data: MOCK_CATEGORIES} = useFetch(getMockCategories)
+  const {data: MOCK_WARRANTY_TIME} = useFetch(getWarrantyTime)
+
+  const publicationText = 'Publicación'
+  const publicationNumber = 1109087736
+  const reportText = 'Denunciar'
+
+  const promotedProductsTitle = 'Productos promocionados'
+  const featuredProductsTitle = 'Quienes compraron este producto también compraron'
+
   return (
     <WebsiteLayout>
       <div className="container padding-none">
@@ -50,31 +63,38 @@ function ProductPage() {
 
         <div className="row padding-none">
           <div className="ProductPage-w-100 padding-none">
-            <GarantiaBlock />
+            
+            {MOCK_WARRANTY_TIME? <WarrantyComponent warranty={MOCK_WARRANTY_TIME} /> : ''}
+
             <PaymentBlock />
             <QuestionAndAnswerBlock />
-            <ProductReviewsBlock />
+            
+            {MOCK_PROMEDY? <ProductReviewsBlock data={MOCK_PROMEDY} /> : ""}
+            
             <div className="row padding-none ProductPage-bg-grey">
               <div className="col ProductPage-w-100">
                 <p>
-                  Publicación <span className="txt-bold">#1109087736</span> |{" "}
-                  <span className="link-color">Denunciar</span>
+                  {publicationText + ' '}
+                  <span className="txt-bold">{'#' + publicationNumber}</span>
+                  {" | "}
+                  <span className="link-color">{reportText}</span>{}
                 </p>
 
                 {/* Productos promocionados */}
-                <FeaturedProductsBlock
-                  title="Productos promocionados"
-                  products={MOCK_PRODUCTOS_PROMOCIONADOS}
-                />
-                {/* Quienes compraron este producto también compraron */}
-                <FeaturedProductsBlock
-                  title="Quienes compraron este producto también compraron"
-                  products={MOCK_PRODUCTOS_QUE_TBM_COMPRARON}
-                />
+                <FeaturedProductsBlock 
+                  src={getFeatured}
+                  title={promotedProductsTitle} />
+
+                <FeaturedProductsBlock 
+                  src={getFeatured}
+                  title={featuredProductsTitle} />
+                  
                 {/* Banner Publicitario */}
                 <AProductBanner />
                 {/* End banner publicitario */}
-                <BreadcrumbBlock />
+
+                {MOCK_CATEGORIES? <BreadcrumbBlock categories={MOCK_CATEGORIES}/> : ''}
+                
               </div>
             </div>
           </div>

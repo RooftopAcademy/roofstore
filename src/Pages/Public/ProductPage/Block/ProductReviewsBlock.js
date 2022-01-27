@@ -1,15 +1,21 @@
 import { useState } from "react"
 import OpinionComponent from "../Component/OpinionComponent"
 import ToogleButtons from "../Component/ToogleButtons"
-import { MOCK_OPINIONS } from '../mockData'
+import useFetch from "../../../../hooks/useFetch"
+import { getOpinions } from "../../../../requests/mocks"
 
-function ProductReviewsBlock() {
+function ProductReviewsBlock({ data }) {
+
+  const {data: MOCK_OPINIONS} = useFetch(getOpinions)
 
   const LABELS = {
     all: "Todas",
     positive: "Positivas",
     negative: "Negativas",
   }
+  const productOpinions = "Opiniones sobre el producto"
+  const spanTxt = "Promedio entre 24 opiniones"
+  const btnTxt = " Ver todas las opiniones"
 
   const [active, setActive] = useState(LABELS.all)
 
@@ -17,17 +23,17 @@ function ProductReviewsBlock() {
     active === LABELS.all
       ? MOCK_OPINIONS
       : active === LABELS.positive
-      ? MOCK_OPINIONS.filter((opinion) => opinion.isPositiveReview)
-      : MOCK_OPINIONS.filter((opinion) => !opinion.isPositiveReview)
+        ? MOCK_OPINIONS?.filter((opinion) => opinion.isPositiveReview)
+        : MOCK_OPINIONS?.filter((opinion) => !opinion.isPositiveReview)
 
   return (
     <section className="shadow-sm">
       <div className="row m-top-0 padding-none">
         <div className="col ProductPage-w-100 padding-none">
-          <p className="m-0">Opiniones sobre el producto</p>
+          <p className="m-0">{productOpinions}</p>
           {/* Rating summary */}
           <div className="row ProductPage-row-left">
-            <span className="ProductPage-text-big">4.5</span>
+            <span className="ProductPage-text-big">{data}</span>
             <div className="col">
               <div className="row padding-none ProductPage-star-row-color">
                 <span>
@@ -48,7 +54,7 @@ function ProductReviewsBlock() {
               </div>
               <div className="padding-none">
                 <span className="ProductPage-txt-light-grey ProductPage-text-sm">
-                  Promedio entre 24 opiniones
+                  {spanTxt}
                 </span>
               </div>
             </div>
@@ -59,13 +65,13 @@ function ProductReviewsBlock() {
             labels={LABELS}
             setActive={setActive}
           />
-          {filteredOpinions.map((opinion) => (
+          {filteredOpinions?.map((opinion) => (
             <OpinionComponent key={opinion.id} opinion={opinion} />
           ))}
 
           <div className="row">
             <button className="rounded txt-blue bg-white p-0 input ProductPage-btn-left m-bottom-4">
-              Ver todas las opiniones <i className="fas fa-angle-right" />
+              {btnTxt} <i className="fas fa-angle-right" />
             </button>
           </div>
         </div>

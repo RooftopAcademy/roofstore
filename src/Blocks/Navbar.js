@@ -3,7 +3,7 @@ import Icon from "../Components/Icon";
 import Logo from "../Components/Logo";
 import MenuMobile from "./MenuMobile/MenuMobile";
 import TextLink from "../Components/TextLink";
-import SearchHelp from "../Components/SearchHelp"
+import SearchHelp from "../Components/SearchHelp/SearchHelp"
 
 function Navbar({showSearch=true, showCart=true}) {
     const [activeMenu, setActiveMenu] = useState(false)

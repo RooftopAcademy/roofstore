@@ -3,63 +3,47 @@ import WebsiteLayout from "../../Layouts/WebsiteLayout";
 import CartItem from "../CartPage/CartItem";
 import CartTotal from "../CartPage/CartTotal";
 import FeaturedProductsBlock from "./ProductPage/Block/FeaturedProductsBlock";
-import { MOCK_PRODUCTOS_PROMOCIONADOS } from '../Public/ProductPage/mockData' 
-import axios from "axios";
+import useFetch from "../../hooks/useFetch";
+import { getCart } from "../../requests/products";
 
 function CartPage () {
 
-    const [products, setProducts] = useState([])
-    const [priceTotal, setPriceTotal] = useState(0)
+    const cartText = 'Carrito'
+    const savedText = 'Guardado'
 
-    const fetchProductCart = async () => {
-        const response = await axios.get('/data/productCartData.json')
-        setProducts(response.data)
-    }
-
-    useEffect(() => {
-        fetchProductCart()
-    }, [])
-
-    useEffect(() => {
-        let total = 0
-        products.forEach(item => total+= item.price * item.cant)
-        setPriceTotal(total)
-    },[products])  
+    const {data: cart} = useFetch(getCart)
 
     return (
         <WebsiteLayout>
             <div>
-
                 <div data-testid="hola" className="row padding-none bg-primary">
                     <div className="col OffersPage-6-col txt-white txt-center ChooseItemTitle-border-blue-bottom">
-                        Carrito ({products.length})
+                        {cartText} ({cart?.totalItems})
                     </div>
                     <div className="col OffersPage-6-col txt-white txt-center">
-                        Guardado (0)
+                        {savedText} (0)
                     </div>
                 </div>
 
                 <div className="bg-main">
-                    {products.map((product, index) => {
+                    {cart?.items.map((product, index) => {
                         return(
                             <CartItem
                                 key={product.id}
-                                item = {product}
-                                dataTestId = {`cart-product-${index}`}
+                                item={product}
+                                dataTestId={`cart-product-${index}`}
                             />
                         )
                     })}
 
-                    <CartTotal priceTotal={priceTotal} />
+                    <CartTotal priceTotal={cart?.finalPrice} />
+                    
                     <div className="SearchHelp-m-3-top">
                         <FeaturedProductsBlock
                             title="Productos que te interesaron" 
-                            products={MOCK_PRODUCTOS_PROMOCIONADOS}
                         />
                     </div>
                 </div>
-
-
             </div>
         </WebsiteLayout>
     )

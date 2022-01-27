@@ -1,12 +1,14 @@
 import TextLink from '../../Components/TextLink'
-import ShoppingHistoryData from './ShoppingHistoryData'
 import ShoppingHistoryItem from './ShoppingHistoryItem'
-import Pagination from '../Public/OffersPage/Blocks/Pagination'
+import Paginator from '../Public/ProductList/Components/Paginator'
+import useFetch from '../../hooks/useFetch'
+import { getPurchases } from '../../requests/products'
 
 function ShoppingHistoryPage() {
   const title = 'Mis Compras'
   const navigationIcon = 'fas fa-arrow-left txt-white'
-  const data = ShoppingHistoryData
+
+  const {data: history} = useFetch(getPurchases)
 
   return (
     <div className="d-flex vh-100 fd-col bg-main">
@@ -19,12 +21,21 @@ function ShoppingHistoryPage() {
           </div>
         </div>
       <div className="container p-none grow-1">
-        {data.map((item) => {
+        {history?.items.map((item) => {
           return <ShoppingHistoryItem shoppingData={item} key={item.id} />
         })}
       </div>
       <footer>
-        <Pagination numPages='2'/>
+        {history?.items ?
+        <Paginator
+            currentPage={history.meta.currentPage}
+            nextUrl={history.links.next}
+            prevUrl={history.links.previous}
+            lastPage={history.links.last}
+            classNameText={"txt-blue"}
+            classNameNumber={"ProductPage-bg-grey ProductList-txt-light-grey"}
+          /> : ""
+        }
       </footer>
     </div>
   )

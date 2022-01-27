@@ -1,0 +1,94 @@
+[
+    {
+        "title": "Computación",
+        "brands":
+            [
+                {
+                    "brandName": "Lenovo",
+                    "src": "/images/lenovo-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Xerox",
+                    "src": "/images/xerox-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Dell",
+                    "src": "/images/dell-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Redragon",
+                    "src": "/images/redragon-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "HyperX",
+                    "src": "/images/hyperx-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Kingston",
+                    "src": "/images/kingston-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Gadnic",
+                    "src": "/images/gadnic-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "HP",
+                    "src": "/images/hp-logo.jpg",
+                    "to": "/product-list"
+                }
+            ]
+    },
+    {
+        "title": "Categoria",
+        "brands":
+            [
+                {
+                    "brandName": "Lenovo",
+                    "src": "/images/lenovo-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Xerox",
+                    "src": "/images/xerox-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Dell",
+                    "src": "/images/dell-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Redragon",
+                    "src": "/images/redragon-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "HyperX",
+                    "src": "/images/hyperx-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Kingston",
+                    "src": "/images/kingston-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "Gadnic",
+                    "src": "/images/gadnic-logo.jpg",
+                    "to": "/product-list"
+                },
+                {
+                    "brandName": "HP",
+                    "src": "/images/hp-logo.jpg",
+                    "to": "/product-list"
+                }
+            ]
+    }
+]

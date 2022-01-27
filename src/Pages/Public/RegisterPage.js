@@ -1,106 +1,72 @@
 import { useState } from "react"
 import DistractionFreeLayout from "../../Layouts/DistractionFreeLayout"
-import ValidateOption from "./RegisterPages/ValidateOption"
-import EmailPage from "./RegisterPages/EmailPage"
-import DataPage from "./RegisterPages/DataPage"
-import PasswordPage from "./RegisterPages/PasswordPage"
-import MobilePage from "./RegisterPages/MobilePage"
+import TextLine from "../../Components/TextLine"
+import FormInput from "../../Components/FormInput"
+import TextLink from "../../Components/TextLink"
+import useAuth from '../../hooks/useAuth'
 
 function RegisterPage() {
-  let [optionActive, setOptionActive] = useState(1)
 
-  const optionInfo = {
-    email: {
-      text: "Validar e-mail",
-      subText: "Lo usarás para recuperar tu cuenta.",
-      icon: "envelope",
-      to: "register/email",
-      isActive: 1,
-    },
-    data: {
-      text: "Confirmar tu identidad",
-      subText: "Accede a los beneficios RoofStore.",
-      icon: "dni",
-      to: "register/data",
-      isActive: 3,
-    },
-    mobile: {
-      text: "Validar teléfono",
-      subText: "Servirá para ingresar a tu cuenta.",
-      icon: "cell-phone",
-      to: "register/pass",
-      isActive: 5,
-    },
-    pass: {
-      text: "Crear contraseña",
-      subText: "Servirá para ingresar a tu cuenta.",
-      icon: "lock",
-      to: "register/pass",
-      isActive: 7,
-    },
+  const {signup, error} = useAuth()
+
+  const [credentials, setCredentials] = useState({
+    email: '',
+    password: '',
+    passwordConfirmation: ''
+  })
+
+  const handleInput = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value })
   }
 
-  const componentToRender = {
-    email: (
-      <EmailPage
-        key={"emailPage"}
-        className={optionActive === 2 ? "" : "d-none"}
-        setOptionActive={setOptionActive}
-        optionActive={optionActive}
-      />
-    ),
-    data: (
-      <DataPage
-        key={"dataPage"}
-        className={optionActive === 4 ? "" : "d-none"}
-        setOptionActive={setOptionActive}
-        optionActive={optionActive}
-      />
-    ),
-    mobile: (
-      <MobilePage
-        key={"mobilePage"}
-        className={optionActive === 6 ? "" : "d-none"}
-        setOptionActive={setOptionActive}
-        optionActive={optionActive}
-      />
-    ),
-    password: (
-      <PasswordPage
-        key={"passwordPage"}
-        className={optionActive === 8 ? "" : "d-none"}
-        setOptionActive={setOptionActive}
-        optionActive={optionActive}
-      />
-    ),
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    signup(credentials)
   }
+
+  const title = "Creá tu cuenta"
+  const description = "Registrate para disfrutar de todos los beneficios que tiene Roofstore para vos"
+  const labelEmailText = 'E-mail'
+  const labelPasswordText = 'Contraseña'
+  const labelConfirmPasswordText = 'Confirmar contraseña'
+  const createAccountButtonText = 'Crear cuenta'
+  const alreadyHaveAccountText = '¿Ya tenés una cuenta?'
+  const sigInText = 'Ingresá'
 
   return (
     <DistractionFreeLayout isFooter={false}>
-      <div className={`row ${optionActive % 2 !== 0 ? "" : "d-none"}`}>
-        <div className="col">
-          <div className="title txt-bold m-bottom-2 ">Tus datos</div>
-          <div className="m-bottom-5 ">
-            Validá tus datos para que nadie pueda ingresa o crear una cuenta a
-            tu nombre.
+      <div className="container grow-1 d-flex fd-col">
+        <div className="row grow-1 ai-start">
+          <div className="col padding-none">
+            <TextLine text={title} className="HomePage-fs-20 txt-bold HomePage-txt-start m-bottom-2" />
+            <TextLine text={description} className="HomePage-txt-start" />
+
+            <form className="d-flex fd-col padding-none m-top-5" onSubmit={handleSubmit} >
+
+              <label className="fz-sm m-left-0" htmlFor="register-email">{labelEmailText}</label>
+              <FormInput name="email" id="register-email" type="email" className="input round p-form" onChange={handleInput} />
+
+              <label className="fz-sm m-left-0 m-top-0" htmlFor="register-password">{labelPasswordText}</label>
+              <FormInput name="password" id="register-password" type="password" className="input round p-form" onChange={handleInput} />
+
+              <label className="fz-sm m-left-0 m-top-0" htmlFor="register-confirm-password">{labelConfirmPasswordText}</label>
+              <FormInput name="passwordConfirmation" id="register-confirm-password" type="password" className="input round p-form" onChange={handleInput} />
+
+              <button className="bg-blue txt-white p-form round txt-bold border-none m-top-5 fz-m">{createAccountButtonText}</button>
+
+              {error && 
+                <div>{error.message}</div>
+              }
+
+            </form>
           </div>
-
-          {Object.keys(optionInfo).map((key) => {
-            return (
-              <ValidateOption
-                key={key}
-                info={optionInfo[key]}
-                active={optionActive === optionInfo[key].isActive}
-                optionActive={optionActive}
-                setOptionActive={setOptionActive}
-              />
-            )
-          })}
         </div>
-      </div>
-
-      <div>
-        {Object.keys(componentToRender).map((key) => componentToRender[key])}
+        <div className="row jc-center padding-none">
+          <div className="col padding-none d-flex ">
+            <TextLine text={alreadyHaveAccountText} className="HomePage-fs-14 txt-grey-copyright" />
+            <TextLink url="/login" className="HomePage-fs-14 txt-blue m-left-0">{sigInText}</TextLink>
+          </div>
+        </div>
       </div>
     </DistractionFreeLayout>
   )

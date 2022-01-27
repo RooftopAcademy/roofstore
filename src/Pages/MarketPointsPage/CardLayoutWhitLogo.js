@@ -3,6 +3,8 @@ import Icon from "../../Components/Icon";
 import TextLink from "../../Components/TextLink";
 import TextTag from "../../Components/TextTag";
 
+const btnText = "Descargar"
+
 function CardLayoutWhitLogo (
   {
     children, 
@@ -49,7 +51,7 @@ function CardLayoutWhitLogo (
             </div>
             <div>
               <button className="button MenuMobile-blue-border p-1 bg-blue rounded txt-white txt-bold">
-                  Descargar
+                  {btnText}
               </button>
             </div>
           </div>

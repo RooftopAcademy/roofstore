@@ -11,11 +11,13 @@ function PasswordPage({ optionActive, setOptionActive, className }) {
     const labelPass = 'Ingresá tu contraseña'
     const labelConfirm = 'Confirmá tu contraseña'
     const buttonText = 'Continuar'
-    const req1 = 'Mínimo de 8 caracteres con letras y números.'
-    const req2 = 'Mínimo 1 signo o símbolo como ?-!*$#.'
-    const req3 = 'No incluyas tu nombre o apellido.'
-    const req4 = 'Sin caracteres repetidos consecutivos como aa.'
-    const req5 = 'Sin tu e-mail, ni "roofstore".'
+    const requeriments = [
+        {text: 'Mínimo de 8 caracteres con letras y números.'},
+        {text: 'Mínimo 1 signo o símbolo como ?-!*$#.'},
+        {text: 'No incluyas tu nombre o apellido..'},
+        {text: 'Sin caracteres repetidos consecutivos como aa.'},
+        {text: 'Sin tu e-mail, ni "roofstore".'},
+    ]
     return (
         <div className={`row d-flex ai-start display-none ${className}`}>
             <div className="col display-none">
@@ -24,11 +26,9 @@ function PasswordPage({ optionActive, setOptionActive, className }) {
                 <form className="d-flex fd-col">
                     <label className="fz-sm m-left-0" htmlFor="name-input">{labelPass}</label>
                     <FormInput id="password-input" type="password" className="input round p-form m-bottom-0" />
-                    <PasswordRequirement text={req1} />
-                    <PasswordRequirement text={req2} />
-                    <PasswordRequirement text={req3} />
-                    <PasswordRequirement text={req4} />
-                    <PasswordRequirement text={req5} />
+                    { requeriments.map(requeriment => {
+                        return <PasswordRequirement text={requeriment.text} />
+                    })}
                     <label className="fz-sm m-left-0 m-top-5" htmlFor="name-input">{labelConfirm}</label>
                     <FormInput id="repeat-password-input" type="password" className="input round p-form m-bottom-5" />
                     <button type="button" className=" bg-blue txt-white p-form round txt-bold border-none fz-m m-top-1">{buttonText}</button>

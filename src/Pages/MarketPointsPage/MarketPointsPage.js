@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
 import Icon from "../../Components/Icon";
-import { useEffect } from "react/cjs/react.development";
 import SubscriptionCard from "../HomePage/SubscriptionCard";
 import TextLine from "../../Components/TextLine";
 import TextLink from "../../Components/TextLink";
@@ -12,34 +10,16 @@ import CardLockedLevels from "./CardLockedLevels";
 import LevelCart from "./LevelCard";
 import PartnerCard from "./PartnerCard";
 import WelcomeCard from "./WelcomeCard";
+import useFetch from "../../hooks/useFetch";
+import { getLocalStores } from "../../requests/stores";
+import { getMoviesAndSeries, getNextLevelBenefit } from "../../requests/mercadoPunto";
 
 function MarketPointPage () {
 
-  const [suscriptions, setSuscriptions] = useState([])
-  const [stores, setStore] = useState([])
-  const [nextLevelBenefit, setNextLevelBenefit] = useState([])
+  const {data: subscriptions} = useFetch(getMoviesAndSeries)
+  const {data: stores} = useFetch(getLocalStores)
+  const {data: nextLevelBenefit} = useFetch(getNextLevelBenefit)
   const [showWelcome, setShowWelcome] = useState(true)
-
-  const fetchSuscriptions = async () => {
-    const response = await axios.get('/data/moviesAndSerieData.json')
-    setSuscriptions(response.data)
-  }
-
-  const fetchLocalStore = async () => {
-    const response = await axios.get('/data/localStoreData.json')
-    setStore(response.data)
-  }
-
-  const fetchNextLevelBenefit = async () => {
-    const response = await axios.get('/data/nextLevelBenefiData.json')
-    setNextLevelBenefit(response.data)
-  }
-
-  useEffect(() => {
-    fetchSuscriptions()
-    fetchLocalStore()
-    fetchNextLevelBenefit()
-  }, [])
 
   const closeWelcome = () => {
     setShowWelcome(false)
@@ -73,7 +53,7 @@ function MarketPointPage () {
               </div>
             </div>
             <img className="w-100" 
-              src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hub/level6/banner-level6-v2-mobile2@2x.png"
+              src="/images/disney-banner.png"
               alt="Disney+ y Star+"
             />
             <div className="row bg-blue-dark border-radius-bottom">
@@ -92,7 +72,7 @@ function MarketPointPage () {
             <p>Descuentos en películas y series</p>
           </span>
 
-          <PartnerCard suscriptions={suscriptions} />
+          {subscriptions? <PartnerCard suscriptions={subscriptions} /> : ""}
 
           <span className="d-flex ai-center m-top-5">
             <div className="d-flex m-right-2 icon-percentage">
@@ -110,7 +90,7 @@ function MarketPointPage () {
             titleDownload="Exclusivo con la app de Roofstore Pago"
           >
             <div className="row px-6">
-              { stores.map((store, index) => {
+              { stores?.map((store, index) => {
                 return( <CardLocalStore store={store} key={index} /> )
               })}
             </div>
@@ -133,10 +113,7 @@ function MarketPointPage () {
 
           <p className="m-top-5">Beneficios de los proximos niveles</p>
           
-          <CardLockedLevels 
-            nextLevelBenefit={nextLevelBenefit} 
-            textLink="Ver todos los beneficios"
-          />
+          {nextLevelBenefit? <CardLockedLevels nextLevelBenefit={nextLevelBenefit} textLink="Ver todos los beneficios"/> : ""}
 
         </div> 
 

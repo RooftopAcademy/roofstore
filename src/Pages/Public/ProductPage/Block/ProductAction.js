@@ -2,50 +2,57 @@ import TextLine from "../../../../Components/TextLine";
 import Benefit from "../Component/Benefit";
 import product from "../dataProduct"
 
-let buttonShop = "Comprar ahora" 
-let buttonAdd = "Agregar al carrito"
-
 function ProductAction({item}) {
+    const buttonShopText = 'Comprar ahora'
+    const buttonAddText = 'Agregar al carrito'
+    const freeReturnText = 'Devolución gratis. '
+    const sinceYouReceiveText = 'Tenés 30 días desde que lo recibís.'
+    const protectedPurchaseText = 'Compra protegida. '
+    const refoundYourMoneyText = 'recibí el producto que esperabas o te devolvemos tu dinero.'
+    const addPointText = `Sumás ${product.points} puntos`
+    const mercadoPointText = 'Mercado Puntos. '
+    const factoryWarrantyText = 'meses de garantia de fábrica'
+
     return (
-            <div className="row p-0 ">
-                <div className="col padding-none ProductPage-w-100">
-                    <div className="ProductPage-p-bottom-2">
-                        <button className=" bg-blue txt-white rounded txt-bold ProductPage-border-none ProductPage-w-100">
-                            <TextLine text={buttonShop} className={"ProductPage-p-button ProductPage-fs-16"}/>
-                        </button>
-                    </div>
-                    <div>
-                        <button className="bg-light-blue txt-blue rounded txt-bold ProductPage-border-none ProductPage-w-100 ">
-                            <TextLine text={buttonAdd} className={"ProductPage-p-button ProductPage-fs-16"}/>
-                        </button>
-                    <Benefit 
-                        icon = "devolution"
-                        txtLink = "Devolución gratis. "
-                        url = "/politicas-de-devolucion" 
-                        description = "Tenés 30 días desde que lo recibís."
+        <div className="row p-0 ">
+            <div className="col padding-none ProductPage-w-100">
+                <div className="ProductPage-p-bottom-2">
+                    <button className=" bg-blue txt-white rounded txt-bold ProductPage-border-none ProductPage-w-100">
+                        <TextLine text={buttonShopText} className={"ProductPage-p-button ProductPage-fs-16"}/>
+                    </button>
+                </div>
+                <div>
+                    <button className="bg-light-blue txt-blue rounded txt-bold ProductPage-border-none ProductPage-w-100 ">
+                        <TextLine text={buttonAddText} className={"ProductPage-p-button ProductPage-fs-16"}/>
+                    </button>
+                <Benefit
+                    icon="devolution"
+                    txtLink={freeReturnText}
+                    url="/help/terms-and-conditions"
+                    description={sinceYouReceiveText}
+                />
+                <Benefit
+                    icon="shield"
+                    txtLink={protectedPurchaseText}
+                    url="/help/consumer-defense" 
+                    description={refoundYourMoneyText}
+                />
+                <Benefit
+                    icon="trophy"
+                    txtLink={mercadoPointText}
+                    url="/market-points"
+                    description={addPointText}
+                />
+                {item.assurance &&
+                    <Benefit
+                        icon="medal"
+                        description={`${product.insuranceMonths} ${factoryWarrantyText}`}
                     />
-                    <Benefit 
-                        icon = "shield"
-                        txtLink = "Compra protegida. "
-                        url = "/compra-protegida" 
-                        description = "recibí el producto que esperabas o te devolvemos tu dinero."
-                    />
-                    <Benefit 
-                        icon = "trophy"
-                        txtLink = "Mercado Puntos. "
-                        url = "/mercado-puntos" 
-                        description = {"Sumás " + product.points + " puntos"}
-                    />
-                    {item.assurance &&
-                        <Benefit 
-                            icon = "medal"
-                            description = {product.insuranceMonths + " meses de garantia de fábrica"}
-                        />
-                    }
-                    </div>
-                </div>    
+                }
+                </div>
             </div>
-     
+        </div>
+    
     );
 }
 export default ProductAction

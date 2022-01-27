@@ -3,6 +3,7 @@
  * footer: copyright
  */
 
+import { Link } from "react-router-dom"
 import TextLine from "../Components/TextLine"
 
 function DistractionFreeLayout({ children, isFooter }) {
@@ -14,7 +15,7 @@ function DistractionFreeLayout({ children, isFooter }) {
         <div className="d-flex vh-100 fd-col">
             <div className="row h-header bg-primary padding-none">
                 <div className="col">
-                    <a href="/"><img className="logo-footer" src={logoUrl} alt={logoAlt} /> </a>
+                    <Link to="/"><img className="logo-footer" src={logoUrl} alt={logoAlt} /> </Link>
                 </div>
             </div>
             {children}

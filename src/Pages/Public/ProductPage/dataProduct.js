@@ -11,9 +11,23 @@ const product = {
     'stock' : 175,
     'assurance' : true,
     'insuranceMonths' : 3,
-    'variantSpecs' : true,
-    'variantOpcion' : ["Color:", "Tamaño del Cuadro:"],
-    'opcion' : ["Negro", "M"],
+    'variantSpecs' : [
+        {
+            'variant' : "Color",
+            'options' : [
+                "Blanco",
+                "Negro",
+                "Rojo"
+            ]
+        },
+        {
+            'variant' : "Tamaño del Cuadro",
+            'options' : [
+                "M",
+                "L"
+            ]
+        }
+    ],
     'divisa' : "$",
     'price' : 49999,
     'discount':  true,

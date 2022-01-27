@@ -3,54 +3,95 @@ import TextLine from '../../Components/TextLine'
 import TextLink from '../../Components/TextLink'
 import WebsiteLayout from '../../Layouts/WebsiteLayout'
 import Advertisement from '../HomePage/Advertisement'
-import advertisementList from '../HomePage/Data/advertisementsData'
 import CardLayout from '../HomePage/CardLayout'
 import Carrousel from '../HomePage/Carrousel'
 import CreateAccountCard from '../HomePage/CreateAccountCard'
-import productList from '../HomePage/Data/productsData'
 import PaymentInfo from '../HomePage/PaymentInfo'
 import ProductItem from '../HomePage/ProductItem'
 import SubscriptionBenefitItem from '../HomePage/SubscriptionBenefitItem'
 import SubscriptionCard from '../HomePage/SubscriptionCard'
 import CategoryItem from '../HomePage/CategoryItem'
 import MercadoPuntosBenefitItem from '../HomePage/MercadoPuntosBenefitItem'
-import subscriptionItemList from '../HomePage/Data/subscriptionBenefitsData'
-import mercadoPuntosBenefitList from '../HomePage/Data/mercadoPuntosBenefitsData'
-import categoryList from '../HomePage/Data/categoriesData'
 import ShoppingInfo from '../HomePage/ShoppingInfo'
 import RegretSectionInfo from '../HomePage/RegretSectionInfo'
 import FinancialUserInfo from '../HomePage/FinancialUserInfo'
 import OfficialStoreItem from '../HomePage/OfficialStoreItem'
-import officialStoreList from '../HomePage/Data/officialStoresData'
-import bannerList from '../HomePage/Data/carrouselData'
+import useFetch from '../../hooks/useFetch'
+import { getAdvertisement, getBanner } from '../../requests/advertisements'
+import { getPopularCategories } from '../../requests/categories'
+import { getBenefits } from '../../requests/mercadoPunto'
+import { getOfficialStores } from '../../requests/stores'
+import { getProducts } from '../../requests/products'
+import { getSubscriptionBenefits } from '../../requests/subscriptions'
 
 function HomePage() {
+
+    const {data: advertisementList} = useFetch(getAdvertisement)
+    const {data: bannerList} = useFetch(getBanner)
+    const {data: categoryList} = useFetch(getPopularCategories)
+    const {data: mercadoPuntosBenefitList} = useFetch(getBenefits)
+    const {data: officialStoreList} = useFetch(getOfficialStores)
+    const {data: productList} = useFetch(getProducts)
+    const {data: subscriptionItemList} = useFetch(getSubscriptionBenefits)
+
+    const vistoTitle = "Visto recientemente"
+    const vistoFooterLinkText = "Ver historial de navegación"
+    const vistoFooterLinkUrl = "/login"
+    const inspiradoTitle = "Inspirado en lo último que viste"
+    const inspiradoFooterLinkUrl = "/login"
+    const verMas = "Ver más"
+    const verTodas = "Ver todas"
+    const relacionadoTitle = "Relacionado con tus visitas en Computación"
+    const relacionadoFooterLinkUrl = "/login"
+    const ofertasTitle = "Ofertas"
+    const ofertasFooterLinkUrl = "/offers"
+    const subsTitle = "Suscribite al nivel 6"
+    const subsPeriod = "el primer mes"
+    const subsFooterLinkUrl = "/login"
+    const subsCardText = "Conseguí los mejores beneficios en Roofstore y RoofPay"
+    const beneficiosTitle = "Beneficios de Mercado Puntos"
+    const beneficiosLinkText = "Ver todos los beneficios"
+    const beneficiosLinkUrl = "/login"
+    const elegidosTitle = "Elegidos para vos en Computación"
+    const elegidosFooterLinkUrl = "/login"
+    const comprar = "comprar"
+    const tiendasText = "Tiendas oficiales"
+    const tiendasLink = "/login"
+    const interesTitle = "También puede interesarte"
+    const interesFooterLinkUrl = "/login"
+    const histTitle = "Historial de navegación"
+    const histFooterLinkText = "Ver historial de navegación"
+    const histFooterLinkUrl = "/login"
+    const categoriasText = "Categorías Populares"
+    const verMasCategorias = "Ver más categorías"
+
+
     return (
         <WebsiteLayout>
             <div className="container bg-main padding-none m-bottom-0">
 
-                <Carrousel bannerList={bannerList}/>
+                {bannerList? <Carrousel banners={bannerList} visible={false} /> : ""}
+                
 
                 <PaymentInfo/>
 
                 {/* Visto recientemente */}
                 <CardLayout
-                    title="Visto recientemente"
-                    footerLinkText="Ver historial de navegación"
-                    footerLinkUrl ="/login">
+                    title={vistoTitle}
+                    footerLinkText={vistoFooterLinkText}
+                    footerLinkUrl ={vistoFooterLinkUrl}>
 
-                    <ProductItem
-                        item = {productList[0]}
-                    />
+                    {productList? <ProductItem item = {productList[0]} /> : ''}
+                    
                 </CardLayout>
 
                 {/* Inspirado en lo último que viste */}
                 <CardLayout 
-                    title="Inspirado en lo último que viste"
-                    footerLinkText="Ver más"
-                    footerLinkUrl ="/login">
+                    title={inspiradoTitle}
+                    footerLinkText={verMas}
+                    footerLinkUrl ={inspiradoFooterLinkUrl}>
 
-                    {productList.map(product => {
+                    {productList?.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -66,11 +107,11 @@ function HomePage() {
 
                 {/* Relacionado con tus visitas en */}
                 <CardLayout 
-                    title="Relacionado con tus visitas en Computación"
-                    footerLinkText="Ver todas"
-                    footerLinkUrl ="/login">
+                    title={relacionadoTitle}
+                    footerLinkText={verTodas}
+                    footerLinkUrl ={relacionadoFooterLinkUrl}>
 
-                    {productList.map(product => {
+                    {productList?.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -83,11 +124,11 @@ function HomePage() {
 
                 {/* Ofertas */}
                 <CardLayout 
-                    title="Ofertas"
-                    footerLinkText="Ver todas"
-                    footerLinkUrl ="/login">
+                    title={ofertasTitle}
+                    footerLinkText={verTodas}
+                    footerLinkUrl ={ofertasFooterLinkUrl}>
                     
-                    {productList.map(product => {
+                    {productList?.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -100,18 +141,18 @@ function HomePage() {
 
                 {/* Suscripciones */}
                 <SubscriptionCard 
-                    title="Suscribite al nivel 6"
+                    title={subsTitle}
                     price={449}
-                    period="el primer mes"
-                    footerLinkUrl ="/login">
+                    period={subsPeriod}
+                    footerLinkUrl ={subsFooterLinkUrl}>
 
                     <div className="p-0">
                         <TextLine
-                            text={"Conseguí los mejores beneficios en Roofstore y RoofPay"}
-                            className={"txt-black txt-bold HomePage-txt-start HomePage-fs-14"}/>
+                            text={subsCardText}
+                            className="txt-black txt-bold HomePage-txt-start HomePage-fs-14"/>
                     </div>
 
-                    {subscriptionItemList.map(subscriptionBenefit => {
+                    {subscriptionItemList?.map(subscriptionBenefit => {
                         return (
                             <SubscriptionBenefitItem
                                 key={subscriptionBenefit.id}
@@ -123,14 +164,14 @@ function HomePage() {
 
                 {/* Beneficios de Mercado Puntos */}
                 <CardLayout 
-                    title="Beneficios de Mercado Puntos"
-                    footerLinkText="Ver todos los beneficios"
-                    footerLinkUrl ="/login">
+                    title={beneficiosTitle}
+                    footerLinkText={beneficiosLinkText}
+                    footerLinkUrl ={beneficiosLinkUrl}>
 
                     <div className="HomePage-m--4 br-btm"> 
                         <div className="row p-0 fw-wrap">
 
-                            {mercadoPuntosBenefitList.map(benefit => {
+                            {mercadoPuntosBenefitList?.map(benefit => {
                                 return (
                                     <div className="HomePage-col-6 HomePage-p-sm" key={benefit.id}>
                                         <MercadoPuntosBenefitItem item={benefit}/>
@@ -142,16 +183,21 @@ function HomePage() {
                 </CardLayout>
 
                 {/* Anuncios */}
-                <Advertisement item={advertisementList[0]} textLink="Ver más" />
-                <Advertisement item={advertisementList[1]} textLink="Ver más" />
+                {advertisementList? (
+                    <>
+                        <Advertisement item={advertisementList[0]} textLink={verMas} />
+                        <Advertisement item={advertisementList[1]} textLink={verMas} />
+                    </>
+                    ) : ''
+                }
 
                 {/* Elegidos para vos */}
                 <CardLayout 
-                    title="Elegidos para vos en Computación"
-                    footerLinkText="Ver más"
-                    footerLinkUrl ="/login">
+                    title={elegidosTitle}
+                    footerLinkText={verMas}
+                    footerLinkUrl ={elegidosFooterLinkUrl}>
                     
-                    {productList.map(product => {
+                    {productList?.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -166,12 +212,12 @@ function HomePage() {
                 <div className="row padding-none m-bottom-3">
                     <div className="col HomePage-col-12 padding-none">
                         <div className="row">
-                            <TextLine className="txt-grey HomePage-txt-start HomePage-fs-18" text={"Tiendas Oficiales"}/>
-                            <TextLink url={"/login"}>Ver más</TextLink>
+                            <TextLine className="txt-grey HomePage-txt-start HomePage-fs-18" text={tiendasText}/>
+                            <TextLink url={tiendasLink}>{verMas}</TextLink>
                         </div>
 
                         <div className="row padding-none overflow-scrollx">
-                            {officialStoreList.map(item => {
+                            {officialStoreList?.map(item => {
                                 return (
                                     <OfficialStoreItem officialStore={item} key={item.id}/>
                                 )
@@ -183,11 +229,11 @@ function HomePage() {
 
                 {/* También puede interesarte */}
                 <CardLayout 
-                    title="También puede interesarte"
-                    footerLinkText="Ver más"
-                    footerLinkUrl ="/login">
+                    title={interesTitle}
+                    footerLinkText={verMas}
+                    footerLinkUrl ={interesFooterLinkUrl}>
                     
-                    {productList.map(product => {
+                    {productList?.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -199,16 +245,21 @@ function HomePage() {
                 </CardLayout>
 
                 {/* Anuncios */}
-                <Advertisement item={advertisementList[2]} textLink="Ver más" />
-                <Advertisement item={advertisementList[3]} textLink="Comprar" />
+                {advertisementList? (
+                    <>
+                        <Advertisement item={advertisementList[2]} textLink={verMas} />
+                        <Advertisement item={advertisementList[3]} textLink={verMas} />
+                    </>
+                    ) : ''
+                }
                 
                 {/* Historial de navegación */}
                 <CardLayout 
-                    title="Historial de navegación"
-                    footerLinkText="Ver historial de navegación"
-                    footerLinkUrl ="/login">
+                    title={histTitle}
+                    footerLinkText={histFooterLinkText}
+                    footerLinkUrl ={histFooterLinkUrl}>
                     
-                    {productList.map(product => {
+                    {productList?.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -223,9 +274,9 @@ function HomePage() {
                 <div className="row m-bottom-0">
                     <div className="col HomePage-col-12 padding-none">
                         <div className="HomePage-m--4">
-                            <TextLine className="txt-grey HomePage-txt-start HomePage-p-sm HomePage-fs-18" text={"Categorías Populares"}/>
+                            <TextLine className="txt-grey HomePage-txt-start HomePage-p-sm HomePage-fs-18" text={categoriasText}/>
                             <div className="row padding-none fw-wrap">
-                                { categoryList.map(item => {
+                                { categoryList?.map(item => {
                                     return (
                                         <div className="HomePage-col-6 HomePage-p-sm" key={item.id}>
                                             <CategoryItem category={item}/>
@@ -237,7 +288,7 @@ function HomePage() {
                             <div className="HomePage-p-sm">
                                 <Link className="link" to={"/categories"}>
                                     <div className="p-0 bg-white rounded">
-                                        <TextLine className="txt-blue HomePage-fs-16" text={"Ver más categorías"} />
+                                        <TextLine className="txt-blue HomePage-fs-16" text={verMasCategorias} />
                                     </div>
                                 </Link>
                             </div>

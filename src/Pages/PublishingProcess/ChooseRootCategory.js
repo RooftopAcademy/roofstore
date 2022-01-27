@@ -3,17 +3,12 @@ import Icon from "../../Components/Icon";
 import TextLine from "../../Components/TextLine";
 import TextLink from "../../Components/TextLink";
 import ChooseCategoryItem from "./ChooseCategoryItem";
-
-const DataCategories = [
-    {name: 'Productos', icon: '/images/productos.svg', url: '/sell/item-title'},
-    {name: 'Vehículos', icon: '/images/vehiculos.svg', url: '/sell/item-title'},
-    {name: 'Inmuebles', icon: '/images/inmuebles.svg', url: '/sell/item-title'},
-    {name: 'Servicios', icon: '/images/servicios.svg', url: '/sell/item-title'},
-]
+import useFetch from "../../hooks/useFetch";
+import { getCategoriesRoot } from "../../requests/categories";
 
 function ChooseRootCategory () {
 
-    const categories = DataCategories
+    const {data: categories} = useFetch(getCategoriesRoot)
     
     return (
         <div className="container bg-primary vh-100 d-flex fd-col ai-center jc-center">
@@ -24,7 +19,7 @@ function ChooseRootCategory () {
                 <div className="col">
                     <TextLine text="¿Que queres publicar?" className="txt-white" />
                     <div className="d-flex fw-wrap justify-content-sb m-top-5">
-                        {categories.map((category, index) => {
+                        {categories?.map((category, index) => {
                             return (
                                 <div className="OffersPage-6-col" key={index}>
                                     <ChooseCategoryItem category={category} />

@@ -1,5 +1,4 @@
 import HelpBlock from './HelpPage/HelpBlock'
-import SearchHelp from '../../Components/SearchHelp'
 import categoryBlocksData from './HelpPage/categoryBlocksData'
 import TextPageLayout from '../../Layouts/TextPageLayout'
 

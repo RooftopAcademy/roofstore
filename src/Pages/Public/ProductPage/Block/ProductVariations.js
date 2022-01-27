@@ -1,23 +1,21 @@
 import Selector from "../Component/Selector";
-import product from "../dataProduct";
 
 function ProductVariations({item}) {
     return (
-        <div>
+        <>
             {item.variantSpecs &&
-                <span>
-                    <Selector
-                        variantOpcion = {product.variantOpcion[0]} 
-                        opcion = {product.opcion[0]}
-                    /> 
-                    <Selector
-                        variantOpcion = {product.variantOpcion[1]} 
-                        opcion = {product.opcion[1]}
-                    />   
-                </span>   
+                <div>
+                    {item.variantSpecs.map((spec, index) =>
+                        <Selector
+                            key={index}
+                            variantOpcion = {spec.variant} 
+                            opcion = {spec.options[0]} />
+                    )
+                    }
+                </div>
             }
-       </div>
-        
-    );
+       </>
+    )
 }
+
 export default ProductVariations
