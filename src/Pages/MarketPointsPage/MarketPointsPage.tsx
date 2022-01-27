@@ -13,11 +13,12 @@ import WelcomeCard from "./WelcomeCard";
 import useFetch from "../../hooks/useFetch";
 import { getLocalStores } from "../../requests/stores";
 import { getMoviesAndSeries, getNextLevelBenefit } from "../../requests/mercadoPunto";
+import { LocalStore } from "../../types/stores";
 
 function MarketPointPage () {
 
   const {data: subscriptions} = useFetch(getMoviesAndSeries)
-  const {data: stores} = useFetch(getLocalStores)
+  const {data: stores}: {data: Array<LocalStore> | null} = useFetch(getLocalStores)
   const {data: nextLevelBenefit} = useFetch(getNextLevelBenefit)
   const [showWelcome, setShowWelcome] = useState(true)
 
@@ -90,9 +91,9 @@ function MarketPointPage () {
             titleDownload="Exclusivo con la app de Roofstore Pago"
           >
             <div className="row px-6">
-              { stores?.map((store, index) => {
+              {stores ? (stores as LocalStore[]).map((store: LocalStore, index: number) => {
                 return( <CardLocalStore store={store} key={index} /> )
-              })}
+              }) : ""}
             </div>
           </CardLayoutWhitLogo>
 
