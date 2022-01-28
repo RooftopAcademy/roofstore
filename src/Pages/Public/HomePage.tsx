@@ -25,11 +25,12 @@ import { OfficialStore } from '../../types/stores'
 import { getProducts } from '../../requests/products'
 import { getSubscriptionBenefits } from '../../requests/subscriptions'
 import Product from '../../types/products'
+import type { Banner } from '../../types/banner'
 
 function HomePage() {
 
     const {data: advertisementList} = useFetch(getAdvertisement)
-    const {data: bannerList} = useFetch(getBanner)
+    const {data: bannerList} = useFetch<Array<Banner>>(getBanner)
     const {data: categoryList} = useFetch(getPopularCategories)
     const {data: mercadoPuntosBenefitList} = useFetch(getBenefits)
     const {data: officialStoreList} = useFetch<Array<OfficialStore>>(getOfficialStores)

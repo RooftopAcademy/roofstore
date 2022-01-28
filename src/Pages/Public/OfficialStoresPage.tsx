@@ -3,11 +3,12 @@ import WebsiteLayout from "../../Layouts/WebsiteLayout"
 import InputStores from './OfficialStoresPage/InputStores'
 import useFetch from "../../hooks/useFetch";
 import {getByCategory} from "../../requests/brands";
+import { CategoryBrand } from "../../types/brands";
 
-function OfficialStores() {
+function OfficialStores(): JSX.Element {
+
     const textButton = 'Ver todas las tiendas'
-
-    const {data : categories} = useFetch(getByCategory)
+    const {data : categories} = useFetch<CategoryBrand[]>(getByCategory)
 
     return (
         <WebsiteLayout>
