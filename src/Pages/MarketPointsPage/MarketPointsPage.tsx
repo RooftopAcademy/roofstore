@@ -18,7 +18,7 @@ import { LocalStore } from "../../types/stores";
 function MarketPointPage () {
 
   const {data: subscriptions} = useFetch(getMoviesAndSeries)
-  const {data: stores}: {data: Array<LocalStore> | null} = useFetch(getLocalStores)
+  const {data: stores} = useFetch<Array<LocalStore>>(getLocalStores)
   const {data: nextLevelBenefit} = useFetch(getNextLevelBenefit)
   const [showWelcome, setShowWelcome] = useState(true)
 
@@ -91,7 +91,7 @@ function MarketPointPage () {
             titleDownload="Exclusivo con la app de Roofstore Pago"
           >
             <div className="row px-6">
-              {stores ? (stores as LocalStore[]).map((store: LocalStore, index: number) => {
+              {stores ? stores.map((store: LocalStore, index: number) => {
                 return( <CardLocalStore store={store} key={index} /> )
               }) : ""}
             </div>
