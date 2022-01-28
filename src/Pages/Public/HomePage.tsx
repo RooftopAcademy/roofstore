@@ -31,7 +31,8 @@ function HomePage() {
     const {data: bannerList} = useFetch(getBanner)
     const {data: categoryList} = useFetch(getPopularCategories)
     const {data: mercadoPuntosBenefitList} = useFetch(getBenefits)
-    const {data: officialStoreList}: {data: Array<OfficialStore> | null} = useFetch(getOfficialStores)
+    const {data: officialStoreList} = useFetch<Array<OfficialStore>>(getOfficialStores)
+    const {data: productList} = useFetch(getProducts)
     const {data: subscriptionItemList} = useFetch(getSubscriptionBenefits)
 
     const vistoTitle = "Visto recientemente"
@@ -217,7 +218,7 @@ function HomePage() {
                         </div>
 
                         <div className="row padding-none overflow-scrollx">
-                            {officialStoreList ? (officialStoreList as OfficialStore[]).map((item: OfficialStore) => {
+                            {officialStoreList ? officialStoreList.map((item: OfficialStore) => {
                                 return (
                                     <OfficialStoreItem officialStore={item} key={item.id}/>
                                 )
