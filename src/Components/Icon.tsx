@@ -55,7 +55,7 @@ const icons : IconsList = {
 	'percent': 'fas fa-percent',
 	'money': 'far fa-money-bill-alt',
 	'truck': 'fas fa-truck-moving',
-};
+}
 
 interface IconInterface {
   className? : string;
@@ -64,12 +64,13 @@ interface IconInterface {
 }
 
 function Icon(props: IconInterface): JSX.Element {
-	return (<i 
-		role="figure" 
-		className={`${props.className} ${icons[props.icon]}`} 
-		onClick={props.onClick}
+	return (
+		<i 
+			role="figure" 
+			className={`${props.className} ${icons[props.icon]}`} 
+			onClick={props.onClick}
 		></i>
 	)
 }
 
-export default Icon;
+export default Icon

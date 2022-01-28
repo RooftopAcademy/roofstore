@@ -1,8 +1,16 @@
 import TextLine from '../../Components/TextLine'
 import Icon from '../../Components/Icon'
 import { Link } from 'react-router-dom'
+import Product from '../../types/products'
 
-function ProductItem({item, orientation = 'vertical', dataTestId = ''}) {
+interface ProductItemProps {
+    item : Product,
+    orientation?: string,
+    dataTestId?: string
+}
+
+function ProductItem(props: ProductItemProps) {
+    const {item, orientation = 'vertical', dataTestId = ''} = props
 
     const freeShippingText = 'Envío gratis'
     const badge = '$'

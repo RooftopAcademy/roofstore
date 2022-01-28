@@ -24,6 +24,7 @@ import { getOfficialStores } from '../../requests/stores'
 import { OfficialStore } from '../../types/stores'
 import { getProducts } from '../../requests/products'
 import { getSubscriptionBenefits } from '../../requests/subscriptions'
+import Product from '../../types/products'
 
 function HomePage() {
 
@@ -32,7 +33,7 @@ function HomePage() {
     const {data: categoryList} = useFetch(getPopularCategories)
     const {data: mercadoPuntosBenefitList} = useFetch(getBenefits)
     const {data: officialStoreList} = useFetch<Array<OfficialStore>>(getOfficialStores)
-    const {data: productList} = useFetch(getProducts)
+    const {data: productList} = useFetch<Array<Product>>(getProducts)
     const {data: subscriptionItemList} = useFetch(getSubscriptionBenefits)
 
     const vistoTitle = "Visto recientemente"
@@ -65,14 +66,13 @@ function HomePage() {
     const histFooterLinkUrl = "/login"
     const categoriasText = "Categorías Populares"
     const verMasCategorias = "Ver más categorías"
-
+    
 
     return (
         <WebsiteLayout>
             <div className="container bg-main padding-none m-bottom-0">
 
                 {bannerList? <Carrousel banners={bannerList} visible={false} /> : ""}
-                
 
                 <PaymentInfo/>
 
@@ -92,16 +92,16 @@ function HomePage() {
                     footerLinkText={verMas}
                     footerLinkUrl ={inspiradoFooterLinkUrl}>
 
-                    {productList?.map(product => {
+                    {productList && productList.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
                                 orientation = "horizontal"
                                 item = {product}
-                                dataTestId={`product-detail-${product.id}`}
                             />
                         )
-                    })}
+                    })
+                    }
                 </CardLayout>
 
                 <CreateAccountCard />
@@ -112,7 +112,7 @@ function HomePage() {
                     footerLinkText={verTodas}
                     footerLinkUrl ={relacionadoFooterLinkUrl}>
 
-                    {productList?.map(product => {
+                    {productList && productList.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -129,7 +129,7 @@ function HomePage() {
                     footerLinkText={verTodas}
                     footerLinkUrl ={ofertasFooterLinkUrl}>
                     
-                    {productList?.map(product => {
+                    {productList && productList.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -198,7 +198,7 @@ function HomePage() {
                     footerLinkText={verMas}
                     footerLinkUrl ={elegidosFooterLinkUrl}>
                     
-                    {productList?.map(product => {
+                    {productList && productList.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -227,14 +227,13 @@ function HomePage() {
                     </div>  
                 </div>
 
-
                 {/* También puede interesarte */}
                 <CardLayout 
                     title={interesTitle}
                     footerLinkText={verMas}
                     footerLinkUrl ={interesFooterLinkUrl}>
                     
-                    {productList?.map(product => {
+                    {productList && productList.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
@@ -260,7 +259,7 @@ function HomePage() {
                     footerLinkText={histFooterLinkText}
                     footerLinkUrl ={histFooterLinkUrl}>
                     
-                    {productList?.map(product => {
+                    {productList && productList.map(product => {
                         return (
                             <ProductItem
                                 key={product.id}
